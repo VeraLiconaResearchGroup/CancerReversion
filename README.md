@@ -1,7 +1,8 @@
-# CancerReversion
+# Cancer Reversion: Computational Systems Biology Approaches
 This repository contains the source code and preliminary results for our computational pipeline for tumor reversion
 
-**Cancer reversion** is the biological process by which tumorigenic cells lose all, or a significant part of, their malignant phenotype. The objective of this project is to develop and apply novel computational systems biology tools to identify molecular drivers of cancer reversion, their mechanisms of action and their clinical application.
+## Cancer reversion
+ is the biological process by which tumorigenic cells lose all, or a significant part of, their malignant phenotype. The objective of this project is to develop and apply novel computational systems biology tools to identify molecular drivers of cancer reversion, their mechanisms of action and their clinical application.
 
 
 
