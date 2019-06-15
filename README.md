@@ -4,14 +4,16 @@ This repository contains the source code and preliminary results for our computa
 ## Cancer reversion
  is the biological process by which tumorigenic cells lose all, or a significant part of, their malignant phenotype. The objective of this project is to develop and apply novel computational systems biology tools to identify molecular drivers of cancer reversion, their mechanisms of action and their clinical application.
 
-
-
-The hypothesis underlying this project is that cancer development can be reversed by identifying and targeting its key drivers through mathematical modeling and optimal control algorithms, in a precise manner that redirects a cancer cell’s phenotype from malignant to normal-associated phenotypes.
-The objective of this project is to develop and validate a computational systems biology pipeline for the construction and attractor landscape control of a static network and dynamic model of tumorigenesis for CL TNBC cell lines MDA-MB-231, Hs578T, SUM1315 and MDA-MB-436. The outcome of this pipeline will be combination on genes that when perturbed, enhance the likelihood of tumor cells moving from cancer-associated attractors to normal-like attractors. A translational objective of this proposal is to validate identified genes that control the development of cancerous cellular states of claudin-low triple negative breast cancer cell lines.
-
 ## June_2019
 This folder contains computations and results for June_2019 grant submission, with multi-omics data from cell lines MDA-MB-231 and MCF10A . There are two subfolders.
 
 ### FC_Analysis
 This folder contains the results of FC FC_Analysis on the putative intracellular signaling network for MDA-MB-231.
 The FC node set of a network is composed of the source nodes (nodes without incoming edges) and of the feedback vertex set problem (FVS) of the network. The FVS problem for a directed graph consists on finding minimal sets of vertices that intersect all cycles of the graph.
+The code in this repository has been modified from [Zanudo et al., 2016](https://www.pnas.org/content/114/28/7234):
+- FVS_search_10_python.py, FVS.py: code provided by Zanudo et al., 2016 to run FVS module, for other requirements for this code see the [Github repository](https://github.com/yanggangthu/FVS_python)
+- 231_FVS_calculation.py: code to calculate FVS for MDA-MB-231 vs MCF10A intracellular signaling network. Requires input of network edges as 'source_node target_node'
+- 231_FVS_output.txt: output of 231_FVS_calculation code. each line contains 1 FVS result from 231_FVS_calculation.py
+
+### <i>in silico</i> Screenings
+To trace the dynamics of a signaling network, we can deﬁne a ‘network state’ as a tuple of values of network components at a speciﬁc time point. When there is no change in the input signal of the network system, the network state will follow the inherent network dynamics determined by interactions between network components. Eventually, the network state will converge to a steady state called an attractor.  Using only the static network, we will perform a topological estimation of signal flow, Signal Flow Analysis (SFA), to perform systems’ simulations. SFA can originally be described in [Lee and Cho, 2018](https://www.nature.com/articles/s41598-018-23643-5), and source code found in [This Github repository](https://github.com/dwgoon/sfa)
