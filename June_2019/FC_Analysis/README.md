@@ -1,4 +1,4 @@
-#FC_Analysis
+# FC_Analysis
 The FC node set of a network is composed of the source nodes (nodes without incoming edges) and of the feedback vertex set problem (FVS) of the network. The FVS problem for a directed graph consists on finding minimal sets of vertices that intersect all cycles of the graph.
 The code in this repository has been modified from [Zanudo et al., 2016](https://www.pnas.org/content/114/28/7234)
 
