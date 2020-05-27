@@ -1,0 +1,3 @@
+ID	Gene symbol ID	Gene symbol	Gene description
+ENSG00000144381	HSPD1	HSPD1	60 kDa heat shock protein, mitochondrial Precursor (Heat shock protein 60)(HSP-60)(Hsp60)(60 kDa chaperonin)(Chaperonin 60)(CPN60)(Mitochondrial matrix protein P1)(P60 lymphocyte protein)(HuCHA60) [Source:UniProtKB/Swiss-Prot;Acc:P10809]
+ENSG00000145425	RPS3A	RPS3A	40S ribosomal protein S3a  [Source:UniProtKB/Swiss-Prot;Acc:P61247]

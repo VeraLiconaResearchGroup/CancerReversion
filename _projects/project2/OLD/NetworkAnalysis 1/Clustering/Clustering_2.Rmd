@@ -1,0 +1,213 @@
+---
+title: "Clustering_pt2"
+author: "Maddie"
+date: "7/19/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+setwd("~/GitHub/gastonguay_compsysmed_labnotebook/_projects/project2/NetworkAnalysis/SFA/Clustering")
+knitr::opts_chunk$set(echo = TRUE)
+library(devtools)
+library(ggplot2)
+library(tidyverse)
+library(cluster)
+library(HSAUR)
+library(fpc)
+library(SingleCellExperiment)
+library(SC3)
+library(NMF)
+# library(scater)
+```
+
+```{r}
+# Read in attractors descritized
+MD231 <- read.table("../231_attractor_discrete", row.names = 1)
+MCF <- read.table("../10A_attractor_discrete", row.names = 1)
+sim <- read.table("../Identify Attractors/attractor_df_discrete.txt", row.names = 1)
+
+pre <- "attractor"
+suf <- seq(1:1000)
+name <- paste(pre, suf, sep = "")
+
+all <- cbind(MD231, MCF, sim)
+names(all) <- c("attractor_231", "attractor_10A", name)
+
+
+# attr <- all %>% t() %>% as.data.frame()
+
+# `%nin%` <- function (x, table) is.na(match(x, table, nomatch=NA_integer_))
+# RONs <- c("MAPK13", "STAT3", "SNAI1", "FYN", "CCNG2")
+# attrs <- cbind(attr[, names(attr) %in% RONs], attr[, names(attr) %nin% RONs])
+
+# write.csv(attrs, "attractor_RON_search.csv", row.names = TRUE, quote = FALSE)
+```
+
+```{r}
+# Read in attractors normal
+attr <- read.table("../Identify Attractors/attractor_df.txt", row.names = 1)
+MBA <- read.table("../attractor_231.txt", row.names = 1)
+MCF10A <- read.table("../attractor_10A.txt", row.names = 1)
+
+pre <- "attractor"
+suf <- seq(1:1000)
+name <- paste(pre, suf, sep = "")
+
+all2 <- cbind(MBA, MCF10A, attr)
+names(all2) <- c("attractor_231", "attractor_10A", name)
+
+
+
+DAC <- as.data.frame(row.names(all2))
+
+for( i in 1:ncol(all2)){
+  DAC[,i+1] <- all2[,1] - all2[,i] 
+}
+
+row.names(DAC) <- DAC$`row.names(all2)`
+DAC <- DAC[,-1]
+names(DAC) <- names(all2)
+
+# Discretize DAC
+disc <- function(x){
+  if(x < 0){
+    x <- -1
+  }else if(x > 0){
+    x <- 1
+  } else{
+    x <- 0
+  }
+  }
+
+DAC_disc <- apply(DAC, c(1,2), disc)
+row.names(DAC_disc)<- paste(row.names(DAC_disc), "_DAC", sep = "")
+
+```
+
+```{r}
+# Create Dataframe with all clustering data
+
+# df <- rbind(all, DAC_disc)
+df <- round(all2, 3)
+df2 <- df%>% t() %>% as.data.frame()
+row.names(df2) <- c("MDAMB231", "MCF10A", seq(1:1000))
+pca <- prcomp(df2, center = TRUE)
+
+screeplot(pca) 
+biplot(pca)
+
+```
+```{r}
+# hierarchical clustering
+
+hclust <- hclust(dist(scale(df2)))
+plot(hclust)
+
+test = as.dendrogram(hclust)
+
+op = par(mfrow = c(2, 1))
+plot(cut(test, h = 30)$lower[[9]])
+
+plot(cut(test, h= 30)$lower)
+
+
+```
+
+```{r}
+# k-means
+
+k3means <- kmeans(round(df2,3), 3, nstart = 1000)
+k3means$cluster
+Kmeans::plot(k3means, df2)
+
+fviz_nbclust(df2, kmeans)
+fviz_nbclust(df2, kmeans, method = "wss")
+
+# k3means$cluster <- as.factor(k3means$cluster)
+
+library(RColorBrewer)
+# Create the palette
+hm.palette <-colorRampPalette(rev(brewer.pal(10, 'RdYlGn')),space='Lab')
+
+
+clusplot(df2, k3means$cluster, color = TRUE, shade = TRUE)
+
+m <- cmdscale(dist(round(df2, 3)))
+plot(m)
+
+```
+
+
+```{r}
+# avg_exp <- read_delim("attractor_df.txt", "\t", escape_double = FALSE, col_names = FALSE,  trim_ws = TRUE)
+avg_expr<-all2[,1:10]
+avg_expr<- round(all2, 3)
+# rownames(avg_expr)=avg_expr[,1]
+# avg_expr = avg_expr[,-1]
+# names(avg_expr)<-c('MCF10A','MDA-MB-231')
+aheatmap(avg_expr,scale = 'row',  Rowv = NA, Colv = 3L, cellwidth = 10, cellheight = 30, hclustfun = "complete",color=colorRampPalette(c('navy','white','firebrick3'))(80), filename = "heatmap.pdf")
+getwd()
+```
+```{r}
+
+# avg_exp <- read_delim("attractor_df.txt", "\t", escape_double = FALSE, col_names = FALSE,  trim_ws = TRUE)
+avg_expr<-round(DAC, 3)
+# avg_expr<- round(all2, 3)
+# rownames(avg_expr)=avg_expr[,1]
+# avg_expr = avg_expr[,-1]
+# names(avg_expr)<-c('MCF10A','MDA-MB-231')
+aheatmap(avg_expr,scale = 'row',  Rowv = NA, Colv = 3L, cellwidth = 10, cellheight = 30, hclustfun = "complete",color=colorRampPalette(c('navy','white','firebrick3'))(80), filename = "DACheatmap.pdf")
+```
+
+
+```{r}
+sce <- SingleCellExperiment(
+    assays = list(
+        counts = as.matrix(yan),
+        logcounts = log2(as.matrix(yan) + 1)
+    ), 
+    colData = ann
+)
+
+# define feature names in feature_symbol column
+rowData(sce)$feature_symbol <- rownames(sce)
+# remove features with duplicated names
+sce <- sce[!duplicated(rowData(sce)$feature_symbol), ]
+
+# define spike-ins
+isSpike(sce, "ERCC") <- grepl("ERCC", rowData(sce)$feature_symbol)
+
+sce <- sc3(sce, ks = 2:4, biology = TRUE)
+# sc3_interactive(sce)
+sc3_plot_consensus(sce, k = 3)
+
+
+```
+
+
+```{r}
+#SC3
+sce2 <- SingleCellExperiment(
+    assays = list(
+        counts = as.matrix(exp(all2)),
+        logcounts = as.matrix(all2)
+    )
+)
+
+# define feature names in feature_symbol column
+rowData(sce2)$feature_symbol <- rownames(all2)
+# logcounts(object) <- log_norm_counts
+
+sce2 <- sc3(sce2, ks = 2:4, biology = TRUE, gene_filter = FALSE)
+sc3_interactive(sce2)
+
+```
+
+```{r}
+# library(rafalib)
+d <- dist( t(round(DAC, 3)) )
+hc <- hclust(d)
+plot(hc,cex=0.5)
+hclusters <- cutree(hc, k=2)
+```
+

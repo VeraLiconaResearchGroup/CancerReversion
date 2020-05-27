@@ -1,0 +1,2 @@
+leuk_attr apop_attr apoptosis bid caspase ceramide disc fas fasl fast gpcr gzmb iap ifngt nfkb pdgfr pi3k s1p sphk1 tpl2 tradd
+leuk1 A1 1 1 1 1 1 1 1 0 -1 1 -1 1 -1 -1 1 -1 -1 0 1

@@ -1,0 +1,22 @@
+#0.FastaHeader	1.FinalInterpretation	2.NearbyPsites	3.DestroysAPsite?	4.PotentiallyPhosphoMimicking?	5.HitsAProteinKinase?	6.ProteinKinaseName	7.HitsAKinaseDomain	8.KinaseAlignmentPosition	9.HitsKinaseEssentialResidue?	10.HitsKinaseDeterminantOfSpecificity?	11.HitsKinaseActivationSegment?	12.HitsSH2Protein?	13.SH2ProteinName	14.HitsSH2Domain?	15.SH2AlignmentPosition	16.HitsSH2EssentialResidue?	17.HitsSH2DeterminantOfSpecificity?
+>EPHA3:p.Glu839Ter	Uninterpreted mutation on kinase domain	NA	NA	NA	Y	TK-Eph--EphA3	Y	1216	N	N	N	N	NA	NA	NA	NA	NA
+>LRRK2:p.Ile2323Ser	Uninterpreted mutation on kinase protein	NA	NA	NA	Y	TKL-LRRK--LRRK2	N	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+>PDGFRA:p.Tyr172Phe	Uninterpreted mutation on kinase protein	NA	NA	NA	Y	TK-PVR-PDGFR-PDGFRa	N	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+>TRIO:p.Lys288Glu	Uninterpreted mutation on kinase protein	NA	NA	NA	Y	CAMK-Trio--Trio	N	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+>TRIO:p.Lys2789Glu	Uninterpreted mutation on kinase protein	NA	NA	NA	Y	CAMK-Trio--Trio	N	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+>TRIO:p.Leu600Val	Uninterpreted mutation on kinase protein	NA	NA	NA	Y	CAMK-Trio--Trio	N	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+>WNK1:p.Arg561Ile	Uninterpreted mutation on kinase protein	NA	NA	NA	Y	Other-WNK--Wnk1	N	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+>ALPK2:p.Cys1858Tyr	Uninterpreted mutation on kinase protein	NA	NA	NA	Y	PKL-Alpha-Alpha-Unclassified-AlphaK2	N	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+>ASPM:p.Ser1422Pro	Mutation around phosphorylation site	5	N	N	N	NA	NA	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+>BRAF:p.Gly504Val	Kinase inactivation by hitting essential residue on kinase domain	NA	NA	NA	Y	TKL-RAF-RAF-BRAF	Y	29	Y	N	N	N	NA	NA	NA	NA	NA
+>BRAF:p.Gly464Val	Kinase inactivation by hitting essential residue on kinase domain	NA	NA	NA	Y	TKL-RAF-RAF-BRAF	Y	29	Y	N	N	N	NA	NA	NA	NA	NA
+>PKDREJ:p.Glu2177Lys	Mutation around phosphorylation site	4	N	N	N	NA	NA	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+>PKDREJ:p.Glu2176Ter	Mutation around phosphorylation site	3	N	N	N	NA	NA	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+>STK38:p.Ile457Thr	Mutation around phosphorylation site on kinase protein	"5,-3"	N	N	Y	AGC-NDR-NDR-NDR1	N	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+>TNFRSF21:p.Pro314Leu	Mutation around phosphorylation site	"-5,-1"	N	N	N	NA	NA	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+>MAP3K19:p.Leu526Arg	Uninterpreted mutation on kinase protein	NA	NA	NA	Y	STE-STE11-MEKK15-MEKK15	N	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+>MAP3K19:p.Leu639Arg	Uninterpreted mutation on kinase protein	NA	NA	NA	Y	STE-STE11-MEKK15-MEKK15	N	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+																	
+Number of proteins mutated:347																	
+Number of mutations:356																	
+Number of mutations interpreted:32																	

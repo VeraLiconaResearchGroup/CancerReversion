@@ -1,0 +1,55 @@
+targets, factors
+a20,nfkb
+apoptosis,caspase
+bclxl,(nfkb | stat3) & !(bid | gzmb | disc)
+bid,(caspase | gzmb) & !(bclxl | mcl1)
+caspase,(((tradd | gzmb) & bid) & !iap) | disc
+ceramide,fas & !s1p
+creb,erk & ifng
+ctla4,tcr
+cytoskeletonsignaling,fyn
+disc,fast & ((fas & il2) | ceramide | (fas & !flip))
+erk,mek & pi3k
+fas,fast & fasl & !sfas
+fasl,stat3 | nfkb | nfat | erk
+fast,nfkb
+flip,(nfkb | (creb & ifng)) & !disc
+fyn,tcr | il2rb
+gap,(ras | (pdgfr & gap)) & !(il15 | il2)
+gpcr,s1p
+grb2,il2rb | zap70
+gzmb,(creb & ifng) | tbet
+iap,nfkb & !bid
+ifng,((il2 | il15 | stimuli) & ifngt) & !(smad | p2)
+ifngt,tbet | stat3 | nfat
+il2,(nfkb | stat3 | nfat) & !tbet
+il2ra,il2 & il2rat & !il2ra
+il2rat,il2 & (stat3 | nfkb)
+il2rb,il2rbt & (il2 | il15)
+il2rbt,erk & tbet
+jak,(il2ra | il2rb | rantes | ifng) & !(socs | cd45)
+lck,cd45 | ((tcr | il2rb) & !zap70)
+mcl1,(il2rb & stat3 & nfkb & pi3k) & !disc
+mek,ras
+nfat,pi3k
+nfkb,(tpl2 | pi3k) | (flip & tradd & iap)
+p2,(ifng | p2) & !stimuli2
+p27,stat3
+pdgfr,s1p | pdgf
+pi3k,pdgfr | ras
+plcg1,grb2 | pdgfr
+proliferation,stat3 & !p27
+rantes,nfkb
+ras,(grb2 | plcg1) & !gap
+s1p,sphk1 & !ceramide
+sfas,fast & s1p & !apoptosis
+smad,gpcr
+socs,jak & !(il2 | il15)
+sphk1,pdgfr
+stat3,jak
+tbet,jak | tbet
+tcr,stimuli & !ctla4
+tnf,nfkb
+tpl2,tax | (pi3k & tnf)
+tradd,tnf & !(iap | a20)
+zap70,lck & !fyn

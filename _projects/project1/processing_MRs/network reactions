@@ -1,0 +1,690 @@
+MEK --> ERK
+MEK --> ERK
+SEK --> JNK
+Rac1 --> PAK1
+Cdc42 --> PAK1
+TAB1 --> TAK1
+Cul-2 --> elongin C
+ErbB1 --> Src
+RSK --/ GSK3
+TAK1 --> MKK4
+Dvl --/ GSK3beta
+TAK1 --> NLK
+TAK1 --> NLK
+TAK1 --> NLK
+TAK1 --> NLK
+AKT --/ Raf
+axin1(h) + ATP --GSK3beta(h)--> axin1(h){p} + ADP
+axin1(h) + ATP --GSK3beta(h)--> axin1(h){p} + ADP
+pak2 --> JNK
+cyclinB --> Cdk1
+Ras --> MEKK1
+PLCgamma --> Syk
+IL-6 --> Tec/Btk family
+26S proteasome --/ c-Jun
+E-cadherin(m) + ATP --GSK3beta(m)--> E-cadherin(m){p} + ADP
+E-cadherin(m) + ATP --GSK3beta(m)--> E-cadherin(m){p} + ADP
+E-cadherin(m) + ATP --GSK3beta(m)--> E-cadherin(m){p} + ADP
+Skp1 --> Skp2
+Skp1 --> Skp2
+Cul-1 --> Cdc34
+elongin C --> VHL
+MKK6(h) + ATP --TAK1(m)--> MKK6(h){p} + ADP
+MKK6(h) + ATP --TAK1(m)--> MKK6(h){p} + ADP
+MKK6(h) + ATP --TAK1(m)--> MKK6(h){p} + ADP
+MKK6(h) + ATP --TAK1(m)--> MKK6(h){p} + ADP
+PI31 --/ 20S proteasome
+IkappaB-alpha(h) + Ubc9(h){sumo} + ATP --> IkappaB-alpha(h){sumo} + Ubc9(h) + AMP + p
+Aos1(h) + SAE2(h) <==> Aos1(h):SAE2(h)
+Cul-1(h){nedd}:IkappaB-alpha(h){p} + n ubiquitin(h) --Cdc34(h),Ubc5A(h),ATP--> Cul-1(h){nedd}:IkappaB-alpha(h){p}{ub(n)}
+Cul-1(h) + beta-TrCP2(h) + Roc1(h) + Skp1(h) <==> Cul-1(h):beta-TrCP2(h):Roc1(h):Skp1(h)
+Cul-1(h) + beta-TrCP2(h) + Roc1(h) + Skp1(h) <==> Cul-1(h):beta-TrCP2(h):Roc1(h):Skp1(h)
+Cul-1(h) + Roc1(h) + Skp1(h) <==> Cul-1(h):Roc1(h):Skp1(h)
+Cul-1(h) + Roc1(h) + Skp1(h) <==> Cul-1(h):Roc1(h):Skp1(h)
+pak2 --> Raf-1
+CKII-alpha:CKII-alpha2:(CKII-beta)2 --/ c-Jun
+CKII-alpha:CKII-alpha2:(CKII-beta)2 --/ c-Jun
+CKII-alpha:CKII-alpha2:(CKII-beta)2 --/ c-Jun
+Rac1 --> pak2
+c-Jun(h) + ATP --JNK1(h)--> c-Jun(h){p} + ADP
+cyclinB(h) + Cdk1(h) <==> cyclinB(h):Cdk1(h)
+IKK-alpha(h) + IKK-beta(h) <==> IKK-alpha(h):IKK-beta(h)
+Ubc13(h) + Uev1(h) <==> Ubc13(h):Uev1(h)
+traf6(m) + ubiquitin(v.s.) + ATP --E1(b),Ubc13(h):Uev1(h)--> traf6(m){ub{K63}(n)} + ADP
+p38gamma(r) + ATP --MKK6(h){p}--> p38gamma(r){p} + ADP
+IKK-beta(h) + ATP --MEKK1(h)--> IKK-beta(h){p} + ADP
+p38alpha(x) + ATP --MKK6(h){p}--> p38alpha(x){p} + ADP
+MAPKAPK2(h) + ATP --p38alpha(h){p}--> MAPKAPK2(h){p} + ADP
+Cks1(h) + cyclinA(h):Cdk2(h):p27Kip1(h){p} + SCF-Skp2(h) + n ubiquitin(h) --> cyclinA(h):Cdk2(h) + p27Kip1(h){p}{ub(n)} + Cks1(h):SCF-Skp2(h)
+pRb --/ Abl
+pRb(h):Abl(m) + ATP --cyclinA(h):Cdk2(h)--> pRb(h){pS807}{pS811} + Abl(m) + ADP
+p38(m){p} --Wip1(h)--> p38(m) + p
+CKII-alpha(h) + CKII-alpha2(h) + CKII-beta(h) <==> CKII-alpha(h):CKII-alpha2(h):CKII-beta(h)
+MKK7(h) + ATP --MEKK2(h)--> MKK7(h){p} + ADP
+Cdc25(h) + ATP --Chk1(h)--> Cdc25(h){p} + ADP
+Cdc25(h) + ATP --Chk2(h)--> Cdc25(h){p} + ADP
+mdm2(h) + ATP --CKII-alpha(h):CKII-alpha2(h):(CKII-beta(h))2--> mdm2(h){p} + ADP
+cyclinB(h):Cdk1(h){pY15} --Cdc25C(h){p}--> cyclinB(h):Cdk1(h) + p
+KSR --> MEK1
+CKII-alpha(h):CKII-alpha2(h):(CKII-beta(h))2 + RelA-p65-isoform1(h) <==> CKII-alpha(h):CKII-alpha2(h):(CKII-beta(h))2:RelA-p65-isoform1(h)
+CKII-alpha(h):CKII-alpha2(h):(CKII-beta(h))2:RelA-p65-isoform1(h) + ATP --> CKII-alpha(h):CKII-alpha2(h):(CKII-beta(h))2 + RelA-p65-isoform1(h){pS529} + ADP
+RelA-p65-isoform1(h) + ATP --IKK-beta(h)--> RelA-p65-isoform1(h){pS536} + ADP
+RelA-p65-isoform1(h) + ATP --IKK-alpha(h):IKK-beta(h)--> RelA-p65-isoform1(h){pS} + ADP
+ERK1(h){p} --DUSP5(h)--> ERK1(h) + p
+ERK1(h){p} --VHR(h)--> ERK1(h) + p
+ERK2(m){p} --MKP-2(r)--> ERK2(m) + p
+ERK1(h){p} --MKP-2(h)--> ERK1(h) + p
+VHL(h):TCP-1(h):Hsp70-1(h) + ATP + elongin B(r) + elongin C(r) --> VHL(h):elongin B(r):elongin C(r) + TCP-1(h) + Hsp70-1(h) + ADP
+FGFR-3 --> PLCgamma1
+AKT-1(h) + NTP --PDK1(m){pS}--> AKT-1(h){pT308} + NDP
+GSK3beta(h) + NTP --AKT-1(h){pT308}{pS473}--> GSK3beta(h){pS9} + NDP
+Src --> TFII-I
+Rad23A --/ p300
+c-Jun(v.s.) + ATP --JNK1alpha1(h)--> c-Jun(v.s.){p} + ADP
+TFII-I(h) + ATP --Jak2(v.s.)--> TFII-I(h){p} + ADP
+TFII-I(h) + ATP --Jak2(v.s.)--> TFII-I(h){p} + ADP
+TFII-I(h) + ATP --Jak2(v.s.)--> TFII-I(h){p} + ADP
+TFII-I(h) + ATP --Jak2(v.s.)--> TFII-I(h){p} + ADP
+TFII-I(h) + ATP --Jak2(v.s.)--> TFII-I(h){p} + ADP
+p300(h) + ATP --AKT-1(h)--> p300(h){p} + ADP
+c-Jun(h) + NTP --JNK2(r){p}--> c-Jun(h){p} + NDP
+Hsp70-1 --/ JNK1
+MSK1(h) + ATP --p38alpha(h)--> MSK1(h){p} + ADP
+TAB1 --> p38alpha
+traf6 --> Src
+H-Ras --> Raf-1
+Raf-1 --> Cdc25A
+Raf-1 --> Cdc25A
+Raf-1 --> Cdc25A
+CKII-alpha + CKII-alpha2 + 2 CKII-beta <==> CKII-alpha:CKII-alpha2:(CKII-beta)2
+MKK4(h) + 2 ATP --MEKK2(v.s.)--> MKK4(h){pS221}{pT225} + 2 ADP
+TCF-4(h) + ATP --NLK(m)--> TCF-4(h){pT178}{pT189} + ADP
+TCF-4(h) + ATP --NLK(m)--> TCF-4(h){pT178}{pT189} + ADP
+TCF-4(h) + ATP --NLK(m)--> TCF-4(h){pT178}{pT189} + ADP
+Roc1 + CUL4A + DDB1 + DET1 + COP1 <==> Roc1:CUL4A:DDB1:DET1:COP1
+c-Jun + n ubiquitin --Roc1:CUL4A:DDB1:DET1:COP1--> c-Jun{ub(n)}
+c-Jun + n ubiquitin --Roc1:CUL4A:DDB1:DET1:COP1--> c-Jun{ub(n)}
+huntingtin --/ CBP
+huntingtin --/ p/CAF
+huntingtin --/ p/CAF
+SCF-beta-TrCP2 --/ IkappaB-alpha
+alpha-synuclein(v.s.) + ubiquitin(v.s.) --E1(v.s.),Ubc5B(h),Siah-2(h),ATP--> alpha-synuclein(v.s.){ub(1)}
+Synphilin-1(h) + ATP --CKII-alpha(h):CKII-alpha2(h):(CKII-beta(h))2--> Synphilin-1(h){p} + ADP
+Synphilin-1 --> alpha-synuclein
+UCH-L1 --/ alpha-synuclein
+alpha-synuclein --/ 26S proteasome
+alpha-synuclein(h) --20S proteasome(h)--> protein remnants
+c-Jun(m) + sumo1(v.s.) --Aos1(d):SAE2(d),Ubc9(v.s.),PIAS1(h)--> c-Jun(m){sumo}
+c-Jun(m) + sumo1(v.s.) --Aos1(d):SAE2(d),Ubc9(v.s.),PIAS1(h)--> c-Jun(m){sumo}
+plk1(x) + ATP --cyclinB(h):Cdk1(h)--> plk1(x){pS340} + ADP
+PTEN(h) + 2 ATP --CKII-alpha(h):CKII-alpha2(h):(CKII-beta(h))2--> PTEN(h){pS370}{pS385} + 2 ADP
+p300(h){ace} --SIRT1(h)--> p300(h) + acetyl
+Abl(m.s.) + NTP --DNA-PKcs(m.s.)--> Abl(m.s.){p} + NDP
+Abl(m.s.) + NTP --pak2(m.s.)--> Abl(m.s.){p} + NDP
+AKT-1(m.s.) + NTP --DNA-PKcs(m.s.)--> AKT-1(m.s.){p} + NDP
+AKT-1(m.s.) + NTP --DNA-PKcs(m.s.)--> AKT-1(m.s.){p} + NDP
+alpha-synuclein(m.s.) + ubiquitin(m.s.) --parkin(m.s.)--> alpha-synuclein(m.s.){ub}
+axin1(m.s.) --/ TCF-4(m.s.)
+c-Jun(m.s.) + NTP --Abl(m.s.)--> c-Jun(m.s.){p} + NDP
+c-Jun(m.s.) + NTP --Abl(m.s.)--> c-Jun(m.s.){p} + NDP
+c-Jun(m.s.) + NTP --Cdk1(m.s.)--> c-Jun(m.s.){p} + NDP
+c-Jun(m.s.) + NTP --DNA-PKcs(m.s.)--> c-Jun(m.s.){p} + NDP
+c-Jun(m.s.) + NTP --DNA-PKcs(m.s.)--> c-Jun(m.s.){p} + NDP
+c-Jun(m.s.) + NTP --GSK3beta(m.s.)--> c-Jun(m.s.){p} + NDP
+c-Jun(m.s.) + NTP --GSK3beta(m.s.)--> c-Jun(m.s.){p} + NDP
+c-Jun(m.s.) + NTP --GSK3beta(m.s.)--> c-Jun(m.s.){p} + NDP
+c-Jun(m.s.) --/ VHR(m.s.)
+c-Jun(m.s.) --> AKT-1(m.s.)
+c-Jun(m.s.) --> Cdk1(m.s.)
+c-Myc(m.s.) + NTP --DNA-PKcs(m.s.)--> c-Myc(m.s.){p} + NDP
+c-Myc(m.s.) + NTP --DNA-PKcs(m.s.)--> c-Myc(m.s.){p} + NDP
+c-Myc(m.s.) + NTP --DNA-PKcs(m.s.)--> c-Myc(m.s.){p} + NDP
+CBP(m.s.) --> TCF-4(m.s.)
+Cdk1(m.s.) + NTP --pkmyt1(m.s.)--> Cdk1(m.s.){p} + NDP
+Chk2(m.s.) + NTP --DNA-PKcs(m.s.)--> Chk2(m.s.){p} + NDP
+CKII-beta(m.s.) + NTP --Cdk1(m.s.)--> CKII-beta(m.s.){p} + NDP
+cyclinB1(m.s.) + Cdk1(m.s.) <==> Cdk1(m.s.):cyclinB1(m.s.)
+ERK2(m.s.) + NTP --RIP2(m.s.)--> ERK2(m.s.){p} + NDP
+GSK3beta(m.s.) + NTP --MEK1(m.s.)--> GSK3beta(m.s.){p} + NDP
+GSK3beta(m.s.) + NTP --MEK1(m.s.)--> GSK3beta(m.s.){p} + NDP
+GSK3beta(m.s.) --> TCF-4(m.s.)
+HIF-1alpha(m.s.) + ubiquitin(m.s.) --Cul-2(m.s.)--> HIF-1alpha(m.s.){ub}
+IkappaB-alpha(m.s.) + ubiquitin(m.s.) --Cdc34(m.s.)--> IkappaB-alpha(m.s.){ub}
+IKK-beta(m.s.) --> beta-TrCP1(m.s.)
+p300(m.s.) --> TCF-4(m.s.)
+plk1(m.s.) + NTP --Cdk1(m.s.)--> plk1(m.s.){p} + NDP
+SHP-1(m.s.) + NTP --Abl(m.s.)--> SHP-1(m.s.){p} + NDP
+Skp2(m.s.) + ubiquitin(m.s.) --Roc1(m.s.)--> Skp2(m.s.){ub}
+Syk(m.s.) + NTP --ERK1(m.s.)--> Syk(m.s.){p} + NDP
+Syk(m.s.){p} --SHP-1(m.s.)--> Syk(m.s.) + p
+TCF-4(m.s.) + NTP --CKII-beta(m.s.)--> TCF-4(m.s.){p} + NDP
+TCF-4(m.s.) + NTP --CKII-beta(m.s.)--> TCF-4(m.s.){p} + NDP
+TCF-4(m.s.) + NTP --CKII-beta(m.s.)--> TCF-4(m.s.){p} + NDP
+TCF-4(m.s.) + NTP --CKII-beta(m.s.)--> TCF-4(m.s.){p} + NDP
+TCF-4(m.s.) + NTP --CKII-beta(m.s.)--> TCF-4(m.s.){p} + NDP
+TCF-4(m.s.) + NTP --CKII-beta(m.s.)--> TCF-4(m.s.){p} + NDP
+Cdk1 --> E1
+Nedd8 --> Roc1
+Roc1 --> IkappaB-alpha
+c-Myc-isoform1(h) + 6 acetyl-CoA --p300(h)--> c-Myc-isoform1(h){aceK143}{aceK157}{aceK275}{aceK317}{aceK323}{aceK371} + 6 CoA
+c-Myc(h) + ATP --ERK1(h)--> c-Myc(h){p} + ADP
+c-Myc(h) + ATP --ERK1(h)--> c-Myc(h){p} + ADP
+c-Jun(m.s.) + ATP --p38(v.s.)--> c-Jun(m.s.){p} + ADP
+Murr1(h) + n ubiquitin(h) --XIAP(h)--> Murr1(h){ub(n)}
+MEK1(m.s.) + ATP --MEKK2(m)--> MEK1(m.s.){p} + ADP
+PLCgamma1(m.s.) + ATP --JNK3(m.s.){p}--> PLCgamma1(m.s.){p} + ADP
+MEK(h) + ATP --Raf-1(h)--> MEK(h){pS} + ADP
+MEK(h) + ATP --Raf-1(h)--> MEK(h){pS} + ADP
+ERK1(m) + ATP --MEK1(h)--> ERK1(m){p} + ADP
+n ubiquitin(m.s.) + c-Jun(r) --E2-20K(rb)--> c-Jun(r){ub(n)}
+n ubiquitin(m.s.) + c-Jun(r) --E2-20K(rb)--> c-Jun(r){ub(n)}
+ERK1(r) + ATP --PKCalpha(m.s.)--> ERK1(r){p} + ADP
+ERK2(r) + ATP --PKCalpha(m.s.)--> ERK2(r){p} + ADP
+Murr1(h){ub(n)} --26S proteasome(h)--> protein remnants + n ubiquitin(h)
+IKK-beta(h) + 2 ATP --Src(h)--> IKK-beta(h){pY188}{pY189} + 2 ADP
+AKT(h) + ATP --> AKT(h){p} + ADP
+ERK(m.s.) + ATP --Raf-1(h)--> ERK(m.s.){p} + ADP
+ERK(m.s.) + ATP --Raf-1(h)--> ERK(m.s.){p} + ADP
+ERK(m.s.) + ATP --Raf-1(h)--> ERK(m.s.){p} + ADP
+ERK(m.s.) + ATP --Raf-1(h)--> ERK(m.s.){p} + ADP
+ERK(m.s.) + ATP --Raf-1(h)--> ERK(m.s.){p} + ADP
+JNK(h) + ATP --> JNK(h){p} + ADP
+JNK(h) + ATP --> JNK(h){p} + ADP
+c-Jun(m.s.) + ATP --JNK(h){p}--> c-Jun(m.s.){p} + ADP
+Cdc25C(m.s.) + NTP --JNK1(m.s.)--> Cdc25C(m.s.){p} + NDP
+Cdc25C(m.s.) + NTP --JNK1(m.s.)--> Cdc25C(m.s.){p} + NDP
+Cdc25C(m.s.) + NTP --PRK1(m.s.)--> Cdc25C(m.s.){p} + NDP
+UCH-L1(m.s.) --OGT(m.s.)--> UCH-L1(m.s.){gly}
+NF-YC(m.s.) --> TFII-I(m.s.)
+Cdc25B(m.s.) + NTP --AKT-1(m.s.)--> Cdc25B(m.s.){p} + NDP
+KSR(m.s.) + NTP --TAK1(m.s.)--> KSR(m.s.){p} + NDP
+KSR(m.s.) + NTP --TAK1(m.s.)--> KSR(m.s.){p} + NDP
+KSR(m.s.) + NTP --TAK1(m.s.)--> KSR(m.s.){p} + NDP
+KSR(m.s.) + NTP --TAK1(m.s.)--> KSR(m.s.){p} + NDP
+c-Jun(m.s.) + NTP --p38alpha(m.s.)--> c-Jun(m.s.){p} + NDP
+CTGF(m.s.) --> ERK1(m.s.)
+MEK1(m.s.) + NTP --A-Raf(m.s.)--> MEK1(m.s.){p} + NDP
+GCN5(m.s.) + NTP --DNA-PKcs(m.s.)--> GCN5(m.s.){p} + NDP
+p70S6K1(m.s.) + NTP --JNK1(m.s.)--> p70S6K1(m.s.){p} + NDP
+p70S6K1(m.s.) + NTP --JNK1(m.s.)--> p70S6K1(m.s.){p} + NDP
+p70S6K1(m.s.) + NTP --JNK1(m.s.)--> p70S6K1(m.s.){p} + NDP
+p70S6K1(m.s.) + NTP --JNK2(m.s.)--> p70S6K1(m.s.){p} + NDP
+p70S6K1(m.s.) + NTP --JNK2(m.s.)--> p70S6K1(m.s.){p} + NDP
+GSK3beta(m.s.) + NTP --p70S6K1(m.s.)--> GSK3beta(m.s.){p} + NDP
+Raf-1(m.s.) + NTP --AKT-1(m.s.)--> Raf-1(m.s.){p} + NDP
+HIF-1alpha(m.s.) --> c-Jun(m.s.)
+p70S6K1(m.s.) + NTP --NEK7(m.s.)--> p70S6K1(m.s.){p} + NDP
+Ubc5B(m.s.) + ubiquitin(v.s.) --RNF4(m.s.)--> Ubc5B(m.s.){ub}
+Ubc5A(m.s.) + ubiquitin(v.s.) --RNF4(m.s.)--> Ubc5A(m.s.){ub}
+c-Myc(m.s.) + NTP --JNK1(m.s.)--> c-Myc(m.s.){p} + NDP
+c-Myc(m.s.) + NTP --JNK1(m.s.)--> c-Myc(m.s.){p} + NDP
+c-Myc(m.s.) + NTP --JNK1(m.s.)--> c-Myc(m.s.){p} + NDP
+c-Myc(m.s.) + NTP --JNK1(m.s.)--> c-Myc(m.s.){p} + NDP
+c-Myc(m.s.) + NTP --JNK1(m.s.)--> c-Myc(m.s.){p} + NDP
+c-Myc(m.s.) + NTP --JNK1(m.s.)--> c-Myc(m.s.){p} + NDP
+STAU1(h) --> Cdc42(h)
+STAU1(h) --> Rac1(h)
+GSK3beta(m.s.) + ATP --AKT-1(m.s.)--> GSK3beta(m.s.){pS9} + ADP
+c-Jun(m.s.) + ATP --MKK7(m.s.),JNK2(m.s.)--> c-Jun(m.s.){p} + ADP
+RelA-p65-isoform1(h) + ATP --GSK3beta(h)--> RelA-p65-isoform1(h){pS468} + ADP
+RelA-p65-isoform1(h) + ATP --GSK3beta(h)--> RelA-p65-isoform1(h){pS468} + ADP
+RelA-p65-isoform1(h) + ATP --GSK3beta(h)--> RelA-p65-isoform1(h){pS468} + ADP
+p/CAF(h) + n ubiquitin(m.s.) --mdm2(h)--> p/CAF(h){ub(n)}
+RelA-p65(m.s.) + ATP --GSK3beta(rb)--> RelA-p65(m.s.){pS468} + ADP
+RelA-p65(m.s.) + ATP --GSK3beta(rb)--> RelA-p65(m.s.){pS468} + ADP
+RelA-p65(m.s.) + ATP --GSK3beta(rb)--> RelA-p65(m.s.){pS468} + ADP
+RelA-p65(m.s.) + ATP --GSK3beta(rb)--> RelA-p65(m.s.){pS468} + ADP
+RelA-p65(m.s.) + ATP --GSK3beta(rb)--> RelA-p65(m.s.){pS468} + ADP
+RelA-p65(m.s.) + ATP --GSK3beta(rb)--> RelA-p65(m.s.){pS468} + ADP
+RelA-p65(m.s.) + ATP --GSK3beta(rb)--> RelA-p65(m.s.){pS468} + ADP
+RelA-p65(m.s.) + ATP --GSK3beta(rb)--> RelA-p65(m.s.){pS468} + ADP
+RelA-p65(m.s.) + ATP --GSK3beta(rb)--> RelA-p65(m.s.){pS468} + ADP
+RelA-p65(m.s.) + ATP --GSK3beta(rb)--> RelA-p65(m.s.){pS468} + ADP
+RelA-p65(m.s.) + ATP --GSK3beta(rb)--> RelA-p65(m.s.){pS468} + ADP
+RelA-p65(m.s.) + ATP --GSK3beta(rb)--> RelA-p65(m.s.){pS468} + ADP
+PPARgamma2(m) + sumo1(h) --PIAS2-beta(m)--> PPARgamma2(m){sumoK107}
+PPARgamma2(m) + sumo1(h) --PIAS2-beta(m)--> PPARgamma2(m){sumoK107}
+PPARgamma2(m) + sumo1(h) --PIAS2-beta(m)--> PPARgamma2(m){sumoK107}
+PPARgamma2(m) + sumo1(h) --PIAS1(m)--> PPARgamma2(m){sumoK107}
+c-Jun(h) --> ErbB1(h)
+c-Jun(h) --> ErbB1(h)
+AR-isoform1(h){pS213}{pS791} + n ubiquitin(h) --mdm2-isoform1(h)--> AR-isoform1(h){pS213}{pS791}{ub(n)}
+RelA-p65(h) + acetyl-CoA --p300(m.s.)--> RelA-p65(h){aceK310} + CoA
+RelA-p65(h) + acetyl-CoA --p300(m.s.)--> RelA-p65(h){aceK310} + CoA
+RelA-p65(h) + acetyl-CoA --p300(m.s.)--> RelA-p65(h){aceK310} + CoA
+RelA-p65(h) + acetyl-CoA --p300(m.s.)--> RelA-p65(h){aceK310} + CoA
+RelA-p65(h) + acetyl-CoA --p300(m.s.)--> RelA-p65(h){aceK310} + CoA
+RelA-p65(h) + acetyl-CoA --p300(m.s.)--> RelA-p65(h){aceK310} + CoA
+RelA-p65(h) + acetyl-CoA --p300(m.s.)--> RelA-p65(h){aceK310} + CoA
+RelA-p65(m) + ATP --MSK1(m)--> RelA-p65(m){pS276} + ADP
+RelA-p65(m) + ATP --MSK1(m)--> RelA-p65(m){pS276} + ADP
+RelA-p65(m) + ATP --MSK1(m)--> RelA-p65(m){pS276} + ADP
+p300 --> c-Myc
+p300 --> c-Myc
+p300 --> c-Myc
+RelA-p65(m.s.) + ATP --IKK-beta(m.s.)--> RelA-p65(m.s.){pS536} + ADP
+RelA-p65(m.s.) + ATP --IKK-beta(m.s.)--> RelA-p65(m.s.){pS536} + ADP
+RelA-p65(m.s.) + ATP --IKK-beta(m.s.)--> RelA-p65(m.s.){pS536} + ADP
+RelA-p65(m.s.) + ATP --IKK-beta(m.s.)--> RelA-p65(m.s.){pS536} + ADP
+RelA-p65(m.s.) + ATP --IKK-beta(m.s.)--> RelA-p65(m.s.){pS536} + ADP
+RelA-p65(m.s.) + ATP --IKK-beta(m.s.)--> RelA-p65(m.s.){pS536} + ADP
+RelA-p65(m.s.) + ATP --IKK-beta(m.s.)--> RelA-p65(m.s.){pS536} + ADP
+HDAC1(h) + ubiquitin(h) --mdm2(m.s.)--> HDAC1(h){ub}
+c-Jun(m.s.) + ATP --Jnk2alpha1(m.s.)--> c-Jun(m.s.){p} + ADP
+c-Jun(m.s.) + ATP --Jnk2alpha1(m.s.)--> c-Jun(m.s.){p} + ADP
+c-Jun(m.s.) + ATP --Jnk2alpha1(m.s.)--> c-Jun(m.s.){p} + ADP
+p300(h) + 2 sumo1(m.s.) --Ubc9(m.s.),Aos1(m.s.):SAE2(m.s.)--> p300(h){sumoK1020}{sumoK1024}
+c-Myc(m.s.) + acetyl-CoA --p/CAF(h)--> c-Myc(m.s.){aceK} + CoA
+c-Myc(m.s.) + acetyl-CoA --p/CAF(h)--> c-Myc(m.s.){aceK} + CoA
+p300(m.s.) + SUMO2(m.s.) --Aos1(m.s.):SAE2(m.s.),Ubc9(m.s.)--> p300(m.s.){sumo2}
+c-Myc-isoform1(h) + ATP --JNK1(h)--> c-Myc-isoform1(h){p} + ADP
+c-Myc-isoform1(h) + ATP --JNK1(h)--> c-Myc-isoform1(h){p} + ADP
+c-Myc-isoform1(h) + ATP --JNK1(h)--> c-Myc-isoform1(h){p} + ADP
+c-Myc-isoform1(h) + ATP --ERK2(h)--> c-Myc-isoform1(h){p} + ADP
+c-Myc-isoform1(h) + 2 ATP --JNK3(h)--> c-Myc-isoform1(h){pS62}{pS71} + 2 ADP
+c-Myc(m.s.) + ATP --Cdk1(m.s.)--> c-Myc(m.s.){pS62} + ADP
+c-Jun(m.s.) + ATP --AKT(m)--> c-Jun(m.s.){p} + ADP
+c-Jun(m.s.) + ATP --AKT(m)--> c-Jun(m.s.){p} + ADP
+c-Jun(m.s.) + ATP --AKT(m)--> c-Jun(m.s.){p} + ADP
+c-Jun(m.s.) + ATP --AKT(m)--> c-Jun(m.s.){p} + ADP
+pRb(m.s.) + ATP --Cdk6(m)--> pRb(m.s.){p} + ADP
+pRb(m.s.) + ATP --Cdk6(m)--> pRb(m.s.){p} + ADP
+Uev1-isoform1(h) + Ubc13(h) <==> Uev1-isoform1(h):Ubc13(h)
+RNF4(m.s.) + sumo1-isoform1(h) --Aos1(m.s.),SAE2(m.s.),Ubc9(m.s.)--> RNF4(m.s.){sumo}
+RNF4(m.s.) + sumo1-isoform1(h) --Aos1(m.s.),SAE2(m.s.),Ubc9(m.s.)--> RNF4(m.s.){sumo}
+RNF4(m.s.) + sumo1-isoform1(h) --Aos1(m.s.),SAE2(m.s.),Ubc9(m.s.)--> RNF4(m.s.){sumo}
+Skp1(h) + NIPA(h) <==> Skp1(h):NIPA(h)
+Skp1(h) + NIPA(h) <==> Skp1(h):NIPA(h)
+n ubiquitin(m.s.) + cyclinB1(m.s.) --Skp1(h):NIPA(h)--> cyclinB1(m.s.){ub}n
+IKK-gamma(h) + sumo1-isoform1(h) --PIASy(h),Ubc9(h)--> IKK-gamma(h){sumo}
+cyclinB1(mo) + n ubiquitin(mo) --Roc1(h):Cul-1(h):Skp1(h):NIPA(h)--> cyclinB1(mo){ub}n
+p38alpha(h){pT180}{pY182} --Wip1(m.s.)--> p38alpha(h) + 2 p
+PIAS1(m.s.) + sumo1-isoform1(h) --Aos1(m.s.),SAE2(m.s.),Ubc9(m.s.)--> PIAS1(m.s.){sumo}
+PIAS1(m.s.) + sumo1-isoform1(h) --Aos1(m.s.),SAE2(m.s.),Ubc9(m.s.)--> PIAS1(m.s.){sumo}
+PIAS1(m.s.) + sumo1-isoform1(h) --Aos1(m.s.),SAE2(m.s.),Ubc9(m.s.)--> PIAS1(m.s.){sumo}
+c-Jun(m.s.) + sumo1-isoform1(h) --Aos1(m.s.),SAE2(m.s.),Ubc9(m.s.),PIAS2(r)--> c-Jun(m.s.){sumo}
+c-Jun(m.s.) + sumo1-isoform1(h) --Aos1(m.s.),SAE2(m.s.),Ubc9(m.s.),PIAS2(r)--> c-Jun(m.s.){sumo}
+c-Jun(m.s.) + sumo1-isoform1(h) --Aos1(m.s.),SAE2(m.s.),Ubc9(m.s.),PIAS2(r)--> c-Jun(m.s.){sumo}
+c-Jun(m.s.) + sumo1-isoform1(h) --Aos1(m.s.),SAE2(m.s.),Ubc9(m.s.),PIAS2(r)--> c-Jun(m.s.){sumo}
+c-Jun(m.s.) + sumo1-isoform1(h) --Aos1(m.s.),SAE2(m.s.),Ubc9(m.s.),PIAS2(r)--> c-Jun(m.s.){sumo}
+c-Jun(m.s.) + sumo1-isoform1(h) --Aos1(m.s.),SAE2(m.s.),Ubc9(m.s.),PIAS2(r)--> c-Jun(m.s.){sumo}
+c-Jun(m.s.) + sumo1-isoform1(h) --Aos1(m.s.),SAE2(m.s.),Ubc9(m.s.),PIAS2(r)--> c-Jun(m.s.){sumo}
+c-Jun(m.s.) + sumo1-isoform1(h) --Aos1(m.s.),SAE2(m.s.),Ubc9(m.s.),PIAS2(r)--> c-Jun(m.s.){sumo}
+c-Jun(m.s.) + sumo1-isoform1(h) --Aos1(m.s.),SAE2(m.s.),Ubc9(m.s.),PIAS2(r)--> c-Jun(m.s.){sumo}
+c-Jun(m.s.) + sumo1-isoform1(h) --Aos1(m.s.),SAE2(m.s.),Ubc9(m.s.),PIAS2(r)--> c-Jun(m.s.){sumo}
+sumo1 --> PIAS1
+p300(h) + ATP --AKT(h)--> p300(h){pS1834} + ADP
+Roc1 + Cul-1 + Skp1 + NIPA <==> NIPA:Skp1:Cul-1:Roc1
+MULE-isoform1(h) + ubiquitin(h) --Ubc5A(rb),E1(rb)--> MULE-isoform1(h){ub}
+CBP(h) --/ plk1(h)
+CBP(h) --/ plk1(h)
+CBP(h) --/ plk1(h)
+p300(h){aceK1020}{aceK1024} --SIRT1-isoform1(h)--> p300(h) + 2 acetyl
+Abl(h) + acetyl-CoA --p300(m.s.)--> Abl(h){aceK} + CoA
+Abl(h) + acetyl-CoA --CBP(m.s.)--> Abl(h){aceK} + CoA
+Abl(h) + acetyl-CoA --CBP(m.s.)--> Abl(h){aceK} + CoA
+sumo1 --/ CBP
+Mdm4-isoform1(h){ub}n --HAUSP-isoform1(h)--> Mdm4-isoform1(h) + n ubiquitin(h)
+JNK3(m.s.) + ATP --ASK1(m.s.)--> JNK3(m.s.){p} + ADP
+Aos1-isoform1(h) + SAE2-isoform1(h) <==> Aos1-isoform1(h):SAE2-isoform1(h)
+Ubc9(h) + sumo1-isoform1(h) --Aos1-isoform1(h):SAE2-isoform1(h)--> Ubc9(h){sumoC93}
+E1(h) + ubiquitin(h) --> E1(h){ub}
+Ubc9(h) + sumo1-isoform1(h) --Aos1(h):SAE2(h)--> Ubc9(h){sumo}
+c-Jun(h) + ATP --JNK1alpha1(h)--> c-Jun(h){p} + ADP
+c-Jun(h) + ATP --JNK2alpha-2(h)--> c-Jun(h){p} + ADP
+c-Jun(h) + acetyl-CoA --p300(m.s.)--> c-Jun(h){aceK271} + CoA
+CBP(m.s.) + 2 ATP --IKK-alpha(h)--> CBP(m.s.){pS1382}{pS1386} + 2 ADP
+p73beta(m.s.) + Nedd8(m.s.) --mdm2(h)--> p73beta(m.s.){nedd}
+RHOBTB2-isoform1(h) + n ubiquitin(h) --UbcH5(m.s.),Roc1(m.s.),CUL3(m.s.)--> RHOBTB2-isoform1(h){ub}n
+parkin(m.s.) + ubiquitin(m.s.) --Ubc13(m.s.):Uev1(m.s.)--> parkin(m.s.){ub(1)}n
+mdm2-isoform1(h) + sumo1-isoform1(h) --Aos1(m.s.):SAE2(m.s.),Ubc9(h),PIAS2-beta(m.s.)--> mdm2-isoform1(h){sumo}
+mdm2-isoform1(h) + sumo1-isoform1(h) --Aos1(m.s.):SAE2(m.s.),Ubc9(h),PIAS2-beta(m.s.)--> mdm2-isoform1(h){sumo}
+mdm2-isoform1(h) + sumo1-isoform1(h) --Aos1(m.s.):SAE2(m.s.),Ubc9(h),PIAS2-beta(m.s.)--> mdm2-isoform1(h){sumo}
+MSK1-isoform1(h) + 2 ATP --p38alpha(m.s.)--> MSK1(h){pT581}{pT700} + 2 ADP
+E1-isoform1(h){ub} + HIP2-isoform1(h) --> E1-isoform1(h) + HIP2-isoform1(h){ub}
+E1-isoform1(h){ub} + UbcH6-isoform1(h) --> UbcH6-isoform1(h){ub} + E1-isoform1(h)
+E1-isoform1(h) + ubiquitin(h) --> E1-isoform1(h){ub}
+RelA-p65-isoform1(h) + ATP --IKK-beta-isoform1(h)--> RelA-p65-isoform1(h){pS468} + ADP
+RelA-p65(h) + ATP --IKK-alpha(h)--> RelA-p65(h){pS536} + ADP
+RelA-p65(h) + ATP --IKK-alpha(h)--> RelA-p65(h){pS536} + ADP
+RelA-p65(h) + ATP --IKK-alpha(h)--> RelA-p65(h){pS536} + ADP
+RelA-p65(h) + ATP --IKK-alpha(h)--> RelA-p65(h){pS536} + ADP
+RelA-p65(h) + ATP --IKK-beta-isoform1(h)--> RelA-p65(h){pS536} + ADP
+SIRT2-isoform1(h) + ATP --Cdk1-isoform1(h):cyclinB1-isoform1(h)--> SIRT2-isoform1(h){pS368} + ADP
+NF-1C-isoform1(m) --20S proteasome(h)--> protein remnants
+NF-1C-isoform1(m) --20S proteasome(h)--> protein remnants
+NF-1C-isoform1(m) --20S proteasome(h)--> protein remnants
+NF-1C-isoform1(m) --20S proteasome(h)--> protein remnants
+RelA-p65-isoform1(h) + acetyl-CoA --p300(m.s.)--> RelA-p65-isoform1(h){aceK310} + CoA
+RelA-p65-isoform1(h){aceK310} --HDAC1(h)--> RelA-p65-isoform1(h) + acetyl-CoA
+RelA-p65(m.s.){ace} --SIRT1(h)--> RelA-p65(m.s.) + acetyl
+RelA-p65(m.s.){ace} --SIRT1(h)--> RelA-p65(m.s.) + acetyl
+RelA-p65(m.s.){ace} --SIRT1(h)--> RelA-p65(m.s.) + acetyl
+RelA-p65(m.s.){ace} --SIRT1(h)--> RelA-p65(m.s.) + acetyl
+RelA-p65(m.s.){ace} --SIRT1(h)--> RelA-p65(m.s.) + acetyl
+RelA-p65(m.s.){ace} --SIRT1(h)--> RelA-p65(m.s.) + acetyl
+RelA-p65(m.s.){ace} --SIRT1(h)--> RelA-p65(m.s.) + acetyl
+CKII-alpha + ATP --Abl--> CKII-alpha{pY} + ADP
+TFII-I + ATP --Btk--> TFII-I{pY} + ADP
+c-Cbl + ATP --PKCalpha--> c-Cbl{p} + ADP
+c-Myc + acetyl-CoA --Tip60--> c-Myc{aceK} + CoA
+c-Myc + acetyl-CoA --Tip60--> c-Myc{aceK} + CoA
+c-Myc + ATP --ERK2--> c-Myc{pS} + ADP
+c-Myc + ATP --ERK2--> c-Myc{pS} + ADP
+c-Myc + acetyl-CoA --CBP--> c-Myc{aceK} + CoA
+c-Myc + acetyl-CoA --CBP--> c-Myc{aceK} + CoA
+c-Myc + acetyl-CoA --CBP--> c-Myc{aceK} + CoA
+c-Myc + acetyl-CoA --CBP--> c-Myc{aceK} + CoA
+c-Myc + acetyl-CoA --CBP--> c-Myc{aceK} + CoA
+c-Myc + ATP --GSK3beta--> c-Myc{p} + ADP
+c-Myc + ATP --GSK3beta--> c-Myc{p} + ADP
+c-Myc + ATP --GSK3beta--> c-Myc{p} + ADP
+c-Myc + ATP --GSK3beta--> c-Myc{p} + ADP
+c-Myc + ATP --GSK3beta--> c-Myc{p} + ADP
+c-Myc + ATP --GSK3beta--> c-Myc{p} + ADP
+c-Myc + ATP --GSK3beta--> c-Myc{p} + ADP
+c-Myc + ATP --GSK3beta--> c-Myc{p} + ADP
+c-Myc + ATP --GSK3beta--> c-Myc{p} + ADP
+c-Jun + acetyl-CoA --p300--> c-Jun{aceK} + CoA
+Synphilin-1 + ATP --GSK3beta--> Synphilin-1{p} + ADP
+Synphilin-1 + ATP --GSK3beta--> Synphilin-1{p} + ADP
+HDAC1(h) + ATP --CKII-alpha(h):CKII-alpha2(h):(CKII-beta(h))2--> HDAC1(h){p} + ADP
+HDAC3(h) + ATP --CKII-alpha(h):CKII-alpha2(h):(CKII-beta(h))2--> HDAC3(h){p} + ADP
+JNK1(m.s.) + ATP --MKK4(m.s.)--> JNK1(m.s.){pY185} + ADP
+JNK2alpha-2(h) + 2 ATP --MKK7(h)--> JNK2alpha-2(h){pT404}{pS407} + 2 ADP
+RelA-p65(m.s.) + n ubiquitin(m.s.) --E1(m.s.),Ubc5A(m.s.),murr1(m.s.):elongin C(m.s.):SOCS-1(m.s.):Cul-2(m.s.):Roc1(m.s.)--> RelA-p65(m.s.){ub}n
+RelA-p65(m.s.) + n ubiquitin(m.s.) --E1(m.s.),Ubc5A(m.s.),murr1(m.s.):elongin C(m.s.):SOCS-1(m.s.):Cul-2(m.s.):Roc1(m.s.)--> RelA-p65(m.s.){ub}n
+p53(m.s.) + ubiquitin(h) --Ubc13(h)--> p53(m.s.){ub}
+RelA-p65(h) --> RelA-p35(h) + protein remnants
+RelA-p65(h) --> RelA-p35(h) + protein remnants
+CTGF(h) --> JNK(h){pT183}{pY185}
+CTGF(h) --> AKT-1(h){pT308}{pS473}
+GSK3beta(m.s.) + ATP --AKT(h)--> GSK3beta(m.s.){pS9} + ADP
+RelA-p65(h) + 2 ATP --IKK-gamma(m.s.)--> RelA-p65(h){pS468}{pS536} + 2 ADP
+RelA-p65(h) + 2 ATP --IKK-gamma(m.s.)--> RelA-p65(h){pS468}{pS536} + 2 ADP
+RelA-p65(h) + 2 ATP --IKK-gamma(m.s.)--> RelA-p65(h){pS468}{pS536} + 2 ADP
+RelA-p65(h) + 2 ATP --IKK-gamma(m.s.)--> RelA-p65(h){pS468}{pS536} + 2 ADP
+IKK-beta(m.s.) + ATP --TAK1(m.s.)--> IKK-beta(m.s.){p} + ADP
+IKK-beta(m.s.) + ATP --TAK1(m.s.)--> IKK-beta(m.s.){p} + ADP
+IKK-beta(m.s.) + ATP --TAK1(m.s.)--> IKK-beta(m.s.){p} + ADP
+IKK-beta(m.s.) + ATP --TAK1(m.s.)--> IKK-beta(m.s.){p} + ADP
+c-Jun(h) + ATP --JNK1(h)--> c-Jun(h){p} + ADP
+c-Jun(h) + ATP --JNK1(h)--> c-Jun(h){p} + ADP
+E1{ub} + Ubc5A --> E1 + Ubc5A{ub}
+p300(m.s.) + ATP --ERK2(m.s.){p}--> p300(m.s.){p} + ADP
+IKK-gamma(m) + n ubiquitin(m) --Ubc13(h),RIP2(m.s.)--> IKK-gamma(m){ub}n
+IKK-gamma(m) + n ubiquitin(m) --Ubc13(m)--> IKK-gamma(m){ub}n
+Hsp50(h) + ATP --IKK-beta-isoform1(h)--> Hsp50(h){p} + ADP
+Hsp50(h) + ATP --IKK-alpha(h)--> Hsp50(h){pS300} + ADP
+IkappaB-alpha(m.s.) + ATP --IKK-beta-isoform1(h)--> IkappaB-alpha(m.s.){p} + ADP
+RIP2(m) + n ubiquitin(m) --Ubc13(m)--> RIP2(m){ub}n
+Cul-1 --> Roc1
+GSK3beta(m.s.) + ATP --AKT-1-isoform1(h)--> GSK3beta(m.s.){pS} + ADP
+CBP --> RelA-p65
+GSK3beta(m.s.) + ATP --ERK(m.s.)--> GSK3beta(m.s.){p} + ADP
+Cdc25A(h) + ATP --Chk1-isoform1(h)--> Cdc25A(h){pS76} + ADP
+Skp2(h) + ATP --AKT-1(m.s.)--> Skp2(h){pS72} + ADP
+Skp2(h) + ATP --AKT-2(m)--> Skp2(h){pS72} + ADP
+Skp2(h) + ATP --CKI(h)--> Skp2(h){pS75} + ADP
+Skp2(h) + ATP --AKT-1-isoform1(h)--> Skp2(h){pT21} + ADP
+RelA-p65-isoform1(h){pS536} --Wip1(m.s.)--> RelA-p65-isoform1(h) + p
+c-Jun(h) + acetyl-CoA --p300(m.s.)--> c-Jun(h){aceK} + CoA
+c-Jun(h){aceK} --SIRT1(m.s.)--> c-Jun(h) + acetyl
+c-Jun(m) + acetyl-CoA --> c-Jun(m){aceK} + CoA
+c-Jun(m){aceK} --SIRT1(m.s.)--> c-Jun(m) + acetyl
+c-Jun(m){aceK} --SIRT1(m.s.)--> c-Jun(m) + acetyl
+c-Jun(m){aceK} --SIRT1(m.s.)--> c-Jun(m) + acetyl
+Dkk-1(h) --/ GSK3beta(h)
+Dkk-1(h) --> PKCalpha(h)
+RelA-p65(h) --> Wip1(h)
+PAK1(m.s.) + ATP --LKB1-isoform1(h)--> PAK1(m.s.){pT109} + ADP
+LKB1-isoform1(h){aceK48} --SIRT1-isoform1(m)--> LKB1-isoform1(h) + acetyl
+LKB1-isoform1(h){aceK48} --SIRT1(h)--> LKB1-isoform1(h) + acetyl
+Dvl-2(m) + n ubiquitin(m) --VHL(m.s.),elongin C(m.s.),Cul-2(m.s.):Roc1(m.s.):elongin B(m.s.),Ubc5A(h),E1(m.s.)--> Dvl-2(m){ub}n
+c-Myc(h) + n ubiquitin(h) --MULE-isoform1(h)--> c-Myc(h){ubK63}n
+IkappaB-alpha(m) + ATP --IKK-alpha(h)--> IkappaB-alpha(m){p} + ADP
+c-Jun + ATP --JNK1{pT183}{pY185}--> c-Jun{pS63}{pS73} + ADP
+c-Jun + ATP --JNK1{pT183}{pY185}--> c-Jun{pS63}{pS73} + ADP
+rictor-isoform1(m) + ATP --p70S6K1(h)--> rictor-isoform1(m){p} + ADP
+HIF-1alpha(h) --> IL-6(h)
+Syk(h) + 2 ubiquitin(h) --c-Cbl(h)--> Syk(h){ub(2)}
+HIP2(m.s.) + sumo1(m.s.) --Aos1-isoform1(h):SAE2-isoform1(h),Ubc9(m)--> HIP2(m.s.){sumoK14}
+Ubc13(h) + isg15(m) --ube2h(m),uba7(h)--> Ubc13(h){isgK92}
+Ubc13(h) + isg15(m) --uba7(h),ube2h(m)--> Ubc13(h){isgK92}
+Ubc9(m) + sumo1(m) --Aos1-isoform1(h):SAE2-isoform1(h)--> Ubc9(m){sumoK14}
+Ubc9(m) + sumo1(m) --Aos1(h):SAE2(h)--> Ubc9(m){sumoK14}
+PIAS1 --> Ubc9
+PIAS1 --> Ubc9
+RelA-p65-isoform1(h) --> IL-6(h)
+Merlin(h) --> ERK(h){p}
+Merlin(h) --> ERK(h){p}
+Merlin(h) --> ERK(h){p}
+Merlin(h) --> ERK(h){p}
+Merlin(h) --> ERK(h){p}
+Merlin(h) --> ERK(h){p}
+Merlin(h) --> JNK(h){p}
+Merlin(h) --> JNK(h){p}
+Merlin(h) --> JNK(h){p}
+Merlin(h) --> JNK(h){p}
+Merlin(h) --> JNK(h){p}
+Merlin(h) --> JNK(h){p}
+p38alpha(h) + acetyl-CoA --p/CAF(h)--> p38alpha(h){aceK152}
+p38alpha(h){aceK53} --HDAC3(h)--> p38alpha(h) + acetyl
+JNK1(m.s.) + acetyl-CoA --p/CAF(h)--> JNK1(m.s.){ace} + CoA
+ERK3(h) + ATP --pak2(m)--> ERK3(h){pS189} + ADP
+Rac1(m.s.) + sumo1(m.s.) --Aos1(m.s.):SAE2(m.s.),Ubc9(m.s.),PIAS2(m.s.)--> Rac1(m.s.){sumo}
+RelA-p65-isoform1(h) --> SIRT1(r)
+plk1(h) + ATP --PAK1(m.s.)--> plk1(h){p} + ADP
+ERK2(m.s.) + ATP --Raf(m.s.)--> ERK2(m.s.){p} + ADP
+plk1(m.s.) + ATP --MAPKAPK2(m.s.)--> plk1(m.s.){pS326} + ADP
+c-Jun(m.s.) + ATP --JNK1beta1(h)--> c-Jun(m.s.){p} + ADP
+TAK1(h){ub}n --USP4-isoform1(h)--> TAK1(h) + n ubiquitin(h)
+TDP43(h) --> SIRT1(h)
+FMRP(h) --> SIRT1(h)
+STAU1(h) --> SIRT1(h)
+Cdc25B(m.s.) + 2 ATP --JNK1(m.s.)--> Cdc25B(m.s.){pS101}{pS103} + 2 ADP
+H-Ras(h) --> JNK(h){p}
+CKII-beta(h) + ATP --CKII(h)--> CKII-beta(h){pS} + ADP
+TAB1(h) + NDP-Gly --OGT(h)--> TAB1(h){gly} + NMP
+ROMO1(h) --/ c-Myc(h)
+ROMO1(h) --/ c-Myc(h)
+ROMO1(h) --/ c-Myc(h)
+ROMO1(h) --> ERK(h){p}
+ROMO1(h) --> ERK(h){p}
+ROMO1(m.s.) --> AKT(h){p}
+RelA-p65-isoform1(h){aceK310} --SIRT1(h)--> RelA-p65-isoform1(h) + acetyl
+RelA-p65-isoform1(h){aceK310} --SIRT1(h)--> RelA-p65-isoform1(h) + acetyl
+RelA-p65-isoform1(h){aceK310} --SIRT2(h)--> RelA-p65-isoform1(h) + acetyl
+RelA-p65-isoform1(h){aceK310} --SIRT2(h)--> RelA-p65-isoform1(h) + acetyl
+RelA-p65(m){aceK310} --SIRT2(m)--> RelA-p65(m) + acetyl
+RelA-p65(m){aceK310} --SIRT2(m)--> RelA-p65(m) + acetyl
+RelA-p65(m){aceK310} --SIRT2(m)--> RelA-p65(m) + acetyl
+RelA-p65(m){aceK310} --SIRT2(m)--> RelA-p65(m) + acetyl
+Jak2(h) + ATP --CKII(h)--> Jak2(h){p} + ADP
+RSK2(m.s.) + ATP --FGFR-3(m.s.)--> RSK2(m.s.){pY707} + ADP
+pkmyt1(m.s.) + ATP --JNK3(h){p}--> pkmyt1(m.s.){p} + ADP
+TAK1(m) + n ubiquitin(m) --Ubc13(m)--> TAK1(m){ub}n
+AKT(h) + acetyl-CoA --p300(h)--> AKT(h){aceK} + CoA
+AKT(h){aceK} --SIRT1(h)--> AKT(h) + acetyl
+AKT(h){aceK} --SIRT1(h)--> AKT(h) + acetyl
+AKT(h){aceK} --SIRT1(h)--> AKT(h) + acetyl
+c-Myc(m.s.) + ATP --pak2(m.s.)--> c-Myc(m.s.){p} + ADP
+c-Myc(m.s.) + ATP --pak2(m.s.)--> c-Myc(m.s.){p} + ADP
+c-Myc(m.s.) + ATP --pak2(m.s.)--> c-Myc(m.s.){p} + ADP
+AKT-1(h) --26S proteasome(h)--> protein remnants
+AKT-1(m.s.) + ATP --rictor-isoform1(h)--> AKT-1(m.s.){pS473} + ADP
+RelA-p65(h) --> IL-6(h)
+OGT(h){ub} --BAP1(h):ASXL1(h)--> OGT(h) + ubiquitin(h)
+OGT(h) + ubiquitin(h) --> OGT(h){ub}
+CTGF(h) --> c-Myc(h)
+CTGF(h) --> c-Myc(h)
+CTGF(h) --> c-Myc(h)
+Chk1(m.s.) + ATP --p70S6K1(m.s.)--> Chk1(m.s.){pS280} + ADP
+Raf-1(h) + S-adenosylmethionine --SKB1(h)--> Raf-1(h){met} + S-adenosylhomocysteine
+A-Raf(h) + S-adenosylmethionine --SKB1(h)--> A-Raf(h){met} + S-adenosylhomocysteine
+H-Ras(m.s.) + n ubiquitin(m.s.) --Skp1(m.s.),beta-TrCP(m.s.),Roc1(m.s.),Cul-1(m.s.),Ubc5A(m.s.),E1(m.s.)--> H-Ras(m.s.){ub}n
+plk1(h) --26S proteasome(h)--> protein remnants
+JNK2(h) --> c-Myc(h)
+JNK2(h) --> c-Myc(h)
+JNK2(h) --> c-Myc(h)
+JNK2(h) --> c-Myc(h)
+JNK2(h) --> c-Myc(h)
+JNK2(h) --> c-Myc(h)
+Skp2(h) + n ubiquitin(h) --VHL(h)--> Skp2(h){ub}n
+CKII-beta(m.s.) + ATP --CKII-alpha(m.s.)--> CKII-beta(m.s.){p} + ADP
+AKT(m.s.) + n ubiquitin(m.s.) --Skp2(m.s.)--> AKT(m.s.){ub}n
+E-cadherin(h) --/ plk1(h)
+PTEN(h) --/ plk1(h)
+ErbB1(h) --> c-Myc(h)
+RelA-p65(m.s.) + ubiquitin(h) --GCN5-L(h),murr1(m.s.):Cul-2(m.s.)--> RelA-p65(m.s.){ub}
+RelA-p65(m.s.) + ubiquitin(h) --GCN5-L(h),murr1(m.s.):Cul-2(m.s.)--> RelA-p65(m.s.){ub}
+RelA-p65(m.s.) + ubiquitin(h) --GCN5-L(h),murr1(m.s.):Cul-2(m.s.)--> RelA-p65(m.s.){ub}
+RelA-p65(m.s.) + ubiquitin(h) --GCN5-L(h),murr1(m.s.):Cul-2(m.s.)--> RelA-p65(m.s.){ub}
+RelA-p65(m.s.) + acetyl-CoA --CBP(m.s.)--> RelA-p65(m.s.){aceK} + CoA
+RelA-p65(m.s.) + acetyl-CoA --CBP(m.s.)--> RelA-p65(m.s.){aceK} + CoA
+RelA-p65(m.s.) + acetyl-CoA --CBP(m.s.)--> RelA-p65(m.s.){aceK} + CoA
+RelA-p65(m.s.) + acetyl-CoA --CBP(m.s.)--> RelA-p65(m.s.){aceK} + CoA
+RelA-p65(m.s.) + acetyl-CoA --CBP(m.s.)--> RelA-p65(m.s.){aceK} + CoA
+RelA-p65(m.s.) + acetyl-CoA --CBP(m.s.)--> RelA-p65(m.s.){aceK} + CoA
+RelA-p65(m.s.) + acetyl-CoA --CBP(m.s.)--> RelA-p65(m.s.){aceK} + CoA
+RelA-p65(m.s.) + acetyl-CoA --CBP(m.s.)--> RelA-p65(m.s.){aceK} + CoA
+RelA-p65(m.s.) + acetyl-CoA --CBP(m.s.)--> RelA-p65(m.s.){aceK} + CoA
+p53(h) --> MKP-2(h)
+Chk1(h) + ATP --RSK(h)--> Chk1(h){pS280} + ADP
+RelA-p65(h){aceK310} --SIRT1-isoform1(h)--> RelA-p65(h) + acetyl
+RelA-p65(h) + 2 S-adenosylmethionine --SKB1(m.s.)--> RelA-p65(h){met(2)R30} + 2 S-adenosylhomocysteine
+RelA-p65(h) + 2 S-adenosylmethionine --SKB1(m.s.)--> RelA-p65(h){met(2)R30} + 2 S-adenosylhomocysteine
+RelA-p65(h) + 2 S-adenosylmethionine --SKB1(m.s.)--> RelA-p65(h){met(2)R30} + 2 S-adenosylhomocysteine
+RelA-p65(h) + 2 S-adenosylmethionine --SKB1(m.s.)--> RelA-p65(h){met(2)R30} + 2 S-adenosylhomocysteine
+RelA-p65(h) + 2 S-adenosylmethionine --SKB1(m.s.)--> RelA-p65(h){met(2)R30} + 2 S-adenosylhomocysteine
+RelA-p65-isoform1(h) + ATP --Cdk6(h)--> RelA-p65-isoform1(h){pS536} + ADP
+RelA-p65-isoform1(h) + ATP --Cdk6(h)--> RelA-p65-isoform1(h){pS536} + ADP
+RelA-p65(h) + ATP --Cdk6(m.s.)--> RelA-p65(h){pS536} + ADP
+RelA-p65(h) + ATP --Cdk6(m.s.)--> RelA-p65(h){pS536} + ADP
+RelA-p65(h) + ATP --Cdk6(m.s.)--> RelA-p65(h){pS536} + ADP
+RelA-p65(h) + ATP --Cdk6(m.s.)--> RelA-p65(h){pS536} + ADP
+RelA-p65(h) + ATP --Cdk6(m.s.)--> RelA-p65(h){pS536} + ADP
+RelA-p65(h) + ATP --Cdk6(m.s.)--> RelA-p65(h){pS536} + ADP
+RelA-p65(h) + ATP --Cdk6(m.s.)--> RelA-p65(h){pS536} + ADP
+RelA-p65(h) + ATP --Cdk6(m.s.)--> RelA-p65(h){pS536} + ADP
+RelA-p65-isoform1(h) + UDP-GlcNAc --OGT(m.s.)--> RelA-p65-isoform1(h){gly} + UDP
+c-Myc(h) + ubiquitin(h) --Skp2(m)--> c-Myc(h){ub}
+c-Myc(h) + ubiquitin(h) --Skp2(m)--> c-Myc(h){ub}
+c-Myc(h) + ubiquitin(h) --Skp2(m)--> c-Myc(h){ub}
+OGT(h) --/ E-cadherin(h)
+plk3(h) + ubiquitin(m.s.) --E1(rb),Ubc5B(rb),KLHL22(m.s.):CUL3(m.s.):Pbx1(m.s.)--> plk3(h){ub}
+plk1(h) + ubiquitin(m.s.) --E1(rb),Ubc5B(rb),KLHL22(m.s.):CUL3(m.s.):Pbx1(m.s.)--> plk1(h){ub}
+Pkm2(h) --> c-Myc(h)
+Roc1(h) --/ c-Myc(h)
+NBS1(h) + n ubiquitin(h) --Cul-1(h),Skp2(m.s.)--> NBS1(h){ub}n
+HAUSP-isoform1(h) + ATP --CKII-alpha(h):CKII-alpha2(h):CKII-beta(h)--> HAUSP-isoform1(h){pS18} + ADP
+RelA-p65(m.s.) + UDP-GlcNAc --OGT(m.s.)--> RelA-p65(m.s.){gly} + UDP
+RelA-p65(m.s.) + UDP-GlcNAc --OGT(m.s.)--> RelA-p65(m.s.){gly} + UDP
+RelA-p65(m.s.) + UDP-GlcNAc --OGT(m.s.)--> RelA-p65(m.s.){gly} + UDP
+RelA-p65(m.s.) + UDP-GlcNAc --OGT(m.s.)--> RelA-p65(m.s.){gly} + UDP
+PRK1(m.s.) + ATP --Cdk6(h)--> PRK1(m.s.){p} + ADP
+PRK1(m.s.) + ATP --Cdk6(h)--> PRK1(m.s.){p} + ADP
+Tip60(m.s.){ub}n --HAUSP-isoform1(h)--> Tip60(m.s.) + n ubiquitin(m.s.)
+RelA-p65(h) --> Pkm2(h)
+AP-4(m.s.) + n ubiquitin(m.s.) --E1(m.s.),Cdc34(m.s.),Skp1(m.s.):Cul-1(m.s.):Roc1(m.s.),beta-TrCP1(m.s.)--> AP-4(m.s.){ub}n
+AP-4(m.s.) + n ubiquitin(m.s.) --E1(m.s.),Cdc34(m.s.),Skp1(m.s.):Cul-1(m.s.):Roc1(m.s.),beta-TrCP1(m.s.)--> AP-4(m.s.){ub}n
+AP-4(m.s.) + n ubiquitin(m.s.) --E1(m.s.),Cdc34(m.s.),Skp1(m.s.):Cul-1(m.s.):Roc1(m.s.),beta-TrCP1(m.s.)--> AP-4(m.s.){ub}n
+AP-4(m.s.) + n ubiquitin(m.s.) --E1(m.s.),Cdc34(m.s.),Skp1(m.s.):Cul-1(m.s.):Roc1(m.s.),beta-TrCP1(m.s.)--> AP-4(m.s.){ub}n
+AP-4(h) --26S proteasome(h)--> protein remnants
+AP-4(h) --26S proteasome(h)--> protein remnants
+TCF-4(m.s.) + sumo1(m.s.) --Ubc9(m.s.)--> TCF-4(m.s.){sumo}
+TCF-4(m.s.) + sumo1(m.s.) --Ubc9(m.s.)--> TCF-4(m.s.){sumo}
+TCF-4(m.s.) + sumo1(m.s.) --Ubc9(m.s.)--> TCF-4(m.s.){sumo}
+CBP(m) + sumo1(m) --Ubc9(h)--> CBP(m){sumo}
+TCF-4(m.s.) + sumo1(m.s.) --Ubc9(m.s.){aceK65}--> TCF-4(m.s.){sumo}
+TCF-4(m.s.) + sumo1(m.s.) --Ubc9(m.s.){aceK65}--> TCF-4(m.s.){sumo}
+TCF-4(m.s.) + sumo1(m.s.) --Ubc9(m.s.){aceK65}--> TCF-4(m.s.){sumo}
+TCF-4(m.s.) + sumo1(m.s.) --Ubc9(h)--> TCF-4(m.s.){sumo}
+TCF-4(m.s.) + sumo1(m.s.) --Ubc9(h)--> TCF-4(m.s.){sumo}
+TCF-4(m.s.) + sumo1(m.s.) --Ubc9(h)--> TCF-4(m.s.){sumo}
+Ubc9(m.s.){aceK65} --SIRT1(m.s.)--> Ubc9(m.s.) + acetyl
+Ubc9(h){aceK} --SIRT1(h)--> Ubc9(h) + acetyl
+USP4(h) --> JNK(h){p}
+USP4(h) --> p38(h){p}
+RelA-p65(m){aceK310} --SIRT2-isoform2(m)--> RelA-p65(m) + acetyl
+RelA-p65(m){aceK310} --SIRT2-isoform2(m)--> RelA-p65(m) + acetyl
+RelA-p65(m){aceK310} --SIRT2-isoform2(m)--> RelA-p65(m) + acetyl
+RelA-p65(m){aceK310} --SIRT2-isoform2(m)--> RelA-p65(m) + acetyl
+RelA-p65(m){aceK310} --SIRT2-isoform2(m)--> RelA-p65(m) + acetyl
+RelA-p65(m){aceK310} --SIRT2-isoform2(m)--> RelA-p65(m) + acetyl
+RelA-p65(m){aceK310} --SIRT2-isoform2(m)--> RelA-p65(m) + acetyl
+RelA-p65(m){aceK310} --SIRT2-isoform2(m)--> RelA-p65(m) + acetyl
+RelA-p65(m){aceK310} --SIRT2-isoform2(m)--> RelA-p65(m) + acetyl
+c-Jun(m.s.) + ATP --ERK2(m.s.)--> c-Jun(m.s.){p} + ADP
+ASK1(h) + ATP --RSK2(h)--> ASK1(h){pS83} + ADP
+Hsp50(h) --> AKT(h)
+Cul-2(h) + Nedd8(h) --Dcun1d1(m.s.)--> Cul-2(h){nedd}
+RelA-p65(m.s.) + sumo3(m.s.) --PIAS1(m.s.)--> RelA-p65(m.s.){sumo3}
+RelA-p65(m.s.) + sumo3(m.s.) --PIAS1(m.s.)--> RelA-p65(m.s.){sumo3}
+RelA-p65(m.s.) + sumo3(m.s.) --PIAS1(m.s.)--> RelA-p65(m.s.){sumo3}
+RelA-p65(m.s.) + sumo3(m.s.) --PIAS1(m.s.)--> RelA-p65(m.s.){sumo3}
+RelA-p65(m.s.) + sumo3(m.s.) --PIAS1(m.s.)--> RelA-p65(m.s.){sumo3}
+RelA-p65(m.s.) + sumo3(m.s.) --PIAS1(m.s.)--> RelA-p65(m.s.){sumo3}
+RelA-p65(m.s.) + sumo3(m.s.) --PIAS1(m.s.)--> RelA-p65(m.s.){sumo3}
+RelA-p65(m.s.) + sumo3(m.s.) --PIAS1(m.s.)--> RelA-p65(m.s.){sumo3}
+RelA-p65(m.s.) + sumo3(m.s.) --PIAS1(m.s.)--> RelA-p65(m.s.){sumo3}
+RelA-p65(m.s.) + sumo3(m.s.) --PIAS1(m.s.)--> RelA-p65(m.s.){sumo3}
+RelA-p65-delta2(h) + n ubiquitin(h) --SOCS-1(h)--> RelA-p65-delta2(h){ub}n
+RelA-p65-delta2(h){ub}n --26S proteasome(h)--> RelA-p65-delta2(h) + n ubiquitin(h)
+VHL-isoform1(h):Cul-2(h) + Nedd8(h) --RP42(h)--> VHL-isoform1(h):Cul-2(h){nedd}
+c-Myc(m.s.) + ATP --Abl(m.s.)--> c-Myc(m.s.){pY74} + ADP
+c-Myc(m.s.) + ATP --Abl(m.s.)--> c-Myc(m.s.){pY74} + ADP
+CDP(h) --/ p300(h)
+RelA-p65-isoform1(h) + ubiquitin(h) --E1(m.s.),Cdc34(m.s.),ing4-isoform1(h)--> RelA-p65-isoform1(h){ub}
+c-Myc(h) --26S proteasome(h)--> protein remnants
+c-Myc(h) --26S proteasome(h)--> protein remnants
+c-Myc-isoform1(h) + n ubiquitin(h) --CHIP-isoform1(h)--> c-Myc-isoform1(h){ub}n
+c-Myc-isoform1(h){ub}n --26S proteasome(h)--> c-Myc-isoform1(h) + n ubiquitin(h)
+p300(h){aceK} --HDAC1(h)--> p300(h) + acetyl
+CKII-alpha(m.s.) + ATP --AKT-1(m.s.){p}--> CKII-alpha(m.s.){p} + ADP
+Wip1(h) --26S proteasome(h)--> protein remnants
+RelA-p65(m.s.) + ATP --CKI-gamma1-Isoform1L(h)--> RelA-p65(m.s.){pS536} + ADP
+RelA-p65(m.s.) + ATP --CKI-gamma1-Isoform1L(h)--> RelA-p65(m.s.){pS536} + ADP
+RelA-p65(m.s.) + ATP --CKI-gamma1-Isoform1L(h)--> RelA-p65(m.s.){pS536} + ADP
+RelA-p65(m.s.) + ATP --CKI-gamma1-Isoform1L(h)--> RelA-p65(m.s.){pS536} + ADP
+RelA-p65-isoform1(h) + ATP --CKI-gamma1-Isoform1L(h)--> RelA-p65-isoform1(h){pS536} + ADP
+RelA-p65(m.s.) + ubiquitin(m.s.) --Cul-2(m.s.)--> RelA-p65(m.s.){ub}
+RelA-p65(m.s.) + ubiquitin(m.s.) --Cul-2(m.s.)--> RelA-p65(m.s.){ub}
+RelA-p65(m.s.) + ubiquitin(m.s.) --Cul-2(m.s.)--> RelA-p65(m.s.){ub}
+RelA-p65(m.s.) + ubiquitin(m.s.) --Cul-2(m.s.)--> RelA-p65(m.s.){ub}
+RelA-p65(m.s.) + ubiquitin(m.s.) --Cul-2(m.s.)--> RelA-p65(m.s.){ub}
+RelA-p65(m.s.) + ubiquitin(m.s.) --murr1(m.s.)--> RelA-p65(m.s.){ub}
+RelA-p65(m.s.) + ubiquitin(m.s.) --murr1(m.s.)--> RelA-p65(m.s.){ub}
+RelA-p65(m.s.) + ubiquitin(m.s.) --murr1(m.s.)--> RelA-p65(m.s.){ub}
+RelA-p65(m.s.) + ubiquitin(m.s.) --murr1(m.s.)--> RelA-p65(m.s.){ub}
+RelA-p65(m.s.) + ubiquitin(m.s.) --murr1(m.s.)--> RelA-p65(m.s.){ub}
+AKT-1(m) + sumo1(m) --PIAS1(h)--> AKT-1(m){sumo}
+AKT-1(m) + sumo1(m) --PIAS1(h)--> AKT-1(m){sumo}
+TAK1(h) + ATP --FGFR-3(h)--> TAK1(h){pY} + ADP
+c-Jun(h) + ATP --GSK3beta(m.s.)--> c-Jun(h){pT239} + ADP
+c-Jun(h) + ATP --GSK3beta(m.s.)--> c-Jun(h){pT239} + ADP
+c-Jun(h) + ATP --GSK3beta(m.s.)--> c-Jun(h){pT239} + ADP
+SIRT1(h) + ATP --plk(h)--> SIRT1(h){p} + ADP
+TFII-I(h) + 2 ATP --plk(h)--> TFII-I(h){pS207}{pS210} + 2 ADP
+TFII-I(h) + 2 ATP --plk(h)--> TFII-I(h){pS207}{pS210} + 2 ADP
+TFII-I(h) + 2 ATP --plk(h)--> TFII-I(h){pS207}{pS210} + 2 ADP
+TFII-I(h) + 2 ATP --plk(h)--> TFII-I(h){pS207}{pS210} + 2 ADP
+TFII-I(h) + 2 ATP --plk(h)--> TFII-I(h){pS207}{pS210} + 2 ADP
+TFII-I(h) + 2 ATP --plk(h)--> TFII-I(h){pS207}{pS210} + 2 ADP
+TFII-I(h) + 2 ATP --plk(h)--> TFII-I(h){pS207}{pS210} + 2 ADP
+TFII-I(h) + 2 ATP --plk(h)--> TFII-I(h){pS207}{pS210} + 2 ADP
+TFII-I(h) + 2 ATP --plk(h)--> TFII-I(h){pS207}{pS210} + 2 ADP
+TFII-I(h) + 2 ATP --plk(h)--> TFII-I(h){pS207}{pS210} + 2 ADP
+TFII-I(h) + 2 ATP --plk(h)--> TFII-I(h){pS207}{pS210} + 2 ADP
+TFII-I(h) + 2 ATP --plk(h)--> TFII-I(h){pS207}{pS210} + 2 ADP
+TFII-I(h) + 2 ATP --plk(h)--> TFII-I(h){pS207}{pS210} + 2 ADP
+E1(h) + ATP --Syk(h)--> E1(h){pY106} + ADP
+TFII-I(h) + ATP --ERK1(h)--> TFII-I(h){pS210} + ADP
+TFII-I(h) + ATP --ERK1(h)--> TFII-I(h){pS210} + ADP
+TFII-I(h) + ATP --ERK1(h)--> TFII-I(h){pS210} + ADP
+TFII-I(h) + ATP --ERK1(h)--> TFII-I(h){pS210} + ADP
+TFII-I(h) + ATP --ERK1(h)--> TFII-I(h){pS210} + ADP
+ERK1(h){p} --Cdc25A(h)--> ERK1(h) + p
+Cdk1(h){pT14}{pY15} --Cdc25A(h)--> Cdk1(h) + 2 p
+Cdk1(h){pT14}{pY15} --Cdc25B(h)--> Cdk1(h) + 2 p
+Cdk1(h){pY15} --Cdc25C(h)--> Cdk1(h) + 2 p

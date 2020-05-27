@@ -1,0 +1,21 @@
+l1 l2 intersection percent_l1_intersection percent_l2_intersection
+sfa_DAC_L vs sfa_kmeansSS_L 228 11546 7 3.07 0.06
+sfa_DAC_L vs sfa_kmeansB_L 228 6721 47 20.61 0.7
+sfa_DAC_A vs sfa_kmeansSS_A 20647 18052 2967 14.37 16.44
+sfa_DAC_A vs sfa_kmeansB_A 20647 15972 2287 11.08 14.32
+boolnet_DAC_L vs boolnet_kmeansSS_L 31 44 24 77.42 54.55
+boolnet_DAC_L vs boolnet_kmeansDAC_L 31 44 24 77.42 54.55
+boolnet_DAC_L vs boolnet_kmeansB_L 31 49 29 93.55 59.18
+boolnet_DAC_A vs boolnet_kmeansSS_A 133 72 32 24.06 44.44
+boolnet_DAC_A vs boolnet_kmeansDAC_A 133 32 16 12.03 50
+boolnet_DAC_A vs boolnet_kmeansB_A 133 62 32 24.06 51.61
+sfa_kmeansSS_L vs sfa_kmeansB_L 11546 6721 5757 49.86 85.66
+sfa_kmeansSS_A vs sfa_kmeansB_A 18052 15972 11495 63.68 71.97
+boolnet_kmeansSS_L vs boolnet_kmeansDAC_L 44 44 44 100 100
+boolnet_kmeansSS_L vs boolnet_kmeansB_L 44 49 44 100 89.8
+boolnet_kmeansDAC_L vs boolnet_kmeansB_L 44 49 44 100 89.8
+boolnet_kmeansSS_A vs boolnet_kmeansDAC_A 72 32 32 44.44 100
+boolnet_kmeansSS_A vs boolnet_kmeansB_A 72 62 36 50 58.06
+boolnet_kmeansDAC_A vs boolnet_kmeansB_A 32 62 20 62.5 32.26
+sfa_DAC_L vs bn_DAC_L 228 9625 25 10.96 0.26
+sfa_DAC_A vs bn_DAC_A 20647 37012 7968 38.59 21.53

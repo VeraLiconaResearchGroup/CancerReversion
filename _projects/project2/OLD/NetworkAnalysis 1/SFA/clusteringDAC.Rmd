@@ -1,0 +1,45 @@
+---
+title: "DACclustering"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(readxl)
+DAC <- read_excel("DAC.xlsx",  col_types = c("text", "numeric", "numeric", "numeric", "numeric", "skip"))
+names(DAC)[4] <- "DAC"
+
+attrs <- read.delim("~/GitHub/gastonguay_compsysmed_labnotebook/_projects/project2/NetworkAnalysis/SFA/Identify Attractors/attractor_df.txt", header=FALSE, row.names=  1)
+MDA231 <- read.table("~/GitHub/gastonguay_compsysmed_labnotebook/_projects/project2/NetworkAnalysis/SFA/attractor_231.txt", quote="\"", comment.char="", row.names = 1)
+MCF10A <- read.table("~/GitHub/gastonguay_compsysmed_labnotebook/_projects/project2/NetworkAnalysis/SFA/attractor_10A.txt", quote="\"", comment.char="", row.names = 1)
+all <- cbind(MCF10A, MDA231, attrs)
+names(all) <- c("attractor_10A", "attractor_231", paste("attractor", seq(1:1000), sep = ""))
+```
+
+```{r}
+# Compute the DAC from 10A
+fun <- function(col) all[,col] - all$attractor_10A 
+
+DAC10A <- as.data.frame(rep(1,116))
+row.names(DAC10A) <- row.names(all)
+for( i in 1:length(names(all))){
+  DAC10A[,i] <- fun(i)
+}
+names(DAC10A) <- names(all)
+
+#discretize 
+DAC10A_discrete <- DAC10A
+for(i in 1 : length(names(DAC10A))){
+  for( n in 1 : nrow(DAC10A)){
+    if( DAC10A[n, i] > 0){
+      DAC10A_discrete <- 1
+    }else if(DAC10A[n,i] < 0){
+      DAC10A_discrete <- -1
+    }else{
+        DAC10A_discrete <- 0
+      }
+    }
+  }
+
+```
+

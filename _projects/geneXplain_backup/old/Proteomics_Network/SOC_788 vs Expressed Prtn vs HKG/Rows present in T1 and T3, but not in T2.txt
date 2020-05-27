@@ -1,0 +1,10 @@
+ID	Gene symbol ID	Gene symbol	Gene description
+ENSG00000111276	CDKN1B	CDKN1B	Cyclin-dependent kinase inhibitor 1B (Cyclin-dependent kinase inhibitor p27)(p27Kip1) [Source:UniProtKB/Swiss-Prot;Acc:P46527]
+ENSG00000111640	GAPDH	GAPDH	Glyceraldehyde-3-phosphate dehydrogenase (GAPDH)(EC 1.2.1.12) [Source:UniProtKB/Swiss-Prot;Acc:P04406]
+ENSG00000144381	HSPD1	HSPD1	60 kDa heat shock protein, mitochondrial Precursor (Heat shock protein 60)(HSP-60)(Hsp60)(60 kDa chaperonin)(Chaperonin 60)(CPN60)(Mitochondrial matrix protein P1)(P60 lymphocyte protein)(HuCHA60) [Source:UniProtKB/Swiss-Prot;Acc:P10809]
+ENSG00000145425	RPS3A	RPS3A	40S ribosomal protein S3a  [Source:UniProtKB/Swiss-Prot;Acc:P61247]
+ENSG00000160613	PCSK7	PCSK7	Proprotein convertase subtilisin/kexin type 7 Precursor (EC 3.4.21.-)(Proprotein convertase PC7)(Subtilisin/kexin-like protease PC7)(Prohormone convertase PC7)(hPC8)(PC8)(Lymphoma proprotein convertase) [Source:UniProtKB/Swiss-Prot;Acc:Q16549]
+ENSG00000170315	UBB	UBB	Ubiquitin  [Source:UniProtKB/Swiss-Prot;Acc:P62988]
+ENSG00000182944	EWSR1	EWSR1	RNA-binding protein EWS (EWS oncogene)(Ewing sarcoma breakpoint region 1 protein) [Source:UniProtKB/Swiss-Prot;Acc:Q01844]
+ENSG00000204525	HLA-C	HLA-B	HLA class I histocompatibility antigen, B-7 alpha chain Precursor (MHC class I antigen B*7) [Source:UniProtKB/Swiss-Prot;Acc:P01889]
+ENSG00000204842	ATXN2	ATXN2	Ataxin-2 (Spinocerebellar ataxia type 2 protein)(Trinucleotide repeat-containing gene 13 protein) [Source:UniProtKB/Swiss-Prot;Acc:Q99700]

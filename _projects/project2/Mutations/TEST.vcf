@@ -1,0 +1,7 @@
+##fileformat=VCFv4.2
+##assembly=ftp://ftp-trace.ncbi.nih.gov/1000genomes/ftp/release/sv/breakpoint_assemblies.fasta
+##ALT=<ID=DEL,Description="Deletion">
+##ALT=<ID=INS,Description="Insertion of novel sequence">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
+16	2297420	ABCA3	G	C	.	PASS	 TEST
+1	94037348	ABCA4	C	T	.	PASS	

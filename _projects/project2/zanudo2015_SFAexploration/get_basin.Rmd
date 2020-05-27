@@ -1,0 +1,179 @@
+---
+title: "Get_basin"
+author: "Maddie Gastonguay"
+date: "2/13/2020"
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+library(BoolNet)
+library(Matrix)
+library(prodlim)
+
+
+network <- loadNetwork("zanudo_boolean.bn")
+states <- read.table("initial_states.txt", row.names = 1, header = TRUE) %>%t() %>%as.data.frame() # Dataframe of initial states
+bn <- read.table('boolnet_attractors.txt', header = TRUE, row.names = 1) # Dataframe of attractors resulting from initial states
+df <- data.frame(row.names = names(states)) #Data frame of initial states and corresponding attractors
+```
+
+
+<!-- ```{r} -->
+<!-- count <- 0 -->
+<!-- for(is in 1:ncol(states)){ -->
+<!--   # start with one initial state -->
+<!--   state <- states[,is] -->
+<!--   names(state) <- rownames(states) -->
+<!--   # Find the attractor the initial state leads to -->
+<!--   attr<-getAttractors(network, type="synchronous",method="chosen", startStates=list(state),returnTable = TRUE) -->
+<!--   sink('basins_of_boolean/temp.txt') -->
+<!--   print(attr) -->
+<!--   sink(file = NULL) -->
+
+<!--   # Read in attractor and manipulate to get it as a vector -->
+<!--   lines <- readLines('basins_of_boolean/temp.txt') -->
+<!--   n = 1 -->
+<!--   l <- list() -->
+<!--   i = 1 -->
+<!--   for(line in lines){ -->
+<!--     if(substr(trimws(line), 1,1) == '1' | substr(trimws(line), 1,1) =='0'){ -->
+<!--       t <- unlist(strsplit(trimws(lines[n]), " "))[1] -->
+<!--       l[i] <- t -->
+<!--       i = i +1 -->
+<!--     } -->
+<!--     n = n + 1 -->
+<!--   } -->
+
+<!--   # Generate vec, a vector of the quasi-attractor -->
+<!--   if(length(l) == 1){ -->
+<!--     vec <- as.numeric(unlist(strsplit(as.character(l[1]), ""))) -->
+<!--   }else{# Need to process cyclic attractors -->
+<!--     vec <- c() -->
+<!--     for(j in 1:60){ -->
+<!--       temp <- c() -->
+<!--       for(k in 1:length(l)){ -->
+<!--         l2 <- as.numeric(unlist(strsplit(as.character(l[k]), ""))) -->
+<!--         temp <- c(temp, l2[j]) -->
+<!--       } -->
+<!--       if(length(unique(temp)) == 1){ -->
+<!--         vec <- c(vec, as.character(temp[1])) -->
+<!--       }else{ -->
+<!--         vec <- c(vec, 'X') -->
+<!--       } -->
+<!--     } -->
+
+<!--   # Find which attractor this corresponds to in boolnet attractors dataframe -->
+<!--   ind <- row.match(vec, bn) -->
+<!--   if(is.na(ind)) ind <- 'ERROR' -->
+<!--   df[is,'Attr'] <- ind -->
+<!--   count <- count + 1 -->
+<!--   if(count%%1000 == 0) print(count) -->
+<!--   } -->
+<!-- } -->
+
+<!-- ``` -->
+```{r}
+count <- 0
+is = 1
+for(is in 1:ncol(states)){
+  # start with one initial state
+  state <- states[,is]
+  names(state) <- rownames(states)
+  # Find the attractor the initial state leads to
+  attr<-getAttractors(network, type="synchronous",method="chosen", startStates=list(state),returnTable = TRUE)
+  seq <- getAttractorSequence(attr, 1)
+  # Generate vec, a vector of the quasi-attractor
+  if(nrow(seq) == 1){
+    vec <- as.numeric(seq[1,])
+  }else{# Need to process cyclic attractors
+    vec <- c()
+    for(j in 1:ncol(seq)){
+      if(length(unique(seq[,j])) == 1){
+        vec <- c(vec, as.character(seq[1,j]))
+      }else{
+        vec <- c(vec, 'X')
+      }
+    }
+  }
+  # Find which attractor this corresponds to in boolnet attractors dataframe
+  ind <- row.match(vec, bn)
+  df[is,'Attr'] <- ind
+  count <- count + 1
+  if(count%%1000 == 0) print(count)
+  
+}
+```
+
+```{r}
+for(i in 1:877){
+  if(!( i %in% df$Attr)){
+    print(i)
+  }
+}
+```
+
+
+```{r}
+#attr3<-getAttractors(network, type="synchronous",method="chosen", startStates=states,returnTable = TRUE)
+iss <- states %>% t() %>% as.data.frame()
+iss[,'name'] <- row.names(iss)
+#final_df <- data.frame(row.names = names(states)) #Data frame of initial states and corresponding attractors
+count = 0
+
+sink(file = '100000_today.txt', type = 'output')
+attr3
+sink(file = NULL)
+
+for(i in 1:877){
+  att <- getBasinOfAttraction(attr3, i)
+  att2 <- att[,grep('initialState', names(att))]
+  names(att2) <- names(iss)[1:(ncol(iss)-1)]
+  d <- inner_join(iss,att2)
+  final_df[d$name,"Attr"] <- i
+  iss <- iss[!(row.names(iss) %in% d$name),]
+  count = count + 1
+  if(count%%100) print(count)
+}
+
+# write.table(final_df, 'is_to_attr_2.txt', quote = FALSE, row.names = TRUE)
+
+
+final_df[,"is"] <-row.names(final_df)
+final_df <- final_df[,c(2,1)]
+
+ref <- final_df %>% filter(final_df$Attr == 195 | final_df$Attr == 507 | final_df$Attr == 284)
+ref$label <- ifelse(ref$Attr == 195, "Apoptosis", ifelse(ref$Attr == 507, "Leukemia1", "Leukemia2"))
+ref$label2[ref$label == 'Apoptosis'] <- paste("Apoptosis", 1:1396, sep = "_")
+ref$label2[ref$label == 'Leukemia1'] <- paste("Leukemia1", 1:11, sep = "_")
+ref$label2[ref$label == 'Leukemia2'] <- paste("Leukemia2", 1:82, sep = "_")
+names(ref)[1] <- c("Initial_state")
+write.table(ref, 'is_to_A_L_inBN.txt', quote = FALSE, row.names = FALSE)
+attr_count <- as.data.frame(table(final_df$Attr))
+names(attr_count) <- c('Attractor', "Number of Initial States")
+
+# Number of sfa apoptosis attractors: 1396
+attr_count %>% filter(Attractor == 195) %>% select(`Number of Initial States`)
+# Number of sfa lekemia1 attractors: 11
+attr_count %>% filter(Attractor == 507) %>% select(`Number of Initial States`)
+# Number of sfa lekemia2 attractors: 82
+attr_count %>% filter(Attractor == 284) %>% select(`Number of Initial States`)
+
+
+```
+
+```{r}
+set.seed(3)
+samp <- sample(attr_count[195, 2], 10)
+apopdf <- final_df[final_df$Attr == 195,]
+apop <- apopdf$name[samp]
+s <- states %>% t() %>% as.data.frame()
+row.names(s)[row.names(s) %in% apop] <- paste('Apoptosis', 1:10)
+row.names(s[apop,]) <- paste('Apoptosis', 1:10)
+
+apop
+row.names(s)[]
+
+```
+
+

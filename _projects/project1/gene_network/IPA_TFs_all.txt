@@ -1,0 +1,141 @@
+© 2000-2019 QIAGEN. All rights reserved.
+
+Upstream Regulator	Expr Log Ratio	Molecule Type	Predicted Activation State	Activation z-score	Flags	p-value of overlap	Target molecules in dataset	Mechanistic Network	
+TP53	1.816	transcription regulator	Inhibited	-2.131	 	2.02E-16	ANXA1,AURKA,BRCA1,BUB1,CAV1,CCNA2,CDC20,CDK1,CDK2,CHUK,EGFR,HTT,MAD2L1,MOCOS,NDC80,PPM1D,PTPN11,RRM2B,TGFA,THBS1,TOP2A,TP53,TPX2	25 (3)
+E2F4	 	transcription regulator	 	 	 	1.52E-11	BRCA1,CCNA2,CDK1,CDK2,MAD2L1,NDC80,PRKDC,PTTG1,RB1,TOP2A,TP53	 
+E2F1	 	transcription regulator	 	-0.747	 	1.39E-10	BRCA1,CCNA2,CDC20,CDK1,ICAM1,NDC80,PRKDC,RB1,THBS1,TOP2A,TP53	26 (3)
+FOXM1	 	transcription regulator	 	1.756	 	3.07E-10	CAV1,CCNA2,CDC20,CDK1,CDK2,MAPK8,PTTG1,STAT3	 
+SP1	 	transcription regulator	 	0.254	 	4.78E-09	CAV1,CDK1,CSNK2A1,EGFR,FN1,HDAC1,NFKB1,PRKCA,PTTG1,RB1,TP53	 
+E2F3	 	transcription regulator	 	1.673	 	7.49E-09	CCNA2,CDK1,HMGB2,MAD2L1,PTTG1,RB1,THBS1,TPX2	 
+MYBL2	 	transcription regulator	 	1.982	bias	5.69E-08	AURKA,BUB1,CCNA2,CDK1	 
+TP63	 	transcription regulator	 	0.896	 	1.75E-07	BRCA1,CCNA2,CDK1,EGFR,FN1,HMGA2,MAD2L1,SMAD2,THBS1	 
+ETS1	 	transcription regulator	 	 	 	3.82E-07	CDK2,CHUK,FN1,PML,SCAMP1,TGFA	 
+KLF17	 	transcription regulator	 	 	 	9.78E-07	FN1,RB1,TP53	 
+HIF1A	 	transcription regulator	 	-0.140	 	1.38E-06	AURKA,CAV1,EGFR,FN1,HUWE1,ITGA5,PRKCA,THBS1	27 (3)
+KDM5B	 	transcription regulator	 	-1.677	 	2.31E-06	AURKA,BRCA1,CAV1,CDK1,NDC80,TOP2A	 
+SPDEF	 	transcription regulator	 	1.000	 	2.43E-06	COL13A1,EGFR,ITGA5,PRKCA,SMAD2	 
+RBL1	 	transcription regulator	 	 	 	3.36E-06	CDK1,RB1,THBS1,TP53	 
+NFYB	 	transcription regulator	 	 	 	1.74E-05	CDK1,PTTG1,TOP2A	 
+CTNNB1	 	transcription regulator	 	1.432	 	3.44E-05	AURKA,EGFR,FN1,SRPK1,STAT3,TP53	 
+ATF3	 	transcription regulator	 	 	 	1.68E-04	AURKA,CDK1,TP53	 
+SMARCB1	 	transcription regulator	 	 	 	1.68E-04	AURKA,CCNA2,TP53	12 (5)
+SF1	 	transcription regulator	 	 	 	2.02E-04	FN1,ICAM1	 
+ETV5	 	transcription regulator	 	 	 	3.22E-04	FN1,ICAM1,ITGA5	 
+RB1	-1.378	transcription regulator	 	 	 	3.38E-04	BRCA1,CCNA2,RB1,TP53	 
+HEXIM1	 	transcription regulator	 	 	 	3.76E-04	ANXA1,TP53	 
+GABPA	 	transcription regulator	 	 	 	4.82E-04	AURKA,BRCA1	 
+PCGF2	 	transcription regulator	 	 	 	4.82E-04	NFKB1,TP53	 
+RELA	 	transcription regulator	 	 	 	4.89E-04	CAV1,FN1,ICAM1,PPM1D,TP53	12 (5)
+ING1	 	transcription regulator	 	 	 	6.01E-04	JAK2,TP53	 
+MYC	 	transcription regulator	 	0.555	 	6.33E-04	CAV1,PIAS1,PIAS3,PIAS4,RRM2B,TP53	 
+EGR1	 	transcription regulator	 	 	 	7.10E-04	CAV1,FN1,THBS1	 
+SIRT1	 	transcription regulator	 	 	 	7.10E-04	EP300,FN1,TP53	 
+SRA1	 	transcription regulator	 	 	 	8.78E-04	CAV1,THBS1	 
+PHB2	 	transcription regulator	 	 	 	8.78E-04	SOCS5,STAT3	 
+BMI1	 	transcription regulator	 	 	 	1.01E-03	AURKA,NFKB1,TP53	 
+LYL1	 	transcription regulator	 	 	 	1.03E-03	BRCA1,NFKB1	 
+SP4	 	transcription regulator	 	 	 	1.39E-03	EGFR,NFKB1	 
+SMARCE1	 	transcription regulator	 	 	 	1.39E-03	BRCA1,CDK1	 
+CDKN2A	 	transcription regulator	 	 	 	1.52E-03	CCNA2,RB1,TP53	26 (5)
+PAX5	 	transcription regulator	 	 	 	1.58E-03	FN1,TP53	6 (2)
+BRCA1	2.812	transcription regulator	 	 	 	1.82E-03	BRCA1,EGFR,HMGA2	 
+JUN	 	transcription regulator	 	 	 	1.99E-03	CDK1,ICAM1,PPM1D,TP53	8 (3)
+HDAC1	1.204	transcription regulator	 	 	 	2.85E-03	CDK1,CDK2,TOP2A	 
+TP73	 	transcription regulator	 	1.983	 	3.19E-03	CDK1,IL4R,THBS1,TP53	 
+FOXP3	 	transcription regulator	 	 	 	3.57E-03	ANXA1,BRCA1	 
+ZSCAN1	 	transcription regulator	 	 	 	3.72E-03	PRKCA	 
+TOX3	 	transcription regulator	 	 	 	3.72E-03	BRCA1	 
+ZGPAT	 	transcription regulator	 	 	 	3.72E-03	EGFR	 
+UBN1	 	transcription regulator	 	 	 	3.72E-03	CCNA2	 
+GTF2F2	 	transcription regulator	 	 	 	3.72E-03	TBP	 
+E4F1	 	transcription regulator	 	 	 	3.72E-03	CCNA2	 
+BRCA2	 	transcription regulator	 	 	 	3.72E-03	TP53	 
+GTF2E1	 	transcription regulator	 	 	 	3.72E-03	TBP	 
+CITED1	 	transcription regulator	 	 	 	3.72E-03	TGFA	 
+MEOX2	 	transcription regulator	 	 	 	3.72E-03	LRP1	 
+GPBP1	 	transcription regulator	 	 	 	3.72E-03	TOP2A	 
+GTF2F1	 	transcription regulator	 	 	 	3.72E-03	TBP	 
+PRDM5	 	transcription regulator	 	 	 	4.18E-03	PIAS3,PML,TP53	 
+TFAP2C	 	transcription regulator	 	 	 	4.18E-03	EGFR,TGFA	 
+ELK1	 	transcription regulator	 	 	 	4.18E-03	PRKCA,THBS1	 
+VHL	 	transcription regulator	 	 	 	4.50E-03	MAD2L1,TGFA	 
+SMAD2	-1.219	transcription regulator	 	 	 	4.50E-03	FN1,SMAD2	 
+EPAS1	 	transcription regulator	 	 	 	4.59E-03	CAV1,EGFR,PRKCA	 
+HMGA1	 	transcription regulator	 	 	 	5.18E-03	CAV1,STAT3	 
+STAT3	1.167	transcription regulator	 	1.004	 	5.50E-03	FN1,JAK2,PTTG1,STAT3	 
+NFKB1	-1.092	transcription regulator	 	 	 	5.50E-03	EGFR,NFKB1,TP53	 
+STAT6	 	transcription regulator	 	 	 	5.54E-03	CDK2,JAK2	 
+ATF6	 	transcription regulator	 	 	 	5.54E-03	AURKA,BUB1	 
+MECP2	 	transcription regulator	 	 	 	5.54E-03	ANXA1,BRCA1	 
+NCOA3	 	transcription regulator	 	 	 	6.29E-03	CCNA2,CDK2	 
+UXT	 	transcription regulator	 	 	 	6.29E-03	BUB1,CCNA2	 
+MYCN	 	transcription regulator	 	 	 	6.29E-03	EGFR,TP53	 
+MITF	 	transcription regulator	 	 	 	7.23E-03	BRCA1,TP53,TPX2	 
+NFX1	 	transcription regulator	 	 	 	7.42E-03	NFKB1	 
+ZBTB49	 	transcription regulator	 	 	 	7.42E-03	RB1	 
+HUWE1	1.740	transcription regulator	 	 	 	7.42E-03	TP53	 
+GTF2H1	 	transcription regulator	 	 	 	7.42E-03	TBP	 
+BCLAF1	 	transcription regulator	 	 	 	7.42E-03	TP53	 
+ZNF350	 	transcription regulator	 	 	 	7.42E-03	HMGA2	 
+MED6	 	transcription regulator	 	 	 	7.42E-03	AURKA	 
+TCF7L2	 	transcription regulator	 	 	 	8.34E-03	ANXA1,EGFR	 
+CCND1	 	transcription regulator	 	 	 	8.44E-03	AURKA,CDK2,TP53,TPX2	 
+NUPR1	 	transcription regulator	 	-1.342	 	1.03E-02	AURKA,BRCA1,BUB1,CCNA2,CHUK,PRKACA	 
+YEATS4	 	transcription regulator	 	 	 	1.11E-02	TP53	 
+MDM2	 	transcription regulator	 	 	 	1.11E-02	THBS1,TP53	 
+TAF4	 	transcription regulator	 	 	 	1.11E-02	TBP	 
+AJUBA	 	transcription regulator	 	 	 	1.11E-02	BUB1	 
+TRIM24	 	transcription regulator	 	 	 	1.11E-02	TP53	 
+GTF2I	 	transcription regulator	 	 	 	1.11E-02	THBS1	 
+CREG1	 	transcription regulator	 	 	 	1.11E-02	CCNA2	 
+HDAC8	 	transcription regulator	 	 	 	1.11E-02	TP53	 
+RUNX1	 	transcription regulator	 	 	 	1.17E-02	EP300,TP53	 
+NFE2L2	 	transcription regulator	 	 	 	1.43E-02	BRCA1,SHC1	 
+GMNN	 	transcription regulator	 	 	 	1.48E-02	TP53	 
+GABPB1	 	transcription regulator	 	 	 	1.48E-02	BRCA1	 
+HOXA5	 	transcription regulator	 	 	 	1.48E-02	TP53	 
+BARD1	 	transcription regulator	 	 	 	1.48E-02	BRCA1	 
+ILF2	 	transcription regulator	 	 	 	1.48E-02	EGFR	 
+HINFP	 	transcription regulator	 	 	 	1.84E-02	PRKDC	 
+HIF3A	 	transcription regulator	 	 	 	1.84E-02	STAT3	 
+NFYC	 	transcription regulator	 	 	 	1.84E-02	PTTG1	 
+CALR	 	transcription regulator	 	 	 	1.84E-02	FN1	 
+URI1	 	transcription regulator	 	 	 	1.84E-02	CDK1	 
+CREB3	 	transcription regulator	 	 	 	1.84E-02	ANXA1	 
+NFIC	 	transcription regulator	 	 	 	1.84E-02	TP53	 
+BACH2	 	transcription regulator	 	 	 	1.84E-02	TP53	 
+NEUROG1	 	transcription regulator	 	 	 	2.10E-02	FN1,THBS1	 
+NOTCH1	 	transcription regulator	 	 	 	2.16E-02	EGFR,TP53	 
+ZNF148	 	transcription regulator	 	 	 	2.21E-02	FN1	 
+KEAP1	 	transcription regulator	 	 	 	2.21E-02	TOP2A	 
+SMAD5	 	transcription regulator	 	 	 	2.21E-02	ICAM1	 
+MEF2D	 	transcription regulator	 	 	 	2.21E-02	FN1	 
+CREB1	 	transcription regulator	 	 	 	2.23E-02	AURKA,FN1	 
+BCL6	 	transcription regulator	 	 	 	2.30E-02	NFKB1,TP53	 
+POU2F2	 	transcription regulator	 	 	 	2.44E-02	MOCOS,STAT3	 
+E2F7	 	transcription regulator	 	 	 	2.57E-02	CCNA2	 
+SMARCA1	 	transcription regulator	 	 	 	2.57E-02	TP53	 
+HEY1	 	transcription regulator	 	 	 	2.57E-02	TP53	 
+RNF2	 	transcription regulator	 	 	 	2.57E-02	TP53	 
+SMARCA4	 	transcription regulator	 	 	 	2.60E-02	FN1,HMGA2,ICAM1,ITGA5,TEC	 
+EZH2	 	transcription regulator	 	 	 	2.63E-02	EGFR,EP300,TP53	 
+SOX11	 	transcription regulator	 	 	 	2.80E-02	CAV1,SOCS5	 
+E2F8	 	transcription regulator	 	 	 	2.93E-02	CCNA2	 
+TFDP1	 	transcription regulator	 	 	 	2.93E-02	CDK1	 
+PML	-1.122	transcription regulator	 	 	 	2.93E-02	EGFR	 
+MZF1	 	transcription regulator	 	 	 	2.93E-02	PRKCA	 
+BTG2	 	transcription regulator	 	 	 	2.93E-02	BRCA1	 
+PAX8	 	transcription regulator	 	 	 	3.30E-02	CCNA2	 
+ZBTB17	 	transcription regulator	 	 	 	3.30E-02	RRM2B	 
+TFAP4	 	transcription regulator	 	 	 	3.66E-02	CDK2	 
+BCL6B	 	transcription regulator	 	 	 	3.66E-02	TP53	 
+FOXC2	 	transcription regulator	 	 	 	3.66E-02	FN1	 
+TAL1	 	transcription regulator	 	 	 	3.85E-02	BUB1,ICAM1,NFKB1	 
+SMAD1	 	transcription regulator	 	 	 	4.01E-02	ICAM1	 
+ILF3	 	transcription regulator	 	 	 	4.01E-02	EGFR	 
+FOXO1	 	transcription regulator	 	 	 	4.25E-02	CDK1,THBS1	 
+NOTCH2	 	transcription regulator	 	 	 	4.37E-02	TP53	 
+PSMD10	 	transcription regulator	 	 	 	4.37E-02	ICAM1	 
+SREBF2	 	transcription regulator	 	 	 	4.37E-02	LRP1	 
+PTTG1	3.501	transcription regulator	 	 	 	4.73E-02	CCNA2	 
+SP3	 	transcription regulator	 	 	 	4.78E-02	EGFR,NFKB1	 

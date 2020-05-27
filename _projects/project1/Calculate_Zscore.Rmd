@@ -1,0 +1,38 @@
+---
+title: "Zscore calculation"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+HI!
+
+```{r cars}
+data2 <- read_excel("data2.xlsx")
+expressed_openregions_6784 <- read_delim("GitHub/gastonguay_compsysmed_labnotebook/_projects/project1/expressed_openregions_6784.txt",
++     "\t", escape_double = FALSE, trim_ws = TRUE)
+df1<-data.frame(data2[data2$Gene_Symbol %in% expressed_openregions_6784$`Gene symbol ID`,])
+```
+
+#calculate standard deviations of the expression of each gene in MCF10A
+```{r}
+
+
+df1 <- read.csv("231_expressed_openchromatin_6783.csv")
+#Create data table with only normalized data for MCF10a
+df <- df1[,c(3,21:24)]
+
+df$SD<- apply(df[,-1], 1, sd)
+df$mean <- df1$MCF10A.mean
+df1$sd_mcf10a <- df$SD
+
+df1$zscore <- (df1$MDA_MB.231.mean-df1$MCF10A.mean)/df1$sd_mcf10a
+
+# write.csv(df1, "231_expressed_openchromatin_zscore_6783.csv", row.names=FALSE)
+write.table(df1, '231_expressed_openchromatin_zscore_6783.txt' ,row.names=FALSE,sep="\t")
+
+```

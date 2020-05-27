@@ -1,0 +1,112 @@
+---
+title: "Comparison of ReadoutNodes"
+author: "Maddie"
+date: "7/23/2019"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library("ggplot2")
+library(readxl)
+DAC <- read_excel("DAC.xlsx")
+names(DAC)[4] <- "DAC"
+```
+
+```{r}
+DAC$Threshold0.4 <- "y"
+n <- 0
+for( i in 1:nrow(DAC)){
+  if(DAC[i,4] >= .4){
+    DAC[i, 6] <- "RON"
+    n <- n + 1
+  }else if(DAC[i,4] <= -.4){
+    DAC[i, 6] <- "RON"
+    n <- n + 1    
+  }else{
+    DAC[i, 6] <- "Not RON"
+  }
+}
+n
+# 103 Possible RONs
+ggplot(DAC, aes(DAC, fill = Threshold0.4)) + geom_histogram(binwidth = .025) + xlab("Direction of Activity Change (10A - 231)") + ggtitle("Identify Readouts Based on Direction of Activity Change Threshold of 0.4")
+```
+
+```{r}
+DAC$Threshold0.5 <- "y"
+m <- 0
+for( i in 1:nrow(DAC)){
+  if(DAC[i,4] >= .5){
+    DAC[i, 7] <- "RON"
+    m <- m + 1
+  }else if(DAC[i,4] <= -.5){
+    DAC[i, 7] <- "RON"
+    m <- m + 1
+  }else{
+    DAC[i, 7] <- "Not RON"
+  }
+}
+m
+# 52 Possible RONs
+ggplot(DAC, aes(DAC, fill = Threshold0.5)) + geom_histogram(binwidth = .025) + xlab("Direction of Activity Change (10A - 231)") + ggtitle("Identify Readouts Based on Direction of Activity Change Threshold of 0.5")
+```
+
+```{r}
+DAC$SignThreshold <- "0"
+
+j <- 0
+for( i in 1:nrow(DAC)){
+  if((DAC[i,2] > 0) & (DAC[i, 3] <0)){
+    DAC[i, 8] <- "RON"
+    j<- j+1
+  }else if((DAC[i,2] < 0) & (DAC[i, 3] > 0)){
+    DAC[i, 8] <- "RON" 
+    j <- j + 1
+  }else{
+    DAC[i, 8] <- "Not RON"
+  }
+}
+j
+#35 possible RONs
+ggplot(DAC, aes(DAC, fill = SignThreshold)) + geom_histogram(binwidth = .025) + xlab("Direction of Activity Change (10A - 231)") + ggtitle("Identify Readouts Based on Positive Compared to Negative Numbers")
+```
+
+```{r}
+DAC$Threshold0.45 <- "y"
+l <- 0
+for( i in 1:nrow(DAC)){
+  if(DAC[i,4] >= .45){
+    DAC[i, 9] <- "RON"
+    l <- l + 1
+  }else if(DAC[i,4] <= -.45){
+    DAC[i, 9] <- "RON"
+    l <- l + 1    
+  }else{
+    DAC[i, 9] <- "Not RON"
+  }
+}
+l
+# 86 Possible RONs
+ggplot(DAC, aes(DAC, fill = Threshold0.45)) + geom_histogram(binwidth = .025) + xlab("Direction of Activity Change (10A - 231)") + ggtitle("Identify Readouts Based on Direction of Activity Change Threshold of 0.45")
+```
+
+```{r}
+l <- 0
+DAC$FC_RON <- "nada"
+for(i in 1:nrow(DAC)){
+  if(DAC[i,5] >= 2){
+    DAC[i, 10] <- "RON"
+    l <- l + 1
+  }else if(DAC[i,5] <= -2){
+    DAC[i, 10] <- "RON"
+    l <- l + 1    
+  }else{
+    DAC[i, 10] <- "Not RON"
+  }
+}
+l
+names(DAC)[5] <- "Fold_Change"
+# 86 Possible RONs
+ggplot(DAC, aes(Fold_Change, fill = FC_RON)) + geom_histogram(binwidth = .025) + xlab("Direction of Activity Change (10A - 231)") + ggtitle("Identify Readouts Based on Direction of Activity Change Threshold of 0.45")
+```
+

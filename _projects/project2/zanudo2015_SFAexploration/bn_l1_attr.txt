@@ -1,0 +1,2 @@
+name a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+leukemia1 1 0 0 0 0 0 0 NaN 1 0 1 0 1 1 1 1 0 1 1 1 1 0 1 0 0 0 1 1 1 1 1 1 1 1 0 1 1 1 1 0 1 1 1 1 1 0 1 1 1 NaN 1 1 0 0 1 1 0 0 0 0

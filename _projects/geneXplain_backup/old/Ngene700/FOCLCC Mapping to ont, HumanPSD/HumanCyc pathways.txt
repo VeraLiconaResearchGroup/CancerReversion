@@ -1,0 +1,2 @@
+ID	Title	Number of hits	Group size	Expected hits	P-value	Adjusted P-value	Hits	Hit names
+pathway69281	choline biosynthesis III	1	9	0.02054794520547945	0.020454011741702176	0.0818160469668087	["ENSG00000129219"]	["PLD2"]

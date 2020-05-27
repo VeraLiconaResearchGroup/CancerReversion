@@ -1,0 +1,1 @@
+ID	UniProt ID	Average Intensity	Gene symbol	Gene description

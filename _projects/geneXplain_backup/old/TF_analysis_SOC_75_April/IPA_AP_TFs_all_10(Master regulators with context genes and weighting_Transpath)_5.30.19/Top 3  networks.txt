@@ -1,0 +1,34 @@
+ID	Molecule name	Role
+MO000004672	ERK1(h)	network element
+MO000004677	ERK2(h)	network element
+MO000007821	JNK1(h)	network element
+MO000009386	MEK1(h)	network element
+MO000016989	GSK3beta(h)	network element
+MO000019262	Syk(h)	network element
+MO000019363	RelA-p65-isoform1(h)	hit
+MO000019469	c-Jun(h)	hit
+MO000019613	c-Myc-isoform1(h)	hit
+MO000019622	TFII-I(h)	hit
+MO000019948	E1(h)	network element
+MO000021172	Raf-1(h)	network element
+MO000024660	AP-4(h)	hit
+MO000025736	RelA-p65-delta(h)	hit
+MO000027279	c-Myc-isoform2(h)	hit
+MO000031983	c-Met(h)	master
+MO000036634	MSK1(h)	network element
+MO000054154	AKT-1(h){pS473}	network element
+MO000056483	c-Myc(h)	hit
+MO000057454	MSK1-isoform1(h)	network element
+MO000058322	c-Jun(h)	hit
+MO000058786	SKAP55(h)	master
+MO000061133	WDR77(h)	master
+MO000064551	SKB1(h)	network element
+MO000079319	RelA-p65(h)	hit
+MO000079350	RelA-p65-delta2(h)	hit
+MO000083183	TFII-I-isoform2(h)	hit
+MO000083184	TFII-I-isoform1(h)	hit
+MO000083186	TFII-I-isoform3(h)	hit
+MO000083187	TFII-I-isoform4(h)	hit
+MO000129437	RelA-p35(h)	hit
+MO000130269	A-Raf(h)	network element
+MO000257758	RelA-p65-isoform4(h)	hit

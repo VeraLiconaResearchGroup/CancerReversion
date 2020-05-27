@@ -1,0 +1,1236 @@
+Attractor 1 is a simple attractor consisting of 1 state(s) and has a basin of 8 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110110000001111011110010000001001100111010101010101101001100   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 2 is a simple attractor consisting of 1 state(s) and has a basin of 39 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 100000001010111101111010001111111111111011111011101100100010   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 3 is a simple attractor consisting of 1 state(s) and has a basin of 68 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110110001011111101110010001101011110111011101010101100101010   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 4 is a simple attractor consisting of 1 state(s) and has a basin of 61 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 100000001010111101111010001111111101111011111011101100100110   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 5 is a simple attractor consisting of 1 state(s) and has a basin of 18 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111000101110010110010000001001110111010000010101101001011   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 6 is a simple attractor consisting of 1 state(s) and has a basin of 41 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111101111110100110110001111011101011011000001101100100101   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 7 is a simple attractor consisting of 1 state(s) and has a basin of 17 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110110001011111101110010001101011110111011101010101100101011   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 8 is a simple attractor consisting of 1 state(s) and has a basin of 79 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111101111110100110110001101011100011011000000101100101101   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 9 is a simple attractor consisting of 1 state(s) and has a basin of 39 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110110001011111101110010001101011100111011101010101100101110   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 10 is a simple attractor consisting of 1 state(s) and has a basin of 36 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111001111110100110010001111011111011011000001101100100001   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 11 is a simple attractor consisting of 1 state(s) and has a basin of 38 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111001111110100110010001101011110011011000000101100101001   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 12 is a simple attractor consisting of 1 state(s) and has a basin of 94 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 100000001010111101111010001111111111111011111011101100100011   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 13 is a simple attractor consisting of 1 state(s) and has a basin of 45 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110110000001111011110010000001001100111010101010101101001111   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 14 is a simple attractor consisting of 1 state(s) and has a basin of 18 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 010110000000000000010010000000000010000000000000100000000000   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 15 is a simple attractor consisting of 1 state(s) and has a basin of 13 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 100000001010111101111010001111111111111011111011101100100000   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 16 is a simple attractor consisting of 1 state(s) and has a basin of 43 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111001111110100110010001101011110011011000000101100101000   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 17 is a simple attractor consisting of 1 state(s) and has a basin of 25 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110110000001111011110010000001001100111010101010101101001110   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 18 is a simple attractor consisting of 1 state(s) and has a basin of 35 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 010110000000000000010010000000000000000000000000100000000100   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 19 is a simple attractor consisting of 1 state(s) and has a basin of 16 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110110000001111011110010000001001110111010101010101101001011   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 20 is a simple attractor consisting of 1 state(s) and has a basin of 58 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111001111110100110010001111011111011011000001101100100000   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 21 is a simple attractor consisting of 1 state(s) and has a basin of 7 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110110000001111011110010000001001110111010101010101101001010   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 22 is a simple attractor consisting of 1 state(s) and has a basin of 98 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111101111110100110110001111011101011011000001101100100100   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 23 is a simple attractor consisting of 1 state(s) and has a basin of 9 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110110001011111101110010001101011100111011101010101100101111   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 24 is a simple attractor consisting of 2 state(s) and has a basin of 14 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111000101110010110010000001001110111010101010101101001011   |
+ 110110000101110011110010000001001110111010000010101101001011   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 25 is a simple attractor consisting of 2 state(s) and has a basin of 23 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111000001110010110010000001001110111010101010101101001010   |
+ 110110000101111011110010000001001110111010000010101101001010   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 26 is a simple attractor consisting of 2 state(s) and has a basin of 49 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111000001110010110010000001001100111010101010101101001111   |
+ 110110000101111011110010000001001100111010000010101101001111   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 27 is a simple attractor consisting of 2 state(s) and has a basin of 63 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 100011001010110100110010001111011111111011101011101100100011   |
+ 110100001111111101111010001111111111111011010011101100100011   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 28 is a simple attractor consisting of 2 state(s) and has a basin of 10 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110110000111110001100011010001011110111011000010001101001011   |
+ 110111000111110000100011110001011110111011101010001101001011   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 29 is a simple attractor consisting of 2 state(s) and has a basin of 38 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111001011110100110010001101011110111011101010101100101010   |
+ 110110001111111101110010001101011110111011000010101100101010   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 30 is a simple attractor consisting of 2 state(s) and has a basin of 25 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111100111110000110111010001011100011011000000001101101101   |
+ 110111100111110000110111110001011100011011000000001101101101   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 31 is a simple attractor consisting of 2 state(s) and has a basin of 23 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110110101111111101110010001101011100111011000010101100101111   |
+ 110111001011110100110110001101011100111011101010101100101111   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 32 is a simple attractor consisting of 2 state(s) and has a basin of 31 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 100011001010110100110010001111011111111011101011101100100010   |
+ 110100001111111101111010001111111111111011010011101100100010   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 33 is a simple attractor consisting of 2 state(s) and has a basin of 15 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111001111110100110010001101011110111011101010101100101010   |
+ 110110001111110101110010001101011110111011000010101100101010   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 34 is a simple attractor consisting of 2 state(s) and has a basin of 24 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111000001110010110010000001001110111010101010101101001011   |
+ 110110000101111011110010000001001110111010000010101101001011   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 35 is a simple attractor consisting of 2 state(s) and has a basin of 12 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 100011001010110100110110001111011101111011101011101100100110   |
+ 110100101111111101111010001111111101111011010011101100100110   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 36 is a simple attractor consisting of 2 state(s) and has a basin of 17 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111001111110100110010001111011111111011101011101100100011   |
+ 110110001111110101110010001111011111111011000011101100100011   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 37 is a simple attractor consisting of 3 state(s) and has a basin of 28 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 100000101010111100111010001111111101011011101011101100100100   |
+ 100000001011111101111010001111111101111011110001101100100100   |
+ 100000001010111101111110001111111101111011011011101100100100   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 38 is a simple attractor consisting of 4 state(s) and has a basin of 111 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110110000001111011010010000001001100111010101010111101011110   |
+ 110110010001111111110010000001001100111010101010111101011110   |
+ 110110011001111111110010000001001100111010101010101100011110   |
+ 110110001001111011010010000001001100111010101010101100011110   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 39 is a simple attractor consisting of 4 state(s) and has a basin of 104 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111101111110100110110001101011100011011000000101100111100   |
+ 110111101111110100110110001101011100011011000000111100111100   |
+ 110111111111110100110110001101011100011011000000111100111100   |
+ 110111111111110100110110001101011100011011000000101100111100   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 40 is a simple attractor consisting of 4 state(s) and has a basin of 131 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111101111110100110110001101011100011011000000101100111101   |
+ 110111101111110100110110001101011100011011000000111100111101   |
+ 110111111111110100110110001101011100011011000000111100111101   |
+ 110111111111110100110110001101011100011011000000101100111101   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 41 is a simple attractor consisting of 4 state(s) and has a basin of 25 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111000111110000010101010001011100010011000000011101111101   |
+ 110111110111110100100011110001011100010010000000011101111101   |
+ 110111011111110100100111010001001100001011000000001100111101   |
+ 110111101101110000000111110001010100011011000000001100111101   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 42 is a simple attractor consisting of 4 state(s) and has a basin of 96 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111101111110100110110001111011101011011000001101100110100   |
+ 110111101111110100110110001111011101011011000001111100110100   |
+ 110111111111110100110110001111011101011011000001111100110100   |
+ 110111111111110100110110001111011101011011000001101100110100   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 43 is a simple attractor consisting of 4 state(s) and has a basin of 19 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110110000001111011010010000010001100111010101111111100010110   |
+ 110110010001111111010010000001001101111110101111111100010110   |
+ 110110011001111111010010000001001101111010101010101100010110   |
+ 110110001001111011010010000010001100111010101010101100010110   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 44 is a simple attractor consisting of 4 state(s) and has a basin of 132 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111001111110100110010001101011110011011000000101100111000   |
+ 110111001111110100110010001101011110011011000000111100111000   |
+ 110111011111110100110010001101011110011011000000111100111000   |
+ 110111011111110100110010001101011110011011000000101100111000   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 45 is a simple attractor consisting of 4 state(s) and has a basin of 108 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 010111000010000010110010000001011100011000000000100001001100   |
+ 110110000010111000110010000101001100001010000000101001001100   |
+ 110110000001111000110010000101000000001011000000101001001100   |
+ 010111000001000010110010000001010000011001000000100001001100   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 46 is a simple attractor consisting of 4 state(s) and has a basin of 29 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111000001110010010010000000001111111010101010101100000010   |
+ 110110000101111011010010000010001110111010000010101100000010   |
+ 110111000001110010010010000010001110111010101111101100000010   |
+ 110110000101111011010010000000001111111110000111101100000010   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 47 is a simple attractor consisting of 4 state(s) and has a basin of 35 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 010110000000000000010110000010000000000000000101110000010100   |
+ 010110010000100100010110000001000001000100000101110000010100   |
+ 010110011000100100010110000001000001000000000000100000010100   |
+ 010110001000000000010110000010000000000000000000100000010100   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 48 is a simple attractor consisting of 4 state(s) and has a basin of 26 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111001101110000010010000000000111000010000000101100010001   |
+ 110111000101110000010010000010000110000010000000111100010001   |
+ 110111010101110100010010000011000110000010000101111100010001   |
+ 110111011101110100010010000001000111000110000101101100010001   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 49 is a simple attractor consisting of 4 state(s) and has a basin of 79 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 010110000000100000010110000000000001000000000000110000010100   |
+ 010110010000000100010110000011000000000000000000110000010100   |
+ 010110011000000100010110000011000000000000000101100000010100   |
+ 010110001000100000010110000000000001000100000101100000010100   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 50 is a simple attractor consisting of 4 state(s) and has a basin of 63 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111001111110100110010001101011110011011000000101100111001   |
+ 110111001111110100110010001101011110011011000000111100111001   |
+ 110111011111110100110010001101011110011011000000111100111001   |
+ 110111011111110100110010001101011110011011000000101100111001   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 51 is a simple attractor consisting of 4 state(s) and has a basin of 28 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111000101110000010010000000000101000010000000101100000101   |
+ 110111000101110000010010000010000100000010000000101100000101   |
+ 110111000101110000010010000010000100000010000101101100000101   |
+ 110111000101110000010010000000000101000110000101101100000101   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 52 is a simple attractor consisting of 4 state(s) and has a basin of 36 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110110000001111011010010000000001111111110101111111100010011   |
+ 110110010001111111010010000001001111111010101010111100010011   |
+ 110110011001111111010010000011001110111010101010101100010011   |
+ 110110001001111011010010000010001110111010101111101100010011   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 53 is a simple attractor consisting of 4 state(s) and has a basin of 11 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111001111110100110010001111011111111011101011101100110011   |
+ 110110001111110101110010001111011111111011000011111100110011   |
+ 110111011111110100110010001111011111111011101011111100110011   |
+ 110110011111110101110010001111011111111011000011101100110011   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 54 is a simple attractor consisting of 4 state(s) and has a basin of 22 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 100000001010111101111010001111111101111011111011101100110101   |
+ 100000001010111101111010001111111101111011111011111100110101   |
+ 100000011010111101111010001111111101111011111011111100110101   |
+ 100000011010111101111010001111111101111011111011101100110101   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 55 is a simple attractor consisting of 4 state(s) and has a basin of 71 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111000101110010010010000001010110010011000000111101011001   |
+ 110111010111110110110010000001011110010010000000111101011001   |
+ 110111011111110100110010000101001110001010000000101100011001   |
+ 110111001101110000010010000101000110001011000000101100011001   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 56 is a simple attractor consisting of 4 state(s) and has a basin of 28 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111001101110000000011010001010110011011000000001000111000   |
+ 110111000111110000000001110001011110010011000000011101111000   |
+ 110111010111110100100011010001011110010010000000011101111000   |
+ 110111011111110100100011110001001110001011000000001100111000   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 57 is a simple attractor consisting of 4 state(s) and has a basin of 43 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111000101110000010110000010000100000010000101111100010101   |
+ 110111010101110100010110000001000101000110000101111100010101   |
+ 110111011101110100010110000001000101000010000000101100010101   |
+ 110111001101110000010110000010000100000010000000101100010101   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 58 is a simple attractor consisting of 4 state(s) and has a basin of 28 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111000111110000000001010001011110010011000000011101111000   |
+ 110111010111110100100011110001011110010010000000011101111000   |
+ 110111011111110100100011010001001110001011000000001100111000   |
+ 110111001101110000000011110001010110011011000000001000111000   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 59 is a simple attractor consisting of 4 state(s) and has a basin of 19 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 100000001010111101111010001111111101111011111011101100110111   |
+ 100000001010111101111010001111111101111011111011111100110111   |
+ 100000011010111101111010001111111101111011111011111100110111   |
+ 100000011010111101111010001111111101111011111011101100110111   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 60 is a simple attractor consisting of 4 state(s) and has a basin of 27 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110110001101111011010010000000001111111010000010101100010010   |
+ 110111000001110010010010000010001110111010101010111100010010   |
+ 110110010101111111010010000011001110111010000111111100010010   |
+ 110111011001110110010010000001001111111110101111101100010010   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 61 is a simple attractor consisting of 4 state(s) and has a basin of 15 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111110111110100100011010001011100010010000000011101011101   |
+ 110111011111110100100111110001001100001011000000001100011101   |
+ 110111101101110000000111010001010100011011000000001100011101   |
+ 110111000111110000010101110001011100010011000000011101011101   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 62 is a simple attractor consisting of 4 state(s) and has a basin of 30 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111000101110010110010000001010110011011000000101101001001   |
+ 110111000111110010110010000001011110011010000000101101001001   |
+ 110111000111110000110010000101001110001010000000101101001001   |
+ 110111000101110000110010000101000110001011000000101101001001   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 63 is a simple attractor consisting of 4 state(s) and has a basin of 29 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111000111110000010101010001011100010011000000011101011101   |
+ 110111110111110100100011110001011100010010000000011101011101   |
+ 110111011111110100100111010001001100001011000000001100011101   |
+ 110111101101110000000111110001010100011011000000001100011101   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 64 is a simple attractor consisting of 4 state(s) and has a basin of 52 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111001101110010010110000001010100011011000000101100011101   |
+ 110111000111110010010110000001011100010010000000111101011101   |
+ 110111110111110100110110000101001100000010000000111101011101   |
+ 110111111101110100110110000101000100001011000000101100011101   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 65 is a simple attractor consisting of 4 state(s) and has a basin of 20 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111000101110010110010000001010100011011000000101101001001   |
+ 110111000111110010110010000001011100011010000000101101001001   |
+ 110111000111110000110010000101001100001010000000101101001001   |
+ 110111000101110000110010000101000100001011000000101101001001   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 66 is a simple attractor consisting of 4 state(s) and has a basin of 30 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110110000001111011010010000000001101111010101010101100000111   |
+ 110110000001111011010010000010001100111010101010101100000111   |
+ 110110000001111011010010000010001100111010101111101100000111   |
+ 110110000001111011010010000000001101111110101111101100000111   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 67 is a simple attractor consisting of 4 state(s) and has a basin of 13 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110110000001111011010010000001001100111010101010111101011111   |
+ 110110010001111111110010000001001100111010101010111101011111   |
+ 110110011001111111110010000001001100111010101010101100011111   |
+ 110110001001111011010010000001001100111010101010101100011111   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 68 is a simple attractor consisting of 4 state(s) and has a basin of 58 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111000101110000010010000000000111000010000000101100000001   |
+ 110111000101110000010010000010000110000010000000101100000001   |
+ 110111000101110000010010000010000110000010000101101100000001   |
+ 110111000101110000010010000000000111000110000101101100000001   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 69 is a simple attractor consisting of 4 state(s) and has a basin of 29 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111000001110010010010000000001101111110101111101100000011   |
+ 110110000101111011010010000000001101111010000010101100000011   |
+ 110111000001110010010010000010001100111010101010101100000011   |
+ 110110000101111011010010000010001100111010000111101100000011   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 70 is a simple attractor consisting of 4 state(s) and has a basin of 42 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111000101110000010010000000000111000110000101111100010001   |
+ 110111010101110100010010000001000111000010000000111100010001   |
+ 110111011101110100010010000011000110000010000000101100010001   |
+ 110111001101110000010010000010000110000010000101101100010001   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 71 is a simple attractor consisting of 4 state(s) and has a basin of 41 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 100000001010111101111010001111111111111011111011101100110011   |
+ 100000001010111101111010001111111111111011111011111100110011   |
+ 100000011010111101111010001111111111111011111011111100110011   |
+ 100000011010111101111010001111111111111011111011101100110011   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 72 is a simple attractor consisting of 4 state(s) and has a basin of 17 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111001101110010010010000000001111111010000010101100010011   |
+ 110111000101110010010010000010001110111010000010111100010011   |
+ 110111010101110110010010000011001110111010000111111100010011   |
+ 110111011101110110010010000001001111111110000111101100010011   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 73 is a simple attractor consisting of 4 state(s) and has a basin of 27 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110110000001111011010010000000001111111010101010101100000010   |
+ 110110000001111011010010000010001110111010101010101100000010   |
+ 110110000001111011010010000010001110111010101111101100000010   |
+ 110110000001111011010010000000001111111110101111101100000010   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 74 is a simple attractor consisting of 4 state(s) and has a basin of 27 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110110101111111101110010001101011100111011000010111100111111   |
+ 110111011011110100110110001101011100111011101010111100111111   |
+ 110110111111111101110010001101011100111011000010101100111111   |
+ 110111001011110100110110001101011100111011101010101100111111   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 75 is a simple attractor consisting of 4 state(s) and has a basin of 23 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111000001110010010010000000001101111010101010101100000111   |
+ 110110000101111011010010000010001100111010000010101100000111   |
+ 110111000001110010010010000010001100111010101111101100000111   |
+ 110110000101111011010010000000001101111110000111101100000111   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 76 is a simple attractor consisting of 4 state(s) and has a basin of 48 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111001111110100110010001111011111011011000001101100110001   |
+ 110111001111110100110010001111011111011011000001111100110001   |
+ 110111011111110100110010001111011111011011000001111100110001   |
+ 110111011111110100110010001111011111011011000001101100110001   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 77 is a simple attractor consisting of 4 state(s) and has a basin of 10 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110110000001111011010010000000001101111110101111111100010100   |
+ 110110010001111111010010000001001101111010101010111100010100   |
+ 110110011001111111010010000011001100111010101010101100010100   |
+ 110110001001111011010010000010001100111010101111101100010100   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 78 is a simple attractor consisting of 4 state(s) and has a basin of 16 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110110001001111011010010000000001111111010101010101100010001   |
+ 110110000001111011010010000010001110111010101010111100010001   |
+ 110110010001111111010010000011001110111010101111111100010001   |
+ 110110011001111111010010000001001111111110101111101100010001   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 79 is a simple attractor consisting of 4 state(s) and has a basin of 13 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111000101110010010010000000001111111110101111111100010010   |
+ 110110010101110111010010000001001111111010000010111100010010   |
+ 110111011101110110010010000011001110111010101010101100010010   |
+ 110110001101110011010010000010001110111010000111101100010010   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 80 is a simple attractor consisting of 4 state(s) and has a basin of 54 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 010110000000100000010110000000000001000100000101110000010100   |
+ 010110010000100100010110000001000001000000000000110000010100   |
+ 010110011000000100010110000011000000000000000000100000010100   |
+ 010110001000000000010110000010000000000000000101100000010100   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 81 is a simple attractor consisting of 4 state(s) and has a basin of 71 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111101111110100110110001111011101011011000001101100110101   |
+ 110111101111110100110110001111011101011011000001111100110101   |
+ 110111111111110100110110001111011101011011000001111100110101   |
+ 110111111111110100110110001111011101011011000001101100110101   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 82 is a simple attractor consisting of 4 state(s) and has a basin of 31 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111001101110010010010000001010110011011000000101100011001   |
+ 110111000111110010010010000001011110010010000000111101011001   |
+ 110111010111110100110010000101001110000010000000111101011001   |
+ 110111011101110100110010000101000110001011000000101100011001   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 83 is a simple attractor consisting of 4 state(s) and has a basin of 11 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110110001101110011010010000000001111111010000010101100010011   |
+ 110111000101110010010010000010001110111010101010111100010011   |
+ 110110010101110111010010000011001110111010000111111100010011   |
+ 110111011101110110010010000001001111111110101111101100010011   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 84 is a simple attractor consisting of 4 state(s) and has a basin of 16 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110110000001111011010010000000001101111110101111111100010110   |
+ 110110010001111111010010000001001101111010101010111100010110   |
+ 110110011001111111010010000011001100111010101010101100010110   |
+ 110110001001111011010010000010001100111010101111101100010110   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 85 is a simple attractor consisting of 4 state(s) and has a basin of 15 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 100011001010110100110010001111011111111011101011101100110011   |
+ 110100001111111101111010001111111111111011010011111100110011   |
+ 100011011010110100110010001111011111111011101011111100110011   |
+ 110100011111111101111010001111111111111011010011101100110011   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 86 is a simple attractor consisting of 4 state(s) and has a basin of 33 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111000101110010010110000001010100010011000000111101011101   |
+ 110111010111110110110110000001011100010010000000111101011101   |
+ 110111111111110100110110000101001100001010000000101100011101   |
+ 110111101101110000010110000101000100001011000000101100011101   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 87 is a simple attractor consisting of 4 state(s) and has a basin of 35 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110110001011111101110010001101011110111011101010101100111010   |
+ 110110001011111101110010001101011110111011101010111100111010   |
+ 110110011011111101110010001101011110111011101010111100111010   |
+ 110110011011111101110010001101011110111011101010101100111010   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 88 is a simple attractor consisting of 4 state(s) and has a basin of 12 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110110000001111011010010000010001110111010101111111100010011   |
+ 110110010001111111010010000001001111111110101111111100010011   |
+ 110110011001111111010010000001001111111010101010101100010011   |
+ 110110001001111011010010000010001110111010101010101100010011   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 89 is a simple attractor consisting of 10 state(s) and has a basin of 24 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 100000000010111001100011010001011100111011101010001101001111   |
+ 101000000011111001101011110001011100111011111010001101001111   |
+ 101000000110111001101011010001011100111011111010001101001111   |
+ 100010000010110001101011110001011100111011111010001101001111   |
+ 111100000010111001101011010001011100111011111010001101001111   |
+ 100000000010111001100011110001011100111011101010001101001111   |
+ 101000000011111001101011010001011100111011111010001101001111   |
+ 101000000110111001101011110001011100111011111010001101001111   |
+ 100010000010110001101011010001011100111011111010001101001111   |
+ 111100000010111001101011110001011100111011111010001101001111   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 90 is a simple attractor consisting of 10 state(s) and has a basin of 15 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110100000010111001100011010001011110111011101010001101101010   |
+ 100000000011111001100011110001011110111011101010001101101010   |
+ 101000000111111001101011010001011110111011111010001101101010   |
+ 100010000110110001101011110001011110111011111010001101101010   |
+ 110110000010110001101011010001011110111011111010001101101010   |
+ 110100000010111001100011110001011110111011101010001101101010   |
+ 100000000011111001100011010001011110111011101010001101101010   |
+ 101000000111111001101011110001011110111011111010001101101010   |
+ 100010000110110001101011010001011110111011111010001101101010   |
+ 110110000010110001101011110001011110111011111010001101101010   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 91 is a simple attractor consisting of 20 state(s) and has a basin of 27 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 100000001010111001000011010001011100111011101010001100011101   |
+ 101000000011111001001011110001011100111011111010011101011101   |
+ 101000010110111101101011010001011100111011111010011101011101   |
+ 100010011010110101101011110001011100111011111010001100011101   |
+ 111100001010111001001011010001011100111011111010001100011101   |
+ 100000000010111001000011110001011100111011101010011101011101   |
+ 101000010011111101101011010001011100111011111010011101011101   |
+ 101000011110111101101011110001011100111011111010001100011101   |
+ 100010001010110001001011010001011100111011111010001100011101   |
+ 111100000010111001001011110001011100111011111010011101011101   |
+ 100000010010111101100011010001011100111011101010011101011101   |
+ 101000011011111101101011110001011100111011111010001100011101   |
+ 101000001110111001001011010001011100111011111010001100011101   |
+ 100010000010110001001011110001011100111011111010011101011101   |
+ 111100010010111101101011010001011100111011111010011101011101   |
+ 100000011010111101100011110001011100111011101010001100011101   |
+ 101000001011111001001011010001011100111011111010001100011101   |
+ 101000000110111001001011110001011100111011111010011101011101   |
+ 100010010010110101101011010001011100111011111010011101011101   |
+ 111100011010111101101011110001011100111011111010001100011101   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 92 is a simple attractor consisting of 20 state(s) and has a basin of 28 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 100000000010111001000011010001011110111011101010011101111010   |
+ 101000010011111101101011110001011110111011111010011101111010   |
+ 101000011110111101101011010001011110111011111010001100111010   |
+ 100010001010110001001011110001011110111011111010001100111010   |
+ 111100000010111001001011010001011110111011111010011101111010   |
+ 100000010010111101100011110001011110111011101010011101111010   |
+ 101000011011111101101011010001011110111011111010001100111010   |
+ 101000001110111001001011110001011110111011111010001100111010   |
+ 100010000010110001001011010001011110111011111010011101111010   |
+ 111100010010111101101011110001011110111011111010011101111010   |
+ 100000011010111101100011010001011110111011101010001100111010   |
+ 101000001011111001001011110001011110111011111010001100111010   |
+ 101000000110111001001011010001011110111011111010011101111010   |
+ 100010010010110101101011110001011110111011111010011101111010   |
+ 111100011010111101101011010001011110111011111010001100111010   |
+ 100000001010111001000011110001011110111011101010001100111010   |
+ 101000000011111001001011010001011110111011111010011101111010   |
+ 101000010110111101101011110001011110111011111010011101111010   |
+ 100010011010110101101011010001011110111011111010001100111010   |
+ 111100001010111001001011110001011110111011111010001100111010   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+

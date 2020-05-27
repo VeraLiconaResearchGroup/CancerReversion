@@ -1,0 +1,34 @@
+ID	Molecule name	Role
+MO000004677	ERK2(h)	network element
+MO000013123	STAT3(h)	hit
+MO000016989	GSK3beta(h)	network element
+MO000017049	beta-catenin(h)	hit
+MO000017421	AKT-1(h)	network element
+MO000018137	c-Fos(h)	hit
+MO000019363	RelA-p65-isoform1(h)	hit
+MO000019469	c-Jun(h)	hit
+MO000024771	E12(h)	hit
+MO000024773	E47(h)	hit
+MO000024920	ITF-1(h)	hit
+MO000025736	RelA-p65-delta(h)	hit
+MO000032335	RSK1(h)	network element
+MO000032492	E2A(h)	hit
+MO000034342	ERK2(h){p}	network element
+MO000036634	MSK1(h)	network element
+MO000044348	SNA(h)	hit
+MO000056654	p300(h)	network element
+MO000058322	c-Jun(h)	hit
+MO000058481	AKT-1-isoform1(h)	network element
+MO000058538	beta-catenin-isoform1(h)	hit
+MO000078237	STAT3-isoform1(h)	hit
+MO000078241	STAT3-isoform2(h)	hit
+MO000079319	RelA-p65(h)	hit
+MO000079350	RelA-p65-delta2(h)	hit
+MO000079681	c-Fos(h)	hit
+MO000129437	RelA-p35(h)	hit
+MO000132736	amotl1-isoform1(h)	master
+MO000132738	amotl1-isoform2(h)	master
+MO000132740	amotl1(h)	master
+MO000133252	SNA(h)	hit
+MO000165730	STAT3-isoform3(h)	hit
+MO000257758	RelA-p65-isoform4(h)	hit

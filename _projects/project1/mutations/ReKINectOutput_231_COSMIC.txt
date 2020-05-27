@@ -1,0 +1,37 @@
+Gene	#0.FastaHeader	1.FinalInterpretation	2.NearbyPsites	3.DestroysAPsite?	4.PotentiallyPhosphoMimicking?	5.HitsAProteinKinase?	6.ProteinKinaseName	7.HitsAKinaseDomain	8.KinaseAlignmentPosition	9.HitsKinaseEssentialResidue?	10.HitsKinaseDeterminantOfSpecificity?	11.HitsKinaseActivationSegment?	12.HitsSH2Protein?	13.SH2ProteinName	14.HitsSH2Domain?	15.SH2AlignmentPosition	16.HitsSH2EssentialResidue?	17.HitsSH2DeterminantOfSpecificity?
+ALPK2	>ENSP00000354991:p.Cys1858Phe	Uninterpreted mutation on kinase protein	NA	NA	NA	Y	PKL-Alpha-Alpha-Unclassified-AlphaK2	N	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+ALPK2	>ENSP00000354991:p.Cys1858Phe	Uninterpreted mutation on kinase protein	NA	NA	NA	Y	PKL-Alpha-Alpha-Unclassified-AlphaK2	N	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+ASPM	>ENSP00000356379:p.Ser1422Ala	Mutation around phosphorylation site	5	N	N	N	NA	NA	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+BRAF	>ENSP00000288602:p.Gly504Glu	Kinase inactivation by hitting essential residue on kinase domain	NA	NA	NA	Y	TKL-RAF-RAF-BRAF	Y	29	Y	N	N	N	NA	NA	NA	NA	NA
+BRAF	>ENSP00000419060:p.Gly464Glu	Kinase inactivation by hitting essential residue on kinase domain	NA	NA	NA	Y	TKL-RAF-RAF-BRAF	Y	29	Y	N	N	N	NA	NA	NA	NA	NA
+BRAF	>ENSP00000496776:p.Gly504Glu	Kinase inactivation by hitting essential residue on kinase domain	NA	NA	NA	Y	TKL-RAF-RAF-BRAF	Y	29	Y	N	N	N	NA	NA	NA	NA	NA
+BRAF	>ENSP00000493543:p.Gly464Glu	Kinase inactivation by hitting essential residue on kinase domain	NA	NA	NA	Y	TKL-RAF-RAF-BRAF	Y	29	Y	N	N	N	NA	NA	NA	NA	NA
+EPHA3	>ENSP00000337451:p.Glu839Ter	Uninterpreted mutation on kinase domain	NA	NA	NA	Y	TK-Eph--EphA3	Y	1216	N	N	N	N	NA	NA	NA	NA	NA
+EPHA4	>ENSP00000419190:p.Glu839Ter	Uninterpreted mutation on kinase domain	NA	NA	NA	Y	TK-Eph--EphA3	Y	1216	N	N	N	N	NA	NA	NA	NA	NA
+LRRK2	>ENSP00000298910:p.Ile2323Ser	Uninterpreted mutation on kinase protein	NA	NA	NA	Y	TKL-LRRK--LRRK2	N	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+LRRK3	>ENSP00000298910:p.Ile2323Ser	Uninterpreted mutation on kinase protein	NA	NA	NA	Y	TKL-LRRK--LRRK2	N	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+PDGFRA	>ENSP00000257290:p.Tyr172Phe	Uninterpreted mutation on kinase protein	NA	NA	NA	Y	TK-PVR-PDGFR-PDGFRa	N	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+PKDREJ	>ENSP00000253255:p.Glu2177Ter	Mutation around phosphorylation site	4	N	N	N	NA	NA	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+PKDREJ	>ENSP00000253255:p.Glu2176Lys	Mutation around phosphorylation site	3	N	N	N	NA	NA	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+STK38	>ENSP00000229812:p.Ile457Arg	Mutation around phosphorylation site on kinase protein	"5,-3"	N	N	Y	AGC-NDR-NDR-NDR1	N	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+TNFRSF21	>ENSP00000296861:p.Pro314Gln	Mutation around phosphorylation site	"-5,-1"	N	N	N	NA	NA	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+TRIO	>ENSP00000339291:p.Lys288Glu	Uninterpreted mutation on kinase protein	NA	NA	NA	Y	CAMK-Trio--Trio	N	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+TRIO	>ENSP00000339299:p.Lys2789Glu	Uninterpreted mutation on kinase protein	NA	NA	NA	Y	CAMK-Trio--Trio	N	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+TRIO	>ENSP00000339299:p.Leu600Val	Uninterpreted mutation on kinase protein	NA	NA	NA	Y	CAMK-Trio--Trio	N	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+WNK1	>ENSP00000313059:p.Arg561Ile	Uninterpreted mutation on kinase protein	NA	NA	NA	Y	Other-WNK--Wnk1	N	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+WNK1	>ENSP00000313059:p.Arg561Ile	Uninterpreted mutation on kinase protein	NA	NA	NA	Y	Other-WNK--Wnk1	N	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+WNK1	>ENSP00000341292:p.Arg561Ile	Uninterpreted mutation on kinase protein	NA	NA	NA	Y	Other-WNK--Wnk1	N	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+WNK1	>ENSP00000341292:p.Arg561Ile	Uninterpreted mutation on kinase protein	NA	NA	NA	Y	Other-WNK--Wnk1	N	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+WNK1	>ENSP00000433548:p.Arg561Ile	Uninterpreted mutation on kinase protein	NA	NA	NA	Y	Other-WNK--Wnk1	N	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+WNK1	>ENSP00000433548:p.Arg561Ile	Uninterpreted mutation on kinase protein	NA	NA	NA	Y	Other-WNK--Wnk1	N	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+WNK1	>ENSP00000441972:p.Arg561Ile	Uninterpreted mutation on kinase protein	NA	NA	NA	Y	Other-WNK--Wnk1	N	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+WNK1	>ENSP00000441972:p.Arg561Ile	Uninterpreted mutation on kinase protein	NA	NA	NA	Y	Other-WNK--Wnk1	N	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+WNK1	>ENSP00000444465:p.Arg561Ile	Uninterpreted mutation on kinase protein	NA	NA	NA	Y	Other-WNK--Wnk1	N	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+WNK1	>ENSP00000444465:p.Arg561Ile	Uninterpreted mutation on kinase protein	NA	NA	NA	Y	Other-WNK--Wnk1	N	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+MAP3K19	>ENSP00000351140:p.Leu526Pro	Uninterpreted mutation on kinase protein	NA	NA	NA	Y	STE-STE11-MEKK15-MEKK15	N	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+MAP3K19	>ENSP00000365005:p.Leu639Pro	Uninterpreted mutation on kinase protein	NA	NA	NA	Y	STE-STE11-MEKK15-MEKK15	N	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+MAP3K19	>ENSP00000376647:p.Leu639Pro	Uninterpreted mutation on kinase protein	NA	NA	NA	Y	STE-STE11-MEKK15-MEKK15	N	NA	NA	NA	NA	N	NA	NA	NA	NA	NA
+																		
+	Number of proteins mutated:336																	
+	Number of mutations:339																	
+	Number of mutations interpreted:32																	

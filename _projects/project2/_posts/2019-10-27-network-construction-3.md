@@ -1,0 +1,138 @@
+---
+layout: post
+title: "Network Construction 3"
+date: "2019-10-27"
+author: maddie
+tags:
+ - project02
+ - static_network
+---
+
+## Objective
+
+The network constructed using Master Regulators from the MR search with a step of 7 had an unrealistically small FVS set of 3 nodes. Hence, we decided to reconstruct the network using MRs from a step size of 9. This regulator search was done using the signed TRANSPATH database, and a literature search was done to vrify the resultant edges.
+
+### Edges lacking listerature evidence
+
+- PLK1 phosphorylates SIRT1
+    - [should be SIRT1 regulating PLK1](https://www.cell.com/cell-reports/pdfExtended/S2211-1247(18)31771-6	https://www.researchgate.net/publication/273151432_Sirt1_Regulates_Microtubule_Dynamics_Through_Negative_Regulation_of_Plk1_in_Mitosis)
+ 
+- MTOR:RPTOR phosphorylates SIRT1	
+    - [SIRT1 regulates MTOR](http://www.dl.begellhouse.com/download/article/55208d285e6515e5/CRE-12975_F.pdf)
+
+- STAT3 acetylation of itself
+- MAPK14 self regulation
+- FOXM1 self sumoylation
+- RELA self regulation
+- CDC25C self phosphorylation
+
+
+### Mutations
+BRAF mutation upregulates MEK (MAP2k1) and ERK (MAPK1). These edges are already in the network.
+Adding in TP53 pathways
+removing all downstream TP53 targets besides notch1 due to literature evidence
+LRKK2 not expressed
+removing TAB2 cause nonsense mutation
+
+### Condensing Source Nodes
+Several source nodes are subunits of the same gene. FC states that they must be controlled to steer the system to any desired attractor. Thus, if the nodes had similar out going edges, I combined them into one node to reduce the number of nodes that must be controlled.
+
+#### PPP3C
+PPP3CA, PPP3CB, and PPP3CC all have the same edges so I will replace them with one node: PPP3C to represent the Phosphatase Subfamily PPP3C.
+
+#### TAOK
+TAOK1 and TAOK2 serve the same purpose and can be [targeted together](https://mct.aacrjournals.org/content/molcanther/16/11/2410.full.pdf). 
+
+### Self loops
+There are several nodes in self loops without literature evidence so the self loops were removed to reduce the size of the FVS set.
+
+Remove Self Loops for:
+- AKT1
+- MAPK1
+- MAP2K3
+- MAP2K6
+
+Keep self loop for Aurka, which [auto phoshporylates](https://www.ncbi.nlm.nih.gov/pubmed/24867643).
+
+## Network Details
+- 25 source nodes
+- 225 nodes
+- 572 edges
+- 2 mFVSes of 12 each (FVS_12 and FVS_34)
+
+## OCASANA+ FC output
+
+Source Nodes: YWHAZ	USP22	TARDBP	TAOK	TAB1	SETD7	RAD23A	PRPF4	PRMT5	PRKACA	PPP4C	PPP3C	PPM1A	PBK	PAK2	MTOR	MAP3K20	MAP3K2	FMR1	EIF2AK2	DKK1	CUL2	CDK6	CDK5	AMOTL1	
+
+FVS_1: SUMO1	FOXM1	MAP2K6	MAPK14	RELA	STAT3	FOS	AURKA	MAPK1	TCF3	GSK3B	JUN	CTNNB1	AKT1	
+
+FVS_2: PIAS1	RPS6KA1	FOXM1	MAPK14	RELA	STAT3	FOS	AURKA	TCF3	GSK3B	JUN	CTNNB1	AKT1	
+
+FVS_3: SUMO1	FOXM1	MAP2K6	HDAC3	RELA	STAT3	AURKA	MAPK1	TCF3	GSK3B	JUN	CTNNB1	AKT1	
+
+FVS_4: PIAS1	FOXM1	HDAC3	RELA	STAT3	FOS	AURKA	MAPK1	TCF3	GSK3B	JUN	CTNNB1	AKT1	
+
+FVS_5: PIAS1	RPS6KA1	SNAI1	FOXM1	MAPK14	RELA	STAT3	AURKA	TCF3	GSK3B	JUN	CTNNB1	AKT1	
+
+FVS_6: PIAS1	SNAI1	FOXM1	MAPK14	RELA	STAT3	FOS	AURKA	MAPK1	TCF3	GSK3B	JUN	CTNNB1	AKT1	
+
+FVS_7: PIAS1	FOXM1	MAP2K6	HDAC3	RELA	STAT3	FOS	AURKA	TCF3	GSK3B	CHEK1	JUN	CTNNB1	AKT1	
+
+FVS_8: PIAS1	SPI1	FOXM1	HDAC3	RELA	STAT3	FOS	AURKA	MAPK1	TCF3	GSK3B	JUN	CTNNB1	AKT1	
+
+FVS_9: SUMO1	SNAI1	FOXM1	MAPK14	RELA	STAT3	AURKA	MAPK1	TCF3	GSK3B	JUN	CTNNB1	AKT1	
+
+FVS_10: SUMO1	FOXM1	HDAC3	RELA	STAT3	FOS	AURKA	MAPK1	TCF3	GSK3B	JUN	CTNNB1	AKT1	
+
+FVS_11: PIAS1	SNAI1	FOXM1	MAPK14	RELA	STAT3	FOS	AURKA	TCF3	GSK3B	CHEK1	JUN	CTNNB1	AKT1	
+
+FVS_12: PIAS1	FOXM1	HDAC3	RELA	STAT3	AURKA	MAPK1	TCF3	GSK3B	JUN	CTNNB1	AKT1	
+
+FVS_13: PIAS1	SPI1	FOXM1	TP53	HDAC3	RELA	STAT3	AURKA	TCF3	GSK3B	CHEK1	JUN	CTNNB1	AKT1	
+
+FVS_14: SUMO1	FOXM1	MAPK14	RELA	STAT3	FOS	AURKA	MAPK1	TCF3	GSK3B	JUN	CTNNB1	AKT1	
+
+FVS_15: PIAS1	MAP3K1	FOXM1	MAP2K6	HDAC3	RELA	STAT3	AURKA	MAPK1	TCF3	JUN	CTNNB1	AKT1	
+
+FVS_16: SUMO1	SPI1	RPS6KA1	SNAI1	FOXM1	MAPK14	RELA	STAT3	FOS	AURKA	TCF3	GSK3B	JUN	CTNNB1	AKT1	
+
+FVS_17: SUMO1	SNAI1	FOXM1	MAPK14	RELA	STAT3	FOS	AURKA	TCF3	GSK3B	CHEK1	JUN	CTNNB1	AKT1	
+
+FVS_18: SUMO1	FOXM1	MAPK8	HDAC3	RELA	STAT3	FOS	CDC25A	AURKA	TCF3	GSK3B	JUN	CTNNB1	AKT1	
+
+FVS_19: SUMO1	FOXM1	MAP2K6	CSNK2A1:CSNK2A2:CSNK2B	RELA	STAT3	FOS	AURKA	MAP2K1	MAPK1	TCF3	JUN	CTNNB1	AKT1	
+
+FVS_20: SUMO1	FOXM1	CSNK2A1:CSNK2A2:CSNK2B	RELA	STAT3	AURKA	MAPK1	TCF3	GSK3B	JUN	CTNNB1	AKT1	
+
+FVS_21: SUMO1	FOXM1	MAP2K6	MAPK14	RELA	STAT3	AURKA	MAPK1	TCF3	GSK3B	JUN	CTNNB1	AKT1	
+
+FVS_22: ZBTB17	PIAS1	FOXM1	MAPK14	RELA	STAT3	AURKA	MAPK1	TCF3	GSK3B	JUN	CTNNB1	AKT1	
+
+FVS_23: PIAS1	FOXM1	MAPK14	RELA	STAT3	FOS	AURKA	TCF3	GSK3B	CHEK1	JUN	CTNNB1	AKT1	
+
+FVS_24: PIAS1	SPI1	FOXM1	HDAC3	RELA	STAT3	AURKA	MAPK1	TCF3	GSK3B	JUN	CTNNB1	AKT1	
+
+FVS_25: PIAS1	SNAI1	FOXM1	HDAC3	RELA	STAT3	FOS	AURKA	TCF3	GSK3B	CHEK1	JUN	CTNNB1	AKT1	
+
+FVS_26: SUMO1	FOXM1	MAP2K6	HDAC3	RELA	STAT3	FOS	AURKA	MAP2K1	TCF3	CHEK1	JUN	CTNNB1	AKT1	
+
+FVS_27: PIAS1	FOXM1	MAPK14	RELA	STAT3	FOS	AURKA	MAPK1	TCF3	GSK3B	JUN	CTNNB1	AKT1	
+
+FVS_28: PIAS1	FOXM1	MAP2K6	HDAC3	RELA	STAT3	FOS	AURKA	MAPK1	TCF3	GSK3B	JUN	CTNNB1	AKT1	
+
+FVS_29: PIAS1	FOXM1	MAPK8	MAPK14	RELA	STAT3	FOS	AURKA	MAPK1	TCF3	GSK3B	JUN	CTNNB1	AKT1	
+
+FVS_30: ZBTB17	SUMO1	FOXM1	MAPK14	RELA	STAT3	AURKA	MAPK1	TCF3	GSK3B	JUN	CTNNB1	AKT1	
+
+FVS_31: SUMO1	SNAI1	FOXM1	MAPK14	RELA	STAT3	FOS	CDC25A	AURKA	TCF3	GSK3B	JUN	CTNNB1	AKT1	
+
+FVS_32: PIAS1	FOXM1	MAPK8	HDAC3	RELA	STAT3	FOS	AURKA	MAPK1	TCF3	GSK3B	JUN	CTNNB1	AKT1	
+
+FVS_33: PIAS1	FOXM1	MAP2K6	HDAC3	RELA	STAT3	FOS	AURKA	MAP2K1	MAPK1	TCF3	JUN	CTNNB1	AKT1	
+
+FVS_34: SUMO1	FOXM1	HDAC3	RELA	STAT3	AURKA	MAPK1	TCF3	GSK3B	JUN	CTNNB1	AKT1		
+
+
+
+
+

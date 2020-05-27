@@ -1,0 +1,2 @@
+ID	Gene symbol ID	Gene symbol	Gene description
+ENSG00000026025	VIM	VIM	Vimentin  [Source:UniProtKB/Swiss-Prot;Acc:P08670]

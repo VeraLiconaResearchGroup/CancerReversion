@@ -1,0 +1,10 @@
+ID	Gene symbol ID	Gene symbol	Gene description	Gene symbol ID_1
+ENSG00000026025	VIM	VIM	Vimentin  [Source:UniProtKB/Swiss-Prot;Acc:P08670]	VIM
+ENSG00000108518	PFN1	PFN1	Profilin-1 (Profilin I) [Source:UniProtKB/Swiss-Prot;Acc:P07737]	PFN1
+ENSG00000108953	YWHAE	YWHAE	14-3-3 protein epsilon (14-3-3E) [Source:UniProtKB/Swiss-Prot;Acc:P62258]	YWHAE
+ENSG00000111676	ATN1	ATN1	Atrophin-1 (Dentatorubral-pallidoluysian atrophy protein) [Source:UniProtKB/Swiss-Prot;Acc:P54259]	ATN1
+ENSG00000116560	SFPQ	SFPQ	Splicing factor, proline- and glutamine-rich (Polypyrimidine tract-binding protein-associated-splicing factor)(PTB-associated-splicing factor)(PSF)(DNA-binding p52/p100 complex, 100 kDa subunit)(100 kDa DNA-pairing protein)(hPOMp100) [Source:UniProtKB/Sw	SFPQ
+ENSG00000142192	APP	APP	Amyloid beta A4 protein Precursor (Alzheimer disease amyloid protein)(ABPP)(APPI)(APP)(PreA4)(Cerebral vascular amyloid peptide)(CVAP)(Protease nexin-II)(PN-II) [Contains Soluble APP-alpha(S-APP-alpha);Soluble APP-beta(S-APP-beta);C99;Beta-amyloid protei	APP
+ENSG00000156508	EEF1A1	EEF1A1	Elongation factor 1-alpha 1 (EF-1-alpha-1)(Elongation factor 1 A-1)(eEF1A-1)(Elongation factor Tu)(EF-Tu)(Leukocyte receptor cluster member 7) [Source:UniProtKB/Swiss-Prot;Acc:P68104]	EEF1A1
+ENSG00000164924	YWHAZ	YWHAZ	14-3-3 protein zeta/delta (Protein kinase C inhibitor protein 1)(KCIP-1) [Source:UniProtKB/Swiss-Prot;Acc:P63104]	YWHAZ
+ENSG00000170315	UBB	UBB	Ubiquitin  [Source:UniProtKB/Swiss-Prot;Acc:P62988]	UBB

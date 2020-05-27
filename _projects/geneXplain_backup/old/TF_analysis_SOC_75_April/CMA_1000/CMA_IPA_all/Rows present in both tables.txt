@@ -1,0 +1,2 @@
+ID	Gene description	Gene symbol	Species	Site model ID	Gene symbol ID	Expr Log Ratio	Molecule Type	Predicted Activation State	Activation z-score	Flags	p-value of overlap	Target molecules in dataset	Mechanistic Network
+ENSG00000185591	Sp1 transcription factor	SP1	Homo sapiens	V$SP1_14	SP1		transcription regulator		0.254		4.78E-9	CAV1,CDK1,CSNK2A1,EGFR,FN1,HDAC1,NFKB1,PRKCA,PTTG1,RB1,TP53	

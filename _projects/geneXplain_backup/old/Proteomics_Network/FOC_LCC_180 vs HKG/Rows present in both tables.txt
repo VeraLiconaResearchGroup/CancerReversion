@@ -1,0 +1,17 @@
+ID	Gene symbol	Gene description	Gene symbol ID
+ENSG00000100316	RPL3	60S ribosomal protein L3 (HIV-1 TAR RNA-binding protein B)(TARBP-B) [Source:UniProtKB/Swiss-Prot;Acc:P39023]	RPL3
+ENSG00000104824	HNRNPL	Heterogeneous nuclear ribonucleoprotein L (hnRNP L) [Source:UniProtKB/Swiss-Prot;Acc:P14866]	HNRNPL
+ENSG00000108953	YWHAE	14-3-3 protein epsilon (14-3-3E) [Source:UniProtKB/Swiss-Prot;Acc:P62258]	YWHAE
+ENSG00000122026	RPL21	60S ribosomal protein L21  [Source:UniProtKB/Swiss-Prot;Acc:P46778]	RPL21
+ENSG00000132341	RAN	GTP-binding nuclear protein Ran (GTPase Ran)(Ras-related nuclear protein)(Ras-like protein TC4)(Androgen receptor-associated protein 24) [Source:UniProtKB/Swiss-Prot;Acc:P62826]	RAN
+ENSG00000142534	RPS11	40S ribosomal protein S11  [Source:UniProtKB/Swiss-Prot;Acc:P62280]	RPS11
+ENSG00000146731	CCT6A	T-complex protein 1 subunit zeta (TCP-1-zeta)(CCT-zeta)(CCT-zeta-1)(Tcp20)(HTR3)(Acute morphine dependence-related protein 2) [Source:UniProtKB/Swiss-Prot;Acc:P40227]	CCT6A
+ENSG00000152234	ATP5A1	ATP synthase subunit alpha, mitochondrial Precursor  [Source:UniProtKB/Swiss-Prot;Acc:P25705]	ATP5A1
+ENSG00000153187	HNRNPU	Heterogeneous nuclear ribonucleoprotein U (hnRNP U)(Scaffold attachment factor A)(SAF-A)(p120)(pp120) [Source:UniProtKB/Swiss-Prot;Acc:Q00839]	HNRNPU
+ENSG00000156508	EEF1A1	Elongation factor 1-alpha 1 (EF-1-alpha-1)(Elongation factor 1 A-1)(eEF1A-1)(Elongation factor Tu)(EF-Tu)(Leukocyte receptor cluster member 7) [Source:UniProtKB/Swiss-Prot;Acc:P68104]	EEF1A1
+ENSG00000163468	CCT3	T-complex protein 1 subunit gamma (TCP-1-gamma)(CCT-gamma)(hTRiC5) [Source:UniProtKB/Swiss-Prot;Acc:P49368]	CCT3
+ENSG00000164924	YWHAZ	14-3-3 protein zeta/delta (Protein kinase C inhibitor protein 1)(KCIP-1) [Source:UniProtKB/Swiss-Prot;Acc:P63104]	YWHAZ
+ENSG00000169045	HNRNPH1	Heterogeneous nuclear ribonucleoprotein H (hnRNP H) [Source:UniProtKB/Swiss-Prot;Acc:P31943]	HNRNPH1
+ENSG00000170889	RPS9	40S ribosomal protein S9  [Source:UniProtKB/Swiss-Prot;Acc:P46781]	RPS9
+ENSG00000181163	NPM1	Nucleophosmin (NPM)(Nucleolar phosphoprotein B23)(Numatrin)(Nucleolar protein NO38) [Source:UniProtKB/Swiss-Prot;Acc:P06748]	NPM1
+ENSG00000185624	P4HB	Protein disulfide-isomerase Precursor (PDI)(EC 5.3.4.1)(Prolyl 4-hydroxylase subunit beta)(Cellular thyroid hormone-binding protein)(p55) [Source:UniProtKB/Swiss-Prot;Acc:P07237]	P4HB

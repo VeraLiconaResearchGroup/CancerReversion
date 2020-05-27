@@ -1,0 +1,5 @@
+ID	Gene symbol	Gene description	Gene symbol ID
+ENSG00000108953	YWHAE	14-3-3 protein epsilon (14-3-3E) [Source:UniProtKB/Swiss-Prot;Acc:P62258]	YWHAE
+ENSG00000156508	EEF1A1	Elongation factor 1-alpha 1 (EF-1-alpha-1)(Elongation factor 1 A-1)(eEF1A-1)(Elongation factor Tu)(EF-Tu)(Leukocyte receptor cluster member 7) [Source:UniProtKB/Swiss-Prot;Acc:P68104]	EEF1A1
+ENSG00000164924	YWHAZ	14-3-3 protein zeta/delta (Protein kinase C inhibitor protein 1)(KCIP-1) [Source:UniProtKB/Swiss-Prot;Acc:P63104]	YWHAZ
+ENSG00000181163	NPM1	Nucleophosmin (NPM)(Nucleolar phosphoprotein B23)(Numatrin)(Nucleolar protein NO38) [Source:UniProtKB/Swiss-Prot;Acc:P06748]	NPM1

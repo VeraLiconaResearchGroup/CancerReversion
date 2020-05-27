@@ -1,0 +1,9 @@
+RAD21	activates	PKIA
+JUN	activates	HDAC2
+SMAD3	inactivates	JUN
+SMAD3	inactivates	HDAC2
+SMAD3	inactivates	PKIA
+JUNB	inactivates	HDAC2
+JUNB	inactivates	JUN
+RAD21	activates	JUN
+RAD21	activates	HDAC2

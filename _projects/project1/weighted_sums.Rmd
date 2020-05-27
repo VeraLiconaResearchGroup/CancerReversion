@@ -1,0 +1,73 @@
+---
+title: "weighted sums"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## input files
+
+## Instructions:
+When running this file, chage working directory accordingly and make sure 3 files you're inputing are correctly named. Then uncomment the ggsave function and change the name of the image you're saving.
+
+```{r}
+# setwd("~/GitHub/gastonguay_compsysmed_labnotebook/_projects/project1")
+library(readr)
+library(ggplot2)
+library(readr)
+library(tidyverse)
+library(ggpubr)
+library(knitr)
+library(gridExtra)
+library(grid)
+
+#Input Files:
+rankedDEGs<-read_csv("gene_network/rankedDEGs_FDR05_Pval001_rankedzscore.txt", col_names = FALSE)
+FOC<-read_csv("gene_network/FOC_LCC", col_names = FALSE)
+SOC<-read_csv("gene_network/SOC_LCC_expr_nohkg", col_names=FALSE)
+
+#Lists we're comparing to:
+HOC<- read_csv("HOC.txt", col_names = FALSE)
+CL<-read_csv("EMT_innateimmune", col_names = FALSE)
+breastDO <-read_csv("breast_DO.txt", col_names = FALSE)
+```
+
+#calculate weighted sums
+```{r}
+weightedsums<-data.frame(gene_set = NA, number_genes = NA, HOC= NA, breastDO= NA, CLgenes=NA, sum=NA)
+class(weightedsums$sum)<-'numeric'
+
+varlist<-list(rankedDEGs$X1,FOC$X1,SOC$X1)
+for (i in varlist){
+  ilen<-length(i)
+  x<-length(intersect(i,HOC$X1))/ilen
+  y<-length(intersect(i,breastDO$X1))/ilen
+  z<-length(intersect(i,CL$X1))/ilen
+  SUM<-((1/3)*x)+((1/3)*y)+((1/3)*z)
+  weightedsums[nrow(weightedsums)+1,] = list(NA,ilen,x,y,z,SUM)
+}
+weightedsums<-weightedsums[-1,]
+weightedsums[1,1]<-'DEGs'
+weightedsums[2,1]<-'FOC'
+weightedsums[3,1]<-'SOC'
+
+# write.table(weightedsums,"gene_network/weightedsums_prtn_300.txt", row.names=FALSE, quote = FALSE)
+tt <- ttheme_default(colhead=list(fg_params = list(fontface=c( "bold"))),
+                     # fg_params=list(fontface=c(rep("plain", 4), "bold.italic")),
+                     base_size = 7.5,
+                     padding = unit(c(2, 4), "mm"))
+tbl <- tableGrob(weightedsums, rows=NULL, theme = tt)
+
+weightedsums$rounded_sum <- round(weightedsums$sum, 4)
+
+g1 <- ggplot(data= weightedsums, aes(x = gene_set, y =sum)) + geom_bar(stat="identity", aes(fill = gene_set)) +
+  geom_text(aes(label = rounded_sum), vjust=1.6, color="white", size=3.5) +
+  ggtitle("Gene List Weighted Sums") + xlab("Gene list") +ylab("Weighted Sum") + theme(legend.position = "none")
+
+# ggsave("../../_assets/images/weightedsums_plusTABLE.png", arrangeGrob(g1, tbl, nrow = 2, heights = c(3,1)), "png")
+
+# ggsave("../../_assets/images/weightedsums.png", g1, "png")
+
+```

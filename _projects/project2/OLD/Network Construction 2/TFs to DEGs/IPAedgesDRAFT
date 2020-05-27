@@ -1,0 +1,49 @@
+CTNNB1	activates	ANXA1
+CTNNB1	activates	FN1
+CTNNB1	activates	VIM
+CTNNB1	actuaves TP53	(https://reports.ingenuity.com/rs/edgeview/edgeview.jsp?edgeViewURLexpID=4b3b853629eceaa8%3A-4889875b%3A16ba1dded98%3A-71fe&FAILOVER_IPA=&eid=4b3b853629eceaa8:-4889875b:16ba1dded98:-71fd&fid=&canWrite=true&srcNodeName=CTNNB1&tgtNodeName=TP53)
+CTNNB1	inactivates	BGN
+CTNNB1	inactivates	EGFR (https://reports.ingenuity.com/rs/edgeview/edgeview.jsp?edgeViewURLexpID=4b3b853629eceaa8%3A-4889875b%3A16ba1dded98%3A-71f6&FAILOVER_IPA=&eid=4b3b853629eceaa8:-4889875b:16ba1dded98:-71f5&fid=&canWrite=true&srcNodeName=CTNNB1&tgtNodeName=EGFR)
+CTNNB1	inactivates	TNIK
+FOS	activates	ATF3
+FOS	activates	FN1
+FOS	activates	ICAM1
+FOS	inactivates	TGFB1
+FOS	inactivates	TP53
+FOXM1	activates	ANXA1
+FOXM1	activates	CDC20
+FOXM1	activates	PLK1
+FOXM1	activates	VIM
+JUN	activates	ATF3
+JUN	activates	FN1
+JUN	activates	IGF1R
+JUN	activates	IL7R
+JUN	activates	IL7R
+JUN	activates	VIM
+JUN	activates	VIM
+JUN	inactivates	TP53
+JUN	inactivates ICAM1 https://reports.ingenuity.com/rs/edgeview/edgeview.jsp?edgeViewURLexpID=f747a12de26f930c%3A5cc1e552%3A16ba1de4ac4%3A-71ac&FAILOVER_IPA=&eid=f747a12de26f930c:5cc1e552:16ba1de4ac4:-71ab&fid=&canWrite=true&srcNodeName=JUN&tgtNodeName=ICAM1
+Mutant RELA protein (substitution p.K195R) increases expression of human PLK1 mRNA in EC3 cells.
+RELA	activates	BACE1 ???https://reports.ingenuity.com/rs/edgeview/edgeview.jsp?edgeViewURLexpID=f747a12de26f930c%3A5cc1e552%3A16ba1de4ac4%3A-7131&FAILOVER_IPA=&eid=f747a12de26f930c:5cc1e552:16ba1de4ac4:-7130&fid=&canWrite=true&srcNodeName=RELA&tgtNodeName=BACE1
+RELA	activates	SMAD4
+RELA	inactivates	IGF1R
+RELA	inactivates	TGFB1
+RELA	inactivates	TP53
+SNAI1	activates	FN1
+SNAI1	activates	TGFB1
+SNAI1	inactivates	CD55
+SNAI1	inactivates	GSN
+STAT3	activates	ICAM1
+STAT3	activates	IL4R
+STAT3	activates	SERPINA1
+STAT3	activates	VIM
+STAT3	inactivates	FN1
+STAT3	inactivates	TP53
+TCF3 inactivates	ATF3
+TCF3 inactivates	IL7R
+ZBTB17	inactivates	CDC20
+ZBTB17	inactivates	NDC80
+ZBTB17	inactivates	NUF2
+ZBTB17	inactivates	PLK1
+ZBTB17	inactivates	TOP2A
+ZBTB17	inactivates	TPX2

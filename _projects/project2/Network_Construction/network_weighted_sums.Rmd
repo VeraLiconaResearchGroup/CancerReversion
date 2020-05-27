@@ -1,0 +1,52 @@
+---
+  title: "weighted sums"
+output: html_document
+---
+  
+  ```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## input files
+This file takes the lists of CL TNBC related genes (EMT/innate immunity Hallmarks of cancer, Breast Disease Ontology, and Claudin-Low related genes) and compares the nodes in the network to them.
+
+```{r}
+setwd("~/Documents/GitHub/gastonguay_compsysmed_labnotebook/_projects/project2/Network_Construction")
+library(readr)
+library(ggplot2)
+library(readr)
+library(tidyverse)
+library(ggpubr)
+library(knitr)
+library(gridExtra)
+library(grid)
+library(MASS)
+
+#Input Files:
+network<-read.csv("networknodes_227", header = FALSE, col.names = "gene")
+
+#Lists we're comparing to:
+# From weighted sums:
+HOC<- read.csv("../Network_Components/EMT_innateimmune.txt", header = FALSE,  col.names = "gene")
+CL<-read.csv("../Network_Components/CL_genes.txt", header = FALSE,  col.names = "gene")
+breastDO <-read.csv("../Network_Components/breast_DO.txt", header = FALSE,  col.names = "gene")
+# ACSN nodes:
+acsn <- read.csv("acsn", header = FALSE,  col.names = "gene")
+
+f = function(x, den) {paste0(x, "/", den)}
+```
+
+
+```{r}
+# Find intersection between the network and each list
+Cl_in_net <- as.data.frame(intersect(network$gene, CL$gene))
+nrow(Cl_in_net)
+HOC_in_net <- as.data.frame(intersect(network$gene, HOC$gene))
+nrow(HOC_in_net)
+BDO_in_net <- as.data.frame(intersect(network$gene, breastDO$gene))
+nrow(BDO_in_net)
+acsn_in_net <- as.data.frame(intersect(network$gene, acsn$gene))
+nrow(acsn_in_net)
+```
+
+

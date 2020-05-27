@@ -1,0 +1,9 @@
+© 2000-2019 QIAGEN. All rights reserved.
+
+Upstream Regulator	Expr Log Ratio	Molecule Type	Predicted Activation State	p-value of overlap	Target molecules in dataset	Mechanistic Network	
+ETS1	 	transcription regulator	 	7.97E-04	FN1,PML,SCAMP1	 
+E2F1	 	transcription regulator	 	1.11E-03	CDC20,CDK1	 
+YY1	 	transcription regulator	 	7.42E-03	BRCA1	 
+CEBPD	 	transcription regulator	 	1.48E-02	CDC27	 
+SRA1	 	transcription regulator	 	2.21E-02	CAV1	 
+EPAS1	 	transcription regulator	 	3.65E-02	EGFR	 

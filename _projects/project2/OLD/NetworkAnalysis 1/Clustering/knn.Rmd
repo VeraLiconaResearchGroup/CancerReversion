@@ -1,0 +1,91 @@
+---
+title: "knn"
+author: "Maddie"
+date: "9/2/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(devtools)
+library(ggplot2)
+library(tidyverse)
+library(class)
+```
+
+
+```{r}
+# Create training set
+
+# Those attractors that always clustered with 231 for hierarchical and kmeans with 2 and 3 clusters for the discrete double vecotrs
+cancerousTrain <- read.delim("DiscreteBoth/cancerousTrain.txt", row.names=1)
+cancerousTrain$class <- rep("cancerous", nrow(cancerousTrain))
+
+# Those attractors that always clustered with 10A for hierarchical and kmeans with 2 and 3 clusters for the discrete double vecotrs
+normalTrain <- read.delim("DiscreteBoth/normalTrain.txt", row.names = 1)
+normalTrain$class <- rep("normal", nrow(normalTrain))
+
+Train <- rbind(cancerousTrain, normalTrain)
+```
+
+```{r}
+# creating test set
+test <- read.delim("DiscreteBoth/pert2205_attr", header=FALSE, row.names=1) %>% t() %>% as.data.frame()
+testSuccess <- read.delim("../../insilico_perturbations/testSet.txt", header=FALSE, row.names=1)
+names(testSuccess) <- names(test)
+```
+
+#knn
+
+```{r}
+# Classifying a perturbation we deemed successful based on readout nodes
+kn2 <- knn(train = Train[,-117], test = test, cl = Train$class, k = 10)
+res <- data.frame("attractor" = "perturbation 2205", "cluster"= as.character(kn2), stringsAsFactors = FALSE)
+res
+```
+
+```{r}
+# Classifying all perturbations we deemed successful
+kn3 <- knn(train = Train[,-117], test = testSuccess, cl = Train$class, k =10)
+res <- data.frame("attractor" = row.names(testSuccess), "cluster"= as.character(kn3), stringsAsFactors = FALSE)
+res
+
+misClass <- res %>% filter(cluster == "cancerous")
+misClass <- misClass$attractor
+misClass
+```
+# Classifying all perturbations of FC1
+```{r}
+# training set is still those that clustered together in discrete double
+test_all_pert <- read.delim('../../insilico_perturbations/testSet_allPerturb.txt', header = FALSE, row.names = 1)
+names(test_all_pert) <- names(test)
+
+kn4 <- knn(train = Train[,-117], test = test_all_pert, cl = Train$class, k =10)
+res <- data.frame("attractor" = row.names(test_all_pert), "cluster"= as.character(kn4), stringsAsFactors = FALSE)
+res
+
+ca1 <- res %>% filter(cluster == "cancerous")
+norm1 <- res %>% filter(cluster == "normal")
+
+
+```
+
+```{r}
+# Adding an "other" classification to training set - all attractors that did not cluster with 231 or 10A
+otherTrain <- read.delim('DiscreteBoth/Other_attrs.txt', header = TRUE, row.names = 1)
+otherTrain$class <- rep("other", nrow(otherTrain))
+Train2 <- rbind(otherTrain, Train)
+
+kn5 <- knn(train = Train2[,-117], test = test_all_pert, cl = Train2$class, k = 10)
+res <- data.frame("attractor" = row.names(test_all_pert), "cluster"= as.character(kn4), stringsAsFactors = FALSE)
+res
+
+ca2 <- res %>% filter(cluster == "cancerous")
+norm2 <- res %>% filter(cluster == "normal")
+other2 <- res %>% filter(cluster == "other")
+
+
+```
+
+
+

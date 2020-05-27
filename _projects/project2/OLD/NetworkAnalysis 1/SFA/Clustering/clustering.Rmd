@@ -1,0 +1,550 @@
+---
+title: "Cluster Attractors"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+
+```{r, include=FALSE}
+# setwd("~/GitHub/gastonguay_compsysmed_labnotebook/_projects/project2/NetworkAnalysis/SFA/Clustering")
+knitr::opts_chunk$set(echo = FALSE)
+library(devtools)
+library(ggplot2)
+library(tidyverse)
+library(cluster)
+library(HSAUR)
+library(fpc)
+library(NMF)
+library(ggfortify)
+library(factoextra)
+library(dendextend)
+library(ClassDiscovery)
+library(magrittr)
+library(MASS)
+library(class)
+```
+
+
+```{r}
+# Read in Data
+# Cancerous attractor (MDA-MB-231)
+MBA <- read.table("../attractor_231.txt", row.names = 1) #Raw SFA output
+MD231 <- read.table("../231_attractor_discrete", row.names = 1) #Discrete
+
+# Normal attractor (MCF10A)
+MCF10A <- read.table("../attractor_10A.txt", row.names = 1) #Raw SFA ouput
+MCF <- read.table("../10A_attractor_discrete", row.names = 1) #Discrete
+
+#Simulated attractors
+attr <- read.table("../Identify Attractors/attractor_df.txt", row.names = 1) #Raw
+sim <- read.table("../Identify Attractors/attractor_df_discrete.txt", row.names = 1) #Discrete
+
+```
+
+
+```{r}
+# Manipulate Data
+# Create a dataframe of all the raw values
+
+temp <- cbind(MBA, MCF10A, attr) 
+all <- temp%>% round(3) #round raw vlaues to three decimals
+names <- paste("attractor", seq(1:1000), sep = "")
+names(all) <- c("attractor_231", "attractor_10A", names)
+
+# Create a dataframe of all the discrete values
+
+all_disc <- cbind(MD231, MCF, sim)
+names(all_disc) <- names(all)
+
+```
+
+
+```{r}
+# Calculate Direction of Activity Change
+# Raw value of DAC
+DAC <- all
+
+for( i in 1:ncol(all)){
+  DAC[,i] <- temp[,1] - temp[,i] 
+}
+row.names(DAC)<- paste(row.names(DAC), "_DAC", sep = "")
+DAC <- round(DAC, 3)
+
+# Discretize DAC
+disc <- function(x){
+  if(x < 0){
+    x <- -1
+  }else if(x > 0){
+    x <- 1
+  } else{
+    x <- 0
+  }
+  }
+
+DAC_disc <- apply(DAC, c(1,2), disc) %>% as.data.frame()
+
+```
+
+
+```{r}
+both <- rbind(all, DAC)
+both_disc <- rbind(all_disc, DAC_disc)
+```
+
+```{r}
+# Create Dataframe with combination of SFA values and DAC
+class <- c("cancerous", "normal", rep("unknown", 1000))
+trials <- c(paste("A", seq(1:4), sep = "."), paste("B", seq(1:4), sep = "."), paste("C", seq(1:4), sep = "."), paste("D", seq(1:4), sep = "."), paste("E", seq(1:4), sep = "."), paste("F", seq(1:4), sep = "."))
+```
+
+
+# Rounded Raw Values Clustering
+```{r}
+all_T <- all %>% t() %>% as.data.frame()
+# add label for coloring
+# all_T$class <- c("Cancerous_MDA-MB-231", "Normal_MCF10A", rep("unknown", 1000))
+
+# PCA scree and biplot
+pca <- prcomp(all_T, center = TRUE)
+screeplot(pca)
+biplot(pca)
+  
+# Hierarchical
+hclust <- hclust(dist(scale(all_T)), method = "complete")
+plotColoredClusters(hclust, class, c("red", "blue", rep("gray",1000)), cex = 0.8, main = "", line = 0) 
+
+all_h_2 <- hclust %>% cutree(k = 2) %>% as.data.frame() %>% set_colnames("A_hierarchical_2")
+all_h_3 <- hclust %>% cutree(k = 3) %>% as.data.frame() %>% set_colnames("A_hierarchical_3")
+
+# Heatmap
+aheatmap(all,scale = 'row',  Rowv = NA, Colv = 3L, cellwidth = 10, cellheight = 30, hclustfun = "complete",color=colorRampPalette(c('navy','white','firebrick3'))(80), filename = "raw_heatmap.pdf")
+
+#MDS
+mds1 <- cmdscale(dist(all_T),eig=TRUE, k=2) # k is the number of dim
+
+x <- mds1$points[-c(1,2),1]
+y <- mds1$points[-c(1,2),2]
+ggplot(as.data.frame(mds1$points[-c(1,2),]), aes(x, y)) + geom_text( label = rownames(mds1$points[-c(1,2),]), color = "gray") + geom_text(data = mds1$points[1:2,], aes(x=mds1$points[1:2,1], y= mds1$points[1:2,2] ), label = rownames(mds1$points[c(1,2),]), color = c("red", "blue")) + xlab("Coordinate 1") + ylab("Coordinate 2") + ggtitle("Metric MDS")+ theme_bw()
+
+
+# Silohouette plot
+fviz_nbclust(all_T, kmeans)
+fviz_nbclust(all_T, kmeans, method = "wss")
+
+#K-means
+k2_raw <- kmeans(all_T, centers = 2, nstart = 10000, iter.max = 30)
+plotcluster(all_T, k2_raw$cluster, bw = FALSE)
+all_km_2 <- k2_raw$cluster %>% as.data.frame() %>% set_colnames("A_KM_2")
+
+# k3_raw <- kmeans(all_T, centers = 3, nstart = 10000, iter.max = 30) #Quick-TRANSfer stage steps exceeded maximum (= 50100)
+# plotcluster(all_T, k3_raw$cluster, bw = FALSE)
+```
+
+# Discrete Values Clustering
+```{r}
+all_disc_T <- all_disc %>% t() %>% as.data.frame()
+# add label for coloring
+# all_T$class <- c("Cancerous_MDA-MB-231", "Normal_MCF10A", rep("unknown", 1000))
+
+# PCA scree and biplot
+pca <- prcomp(all_disc_T, center = TRUE)
+screeplot(pca)
+biplot(pca)
+  
+# Hierarchical
+hclust <- hclust(dist(scale(all_disc_T)), method = "complete")
+plotColoredClusters(hclust, class, c("red", "blue", rep("gray",1000)), cex = 0.8, main = "", line = 0)
+
+# Heatmap
+aheatmap(all_disc,Rowv = NA, Colv = 3L, cellwidth = 10, cellheight = 30, hclustfun = "complete",color=colorRampPalette(c('navy','white','firebrick3'))(80), filename = "disc_heatmap.pdf")
+
+#MDS
+mds1 <- cmdscale(dist(all_disc_T),eig=TRUE, k=2) # k is the number of dim
+
+x <- mds1$points[-c(1,2),1]
+y <- mds1$points[-c(1,2),2]
+ggplot(as.data.frame(mds1$points[-c(1,2),]), aes(x, y)) + geom_text( label = rownames(mds1$points[-c(1,2),]), color = "gray") + geom_text(data = mds1$points[1:2,], aes(x=mds1$points[1:2,1], y= mds1$points[1:2,2] ), label = rownames(mds1$points[c(1,2),]), color = c("red", "blue")) + xlab("Coordinate 1") + ylab("Coordinate 2") + ggtitle("Metric MDS") + theme_bw()
+
+# Silohouette plot
+fviz_nbclust(all_disc_T, kmeans)
+fviz_nbclust(all_disc_T, kmeans, method = "wss")
+
+#K-means
+k2_disc <- kmeans(all_disc_T, centers = 2, nstart = 10000, iter.max = 30)
+plotcluster(all_disc_T, k2_disc$cluster, bw = FALSE)
+
+all_disc_km_2 <- k2_disc$cluster %>% as.data.frame() %>% set_colnames("B_KM_2")
+
+k3_disc <- kmeans(all_disc_T, centers = 3, nstart = 10000, iter.max = 30)
+plotcluster(all_disc_T, k3_disc$cluster, bw = FALSE)
+
+all_disc_km_3 <- k3_disc$cluster %>% as.data.frame() %>% set_colnames("B_KM_3")
+
+```
+
+
+```{r}
+#trying to get scree plots from MDS
+# iris.iso <- isoMDS(dist(all_disc_T))
+# eqscplot(iris.iso$points, type = "n")
+# text(iris.iso$points, label = row.names(all_disc_T), cex = .8)
+# iris.iso$stress
+# 
+# scree.plot = function(d, k) {
+#     stresses=isoMDS(d, k=k)$stress
+#     for(i in rev(seq(k-1)))  
+#         stresses=append(stresses,isoMDS(d, k=i)$stress)
+#     plot(seq(k),rev(stresses), type="b", xaxp=c(1,k, k-1), ylab="Stress", xlab="Number of dimensions")
+# }
+# 
+# scree.plot(dist(all_disc_T), k=6)
+
+```
+
+
+# Raw DAC
+```{r}
+DAC_T <- DAC %>% t() %>% as.data.frame()
+# add label for coloring
+# all_T$class <- c("Cancerous_MDA-MB-231", "Normal_MCF10A", rep("unknown", 1000))
+
+# PCA scree and biplot
+pca <- prcomp(DAC_T, center = TRUE)
+screeplot(pca)
+biplot(pca)
+  
+# Hierarchical
+hclust <- hclust(dist(scale(DAC_T)), method = "complete")
+plotColoredClusters(hclust, class, c("red", "blue", rep("gray",1000)), cex = 0.8, main = "", line = 0) 
+
+
+# Heatmap
+aheatmap(DAC, scale = 'row',  Rowv = NA, Colv = 3L, cellwidth = 10, cellheight = 30, hclustfun = "complete",color=colorRampPalette(c('navy','white','firebrick3'))(80), filename = "DAC_heatmap.pdf")
+
+#MDS
+mds1 <- cmdscale(dist(DAC_T),eig=TRUE, k=2) # k is the number of dim
+
+x <- mds1$points[-c(1,2),1]
+y <- mds1$points[-c(1,2),2]
+ggplot(as.data.frame(mds1$points[-c(1,2),]), aes(x, y)) + geom_text( label = rownames(mds1$points[-c(1,2),]), color = "gray") + geom_text(data = mds1$points[1:2,], aes(x=mds1$points[1:2,1], y= mds1$points[1:2,2] ), label = rownames(mds1$points[c(1,2),]), color = c("red", "blue")) + xlab("Coordinate 1") + ylab("Coordinate 2") + ggtitle("Metric MDS") + theme_bw()
+
+
+# Silohouette plot
+fviz_nbclust(DAC_T, kmeans)
+fviz_nbclust(DAC_T, kmeans, method = "wss")
+
+#K-means
+k2_DAC <- kmeans(DAC_T, centers = 2, nstart = 10000, iter.max = 30)
+plotcluster(DAC_T, k2_DAC$cluster, bw = FALSE)
+
+DAC_km_2 <- k2_DAC$cluster %>% as.data.frame() %>% set_colnames("C_km_2")
+
+k3_DAC <- kmeans(DAC_T, centers = 3, nstart = 10000, iter.max = 30)
+plotcluster(DAC_T, k3_DAC$cluster, bw = FALSE)
+
+DAC_km_3 <- k3_DAC$cluster%>% as.data.frame() %>% set_colnames("C_km_3")
+
+```
+
+# Discrete DAC
+```{r}
+DAC_disc_T <- DAC_disc %>% t() %>% as.data.frame()
+# add label for coloring
+# all_T$class <- c("Cancerous_MDA-MB-231", "Normal_MCF10A", rep("unknown", 1000))
+
+# PCA scree and biplot
+pca <- prcomp(DAC_disc_T, center = TRUE)
+screeplot(pca)
+biplot(pca)
+  
+# Hierarchical
+hclust <- hclust(dist(scale(DAC_disc_T)), method = "complete")
+plotColoredClusters(hclust, class, c("red", "blue", rep("gray",1000)), cex = 0.8, main = "", line = 0) 
+
+DAC_disc_h_3 <- hclust %>% cutree(k=3) %>% as.data.frame() %>% set_colnames("D_hierarchical_3")
+DAC_disc_h_4 <- hclust %>% cutree(k=4) %>% as.data.frame() %>% set_colnames("D_hierarchical_4")
+
+# Heatmap
+aheatmap(DAC_disc,Colv = 3L, cellwidth = 10, cellheight = 30, hclustfun = "complete",color=colorRampPalette(c('navy','white','firebrick3'))(80), filename = "DAC_disc_heatmap.pdf")
+
+#MDS
+mds1 <- cmdscale(dist(DAC_disc_T),eig=TRUE, k=2) # k is the number of dim
+
+x <- mds1$points[-c(1,2),1]
+y <- mds1$points[-c(1,2),2]
+ggplot(as.data.frame(mds1$points[-c(1,2),]), aes(x, y)) + geom_text( label = rownames(mds1$points[-c(1,2),]), color = "gray") + geom_text(data = mds1$points[1:2,], aes(x=mds1$points[1:2,1], y= mds1$points[1:2,2] ), label = rownames(mds1$points[c(1,2),]), color = c("red", "blue")) + xlab("Coordinate 1") + ylab("Coordinate 2") + ggtitle("Metric MDS") + theme_bw()
+
+# Silohouette plot
+fviz_nbclust(DAC_disc_T, kmeans)
+fviz_nbclust(DAC_disc_T, kmeans, method = "wss")
+
+#K-means
+k2_DAC_disc <- kmeans(DAC_disc_T, centers = 2, nstart = 10000, iter.max = 30)
+plotcluster(DAC_disc_T, k2_DAC_disc$cluster, bw = FALSE)
+
+k3_DAC_disc <- kmeans(DAC_disc_T, centers = 3, nstart = 10000, iter.max = 30)
+plotcluster(DAC_disc_T, k3_DAC_disc$cluster, bw = FALSE)
+
+DAC_disc_km_2 <- k2_DAC_disc$cluster %>% as.data.frame() %>% set_colnames("D_km_2")
+DAC_disc_km_3 <- k3_DAC_disc$cluster %>% as.data.frame() %>% set_colnames("D_km_3")
+
+```
+
+# Both
+```{r}
+both_T <- both %>% t() %>% as.data.frame()
+# add label for coloring
+# all_T$class <- c("Cancerous_MDA-MB-231", "Normal_MCF10A", rep("unknown", 1000))
+
+# PCA scree and biplot
+pca <- prcomp(both_T, center = TRUE)
+screeplot(pca)
+biplot(pca)
+  
+# Hierarchical
+hclust <- hclust(dist(scale(both_T)), method = "complete")
+plotColoredClusters(hclust, class, c("red", "blue", rep("gray",1000)), cex = 0.8, main = "", line = 0) 
+
+both_h_2 <- hclust %>% cutree(k=2) %>% as.data.frame() %>% set_colnames("E_hierarchical_2")
+both_h_3 <- hclust %>% cutree(k=3) %>% as.data.frame() %>% set_colnames("E_hierarchical_3")
+
+# Heatmap
+aheatmap(both,scale = 'row',  Rowv = NA, Colv = 3L, cellwidth = 10, cellheight = 30, hclustfun = "complete",color=colorRampPalette(c('navy','white','firebrick3'))(80), filename = "both_heatmap.pdf")
+
+#MDS
+mds1 <- cmdscale(dist(both_T),eig=TRUE, k=2) # k is the number of dim
+
+x <- mds1$points[-c(1,2),1]
+y <- mds1$points[-c(1,2),2]
+ggplot(as.data.frame(mds1$points[-c(1,2),]), aes(x, y)) + geom_text( label = rownames(mds1$points[-c(1,2),]), color = "gray") + geom_text(data = mds1$points[1:2,], aes(x=mds1$points[1:2,1], y= mds1$points[1:2,2] ), label = rownames(mds1$points[c(1,2),]), color = c("red", "blue")) + xlab("Coordinate 1") + ylab("Coordinate 2") + ggtitle("Metric MDS") + theme_bw()
+
+# Silohouette plot
+fviz_nbclust(both_T, kmeans)
+fviz_nbclust(both_T, kmeans, method = "wss")
+
+#K-means
+k2_both <- kmeans(both_T, centers = 2, nstart = 10000, iter.max = 30)
+plotcluster(both_T, k2_both$cluster, bw = FALSE)
+
+both_km_2 <- k2_both$cluster %>% as.data.frame() %>% set_colnames("E_km_2")
+# 
+k3_both <- kmeans(both_T, centers = 3, nstart = 10000, iter.max = 30) #Quick-TRANSfer stage steps exceeded maximum (= 50100)
+plotcluster(both_T, k3_both$cluster, bw = FALSE)
+
+```
+
+
+# Both discrete
+```{r}
+both_disc_T <- both_disc %>% t() %>% as.data.frame()
+# add label for coloring
+# all_T$class <- c("Cancerous_MDA-MB-231", "Normal_MCF10A", rep("unknown", 1000))
+
+# PCA scree and biplot
+pca <- prcomp(both_disc_T, center = TRUE)
+screeplot(pca)
+biplot(pca)
+  
+# Hierarchical
+hclust <- hclust(dist(scale(both_disc_T)), method = "complete")
+plotColoredClusters(hclust, class, c("red", "blue", rep("gray",1000)), cex = 0.8, main = "", line = 0) 
+
+both_disc_h_h28 <- hclust %>% cutree(h=28) %>% as.data.frame() %>% set_colnames("F_hierarchical_10")
+
+# Heatmap
+aheatmap(both_disc, Colv = 3L, cellwidth = 10, cellheight = 30, hclustfun = "complete",color=colorRampPalette(c('navy','white','firebrick3'))(80), filename = "both_disc_heatmap.pdf")
+
+#MDS
+mds1 <- cmdscale(dist(both_disc_T),eig=TRUE, k=2) # k is the number of dim
+x <- mds1$points[-c(1,2),1]
+y <- mds1$points[-c(1,2),2]
+ggplot(as.data.frame(mds1$points[-c(1,2),]), aes(x, y)) + geom_text( label = rownames(mds1$points[-c(1,2),]), color = "gray") + geom_text(data = mds1$points[1:2,], aes(x=mds1$points[1:2,1], y= mds1$points[1:2,2] ), label = rownames(mds1$points[c(1,2),]), color = c("red", "blue")) + xlab("Coordinate 1") + ylab("Coordinate 2") + ggtitle("Metric MDS") + theme_bw()
+
+
+# Silohouette plot
+fviz_nbclust(both_disc_T, kmeans)
+fviz_nbclust(both_disc_T, kmeans, method = "wss")
+
+#K-means
+k2_both_disc <- kmeans(both_disc_T, centers = 2, nstart = 10000, iter.max = 30)
+plotcluster(both_disc_T, k2_both_disc$cluster, bw = FALSE)
+
+both_disc_km_2 <- k2_both_disc$cluster %>% as.data.frame() %>% set_colnames("F_km_2")
+
+k3_both_disc <- kmeans(both_disc_T, centers = 3, nstart = 10000, iter.max = 30)
+plotcluster(both_disc_T, k3_both_disc$cluster, bw = FALSE)
+
+both_disc_km_3 <- k3_both_disc$cluster %>% as.data.frame() %>% set_colnames("F_km_3")
+
+# k4_both_disc <- kmeans(both_disc_T, centers = 4, nstart = 10000, iter.max = 30)
+# plotcluster(both_disc_T, k4_both_disc$cluster, bw = FALSE)
+
+
+```
+
+
+# Knn for discrete Both
+```{r, echo = TRUE}
+df5 <- all_T
+df5$class <- c("cancerous", "normal", rep("unknown", 1000))
+kn <- knn(train = df5[1:2,-117], test = df5[-c(1,2),-117], cl = df5[1:2,]$class, k = 2)
+res <- data.frame("attractor" = row.names(df5)[-c(1,2)], "cluster"= as.character(kn), stringsAsFactors = FALSE)
+
+```
+
+
+<!-- # Explore Results -->
+<!-- ```{r} -->
+<!-- clusters <- cbind(all_h_2, all_h_3, all_km_2, all_disc_km_2, all_disc_km_3, DAC_km_2, DAC_km_3, DAC_disc_h_3, DAC_disc_h_4, DAC_disc_km_2, both_h_2, both_h_3, both_km_2, both_disc_h_h28, both_disc_km_2, both_disc_km_3) -->
+<!-- write.table(clusters, "cluster_assignments.txt", quote = FALSE) -->
+
+<!-- cl_disc <- cbind(all_disc_km_2, all_disc_km_3) -->
+<!-- cl_disc_DAC <- cbind(DAC_disc_h_3, DAC_disc_h_4, DAC_disc_km_2, DAC_disc_km_3) -->
+<!-- cl_disc_both <- cbind(both_disc_h_h28, both_disc_km_2, both_disc_km_3) -->
+
+<!-- ``` -->
+
+<!-- # Using descitized double vectors to cluster -->
+<!-- ```{r} -->
+<!-- df <- k3_both_disc$cluster %>% as.data.frame() %>% set_colnames("Cluster") -->
+
+<!-- df2 <- cbind(all_disc_T, df) -->
+
+<!-- df3 <- df2 %>% select(c(Cluster, CCNG2, CDC20, FYN, GSK3B, HUWE1, MAPK13, SNAI1, STAT3)) -->
+<!-- df4 <- df2 %>% select(-c(Cluster, CCNG2, CDC20, FYN, GSK3B, HUWE1, MAPK13, SNAI1, STAT3)) -->
+
+<!-- df5 <- cbind(df3,df4) -->
+<!-- df5$attr <- row.names(df5) -->
+<!-- df5 <- arrange(df5, Cluster) -->
+<!-- row.names(df5) <- df5$attr -->
+<!-- # df5 <- df5[,1:length(names(df5))-1] -->
+
+
+<!-- ``` -->
+
+<!-- #Exploring readout nodes in clusters -->
+<!-- ```{r} -->
+<!-- # c1 <- df5 %>% filter(Cluster == 1) %>% column_to_rownames('attr') -->
+<!-- # c2 <- df5 %>% filter(Cluster == 2) %>% column_to_rownames('attr') -->
+<!-- # c3 <- df5 %>% filter(Cluster == 3) %>% column_to_rownames('attr') -->
+<!-- #  -->
+<!-- #  -->
+<!-- # get_frac <- function(RON, df){ -->
+<!-- #   i = 0 -->
+<!-- #   l = 0 -->
+<!-- #   a231 <- c1[1, RON] -->
+<!-- #   a10A <- c3[1, RON] -->
+<!-- #   a <- df[1, RON] -->
+<!-- #   for (n in 1:nrow(df)){ -->
+<!-- #     if (df[n, RON] == a){ -->
+<!-- #       i = i + 1 -->
+<!-- #     } else{ -->
+<!-- #       l = 1+l -->
+<!-- #     } -->
+<!-- #   } -->
+<!-- #   f1 <- i/nrow(df) -->
+<!-- #   f2 <- l/nrow(df) -->
+<!-- #   # print("match:") -->
+<!-- #   # return(f1) -->
+<!-- #   # print("diff:") -->
+<!-- #   return(c("match:", f1, "diff:", f2)) -->
+<!-- #  -->
+<!-- # } -->
+<!-- #  -->
+<!-- # rons <- c("CCNG2", "CDC20", "FYN", "GSK3B", "HUWE1", "MAPK13", "SNAI1", "STAT3") -->
+<!-- # for (elem in rons){ -->
+<!-- #   a <- get_frac(elem, c1) -->
+<!-- #   print(c(elem, a)) -->
+<!-- # } -->
+<!-- #  -->
+<!-- # for (elem in rons){ -->
+<!-- #   a <- get_frac(elem, c3) -->
+<!-- #   print(c(elem, a)) -->
+<!-- # } -->
+<!-- #  -->
+<!-- # for (elem in rons){ -->
+<!-- #   a <- get_frac(elem, c2) -->
+<!-- #   print(c(elem, a)) -->
+<!-- # } -->
+<!-- #  -->
+<!-- # for (elem in rons){ -->
+<!-- #   a <- get_frac(elem, c23) -->
+<!-- #   print(c(elem, a)) -->
+<!-- # } -->
+<!-- #  -->
+<!-- # c23 <- rbind(c2,c3) -->
+<!-- #  -->
+
+
+<!-- ``` -->
+
+<!-- #Cluster by discrete value, 3 clusters -->
+<!-- ```{r} -->
+<!-- ##231 = 1, 10a = 3 -->
+<!-- # clusters <- k3_disc$cluster %>% as.data.frame() %>% set_colnames("Cluster") -->
+<!-- #  -->
+<!-- # df6 <- cbind( all_disc_T,clusters) -->
+<!-- #  -->
+<!-- # df7 <- df6 %>% select(c(Cluster, CCNG2, CDC20, FYN, GSK3B, HUWE1, MAPK13, SNAI1, STAT3)) -->
+<!-- # df8 <- df6 %>% select(-c(Cluster, CCNG2, CDC20, FYN, GSK3B, HUWE1, MAPK13, SNAI1, STAT3)) -->
+<!-- #  -->
+<!-- # df6 <- cbind(df7,df8) -->
+<!-- # df6$attr <- row.names(df6) -->
+<!-- # df6 <- arrange(df6, Cluster) -->
+<!-- # row.names(df6) <- df6$attr -->
+<!-- # # df5 <- df5[,1:length(names(df5))-1] -->
+<!-- #  -->
+<!-- # cl1 <- df6 %>% filter(Cluster == 1) %>% column_to_rownames('attr') -->
+<!-- # cl2 <- df6 %>% filter(Cluster == 2) %>% column_to_rownames('attr') -->
+<!-- # cl3 <- df6 %>% filter(Cluster == 3) %>% column_to_rownames('attr') -->
+<!-- #  -->
+<!-- # for (elem in rons){ -->
+<!-- #   a <- get_frac(elem, cl1) -->
+<!-- #   print(c(elem, a)) -->
+<!-- # } -->
+<!-- #  -->
+<!-- # for (elem in rons){ -->
+<!-- #   a <- get_frac(elem, cl3) -->
+<!-- #   print(c(elem, a)) -->
+<!-- # } -->
+<!-- #  -->
+<!-- # for (elem in rons){ -->
+<!-- #   a <- get_frac(elem, cl2) -->
+<!-- #   print(c(elem, a)) -->
+<!-- # } -->
+
+<!-- ``` -->
+
+<!-- #Cluster by discrete value, 2 clusters -->
+<!-- ```{r} -->
+<!-- # #231 = 1, 10a = 3 -->
+<!-- # clusters <- k2_disc$cluster %>% as.data.frame() %>% set_colnames("Cluster") -->
+<!-- #  -->
+<!-- # df6 <- cbind(clusters, all_disc_T) -->
+<!-- #  -->
+<!-- # df7 <- df6 %>% select(c(Cluster, CCNG2, CDC20, FYN, GSK3B, HUWE1, MAPK13, SNAI1, STAT3)) -->
+<!-- # df8 <- df6 %>% select(-c(Cluster, CCNG2, CDC20, FYN, GSK3B, HUWE1, MAPK13, SNAI1, STAT3)) -->
+<!-- #  -->
+<!-- # df6 <- cbind(df7,df8) -->
+<!-- # df6$attr <- row.names(df6) -->
+<!-- # df6 <- arrange(df6, Cluster) -->
+<!-- # row.names(df6) <- df6$attr -->
+<!-- # # df5 <- df5[,1:length(names(df5))-1] -->
+<!-- #  -->
+<!-- # cl1 <- df6 %>% filter(Cluster == 1) %>% column_to_rownames('attr') -->
+<!-- # cl2 <- df6 %>% filter(Cluster == 2) %>% column_to_rownames('attr') -->
+<!-- #  -->
+<!-- #  -->
+<!-- # for (elem in rons){ -->
+<!-- #   a <- get_frac(elem, cl1) -->
+<!-- #   print(c(elem, a)) -->
+<!-- # } -->
+<!-- #  -->
+<!-- #  -->
+<!-- # for (elem in rons){ -->
+<!-- #   a <- get_frac(elem, cl2) -->
+<!-- #   print(c(elem, a)) -->
+<!-- # } -->
+
+<!-- ``` -->

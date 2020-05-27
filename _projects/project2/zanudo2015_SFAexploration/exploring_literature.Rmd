@@ -1,0 +1,44 @@
+---
+title: "explore boolean"
+author: "Maddie Gastonguay"
+date: "2/21/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r read in files}
+setwd("~/Documents/GitHub/gastonguay_compsysmed_labnotebook/_projects/project2/zanudo2015_SFAexploration")
+library(tidyverse)
+library(BoolNet)
+# setwd("C:/Users/marazzi/Google Drive/ALS_IPS/zanudo2015")
+network <- loadNetwork("sub_network.bn")
+```
+
+generate initial state where only il15, stimuli, and pdgfr are on
+result should just be a random attractor
+```{r random initial state}
+yo <-getAttractors(network, type="synchronous", method = 'exhaustive')
+print(yo)
+getAttractorSequence(yo, 3)
+```
+
+```{r}
+network2 <- loadNetwork("sub_network2.bn")
+ya <-getAttractors(network2, type="synchronous", method = 'exhaustive')
+print(ya)
+```
+
+```{r}
+network <- loadNetwork("zanudo_boolean.bn")
+p1<-fixGenes(network,c("il15", "stimuli"),c(1,1))
+hey <- getAttractors(p1, type = 'synchronous', startStates = 100000)
+names(hey)
+print(hey)
+length(hey)
+length(hey$attractors)
+```
+
+

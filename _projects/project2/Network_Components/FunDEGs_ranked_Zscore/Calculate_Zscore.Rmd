@@ -1,0 +1,35 @@
+---
+title: "Zscore calculation"
+output: html_document
+---
+
+This script calculates the psuedo z-score of each gene. It requires normalized epxression data as input and gives the psuedo z-score of eveery expressed gene as output.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+setwd("~/Documents/GitHub/gastonguay_compsysmed_labnotebook/_projects/project2/Network_Components/FunDEGs_rankedZscore")
+# Load Libraries
+library(knitr)
+library(dplyr)
+```
+
+#calculate standard deviations of the expression of each gene in MCF10A
+```{r}
+# Read in expression data for all expressed genes (all DEGs) filtered by CNL
+## Note: In this case, none of our genes had CNL
+data2 <- read.csv("data2.csv")
+
+#Create data table with only normalized data for MCF10a
+df <- data2 %>% select(Gene_Symbol, N_MCF10A_1, N_MCF10A_2, N_MCF10A_3, N_MCF10A_4)
+df$SD<- apply(df[,-1], 1, sd)
+df$mean <- data2$MCF10A.mean
+
+#Create new data table with all info from data2 as well as z-scores
+df1 <- data2
+df1$sd_mcf10a <- df$SD
+df1$zscore <- (df1$MDA_MB.231.mean-df1$MCF10A.mean)/df1$sd_mcf10a
+df1$abs_zscore <- abs(df1$zscore)
+
+write.table(df1, '231_expressed_zscore.txt', row.names=FALSE,sep="\t")
+
+```

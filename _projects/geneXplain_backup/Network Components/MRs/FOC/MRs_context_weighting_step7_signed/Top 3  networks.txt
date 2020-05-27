@@ -1,0 +1,51 @@
+ID	Molecule name	Role
+MO000004677	ERK2(h)	network element
+MO000004681	ERK3(h)	master
+MO000009086	MEKK1(h)	network element
+MO000009253	MAPKAPK2(h)	network element
+MO000009339	p38alpha(h)	network element
+MO000013123	STAT3(h)	hit
+MO000016677	ErbB1(h)	network element
+MO000016989	GSK3beta(h)	network element
+MO000017049	beta-catenin(h)	hit
+MO000018137	c-Fos(h)	hit
+MO000018962	ErbB2(h)	network element
+MO000019363	RelA-p65-isoform1(h)	hit
+MO000019469	c-Jun(h)	hit
+MO000019475	ErbB3(h)	network element
+MO000019481	PAK1(h)	network element
+MO000022208	p38alpha(h){p}	network element
+MO000022210	p38delta(h)	master
+MO000022403	plk1(h)	network element
+MO000023578	HDAC3(h)	master
+MO000023642	Wip1(h)	network element
+MO000024771	E12(h)	hit
+MO000024773	E47(h)	hit
+MO000024920	ITF-1(h)	hit
+MO000025736	RelA-p65-delta(h)	hit
+MO000030895	Chk2(h)	network element
+MO000031076	hipk2(h)	network element
+MO000032335	RSK1(h)	network element
+MO000032492	E2A(h)	hit
+MO000036634	MSK1(h)	network element
+MO000044348	SNA(h)	hit
+MO000058322	c-Jun(h)	hit
+MO000058538	beta-catenin-isoform1(h)	hit
+MO000059843	HEPTP(h)	network element
+MO000060210	ErbB2-isoform1(h)	network element
+MO000068035	OGT(h)	network element
+MO000078237	STAT3-isoform1(h)	hit
+MO000078241	STAT3-isoform2(h)	hit
+MO000079319	RelA-p65(h)	hit
+MO000079350	RelA-p65-delta2(h)	hit
+MO000079681	c-Fos(h)	hit
+MO000082277	ErbB1-p170(h)	network element
+MO000088314	foxm1(h)	hit
+MO000092500	OGT-isoform3(h)	network element
+MO000098995	hipk2-isoform1(h)	network element
+MO000129437	RelA-p35(h)	hit
+MO000133252	SNA(h)	hit
+MO000161481	Cytochrome b-558:p22phox:p40phox{p}:p67phox:Rac1:GTP:JFC1:PtdIns(3,4)P2:PA:p47phox	network element
+MO000165730	STAT3-isoform3(h)	hit
+MO000198783	lats2(h)	network element
+MO000257758	RelA-p65-isoform4(h)	hit

@@ -1,0 +1,51 @@
+ID	Molecule name	Role
+MO000007821	JNK1(h)	network element
+MO000007830	JunB(h)	hit
+MO000008180	PKR(h)	network element
+MO000009086	MEKK1(h)	network element
+MO000009339	p38alpha(h)	network element
+MO000017421	AKT-1(h)	network element
+MO000017447	TGFbetaR-I(h)	network element
+MO000018901	CKII-alpha(h):CKII-alpha2(h):(CKII-beta(h))2	network element
+MO000019311	IKK-alpha(h)	network element
+MO000019315	IkappaB-alpha(h)	network element
+MO000019344	MKK6(h){p}	network element
+MO000019352	traf6(h)	network element
+MO000019469	c-Jun(h)	hit
+MO000019780	Smad3-isoform1(h)	hit
+MO000019975	Ubc9(h)	network element
+MO000020398	Caspase-3(h)	network element
+MO000020634	Smad7(h)	network element
+MO000021207	Caspase-7(h)	network element
+MO000021423	MKK4(h)	network element
+MO000022097	IKK-beta(h){p}	network element
+MO000022211	MKK6(h)	network element
+MO000022224	dsRNA	master
+MO000022227	MKK7(h)	network element
+MO000022228	MKK7(h){p}	network element
+MO000023575	HDAC1(h)	network element
+MO000023577	hdac2-isoform1(h)	hit
+MO000026496	foxm1-isoform2(h)	hit
+MO000028099	foxm1-isoform1(h)	hit
+MO000030859	JNK2(h)	network element
+MO000030904	MKK4(h){p}	network element
+MO000031000	JNK2alpha-2(h)	network element
+MO000032000	proCaspase-7(h)	network element
+MO000041437	dsRNA:TLR3:TRIF	network element
+MO000041500	Fbw7(h)	network element
+MO000042938	Rad21(h)	hit
+MO000042939	Rad21-p65(h)	hit
+MO000042940	Rad21-p32(h)	hit
+MO000057745	CBP(h)	network element
+MO000057832	Smad3(h)	hit
+MO000058322	c-Jun(h)	hit
+MO000058921	JunB(h)	hit
+MO000058923	hdac2(h)	hit
+MO000059863	p38alpha-CSBP1(h)	network element
+MO000060084	IKK-alpha(h)	network element
+MO000079234	Ubc9(h)	network element
+MO000084506	HSF2B(h)	master
+MO000084620	MLK3-isoform1(h)	master
+MO000088314	foxm1(h)	hit
+MO000100895	Erm-isoform1(h)	hit
+MO000102071	Rad21(h)	hit
