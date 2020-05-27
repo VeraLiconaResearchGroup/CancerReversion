@@ -10,7 +10,8 @@ include: [ _assets , _projects ]
 
 name : Maddie Gastonguay
 email : madeleine.gastonguay@uconn.edu
-github_username: MadeleineGastonguay
+github_username: VeraLiconaResearchGroup
+
 
 # Build settings
 markdown: kramdown

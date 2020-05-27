@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/gastonguay_compsysmed_labnotebook/</link>
     <atom:link href="http://localhost:4000/gastonguay_compsysmed_labnotebook/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 18 May 2020 21:25:40 -0400</pubDate>
-    <lastBuildDate>Mon, 18 May 2020 21:25:40 -0400</lastBuildDate>
+    <pubDate>Wed, 27 May 2020 16:55:35 -0400</pubDate>
+    <lastBuildDate>Wed, 27 May 2020 16:55:35 -0400</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -2417,7 +2417,7 @@ This tells me that our results are very sensitive to the initial conditions of t
 
 &lt;h1 id=&quot;looking-for-similar-trends-in-literature-for-gsk3b-and-ctnnb1&quot;&gt;Looking For similar trends in literature for GSK3B and CTNNB1&lt;/h1&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1944515&quot;&gt;Here&lt;/a&gt;, we observe the same trend in GSK3B but not in CTNNB1 from normalized counts:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE75168&quot;&gt;Here&lt;/a&gt;, we observe the same trend in GSK3B but not in CTNNB1 from normalized counts:&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -3783,7 +3783,7 @@ pvalue=0.6178509&lt;/p&gt;
       <item>
         <title>Exploration of the Uses and Applications of SFA</title>
         <description>&lt;h2 id=&quot;objective&quot;&gt;Objective&lt;/h2&gt;
-&lt;p&gt;The purpose of this exploration was to identify the limitations and appropriate uses of SFA. We compared results of SFA applied to the signaling network of T-LGL Leukemia to the attractors of the Boolean model of T-LGL Leukemia from &lt;a href=&quot;https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004193&quot;&gt;Zanudo and Albert&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The purpose of this exploration was to identify the limitations and appropriate uses of SFA. We compared results of SFA applied to the signaling network of T-LGL Leukemia to the attractors of the Boolean model of T-LGL Leukemia from &lt;a href=&quot;https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004193&quot;&gt;Zanudo and Albert&lt;/a&gt;. Data from the exploration can be found &lt;a href=&quot;https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/tree/dev/_projects/project2/zanudo2015_SFAexploration&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;conclusions&quot;&gt;Conclusions&lt;/h2&gt;
 &lt;p&gt;We found that SFA can accurately associate attractors to phenotypes by computing the DAC between attractors from different conditions when simulated with fixed nodes. Thus, we expect it to be able to predict effect of perturbations of the FVS nodes on the long-term behavior of the network with reasonably good accuracy. We also concluded that SFA cannot be used the way we are currently using it to estimate the attractor landscape of the network. Further work will be done by Lauren to determine if there are modifications to its application that can produce more biologically relevant attractors.&lt;/p&gt;
