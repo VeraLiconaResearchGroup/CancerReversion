@@ -5,6 +5,11 @@ The lab notebook of Madeleine S. Gastonguay for the Computational Systems Medici
 ## Description
 This is a lab notebook developed from a jekyll template developed by [Florian Schneider](https://github.com/fdschneider/jekyll-lablog). It contains data, scripts, and documentation of the work for my undergraduate honors thesis with the [Computational Systems Medicine Team](https://veraliconaresearchgroup.github.io/) at UConn Health's Center for Quantitative Medicine.
 
+## Folder Architecture
+**\_projects** Contains data, scripts, and results from the development of a quantitative pipeline for the identification of reversion targets in Claudin-Low Triple Negative Breast Cancer.
+
+
+
 ### Requirements
 - install Developer Ruby
   - if you already have hombrew installed
