@@ -1,6 +1,6 @@
-Computational Systems Medicine Lab Notebook
+Cancer Reversion
 =============================
-Madeleine S. Gastonguay
+The lab notebook of Madeleine S. Gastonguay for the Computational Systems Medicine Team.
 
 ## Description
 This is a lab notebook developed from a jekyll template developed by [Florian Schneider](https://github.com/fdschneider/jekyll-lablog). It contains data, scripts, and documentation of the work for my undergraduate honors thesis with the [Computational Systems Medicine Team](https://veraliconaresearchgroup.github.io/) at UConn Health's Center for Quantitative Medicine.
