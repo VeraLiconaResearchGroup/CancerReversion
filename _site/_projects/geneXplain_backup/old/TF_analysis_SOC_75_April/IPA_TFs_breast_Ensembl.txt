@@ -1,0 +1,34 @@
+ID	Gene symbol ID	Expr Log Ratio	Molecule Type	Predicted Activation State	Activation z-score	p-value of overlap	Target molecules in dataset	Mechanistic Network
+ENSG00000073584	SMARCE1		transcription regulator			0.04	BRCA1	
+ENSG00000078900	TP73		transcription regulator			0.00379	CDK1,TP53	
+ENSG00000080839	RBL1		transcription regulator			0.0116	CDK1	
+ENSG00000087510	TFAP2C		transcription regulator			0.00651	EGFR,TGFA	
+ENSG00000096717	SIRT1		transcription regulator			0.0455	TP53	
+ENSG00000099956	SMARCB1		transcription regulator			0.0344	TP53	
+ENSG00000100811	YY1		transcription regulator			0.0173	BRCA1	
+ENSG00000101412	E2F1		transcription regulator			6.53E-5	BRCA1,CDC20,CDK1	
+ENSG00000102038	SMARCA1		transcription regulator			0.023	TP53	
+ENSG00000104064	GABPB1		transcription regulator			0.0116	BRCA1	
+ENSG00000106004	HOXA5		transcription regulator			0.023	TP53	
+ENSG00000116016	EPAS1		transcription regulator			0.0175	EGFR,PRKCA	
+ENSG00000116044	NFE2L2		transcription regulator			0.0344	BRCA1	
+ENSG00000117139	KDM5B		transcription regulator		-1.698	1.8E-5	AURKA,BRCA1,CAV1,CDK1,NDC80,TOP2A	
+ENSG00000120738	EGR1		transcription regulator			0.0173	CAV1	
+ENSG00000124664	SPDEF		transcription regulator			0.00379	EGFR,ITGA5	
+ENSG00000125931	CITED1		transcription regulator			0.00581	TGFA	
+ENSG00000134954	ETS1		transcription regulator			4.97E-4	FN1,PML,SCAMP1	
+ENSG00000137309	HMGA1		transcription regulator			0.00289	CAV1,STAT3	
+ENSG00000139618	BRCA2		transcription regulator			0.00581	TP53	
+ENSG00000141905	NFIC		transcription regulator			0.00581	TP53	
+ENSG00000147889	CDKN2A		transcription regulator			0.00145	RB1,TP53	
+ENSG00000154727	GABPA		transcription regulator			0.0116	BRCA1	
+ENSG00000157514	TSC22D3		transcription regulator			0.0173	TP53	
+ENSG00000157557	ETS2		transcription regulator			0.0173	BRCA1	
+ENSG00000159388	BTG2		transcription regulator			0.023	BRCA1	
+ENSG00000173039	RELA		transcription regulator			0.00778	PPM1D,TP53	
+ENSG00000175387	SMAD2	-1.219	transcription regulator			0.0116	FN1	
+ENSG00000176692	FOXC2		transcription regulator			0.023	FN1	
+ENSG00000182979	MTA1		transcription regulator			0.0344	BRCA1	
+ENSG00000186834	HEXIM1		transcription regulator			9.11E-4	ANXA1,TP53	
+ENSG00000221869	CEBPD		transcription regulator			0.0173	CDC27	
+ENSG00000233608	TWIST2		transcription regulator			0.04	FN1	

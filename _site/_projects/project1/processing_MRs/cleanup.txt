@@ -1,0 +1,672 @@
+MEK --> ERK
+MEK --> ERK
+SEK --> JNK
+RAC1 --> PAK1
+CDC42 --> PAK1
+TAB1 --> MAP3K7
+CUL2 --> ELOC
+EGFR --> SRC
+RSK --/ GSK3
+MAP3K7 --> MAP2K4
+Dvl --/ GSK3B
+MAP3K7 --> NLK
+MAP3K7 --> NLK
+MAP3K7 --> NLK
+MAP3K7 --> NLK
+AKT --/ Raf
+AXIN1(h) + ATP --GSK3B(h)--> AXIN1(h){p} + ADP
+AXIN1(h) + ATP --GSK3B(h)--> AXIN1(h){p} + ADP
+PAK2 --> JNK
+cyclinB --> CDK1
+Ras --> MAP3K1
+PLCgamma --> SYK
+IL6 --> Tec/BTK family
+PSMC2 --/ JUN
+CDH1(m) + ATP --GSK3B(m)--> CDH1(m){p} + ADP
+CDH1(m) + ATP --GSK3B(m)--> CDH1(m){p} + ADP
+CDH1(m) + ATP --GSK3B(m)--> CDH1(m){p} + ADP
+SKP1 --> SKP2
+SKP1 --> SKP2
+CUL1 --> CDC34
+ELOC --> VHL
+MAP2K6(h) + ATP --MAP3K7(m)--> MAP2K6(h){p} + ADP
+MAP2K6(h) + ATP --MAP3K7(m)--> MAP2K6(h){p} + ADP
+MAP2K6(h) + ATP --MAP3K7(m)--> MAP2K6(h){p} + ADP
+MAP2K6(h) + ATP --MAP3K7(m)--> MAP2K6(h){p} + ADP
+PSMF1 --/ MYC
+NFKBIA(h) + UBE2I(h){sumo} + ATP --> NFKBIA(h){sumo} + UBE2I(h) + AMP + p
+CUL1(h){nedd}:NFKBIA(h){p} + n UBB(h) --CDC34(h),UBE2D1(h),ATP--> CUL1(h){nedd}:NFKBIA(h){p}{ub(n)}
+PAK2 --> RAF1
+CSNK2A1:CSNK2A12:(CSNK2B)2 --/ JUN
+CSNK2A1:CSNK2A12:(CSNK2B)2 --/ JUN
+CSNK2A1:CSNK2A12:(CSNK2B)2 --/ JUN
+RAC1 --> PAK2
+JUN(h) + ATP --MAPK8(h)--> JUN(h){p} + ADP
+TRAF6(m) + UBB(v.s.) + ATP --UBA1(b),UBE2N(h):Uev1(h)--> TRAF6(m){ub{K63}(n)} + ADP
+MAPK12(r) + ATP --MAP2K6(h){p}--> MAPK12(r){p} + ADP
+IKBKB(h) + ATP --MAP3K1(h)--> IKBKB(h){p} + ADP
+MAPK14(x) + ATP --MAP2K6(h){p}--> MAPK14(x){p} + ADP
+MAPKAPK2(h) + ATP --MAPK14(h){p}--> MAPKAPK2(h){p} + ADP
+Cks1(h) + cyclinA(h):Cdk2(h):p27Kip1(h){p} + SCF-SKP2(h) + n UBB(h) --> cyclinA(h):Cdk2(h) + p27Kip1(h){p}{ub(n)} + Cks1(h):SCF-SKP2(h)
+RB1 --/ ABL1
+RB1(h):ABL1(m) + ATP --cyclinA(h):Cdk2(h)--> RB1(h){pS807}{pS811} + ABL1(m) + ADP
+p38(m){p} --PPM1D(h)--> p38(m) + p
+MAP2K7(h) + ATP --MAP3K2(h)--> MAP2K7(h){p} + ADP
+Cdc25(h) + ATP --CHEK1(h)--> Cdc25(h){p} + ADP
+Cdc25(h) + ATP --CHEK2(h)--> Cdc25(h){p} + ADP
+MDM2(h) + ATP --CSNK2A1(h):CSNK2A12(h):(CSNK2B(h))2--> MDM2(h){p} + ADP
+cyclinB(h):CDK1(h){pY15} --CDC25C(h){p}--> cyclinB(h):CDK1(h) + p
+KSR1 --> MAP2K1
+CSNK2A1(h):CSNK2A12(h):(CSNK2B(h))2:RELA(h) + ATP --> CSNK2A1(h):CSNK2A12(h):(CSNK2B(h))2 + RELA(h){pS529} + ADP
+RELA(h) + ATP --IKBKB(h)--> RELA(h){pS536} + ADP
+RELA(h) + ATP --CHUK(h):IKBKB(h)--> RELA(h){pS} + ADP
+MAPK3(h){p} --DUSP5(h)--> MAPK3(h) + p
+MAPK3(h){p} --DUSP3(h)--> MAPK3(h) + p
+MAPK1(m){p} --DUSP4(r)--> MAPK1(m) + p
+MAPK3(h){p} --DUSP4(h)--> MAPK3(h) + p
+VHL(h):TCP-1(h):HSPA1A(h) + ATP + elongin B(r) + ELOC(r) --> VHL(h):elongin B(r):ELOC(r) + TCP-1(h) + HSPA1A(h) + ADP
+FGFR3 --> PLCG1
+AKT1(h) + NTP --PDK1(m){pS}--> AKT1(h){pT308} + NDP
+GSK3B(h) + NTP --AKT1(h){pT308}{pS473}--> GSK3B(h){pS9} + NDP
+SRC --> GTF2I
+RAD23A --/ EP300
+JUN(v.s.) + ATP --MAPK8alpha1(h)--> JUN(v.s.){p} + ADP
+GTF2I(h) + ATP --JAK2(v.s.)--> GTF2I(h){p} + ADP
+GTF2I(h) + ATP --JAK2(v.s.)--> GTF2I(h){p} + ADP
+GTF2I(h) + ATP --JAK2(v.s.)--> GTF2I(h){p} + ADP
+GTF2I(h) + ATP --JAK2(v.s.)--> GTF2I(h){p} + ADP
+GTF2I(h) + ATP --JAK2(v.s.)--> GTF2I(h){p} + ADP
+EP300(h) + ATP --AKT1(h)--> EP300(h){p} + ADP
+JUN(h) + NTP --MAPK9(r){p}--> JUN(h){p} + NDP
+HSPA1A --/ MAPK8
+RPS6KA5(h) + ATP --MAPK14(h)--> RPS6KA5(h){p} + ADP
+TAB1 --> MAPK14
+TRAF6 --> SRC
+HRAS --> RAF1
+RAF1 --> CDC25A
+RAF1 --> CDC25A
+RAF1 --> CDC25A
+MAP2K4(h) + 2 ATP --MAP3K2(v.s.)--> MAP2K4(h){pS221}{pT225} + 2 ADP
+TCF7L2(h) + ATP --NLK(m)--> TCF7L2(h){pT178}{pT189} + ADP
+TCF7L2(h) + ATP --NLK(m)--> TCF7L2(h){pT178}{pT189} + ADP
+TCF7L2(h) + ATP --NLK(m)--> TCF7L2(h){pT178}{pT189} + ADP
+JUN + n UBB --RBX1:CUL4A:DDB1:DET1:COP1--> JUN{ub(n)}
+JUN + n UBB --RBX1:CUL4A:DDB1:DET1:COP1--> JUN{ub(n)}
+HTT --/ CREBBP
+HTT --/ KAT2B
+HTT --/ KAT2B
+SCF-beta-TrCP2 --/ NFKBIA
+SNCA(v.s.) + UBB(v.s.) --UBA1(v.s.),UBE2D2(h),Siah-2(h),ATP--> SNCA(v.s.){ub(1)}
+SNCAIP(h) + ATP --CSNK2A1(h):CSNK2A12(h):(CSNK2B(h))2--> SNCAIP(h){p} + ADP
+SNCAIP --> SNCA
+UCHL1 --/ SNCA
+SNCA --/ PSMC2
+SNCA(h) --MYC(h)--> protein remnants
+JUN(m) + SUMO1(v.s.) --SAUBA1(d):UBA2(d),UBE2I(v.s.),PIAS1(h)--> JUN(m){sumo}
+JUN(m) + SUMO1(v.s.) --SAUBA1(d):UBA2(d),UBE2I(v.s.),PIAS1(h)--> JUN(m){sumo}
+PLK1(x) + ATP --cyclinB(h):CDK1(h)--> PLK1(x){pS340} + ADP
+PTEN(h) + 2 ATP --CSNK2A1(h):CSNK2A12(h):(CSNK2B(h))2--> PTEN(h){pS370}{pS385} + 2 ADP
+EP300(h){ace} --SIRT1(h)--> EP300(h) + acetyl
+ABL1(m.s.) + NTP --DNA-PKcs(m.s.)--> ABL1(m.s.){p} + NDP
+ABL1(m.s.) + NTP --PAK2(m.s.)--> ABL1(m.s.){p} + NDP
+AKT1(m.s.) + NTP --DNA-PKcs(m.s.)--> AKT1(m.s.){p} + NDP
+AKT1(m.s.) + NTP --DNA-PKcs(m.s.)--> AKT1(m.s.){p} + NDP
+SNCA(m.s.) + UBB(m.s.) --PRKN(m.s.)--> SNCA(m.s.){ub}
+AXIN1(m.s.) --/ TCF7L2(m.s.)
+JUN(m.s.) + NTP --ABL1(m.s.)--> JUN(m.s.){p} + NDP
+JUN(m.s.) + NTP --ABL1(m.s.)--> JUN(m.s.){p} + NDP
+JUN(m.s.) + NTP --CDK1(m.s.)--> JUN(m.s.){p} + NDP
+JUN(m.s.) + NTP --DNA-PKcs(m.s.)--> JUN(m.s.){p} + NDP
+JUN(m.s.) + NTP --DNA-PKcs(m.s.)--> JUN(m.s.){p} + NDP
+JUN(m.s.) + NTP --GSK3B(m.s.)--> JUN(m.s.){p} + NDP
+JUN(m.s.) + NTP --GSK3B(m.s.)--> JUN(m.s.){p} + NDP
+JUN(m.s.) + NTP --GSK3B(m.s.)--> JUN(m.s.){p} + NDP
+JUN(m.s.) --/ DUSP3(m.s.)
+JUN(m.s.) --> AKT1(m.s.)
+JUN(m.s.) --> CDK1(m.s.)
+PSMB8(m.s.) + NTP --DNA-PKcs(m.s.)--> PSMB8(m.s.){p} + NDP
+PSMB8(m.s.) + NTP --DNA-PKcs(m.s.)--> PSMB8(m.s.){p} + NDP
+PSMB8(m.s.) + NTP --DNA-PKcs(m.s.)--> PSMB8(m.s.){p} + NDP
+CREBBP(m.s.) --> TCF7L2(m.s.)
+CDK1(m.s.) + NTP --PKMYT1(m.s.)--> CDK1(m.s.){p} + NDP
+CHEK2(m.s.) + NTP --DNA-PKcs(m.s.)--> CHEK2(m.s.){p} + NDP
+CSNK2B(m.s.) + NTP --CDK1(m.s.)--> CSNK2B(m.s.){p} + NDP
+MAPK1(m.s.) + NTP --RIPK2(m.s.)--> MAPK1(m.s.){p} + NDP
+GSK3B(m.s.) + NTP --MAP2K1(m.s.)--> GSK3B(m.s.){p} + NDP
+GSK3B(m.s.) + NTP --MAP2K1(m.s.)--> GSK3B(m.s.){p} + NDP
+GSK3B(m.s.) --> TCF7L2(m.s.)
+HIF1A(m.s.) + UBB(m.s.) --CUL2(m.s.)--> HIF1A(m.s.){ub}
+NFKBIA(m.s.) + UBB(m.s.) --CDC34(m.s.)--> NFKBIA(m.s.){ub}
+IKBKB(m.s.) --> BTRC(m.s.)
+EP300(m.s.) --> TCF7L2(m.s.)
+PLK1(m.s.) + NTP --CDK1(m.s.)--> PLK1(m.s.){p} + NDP
+PTPN6(m.s.) + NTP --ABL1(m.s.)--> PTPN6(m.s.){p} + NDP
+SKP2(m.s.) + UBB(m.s.) --RBX1(m.s.)--> SKP2(m.s.){ub}
+SYK(m.s.) + NTP --MAPK3(m.s.)--> SYK(m.s.){p} + NDP
+SYK(m.s.){p} --PTPN6(m.s.)--> SYK(m.s.) + p
+TCF7L2(m.s.) + NTP --CSNK2B(m.s.)--> TCF7L2(m.s.){p} + NDP
+TCF7L2(m.s.) + NTP --CSNK2B(m.s.)--> TCF7L2(m.s.){p} + NDP
+TCF7L2(m.s.) + NTP --CSNK2B(m.s.)--> TCF7L2(m.s.){p} + NDP
+TCF7L2(m.s.) + NTP --CSNK2B(m.s.)--> TCF7L2(m.s.){p} + NDP
+TCF7L2(m.s.) + NTP --CSNK2B(m.s.)--> TCF7L2(m.s.){p} + NDP
+TCF7L2(m.s.) + NTP --CSNK2B(m.s.)--> TCF7L2(m.s.){p} + NDP
+CDK1 --> UBA1
+NEDD8 --> RBX1
+RBX1 --> NFKBIA
+MYC(h) + 6 acetyl-CoA --EP300(h)--> MYC(h){aceK143}{aceK157}{aceK275}{aceK317}{aceK323}{aceK371} + 6 CoA
+PSMB8(h) + ATP --MAPK3(h)--> PSMB8(h){p} + ADP
+PSMB8(h) + ATP --MAPK3(h)--> PSMB8(h){p} + ADP
+JUN(m.s.) + ATP --p38(v.s.)--> JUN(m.s.){p} + ADP
+COMMD1(h) + n UBB(h) --XIAP(h)--> COMMD1(h){ub(n)}
+MAP2K1(m.s.) + ATP --MAP3K2(m)--> MAP2K1(m.s.){p} + ADP
+PLCG1(m.s.) + ATP --MAPK10(m.s.){p}--> PLCG1(m.s.){p} + ADP
+MEK(h) + ATP --RAF1(h)--> MEK(h){pS} + ADP
+MEK(h) + ATP --RAF1(h)--> MEK(h){pS} + ADP
+MAPK3(m) + ATP --MAP2K1(h)--> MAPK3(m){p} + ADP
+n UBB(m.s.) + JUN(r) --E2-20K(rb)--> JUN(r){ub(n)}
+n UBB(m.s.) + JUN(r) --E2-20K(rb)--> JUN(r){ub(n)}
+MAPK3(r) + ATP --PRKCA(m.s.)--> MAPK3(r){p} + ADP
+MAPK1(r) + ATP --PRKCA(m.s.)--> MAPK1(r){p} + ADP
+COMMD1(h){ub(n)} --PSMC2(h)--> protein remnants + n UBB(h)
+IKBKB(h) + 2 ATP --SRC(h)--> IKBKB(h){pY188}{pY189} + 2 ADP
+AKT(h) + ATP --> AKT(h){p} + ADP
+ERK(m.s.) + ATP --RAF1(h)--> ERK(m.s.){p} + ADP
+ERK(m.s.) + ATP --RAF1(h)--> ERK(m.s.){p} + ADP
+ERK(m.s.) + ATP --RAF1(h)--> ERK(m.s.){p} + ADP
+ERK(m.s.) + ATP --RAF1(h)--> ERK(m.s.){p} + ADP
+ERK(m.s.) + ATP --RAF1(h)--> ERK(m.s.){p} + ADP
+JNK(h) + ATP --> JNK(h){p} + ADP
+JNK(h) + ATP --> JNK(h){p} + ADP
+JUN(m.s.) + ATP --JNK(h){p}--> JUN(m.s.){p} + ADP
+CDC25C(m.s.) + NTP --MAPK8(m.s.)--> CDC25C(m.s.){p} + NDP
+CDC25C(m.s.) + NTP --MAPK8(m.s.)--> CDC25C(m.s.){p} + NDP
+CDC25C(m.s.) + NTP --PKN1(m.s.)--> CDC25C(m.s.){p} + NDP
+UCHL1(m.s.) --OGT(m.s.)--> UCHL1(m.s.){gly}
+NFYC(m.s.) --> GTF2I(m.s.)
+CDC25B(m.s.) + NTP --AKT1(m.s.)--> CDC25B(m.s.){p} + NDP
+KSR1(m.s.) + NTP --MAP3K7(m.s.)--> KSR1(m.s.){p} + NDP
+KSR1(m.s.) + NTP --MAP3K7(m.s.)--> KSR1(m.s.){p} + NDP
+KSR1(m.s.) + NTP --MAP3K7(m.s.)--> KSR1(m.s.){p} + NDP
+KSR1(m.s.) + NTP --MAP3K7(m.s.)--> KSR1(m.s.){p} + NDP
+JUN(m.s.) + NTP --MAPK14(m.s.)--> JUN(m.s.){p} + NDP
+CTGF(m.s.) --> MAPK3(m.s.)
+MAP2K1(m.s.) + NTP --ARAF(m.s.)--> MAP2K1(m.s.){p} + NDP
+GCN5(m.s.) + NTP --DNA-PKcs(m.s.)--> GCN5(m.s.){p} + NDP
+RPS6KB1(m.s.) + NTP --MAPK8(m.s.)--> RPS6KB1(m.s.){p} + NDP
+RPS6KB1(m.s.) + NTP --MAPK8(m.s.)--> RPS6KB1(m.s.){p} + NDP
+RPS6KB1(m.s.) + NTP --MAPK8(m.s.)--> RPS6KB1(m.s.){p} + NDP
+RPS6KB1(m.s.) + NTP --MAPK9(m.s.)--> RPS6KB1(m.s.){p} + NDP
+RPS6KB1(m.s.) + NTP --MAPK9(m.s.)--> RPS6KB1(m.s.){p} + NDP
+GSK3B(m.s.) + NTP --RPS6KB1(m.s.)--> GSK3B(m.s.){p} + NDP
+RAF1(m.s.) + NTP --AKT1(m.s.)--> RAF1(m.s.){p} + NDP
+HIF1A(m.s.) --> JUN(m.s.)
+RPS6KB1(m.s.) + NTP --NEK7(m.s.)--> RPS6KB1(m.s.){p} + NDP
+UBE2D2(m.s.) + UBB(v.s.) --RNF4(m.s.)--> UBE2D2(m.s.){ub}
+UBE2D1(m.s.) + UBB(v.s.) --RNF4(m.s.)--> UBE2D1(m.s.){ub}
+PSMB8(m.s.) + NTP --MAPK8(m.s.)--> PSMB8(m.s.){p} + NDP
+PSMB8(m.s.) + NTP --MAPK8(m.s.)--> PSMB8(m.s.){p} + NDP
+PSMB8(m.s.) + NTP --MAPK8(m.s.)--> PSMB8(m.s.){p} + NDP
+PSMB8(m.s.) + NTP --MAPK8(m.s.)--> PSMB8(m.s.){p} + NDP
+PSMB8(m.s.) + NTP --MAPK8(m.s.)--> PSMB8(m.s.){p} + NDP
+PSMB8(m.s.) + NTP --MAPK8(m.s.)--> PSMB8(m.s.){p} + NDP
+STAU1(h) --> CDC42(h)
+STAU1(h) --> RAC1(h)
+GSK3B(m.s.) + ATP --AKT1(m.s.)--> GSK3B(m.s.){pS9} + ADP
+JUN(m.s.) + ATP --MAP2K7(m.s.),MAPK9(m.s.)--> JUN(m.s.){p} + ADP
+RELA(h) + ATP --GSK3B(h)--> RELA(h){pS468} + ADP
+RELA(h) + ATP --GSK3B(h)--> RELA(h){pS468} + ADP
+RELA(h) + ATP --GSK3B(h)--> RELA(h){pS468} + ADP
+KAT2B(h) + n UBB(m.s.) --MDM2(h)--> KAT2B(h){ub(n)}
+RELA(m.s.) + ATP --GSK3B(rb)--> RELA(m.s.){pS468} + ADP
+RELA(m.s.) + ATP --GSK3B(rb)--> RELA(m.s.){pS468} + ADP
+RELA(m.s.) + ATP --GSK3B(rb)--> RELA(m.s.){pS468} + ADP
+RELA(m.s.) + ATP --GSK3B(rb)--> RELA(m.s.){pS468} + ADP
+RELA(m.s.) + ATP --GSK3B(rb)--> RELA(m.s.){pS468} + ADP
+RELA(m.s.) + ATP --GSK3B(rb)--> RELA(m.s.){pS468} + ADP
+RELA(m.s.) + ATP --GSK3B(rb)--> RELA(m.s.){pS468} + ADP
+RELA(m.s.) + ATP --GSK3B(rb)--> RELA(m.s.){pS468} + ADP
+RELA(m.s.) + ATP --GSK3B(rb)--> RELA(m.s.){pS468} + ADP
+RELA(m.s.) + ATP --GSK3B(rb)--> RELA(m.s.){pS468} + ADP
+RELA(m.s.) + ATP --GSK3B(rb)--> RELA(m.s.){pS468} + ADP
+RELA(m.s.) + ATP --GSK3B(rb)--> RELA(m.s.){pS468} + ADP
+PPARgamma2(m) + SUMO1(h) --PIAS2(m)--> PPARgamma2(m){sumoK107}
+PPARgamma2(m) + SUMO1(h) --PIAS2(m)--> PPARgamma2(m){sumoK107}
+PPARgamma2(m) + SUMO1(h) --PIAS2(m)--> PPARgamma2(m){sumoK107}
+PPARgamma2(m) + SUMO1(h) --PIAS1(m)--> PPARgamma2(m){sumoK107}
+JUN(h) --> EGFR(h)
+JUN(h) --> EGFR(h)
+AR-isoform1(h){pS213}{pS791} + n UBB(h) --MDM2-isoform1(h)--> AR-isoform1(h){pS213}{pS791}{ub(n)}
+RELA(h) + acetyl-CoA --EP300(m.s.)--> RELA(h){aceK310} + CoA
+RELA(h) + acetyl-CoA --EP300(m.s.)--> RELA(h){aceK310} + CoA
+RELA(h) + acetyl-CoA --EP300(m.s.)--> RELA(h){aceK310} + CoA
+RELA(h) + acetyl-CoA --EP300(m.s.)--> RELA(h){aceK310} + CoA
+RELA(h) + acetyl-CoA --EP300(m.s.)--> RELA(h){aceK310} + CoA
+RELA(h) + acetyl-CoA --EP300(m.s.)--> RELA(h){aceK310} + CoA
+RELA(h) + acetyl-CoA --EP300(m.s.)--> RELA(h){aceK310} + CoA
+RELA(m) + ATP --RPS6KA5(m)--> RELA(m){pS276} + ADP
+RELA(m) + ATP --RPS6KA5(m)--> RELA(m){pS276} + ADP
+RELA(m) + ATP --RPS6KA5(m)--> RELA(m){pS276} + ADP
+EP300 --> PSMB8
+EP300 --> PSMB8
+EP300 --> PSMB8
+RELA(m.s.) + ATP --IKBKB(m.s.)--> RELA(m.s.){pS536} + ADP
+RELA(m.s.) + ATP --IKBKB(m.s.)--> RELA(m.s.){pS536} + ADP
+RELA(m.s.) + ATP --IKBKB(m.s.)--> RELA(m.s.){pS536} + ADP
+RELA(m.s.) + ATP --IKBKB(m.s.)--> RELA(m.s.){pS536} + ADP
+RELA(m.s.) + ATP --IKBKB(m.s.)--> RELA(m.s.){pS536} + ADP
+RELA(m.s.) + ATP --IKBKB(m.s.)--> RELA(m.s.){pS536} + ADP
+RELA(m.s.) + ATP --IKBKB(m.s.)--> RELA(m.s.){pS536} + ADP
+HDAC1(h) + UBB(h) --MDM2(m.s.)--> HDAC1(h){ub}
+JUN(m.s.) + ATP --Jnk2alpha1(m.s.)--> JUN(m.s.){p} + ADP
+JUN(m.s.) + ATP --Jnk2alpha1(m.s.)--> JUN(m.s.){p} + ADP
+JUN(m.s.) + ATP --Jnk2alpha1(m.s.)--> JUN(m.s.){p} + ADP
+EP300(h) + 2 SUMO1(m.s.) --UBE2I(m.s.),SAUBA1(m.s.):UBA2(m.s.)--> EP300(h){sumoK1020}{sumoK1024}
+PSMB8(m.s.) + acetyl-CoA --KAT2B(h)--> PSMB8(m.s.){aceK} + CoA
+PSMB8(m.s.) + acetyl-CoA --KAT2B(h)--> PSMB8(m.s.){aceK} + CoA
+EP300(m.s.) + SUMO2(m.s.) --SAUBA1(m.s.):UBA2(m.s.),UBE2I(m.s.)--> EP300(m.s.){sumo2}
+MYC(h) + ATP --MAPK8(h)--> MYC(h){p} + ADP
+MYC(h) + ATP --MAPK8(h)--> MYC(h){p} + ADP
+MYC(h) + ATP --MAPK8(h)--> MYC(h){p} + ADP
+MYC(h) + ATP --MAPK1(h)--> MYC(h){p} + ADP
+MYC(h) + 2 ATP --MAPK10(h)--> MYC(h){pS62}{pS71} + 2 ADP
+PSMB8(m.s.) + ATP --CDK1(m.s.)--> PSMB8(m.s.){pS62} + ADP
+JUN(m.s.) + ATP --AKT(m)--> JUN(m.s.){p} + ADP
+JUN(m.s.) + ATP --AKT(m)--> JUN(m.s.){p} + ADP
+JUN(m.s.) + ATP --AKT(m)--> JUN(m.s.){p} + ADP
+JUN(m.s.) + ATP --AKT(m)--> JUN(m.s.){p} + ADP
+RB1(m.s.) + ATP --CDK6(m)--> RB1(m.s.){p} + ADP
+RB1(m.s.) + ATP --CDK6(m)--> RB1(m.s.){p} + ADP
+RNF4(m.s.) + SUMO1-isoform1(h) --SAUBA1(m.s.),UBA2(m.s.),UBE2I(m.s.)--> RNF4(m.s.){sumo}
+RNF4(m.s.) + SUMO1-isoform1(h) --SAUBA1(m.s.),UBA2(m.s.),UBE2I(m.s.)--> RNF4(m.s.){sumo}
+RNF4(m.s.) + SUMO1-isoform1(h) --SAUBA1(m.s.),UBA2(m.s.),UBE2I(m.s.)--> RNF4(m.s.){sumo}
+n UBB(m.s.) + CCNB1(m.s.) --SKP1(h):NIPA(h)--> CCNB1(m.s.){ub}n
+IKBKG(h) + SUMO1-isoform1(h) --PIASy(h),UBE2I(h)--> IKBKG(h){sumo}
+CCNB1(mo) + n UBB(mo) --RBX1(h):CUL1(h):SKP1(h):NIPA(h)--> CCNB1(mo){ub}n
+MAPK14(h){pT180}{pY182} --PPM1D(m.s.)--> MAPK14(h) + 2 p
+PIAS1(m.s.) + SUMO1-isoform1(h) --SAUBA1(m.s.),UBA2(m.s.),UBE2I(m.s.)--> PIAS1(m.s.){sumo}
+PIAS1(m.s.) + SUMO1-isoform1(h) --SAUBA1(m.s.),UBA2(m.s.),UBE2I(m.s.)--> PIAS1(m.s.){sumo}
+PIAS1(m.s.) + SUMO1-isoform1(h) --SAUBA1(m.s.),UBA2(m.s.),UBE2I(m.s.)--> PIAS1(m.s.){sumo}
+JUN(m.s.) + SUMO1-isoform1(h) --SAUBA1(m.s.),UBA2(m.s.),UBE2I(m.s.),PIAS2(r)--> JUN(m.s.){sumo}
+JUN(m.s.) + SUMO1-isoform1(h) --SAUBA1(m.s.),UBA2(m.s.),UBE2I(m.s.),PIAS2(r)--> JUN(m.s.){sumo}
+JUN(m.s.) + SUMO1-isoform1(h) --SAUBA1(m.s.),UBA2(m.s.),UBE2I(m.s.),PIAS2(r)--> JUN(m.s.){sumo}
+JUN(m.s.) + SUMO1-isoform1(h) --SAUBA1(m.s.),UBA2(m.s.),UBE2I(m.s.),PIAS2(r)--> JUN(m.s.){sumo}
+JUN(m.s.) + SUMO1-isoform1(h) --SAUBA1(m.s.),UBA2(m.s.),UBE2I(m.s.),PIAS2(r)--> JUN(m.s.){sumo}
+JUN(m.s.) + SUMO1-isoform1(h) --SAUBA1(m.s.),UBA2(m.s.),UBE2I(m.s.),PIAS2(r)--> JUN(m.s.){sumo}
+JUN(m.s.) + SUMO1-isoform1(h) --SAUBA1(m.s.),UBA2(m.s.),UBE2I(m.s.),PIAS2(r)--> JUN(m.s.){sumo}
+JUN(m.s.) + SUMO1-isoform1(h) --SAUBA1(m.s.),UBA2(m.s.),UBE2I(m.s.),PIAS2(r)--> JUN(m.s.){sumo}
+JUN(m.s.) + SUMO1-isoform1(h) --SAUBA1(m.s.),UBA2(m.s.),UBE2I(m.s.),PIAS2(r)--> JUN(m.s.){sumo}
+JUN(m.s.) + SUMO1-isoform1(h) --SAUBA1(m.s.),UBA2(m.s.),UBE2I(m.s.),PIAS2(r)--> JUN(m.s.){sumo}
+SUMO1 --> PIAS1
+EP300(h) + ATP --AKT(h)--> EP300(h){pS1834} + ADP
+HUWUBA1(h) + UBB(h) --UBE2D1(rb),UBA1(rb)--> HUWUBA1(h){ub}
+CREBBP(h) --/ PLK1(h)
+CREBBP(h) --/ PLK1(h)
+CREBBP(h) --/ PLK1(h)
+EP300(h){aceK1020}{aceK1024} --SIRT1(h)--> EP300(h) + 2 acetyl
+ABL1(h) + acetyl-CoA --EP300(m.s.)--> ABL1(h){aceK} + CoA
+ABL1(h) + acetyl-CoA --CREBBP(m.s.)--> ABL1(h){aceK} + CoA
+ABL1(h) + acetyl-CoA --CREBBP(m.s.)--> ABL1(h){aceK} + CoA
+SUMO1 --/ CREBBP
+Mdm4-isoform1(h){ub}n --USP7(h)--> Mdm4-isoform1(h) + n UBB(h)
+MAPK10(m.s.) + ATP --MAP3K5(m.s.)--> MAPK10(m.s.){p} + ADP
+UBE2I(h) + SUMO1-isoform1(h) --SAUBA1(h):UBA2-isoform1(h)--> UBE2I(h){sumoC93}
+UBA1(h) + UBB(h) --> UBA1(h){ub}
+UBE2I(h) + SUMO1-isoform1(h) --SAUBA1(h):UBA2(h)--> UBE2I(h){sumo}
+JUN(h) + ATP --MAPK8alpha1(h)--> JUN(h){p} + ADP
+JUN(h) + ATP --MAPK9alpha-2(h)--> JUN(h){p} + ADP
+JUN(h) + acetyl-CoA --EP300(m.s.)--> JUN(h){aceK271} + CoA
+CREBBP(m.s.) + 2 ATP --CHUK(h)--> CREBBP(m.s.){pS1382}{pS1386} + 2 ADP
+p73beta(m.s.) + NEDD8(m.s.) --MDM2(h)--> p73beta(m.s.){nedd}
+RHOBTB2-isoform1(h) + n UBB(h) --UbcH5(m.s.),RBX1(m.s.),CUL3(m.s.)--> RHOBTB2-isoform1(h){ub}n
+PRKN(m.s.) + UBB(m.s.) --UBE2N(m.s.):Uev1(m.s.)--> PRKN(m.s.){ub(1)}n
+MDM2-isoform1(h) + SUMO1-isoform1(h) --SAUBA1(m.s.):UBA2(m.s.),UBE2I(h),PIAS2(m.s.)--> MDM2-isoform1(h){sumo}
+MDM2-isoform1(h) + SUMO1-isoform1(h) --SAUBA1(m.s.):UBA2(m.s.),UBE2I(h),PIAS2(m.s.)--> MDM2-isoform1(h){sumo}
+MDM2-isoform1(h) + SUMO1-isoform1(h) --SAUBA1(m.s.):UBA2(m.s.),UBE2I(h),PIAS2(m.s.)--> MDM2-isoform1(h){sumo}
+RPS6KA5-isoform1(h) + 2 ATP --MAPK14(m.s.)--> RPS6KA5(h){pT581}{pT700} + 2 ADP
+UBA1-isoform1(h){ub} + UBE2K(h) --> UBA1-isoform1(h) + UBE2K(h){ub}
+UBA1-isoform1(h){ub} + UbcH6-isoform1(h) --> UbcH6-isoform1(h){ub} + UBA1-isoform1(h)
+UBA1-isoform1(h) + UBB(h) --> UBA1-isoform1(h){ub}
+RELA(h) + ATP --IKBKB-isoform1(h)--> RELA(h){pS468} + ADP
+RELA(h) + ATP --CHUK(h)--> RELA(h){pS536} + ADP
+RELA(h) + ATP --CHUK(h)--> RELA(h){pS536} + ADP
+RELA(h) + ATP --CHUK(h)--> RELA(h){pS536} + ADP
+RELA(h) + ATP --CHUK(h)--> RELA(h){pS536} + ADP
+RELA(h) + ATP --IKBKB-isoform1(h)--> RELA(h){pS536} + ADP
+SIRT2(h) + ATP --CDK1-isoform1(h):CCNB1-isoform1(h)--> SIRT2(h){pS368} + ADP
+NFIC(m) --MYC(h)--> protein remnants
+NFIC(m) --MYC(h)--> protein remnants
+NFIC(m) --MYC(h)--> protein remnants
+NFIC(m) --MYC(h)--> protein remnants
+RELA(h) + acetyl-CoA --EP300(m.s.)--> RELA(h){aceK310} + CoA
+RELA(h){aceK310} --HDAC1(h)--> RELA(h) + acetyl-CoA
+RELA(m.s.){ace} --SIRT1(h)--> RELA(m.s.) + acetyl
+RELA(m.s.){ace} --SIRT1(h)--> RELA(m.s.) + acetyl
+RELA(m.s.){ace} --SIRT1(h)--> RELA(m.s.) + acetyl
+RELA(m.s.){ace} --SIRT1(h)--> RELA(m.s.) + acetyl
+RELA(m.s.){ace} --SIRT1(h)--> RELA(m.s.) + acetyl
+RELA(m.s.){ace} --SIRT1(h)--> RELA(m.s.) + acetyl
+RELA(m.s.){ace} --SIRT1(h)--> RELA(m.s.) + acetyl
+CSNK2A1 + ATP --ABL1--> CSNK2A1{pY} + ADP
+GTF2I + ATP --BTK--> GTF2I{pY} + ADP
+CBL + ATP --PRKCA--> CBL{p} + ADP
+PSMB8 + acetyl-CoA --KAT5--> PSMB8{aceK} + CoA
+PSMB8 + acetyl-CoA --KAT5--> PSMB8{aceK} + CoA
+PSMB8 + ATP --MAPK1--> PSMB8{pS} + ADP
+PSMB8 + ATP --MAPK1--> PSMB8{pS} + ADP
+PSMB8 + acetyl-CoA --CREBBP--> PSMB8{aceK} + CoA
+PSMB8 + acetyl-CoA --CREBBP--> PSMB8{aceK} + CoA
+PSMB8 + acetyl-CoA --CREBBP--> PSMB8{aceK} + CoA
+PSMB8 + acetyl-CoA --CREBBP--> PSMB8{aceK} + CoA
+PSMB8 + acetyl-CoA --CREBBP--> PSMB8{aceK} + CoA
+PSMB8 + ATP --GSK3B--> PSMB8{p} + ADP
+PSMB8 + ATP --GSK3B--> PSMB8{p} + ADP
+PSMB8 + ATP --GSK3B--> PSMB8{p} + ADP
+PSMB8 + ATP --GSK3B--> PSMB8{p} + ADP
+PSMB8 + ATP --GSK3B--> PSMB8{p} + ADP
+PSMB8 + ATP --GSK3B--> PSMB8{p} + ADP
+PSMB8 + ATP --GSK3B--> PSMB8{p} + ADP
+PSMB8 + ATP --GSK3B--> PSMB8{p} + ADP
+PSMB8 + ATP --GSK3B--> PSMB8{p} + ADP
+JUN + acetyl-CoA --EP300--> JUN{aceK} + CoA
+SNCAIP + ATP --GSK3B--> SNCAIP{p} + ADP
+SNCAIP + ATP --GSK3B--> SNCAIP{p} + ADP
+HDAC1(h) + ATP --CSNK2A1(h):CSNK2A12(h):(CSNK2B(h))2--> HDAC1(h){p} + ADP
+HDAC3(h) + ATP --CSNK2A1(h):CSNK2A12(h):(CSNK2B(h))2--> HDAC3(h){p} + ADP
+MAPK8(m.s.) + ATP --MAP2K4(m.s.)--> MAPK8(m.s.){pY185} + ADP
+MAPK9alpha-2(h) + 2 ATP --MAP2K7(h)--> MAPK9alpha-2(h){pT404}{pS407} + 2 ADP
+RELA(m.s.) + n UBB(m.s.) --UBA1(m.s.),UBE2D1(m.s.),murr1(m.s.):ELOC(m.s.):SOCS-1(m.s.):CUL2(m.s.):RBX1(m.s.)--> RELA(m.s.){ub}n
+RELA(m.s.) + n UBB(m.s.) --UBA1(m.s.),UBE2D1(m.s.),murr1(m.s.):ELOC(m.s.):SOCS-1(m.s.):CUL2(m.s.):RBX1(m.s.)--> RELA(m.s.){ub}n
+TP53(m.s.) + UBB(h) --UBE2N(h)--> TP53(m.s.){ub}
+RELA(h) --> RELA(h) + protein remnants
+RELA(h) --> RELA(h) + protein remnants
+CTGF(h) --> JNK(h){pT183}{pY185}
+CTGF(h) --> AKT1(h){pT308}{pS473}
+GSK3B(m.s.) + ATP --AKT(h)--> GSK3B(m.s.){pS9} + ADP
+RELA(h) + 2 ATP --IKBKG(m.s.)--> RELA(h){pS468}{pS536} + 2 ADP
+RELA(h) + 2 ATP --IKBKG(m.s.)--> RELA(h){pS468}{pS536} + 2 ADP
+RELA(h) + 2 ATP --IKBKG(m.s.)--> RELA(h){pS468}{pS536} + 2 ADP
+RELA(h) + 2 ATP --IKBKG(m.s.)--> RELA(h){pS468}{pS536} + 2 ADP
+IKBKB(m.s.) + ATP --MAP3K7(m.s.)--> IKBKB(m.s.){p} + ADP
+IKBKB(m.s.) + ATP --MAP3K7(m.s.)--> IKBKB(m.s.){p} + ADP
+IKBKB(m.s.) + ATP --MAP3K7(m.s.)--> IKBKB(m.s.){p} + ADP
+IKBKB(m.s.) + ATP --MAP3K7(m.s.)--> IKBKB(m.s.){p} + ADP
+JUN(h) + ATP --MAPK8(h)--> JUN(h){p} + ADP
+JUN(h) + ATP --MAPK8(h)--> JUN(h){p} + ADP
+UBA1{ub} + UBE2D1 --> UBA1 + UBE2D1{ub}
+EP300(m.s.) + ATP --MAPK1(m.s.){p}--> EP300(m.s.){p} + ADP
+IKBKG(m) + n UBB(m) --UBE2N(h),RIPK2(m.s.)--> IKBKG(m){ub}n
+IKBKG(m) + n UBB(m) --UBE2N(m)--> IKBKG(m){ub}n
+CDC37(h) + ATP --IKBKB-isoform1(h)--> CDC37(h){p} + ADP
+CDC37(h) + ATP --CHUK(h)--> CDC37(h){pS300} + ADP
+NFKBIA(m.s.) + ATP --IKBKB-isoform1(h)--> NFKBIA(m.s.){p} + ADP
+RIPK2(m) + n UBB(m) --UBE2N(m)--> RIPK2(m){ub}n
+CUL1 --> RBX1
+GSK3B(m.s.) + ATP --AKT1-isoform1(h)--> GSK3B(m.s.){pS} + ADP
+CREBBP --> RELA
+GSK3B(m.s.) + ATP --ERK(m.s.)--> GSK3B(m.s.){p} + ADP
+CDC25A(h) + ATP --CHEK1-isoform1(h)--> CDC25A(h){pS76} + ADP
+SKP2(h) + ATP --AKT1(m.s.)--> SKP2(h){pS72} + ADP
+SKP2(h) + ATP --AKT-2(m)--> SKP2(h){pS72} + ADP
+SKP2(h) + ATP --CKI(h)--> SKP2(h){pS75} + ADP
+SKP2(h) + ATP --AKT1-isoform1(h)--> SKP2(h){pT21} + ADP
+RELA(h){pS536} --PPM1D(m.s.)--> RELA(h) + p
+JUN(h) + acetyl-CoA --EP300(m.s.)--> JUN(h){aceK} + CoA
+JUN(h){aceK} --SIRT1(m.s.)--> JUN(h) + acetyl
+JUN(m) + acetyl-CoA --> JUN(m){aceK} + CoA
+JUN(m){aceK} --SIRT1(m.s.)--> JUN(m) + acetyl
+JUN(m){aceK} --SIRT1(m.s.)--> JUN(m) + acetyl
+JUN(m){aceK} --SIRT1(m.s.)--> JUN(m) + acetyl
+DKK1(h) --/ GSK3B(h)
+DKK1(h) --> PRKCA(h)
+RELA(h) --> PPM1D(h)
+PAK1(m.s.) + ATP --STK11(h)--> PAK1(m.s.){pT109} + ADP
+STK11(h){aceK48} --SIRT1(m)--> STK11(h) + acetyl
+STK11(h){aceK48} --SIRT1(h)--> STK11(h) + acetyl
+DVL2(m) + n UBB(m) --VHL(m.s.),ELOC(m.s.),CUL2(m.s.):RBX1(m.s.):elongin B(m.s.),UBE2D1(h),UBA1(m.s.)--> DVL2(m){ub}n
+PSMB8(h) + n UBB(h) --HUWUBA1(h)--> PSMB8(h){ubK63}n
+NFKBIA(m) + ATP --CHUK(h)--> NFKBIA(m){p} + ADP
+JUN + ATP --MAPK8{pT183}{pY185}--> JUN{pS63}{pS73} + ADP
+JUN + ATP --MAPK8{pT183}{pY185}--> JUN{pS63}{pS73} + ADP
+RICTOR(m) + ATP --RPS6KB1(h)--> RICTOR(m){p} + ADP
+HIF1A(h) --> IL6(h)
+SYK(h) + 2 UBB(h) --CBL(h)--> SYK(h){ub(2)}
+HIP2(m.s.) + SUMO1(m.s.) --SAUBA1(h):UBA2-isoform1(h),UBE2I(m)--> HIP2(m.s.){sumoK14}
+UBE2N(h) + isg15(m) --UBE2H(m),uba7(h)--> UBE2N(h){isgK92}
+UBE2N(h) + isg15(m) --uba7(h),UBE2H(m)--> UBE2N(h){isgK92}
+UBE2I(m) + SUMO1(m) --SAUBA1(h):UBA2-isoform1(h)--> UBE2I(m){sumoK14}
+UBE2I(m) + SUMO1(m) --SAUBA1(h):UBA2(h)--> UBE2I(m){sumoK14}
+PIAS1 --> UBE2I
+PIAS1 --> UBE2I
+RELA(h) --> IL6(h)
+Merlin(h) --> ERK(h){p}
+Merlin(h) --> ERK(h){p}
+Merlin(h) --> ERK(h){p}
+Merlin(h) --> ERK(h){p}
+Merlin(h) --> ERK(h){p}
+Merlin(h) --> ERK(h){p}
+Merlin(h) --> JNK(h){p}
+Merlin(h) --> JNK(h){p}
+Merlin(h) --> JNK(h){p}
+Merlin(h) --> JNK(h){p}
+Merlin(h) --> JNK(h){p}
+Merlin(h) --> JNK(h){p}
+MAPK14(h) + acetyl-CoA --KAT2B(h)--> MAPK14(h){aceK152}
+MAPK14(h){aceK53} --HDAC3(h)--> MAPK14(h) + acetyl
+MAPK8(m.s.) + acetyl-CoA --KAT2B(h)--> MAPK8(m.s.){ace} + CoA
+MAPK6(h) + ATP --PAK2(m)--> MAPK6(h){pS189} + ADP
+RAC1(m.s.) + SUMO1(m.s.) --SAUBA1(m.s.):UBA2(m.s.),UBE2I(m.s.),PIAS2(m.s.)--> RAC1(m.s.){sumo}
+RELA(h) --> SIRT1(r)
+PLK1(h) + ATP --PAK1(m.s.)--> PLK1(h){p} + ADP
+MAPK1(m.s.) + ATP --Raf(m.s.)--> MAPK1(m.s.){p} + ADP
+PLK1(m.s.) + ATP --MAPKAPK2(m.s.)--> PLK1(m.s.){pS326} + ADP
+JUN(m.s.) + ATP --MAPK8beta1(h)--> JUN(m.s.){p} + ADP
+MAP3K7(h){ub}n --USP4(h)--> MAP3K7(h) + n UBB(h)
+TARDBP(h) --> SIRT1(h)
+FMR1(h) --> SIRT1(h)
+STAU1(h) --> SIRT1(h)
+CDC25B(m.s.) + 2 ATP --MAPK8(m.s.)--> CDC25B(m.s.){pS101}{pS103} + 2 ADP
+HRAS(h) --> JNK(h){p}
+CSNK2B(h) + ATP --CKII(h)--> CSNK2B(h){pS} + ADP
+TAB1(h) + NDP-Gly --OGT(h)--> TAB1(h){gly} + NMP
+ROMO1(h) --/ PSMB8(h)
+ROMO1(h) --/ PSMB8(h)
+ROMO1(h) --/ PSMB8(h)
+ROMO1(h) --> ERK(h){p}
+ROMO1(h) --> ERK(h){p}
+ROMO1(m.s.) --> AKT(h){p}
+RELA(h){aceK310} --SIRT1(h)--> RELA(h) + acetyl
+RELA(h){aceK310} --SIRT1(h)--> RELA(h) + acetyl
+RELA(h){aceK310} --SIRT2(h)--> RELA(h) + acetyl
+RELA(h){aceK310} --SIRT2(h)--> RELA(h) + acetyl
+RELA(m){aceK310} --SIRT2(m)--> RELA(m) + acetyl
+RELA(m){aceK310} --SIRT2(m)--> RELA(m) + acetyl
+RELA(m){aceK310} --SIRT2(m)--> RELA(m) + acetyl
+RELA(m){aceK310} --SIRT2(m)--> RELA(m) + acetyl
+JAK2(h) + ATP --CKII(h)--> JAK2(h){p} + ADP
+RPS6KA3(m.s.) + ATP --FGFR3(m.s.)--> RPS6KA3(m.s.){pY707} + ADP
+PKMYT1(m.s.) + ATP --MAPK10(h){p}--> PKMYT1(m.s.){p} + ADP
+MAP3K7(m) + n UBB(m) --UBE2N(m)--> MAP3K7(m){ub}n
+AKT(h) + acetyl-CoA --EP300(h)--> AKT(h){aceK} + CoA
+AKT(h){aceK} --SIRT1(h)--> AKT(h) + acetyl
+AKT(h){aceK} --SIRT1(h)--> AKT(h) + acetyl
+AKT(h){aceK} --SIRT1(h)--> AKT(h) + acetyl
+PSMB8(m.s.) + ATP --PAK2(m.s.)--> PSMB8(m.s.){p} + ADP
+PSMB8(m.s.) + ATP --PAK2(m.s.)--> PSMB8(m.s.){p} + ADP
+PSMB8(m.s.) + ATP --PAK2(m.s.)--> PSMB8(m.s.){p} + ADP
+AKT1(h) --PSMC2(h)--> protein remnants
+AKT1(m.s.) + ATP --RICTOR(h)--> AKT1(m.s.){pS473} + ADP
+RELA(h) --> IL6(h)
+OGT(h){ub} --BAP1(h):ASXL1(h)--> OGT(h) + UBB(h)
+OGT(h) + UBB(h) --> OGT(h){ub}
+CTGF(h) --> PSMB8(h)
+CTGF(h) --> PSMB8(h)
+CTGF(h) --> PSMB8(h)
+CHEK1(m.s.) + ATP --RPS6KB1(m.s.)--> CHEK1(m.s.){pS280} + ADP
+RAF1(h) + S-adenosylmethionine --SKB1(h)--> RAF1(h){met} + S-adenosylhomocysteine
+ARAF(h) + S-adenosylmethionine --SKB1(h)--> ARAF(h){met} + S-adenosylhomocysteine
+HRAS(m.s.) + n UBB(m.s.) --SKP1(m.s.),beta-TrCP(m.s.),RBX1(m.s.),CUL1(m.s.),UBE2D1(m.s.),UBA1(m.s.)--> HRAS(m.s.){ub}n
+PLK1(h) --PSMC2(h)--> protein remnants
+MAPK9(h) --> PSMB8(h)
+MAPK9(h) --> PSMB8(h)
+MAPK9(h) --> PSMB8(h)
+MAPK9(h) --> PSMB8(h)
+MAPK9(h) --> PSMB8(h)
+MAPK9(h) --> PSMB8(h)
+SKP2(h) + n UBB(h) --VHL(h)--> SKP2(h){ub}n
+CSNK2B(m.s.) + ATP --CSNK2A1(m.s.)--> CSNK2B(m.s.){p} + ADP
+AKT(m.s.) + n UBB(m.s.) --SKP2(m.s.)--> AKT(m.s.){ub}n
+CDH1(h) --/ PLK1(h)
+PTEN(h) --/ PLK1(h)
+EGFR(h) --> PSMB8(h)
+RELA(m.s.) + UBB(h) --KAT2A(h),murr1(m.s.):CUL2(m.s.)--> RELA(m.s.){ub}
+RELA(m.s.) + UBB(h) --KAT2A(h),murr1(m.s.):CUL2(m.s.)--> RELA(m.s.){ub}
+RELA(m.s.) + UBB(h) --KAT2A(h),murr1(m.s.):CUL2(m.s.)--> RELA(m.s.){ub}
+RELA(m.s.) + UBB(h) --KAT2A(h),murr1(m.s.):CUL2(m.s.)--> RELA(m.s.){ub}
+RELA(m.s.) + acetyl-CoA --CREBBP(m.s.)--> RELA(m.s.){aceK} + CoA
+RELA(m.s.) + acetyl-CoA --CREBBP(m.s.)--> RELA(m.s.){aceK} + CoA
+RELA(m.s.) + acetyl-CoA --CREBBP(m.s.)--> RELA(m.s.){aceK} + CoA
+RELA(m.s.) + acetyl-CoA --CREBBP(m.s.)--> RELA(m.s.){aceK} + CoA
+RELA(m.s.) + acetyl-CoA --CREBBP(m.s.)--> RELA(m.s.){aceK} + CoA
+RELA(m.s.) + acetyl-CoA --CREBBP(m.s.)--> RELA(m.s.){aceK} + CoA
+RELA(m.s.) + acetyl-CoA --CREBBP(m.s.)--> RELA(m.s.){aceK} + CoA
+RELA(m.s.) + acetyl-CoA --CREBBP(m.s.)--> RELA(m.s.){aceK} + CoA
+RELA(m.s.) + acetyl-CoA --CREBBP(m.s.)--> RELA(m.s.){aceK} + CoA
+TP53(h) --> DUSP4(h)
+CHEK1(h) + ATP --RSK(h)--> CHEK1(h){pS280} + ADP
+RELA(h){aceK310} --SIRT1(h)--> RELA(h) + acetyl
+RELA(h) + 2 S-adenosylmethionine --SKB1(m.s.)--> RELA(h){met(2)R30} + 2 S-adenosylhomocysteine
+RELA(h) + 2 S-adenosylmethionine --SKB1(m.s.)--> RELA(h){met(2)R30} + 2 S-adenosylhomocysteine
+RELA(h) + 2 S-adenosylmethionine --SKB1(m.s.)--> RELA(h){met(2)R30} + 2 S-adenosylhomocysteine
+RELA(h) + 2 S-adenosylmethionine --SKB1(m.s.)--> RELA(h){met(2)R30} + 2 S-adenosylhomocysteine
+RELA(h) + 2 S-adenosylmethionine --SKB1(m.s.)--> RELA(h){met(2)R30} + 2 S-adenosylhomocysteine
+RELA(h) + ATP --CDK6(h)--> RELA(h){pS536} + ADP
+RELA(h) + ATP --CDK6(h)--> RELA(h){pS536} + ADP
+RELA(h) + ATP --CDK6(m.s.)--> RELA(h){pS536} + ADP
+RELA(h) + ATP --CDK6(m.s.)--> RELA(h){pS536} + ADP
+RELA(h) + ATP --CDK6(m.s.)--> RELA(h){pS536} + ADP
+RELA(h) + ATP --CDK6(m.s.)--> RELA(h){pS536} + ADP
+RELA(h) + ATP --CDK6(m.s.)--> RELA(h){pS536} + ADP
+RELA(h) + ATP --CDK6(m.s.)--> RELA(h){pS536} + ADP
+RELA(h) + ATP --CDK6(m.s.)--> RELA(h){pS536} + ADP
+RELA(h) + ATP --CDK6(m.s.)--> RELA(h){pS536} + ADP
+RELA(h) + UDP-GlcNAc --OGT(m.s.)--> RELA(h){gly} + UDP
+PSMB8(h) + UBB(h) --SKP2(m)--> PSMB8(h){ub}
+PSMB8(h) + UBB(h) --SKP2(m)--> PSMB8(h){ub}
+PSMB8(h) + UBB(h) --SKP2(m)--> PSMB8(h){ub}
+OGT(h) --/ CDH1(h)
+PLK3(h) + UBB(m.s.) --UBA1(rb),UBE2D2(rb),KLHL22(m.s.):CUL3(m.s.):Pbx1(m.s.)--> PLK3(h){ub}
+PLK1(h) + UBB(m.s.) --UBA1(rb),UBE2D2(rb),KLHL22(m.s.):CUL3(m.s.):Pbx1(m.s.)--> PLK1(h){ub}
+PKM(h) --> PSMB8(h)
+RBX1(h) --/ PSMB8(h)
+NBS1(h) + n UBB(h) --CUL1(h),SKP2(m.s.)--> NBS1(h){ub}n
+USP7(h) + ATP --CSNK2A1(h):CSNK2A12(h):CSNK2B(h)--> USP7(h){pS18} + ADP
+RELA(m.s.) + UDP-GlcNAc --OGT(m.s.)--> RELA(m.s.){gly} + UDP
+RELA(m.s.) + UDP-GlcNAc --OGT(m.s.)--> RELA(m.s.){gly} + UDP
+RELA(m.s.) + UDP-GlcNAc --OGT(m.s.)--> RELA(m.s.){gly} + UDP
+RELA(m.s.) + UDP-GlcNAc --OGT(m.s.)--> RELA(m.s.){gly} + UDP
+PKN1(m.s.) + ATP --CDK6(h)--> PKN1(m.s.){p} + ADP
+PKN1(m.s.) + ATP --CDK6(h)--> PKN1(m.s.){p} + ADP
+KAT5(m.s.){ub}n --USP7(h)--> KAT5(m.s.) + n UBB(m.s.)
+RELA(h) --> PKM(h)
+TFAP4(m.s.) + n UBB(m.s.) --UBA1(m.s.),CDC34(m.s.),SKP1(m.s.):CUL1(m.s.):RBX1(m.s.),BTRC(m.s.)--> TFAP4(m.s.){ub}n
+TFAP4(m.s.) + n UBB(m.s.) --UBA1(m.s.),CDC34(m.s.),SKP1(m.s.):CUL1(m.s.):RBX1(m.s.),BTRC(m.s.)--> TFAP4(m.s.){ub}n
+TFAP4(m.s.) + n UBB(m.s.) --UBA1(m.s.),CDC34(m.s.),SKP1(m.s.):CUL1(m.s.):RBX1(m.s.),BTRC(m.s.)--> TFAP4(m.s.){ub}n
+TFAP4(m.s.) + n UBB(m.s.) --UBA1(m.s.),CDC34(m.s.),SKP1(m.s.):CUL1(m.s.):RBX1(m.s.),BTRC(m.s.)--> TFAP4(m.s.){ub}n
+TFAP4(h) --PSMC2(h)--> protein remnants
+TFAP4(h) --PSMC2(h)--> protein remnants
+TCF7L2(m.s.) + SUMO1(m.s.) --UBE2I(m.s.)--> TCF7L2(m.s.){sumo}
+TCF7L2(m.s.) + SUMO1(m.s.) --UBE2I(m.s.)--> TCF7L2(m.s.){sumo}
+TCF7L2(m.s.) + SUMO1(m.s.) --UBE2I(m.s.)--> TCF7L2(m.s.){sumo}
+CREBBP(m) + SUMO1(m) --UBE2I(h)--> CREBBP(m){sumo}
+TCF7L2(m.s.) + SUMO1(m.s.) --UBE2I(m.s.){aceK65}--> TCF7L2(m.s.){sumo}
+TCF7L2(m.s.) + SUMO1(m.s.) --UBE2I(m.s.){aceK65}--> TCF7L2(m.s.){sumo}
+TCF7L2(m.s.) + SUMO1(m.s.) --UBE2I(m.s.){aceK65}--> TCF7L2(m.s.){sumo}
+TCF7L2(m.s.) + SUMO1(m.s.) --UBE2I(h)--> TCF7L2(m.s.){sumo}
+TCF7L2(m.s.) + SUMO1(m.s.) --UBE2I(h)--> TCF7L2(m.s.){sumo}
+TCF7L2(m.s.) + SUMO1(m.s.) --UBE2I(h)--> TCF7L2(m.s.){sumo}
+UBE2I(m.s.){aceK65} --SIRT1(m.s.)--> UBE2I(m.s.) + acetyl
+UBE2I(h){aceK} --SIRT1(h)--> UBE2I(h) + acetyl
+USP4(h) --> JNK(h){p}
+USP4(h) --> p38(h){p}
+RELA(m){aceK310} --SIRT2(m)--> RELA(m) + acetyl
+RELA(m){aceK310} --SIRT2(m)--> RELA(m) + acetyl
+RELA(m){aceK310} --SIRT2(m)--> RELA(m) + acetyl
+RELA(m){aceK310} --SIRT2(m)--> RELA(m) + acetyl
+RELA(m){aceK310} --SIRT2(m)--> RELA(m) + acetyl
+RELA(m){aceK310} --SIRT2(m)--> RELA(m) + acetyl
+RELA(m){aceK310} --SIRT2(m)--> RELA(m) + acetyl
+RELA(m){aceK310} --SIRT2(m)--> RELA(m) + acetyl
+RELA(m){aceK310} --SIRT2(m)--> RELA(m) + acetyl
+JUN(m.s.) + ATP --MAPK1(m.s.)--> JUN(m.s.){p} + ADP
+MAP3K5(h) + ATP --RPS6KA3(h)--> MAP3K5(h){pS83} + ADP
+CDC37(h) --> AKT(h)
+CUL2(h) + NEDD8(h) --Dcun1d1(m.s.)--> CUL2(h){nedd}
+RELA(m.s.) + sumo3(m.s.) --PIAS1(m.s.)--> RELA(m.s.){sumo3}
+RELA(m.s.) + sumo3(m.s.) --PIAS1(m.s.)--> RELA(m.s.){sumo3}
+RELA(m.s.) + sumo3(m.s.) --PIAS1(m.s.)--> RELA(m.s.){sumo3}
+RELA(m.s.) + sumo3(m.s.) --PIAS1(m.s.)--> RELA(m.s.){sumo3}
+RELA(m.s.) + sumo3(m.s.) --PIAS1(m.s.)--> RELA(m.s.){sumo3}
+RELA(m.s.) + sumo3(m.s.) --PIAS1(m.s.)--> RELA(m.s.){sumo3}
+RELA(m.s.) + sumo3(m.s.) --PIAS1(m.s.)--> RELA(m.s.){sumo3}
+RELA(m.s.) + sumo3(m.s.) --PIAS1(m.s.)--> RELA(m.s.){sumo3}
+RELA(m.s.) + sumo3(m.s.) --PIAS1(m.s.)--> RELA(m.s.){sumo3}
+RELA(m.s.) + sumo3(m.s.) --PIAS1(m.s.)--> RELA(m.s.){sumo3}
+RELA2(h) + n UBB(h) --SOCS-1(h)--> RELA2(h){ub}n
+RELA2(h){ub}n --PSMC2(h)--> RELA2(h) + n UBB(h)
+VHL-isoform1(h):CUL2(h) + NEDD8(h) --DCUN1D1(h)--> VHL-isoform1(h):CUL2(h){nedd}
+PSMB8(m.s.) + ATP --ABL1(m.s.)--> PSMB8(m.s.){pY74} + ADP
+PSMB8(m.s.) + ATP --ABL1(m.s.)--> PSMB8(m.s.){pY74} + ADP
+CUX1(h) --/ EP300(h)
+RELA(h) + UBB(h) --UBA1(m.s.),CDC34(m.s.),ing4-isoform1(h)--> RELA(h){ub}
+PSMB8(h) --PSMC2(h)--> protein remnants
+PSMB8(h) --PSMC2(h)--> protein remnants
+MYC(h) + n UBB(h) --CHIP-isoform1(h)--> MYC(h){ub}n
+MYC(h){ub}n --PSMC2(h)--> MYC(h) + n UBB(h)
+EP300(h){aceK} --HDAC1(h)--> EP300(h) + acetyl
+CSNK2A1(m.s.) + ATP --AKT1(m.s.){p}--> CSNK2A1(m.s.){p} + ADP
+PPM1D(h) --PSMC2(h)--> protein remnants
+RELA(m.s.) + ATP --CSNK1G1(h)--> RELA(m.s.){pS536} + ADP
+RELA(m.s.) + ATP --CSNK1G1(h)--> RELA(m.s.){pS536} + ADP
+RELA(m.s.) + ATP --CSNK1G1(h)--> RELA(m.s.){pS536} + ADP
+RELA(m.s.) + ATP --CSNK1G1(h)--> RELA(m.s.){pS536} + ADP
+RELA(h) + ATP --CSNK1G1(h)--> RELA(h){pS536} + ADP
+RELA(m.s.) + UBB(m.s.) --CUL2(m.s.)--> RELA(m.s.){ub}
+RELA(m.s.) + UBB(m.s.) --CUL2(m.s.)--> RELA(m.s.){ub}
+RELA(m.s.) + UBB(m.s.) --CUL2(m.s.)--> RELA(m.s.){ub}
+RELA(m.s.) + UBB(m.s.) --CUL2(m.s.)--> RELA(m.s.){ub}
+RELA(m.s.) + UBB(m.s.) --CUL2(m.s.)--> RELA(m.s.){ub}
+RELA(m.s.) + UBB(m.s.) --murr1(m.s.)--> RELA(m.s.){ub}
+RELA(m.s.) + UBB(m.s.) --murr1(m.s.)--> RELA(m.s.){ub}
+RELA(m.s.) + UBB(m.s.) --murr1(m.s.)--> RELA(m.s.){ub}
+RELA(m.s.) + UBB(m.s.) --murr1(m.s.)--> RELA(m.s.){ub}
+RELA(m.s.) + UBB(m.s.) --murr1(m.s.)--> RELA(m.s.){ub}
+AKT1(m) + SUMO1(m) --PIAS1(h)--> AKT1(m){sumo}
+AKT1(m) + SUMO1(m) --PIAS1(h)--> AKT1(m){sumo}
+MAP3K7(h) + ATP --FGFR3(h)--> MAP3K7(h){pY} + ADP
+JUN(h) + ATP --GSK3B(m.s.)--> JUN(h){pT239} + ADP
+JUN(h) + ATP --GSK3B(m.s.)--> JUN(h){pT239} + ADP
+JUN(h) + ATP --GSK3B(m.s.)--> JUN(h){pT239} + ADP
+SIRT1(h) + ATP --plk(h)--> SIRT1(h){p} + ADP
+GTF2I(h) + 2 ATP --plk(h)--> GTF2I(h){pS207}{pS210} + 2 ADP
+GTF2I(h) + 2 ATP --plk(h)--> GTF2I(h){pS207}{pS210} + 2 ADP
+GTF2I(h) + 2 ATP --plk(h)--> GTF2I(h){pS207}{pS210} + 2 ADP
+GTF2I(h) + 2 ATP --plk(h)--> GTF2I(h){pS207}{pS210} + 2 ADP
+GTF2I(h) + 2 ATP --plk(h)--> GTF2I(h){pS207}{pS210} + 2 ADP
+GTF2I(h) + 2 ATP --plk(h)--> GTF2I(h){pS207}{pS210} + 2 ADP
+GTF2I(h) + 2 ATP --plk(h)--> GTF2I(h){pS207}{pS210} + 2 ADP
+GTF2I(h) + 2 ATP --plk(h)--> GTF2I(h){pS207}{pS210} + 2 ADP
+GTF2I(h) + 2 ATP --plk(h)--> GTF2I(h){pS207}{pS210} + 2 ADP
+GTF2I(h) + 2 ATP --plk(h)--> GTF2I(h){pS207}{pS210} + 2 ADP
+GTF2I(h) + 2 ATP --plk(h)--> GTF2I(h){pS207}{pS210} + 2 ADP
+GTF2I(h) + 2 ATP --plk(h)--> GTF2I(h){pS207}{pS210} + 2 ADP
+GTF2I(h) + 2 ATP --plk(h)--> GTF2I(h){pS207}{pS210} + 2 ADP
+UBA1(h) + ATP --SYK(h)--> UBA1(h){pY106} + ADP
+GTF2I(h) + ATP --MAPK3(h)--> GTF2I(h){pS210} + ADP
+GTF2I(h) + ATP --MAPK3(h)--> GTF2I(h){pS210} + ADP
+GTF2I(h) + ATP --MAPK3(h)--> GTF2I(h){pS210} + ADP
+GTF2I(h) + ATP --MAPK3(h)--> GTF2I(h){pS210} + ADP
+GTF2I(h) + ATP --MAPK3(h)--> GTF2I(h){pS210} + ADP
+MAPK3(h){p} --CDC25A(h)--> MAPK3(h) + p
+CDK1(h){pT14}{pY15} --CDC25A(h)--> CDK1(h) + 2 p
+CDK1(h){pT14}{pY15} --CDC25B(h)--> CDK1(h) + 2 p
+CDK1(h){pY15} --CDC25C(h)--> CDK1(h) + 2 p

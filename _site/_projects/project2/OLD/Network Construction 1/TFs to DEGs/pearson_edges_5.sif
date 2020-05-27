@@ -1,0 +1,13 @@
+SMAD3	inactivates	JUN
+SMAD3	inactivates	PTPN11
+RAD21	activates	JUN
+RAD21	activates	HDAC2
+JUN	activates	HDAC2
+SMAD3	inactivates	HDAC2
+SMAD3	activates	SETDB1
+SMAD3	activates	SLC9A3R1
+SMAD3	inactivates	PXN
+JUNB	inactivates	JUN
+RAD21	activates	MED28
+RAD21	activates	PTPN11
+JUNB	inactivates	HDAC2

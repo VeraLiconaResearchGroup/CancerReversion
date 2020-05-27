@@ -1,0 +1,68 @@
+rm(---
+title: "heatmaps"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+
+library(readxl)
+library(NMF)
+#import files
+avg_exp <- read_delim("network_avg_expression_10A_231", "\t", escape_double = FALSE, col_names = FALSE, col_types = cols(X2 = col_number(),X3 = col_number()), trim_ws = TRUE)
+avg_expr<-data.frame(avg_exp)
+rownames(avg_expr)=avg_expr[,1]
+avg_expr = avg_expr[,-1]
+names(avg_expr)<-c('MCF10A','MDA-MB-231')
+aheatmap(avg_expr,scale = 'row', hclustfun = "complete",color=colorRampPalette(c('navy','white','firebrick3'))(80),filename="avg_norm_exp.pdf")
+
+ind_exp <- read_delim("network_indv_expression_10A_231", "\t", escape_double = FALSE, col_names = FALSE, col_types = cols(X2 = col_number(),X3 = col_number(),X4 = col_number(),X5 = col_number(),X6 = col_number(),X7 = col_number(),X8 = col_number(),X9 = col_number()), trim_ws = TRUE)
+ind_expr<-data.frame(ind_exp)
+rownames(ind_expr)=ind_expr[,1]
+ind_expr = ind_expr[,-1]
+names(ind_expr)<-c('MCF10A_1','MCF10A_2','MCF10A_3','MCF10A_4','MDA-MB-231_1','MDA-MB-231_2','MDA-MB-231_3','MDA-MB-231_4')
+aheatmap(ind_expr,scale = 'row', hclustfun = "complete",color=colorRampPalette(c('navy','white','firebrick3'))(80),filename="ind_norm_exp.pdf")
+
+
+```
+
+```{r}
+#SFA heat maps
+avg_exp <- read_delim("network_attractors_10A_231", "\t", escape_double = FALSE, col_names = FALSE, col_types = cols(X2 = col_number(),X3 = col_number()), trim_ws = TRUE)
+avg_expr<-data.frame(avg_exp)
+rownames(avg_expr)=avg_expr[,1]
+avg_expr = avg_expr[,-1]
+names(avg_expr)<-c('MCF10A','MDA-MB-231')
+aheatmap(avg_expr,scale = 'row', hclustfun = "complete",color=colorRampPalette(c('navy','white','firebrick3'))(80),filename="nework_attractors.pdf")
+
+aheatmap(avg_expr, hclustfun = "complete",color=colorRampPalette(c('navy','white','firebrick3'))(80),filename="nework_attractors_noScaleRow.pdf")
+```
+
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+#DACvslogFC heat maps
+library(readr)
+ron_values <- read_delim("ron_DAC_vs_exprlogFC", "\t", escape_double = FALSE, col_names = FALSE, col_types = cols(X2 = col_number(),X3 = col_number()), trim_ws = TRUE)
+ron_valuesr<-data.frame(ron_values)
+rownames(ron_valuesr)=ron_valuesr[,1]
+ron_valuesr = ron_valuesr[,-1]
+names(ron_valuesr)<-c('DAC','231vs10A_logFC')
+aheatmap(ron_valuesr,scale = 'col', hclustfun = "complete",color=colorRampPalette(c('navy','white','firebrick3'))(80),filename="DACvslogFC.pdf")
+
+#aheatmap(avg_expr, hclustfun = "complete",color=colorRampPalette(c('navy','white','firebrick3'))(80),filename="nework_attractors_noScaleRow.pdf")
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

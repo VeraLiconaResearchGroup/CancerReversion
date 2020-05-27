@@ -1,0 +1,1 @@
+ID	Gene symbol ID	Gene symbol ID_1	Gene symbol ID_1_1	MDA_MB-231_MCF10A.fc	MDA_MB-231_MCF10A.baseMean	MDA_MB-231_MCF10A.lfcSE	MDA_MB-231_MCF10A.stat	MDA_MB-231_MCF10A.raw.pval	MDA_MB-231_MCF10A.bh.pval

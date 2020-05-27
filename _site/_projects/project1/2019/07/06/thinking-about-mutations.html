@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Investigating Mutational Pathways</title>
+    <meta name="description" content="This is my lab notebook for my undergraduate honors thesis in Dr. Paola Vera-Licona's Computational Systems Medicine Research Group.
+">
+
+    <link rel="stylesheet" href="http://localhost:4000/gastonguay_compsysmed_labnotebook/css/main.css">
+    <link rel="canonical" href="http://localhost:4000/gastonguay_compsysmed_labnotebook/_projects/project1/2019/07/06/thinking-about-mutations.html">
+
+<!-- meta robots -->
+    
+     	<meta name="robots" content="noindex" />
+    
+
+<!-- loading fonts -->
+    <!-- Open Sans -->
+    <link href="http://localhost:4000/gastonguay_compsysmed_labnotebook/_assets/open_sans/style.css" rel="stylesheet">
+
+    <!-- own icon font, created via https://icomoon.io/  -->
+    <link href="http://localhost:4000/gastonguay_compsysmed_labnotebook/_assets/lablogIcons/style.css" rel="stylesheet">
+
+    <!-- Ubuntu Mono for code -->
+    <link href="http://localhost:4000/gastonguay_compsysmed_labnotebook/_assets/Ubuntu_Mono/style.css" rel='stylesheet' type='text/css'>
+
+<!-- mathjax.org for math equations -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    imageFont: null,
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]} ,
+    menuSettings: { context: "Browser" }
+    });
+    </script>
+
+    <script type="text/javascript"  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+<!-- highlight.js for code syntax highlighting-->
+<link rel="stylesheet" href="http://localhost:4000/gastonguay_compsysmed_labnotebook/_assets/highlight/styles/github.css">
+<script src="http://localhost:4000/gastonguay_compsysmed_labnotebook/_assets/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!--<link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/default.min.css">
+<script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>-->
+
+
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/gastonguay_compsysmed_labnotebook/index.html">Maddie Gastonguay lab notebook</a>
+
+  <nav  class="main-menu">
+  <input type="checkbox" id="menu" />
+  <label for="menu"></label>
+  <div class="trigger">
+
+    <a class="page-link" href="/gastonguay_compsysmed_labnotebook/index.html"><span style = "font-family: 'lablogIcons';">  &#xe605; </span> Maddie Gastonguay lab notebook</a>
+
+    
+      <a class="page-link" href="/gastonguay_compsysmed_labnotebook/tasks.html"><span style = "font-family: 'lablogIcons';">  &#xf046; </span> Tasks</a>
+    
+
+    
+<a class="page-link" href="/gastonguay_compsysmed_labnotebook/tags.html"><span style = "font-family: 'lablogIcons';">  &#xe600; </span> Tags</a>
+    
+
+    
+      <a class="page-link" href="/gastonguay_compsysmed_labnotebook/archive.html"><span style = "font-family: 'lablogIcons';">  &#xe602; </span> Archive</a>
+    
+
+    <br>
+
+    
+      <a class="page-link" href="/gastonguay_compsysmed_labnotebook/about.html">
+        <span style = "font-family: 'lablogIcons';">  &#xe60a; </span>
+        
+        
+        About
+      </a>
+    
+      <a class="page-link" href="/gastonguay_compsysmed_labnotebook/_projects/project1/project01.html">
+        <span style = "font-family: 'lablogIcons';">  &#xe60a; </span>
+        
+        
+        Preliminary Network For Breast Cancer Reversion
+      </a>
+    
+      <a class="page-link" href="/gastonguay_compsysmed_labnotebook/_projects/project2/project02.html">
+        <span style = "font-family: 'lablogIcons';">  &#xe60a; </span>
+        
+        
+        Cancer Reversion in Claudin Low Triple Negative Breast Cancer
+      </a>
+    
+
+    
+
+    <br>
+
+    
+    <div class="menu-content">
+      
+
+    </div>
+    
+
+    
+
+  </div>
+
+  </nav>
+
+
+  </div>
+
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Investigating Mutational Pathways</h1>
+    <p class="post-meta">Jul 6, 2019 • maddie</p>
+
+    
+    <div>
+     
+       <a href="/gastonguay_compsysmed_labnotebook/tags.html#project02" title="Pages tagged project02" rel="tag" class = "tag"> project02 </a>  &nbsp
+     
+       <a href="/gastonguay_compsysmed_labnotebook/tags.html#static_network" title="Pages tagged static_network" rel="tag" class = "tag"> static_network </a>  &nbsp
+     
+       <a href="/gastonguay_compsysmed_labnotebook/tags.html#mutations" title="Pages tagged mutations" rel="tag" class = "tag"> mutations </a>  &nbsp
+     
+    </div>
+    
+
+  </header>
+
+  <article class="post-content">
+    <h1 id="tp53-mutation">TP53 mutation</h1>
+<p><strong>R280K</strong>
+<a href="https://cancer.sanger.ac.uk/cosmic/mutation/overview?id=330620#pathway">COSMIC</a></p>
+
+<h2 id="mevalonate-pathway">Mevalonate Pathway</h2>
+<div style="text-align:center">
+  <p><img src="/gastonguay_compsysmed_labnotebook\_assets\images\mevalonate_pathway.png" alt="pathway" /></p>
+</div>
+
+<p><a href="https://www.wikipathways.org/index.php/Pathway:WP3963">wiki pathway</a></p>
+<ul>
+  <li><a href="https://www.cell.com/fulltext/S0092-8674(11)01569-8">upregulated by TP53 mutation</a></li>
+</ul>
+
+<div style="text-align:center">
+  <p><img src="/gastonguay_compsysmed_labnotebook\_assets\images\TP53_SREBP.png" alt="pathway" /></p>
+</div>
+<ul>
+  <li>TP53 <a href="https://www.nature.com/articles/nrc.2016.76">interacts with SREBP</a> to upregulate the transcription of HMGCoA reductase and therefore increase activity of the mevalonate pathway
+    <ul>
+      <li>SREBP is expressed but does not have protein data</li>
+      <li>There is mRNA and/or protein data for all components of the mevalonate pathway except PMVK, MVD, and FDPS</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="chemokines">Chemokines</h2>
+<ul>
+  <li><a href="https://academic.oup.com/carcin/article/33/2/442/2463582">Chemokines act as motility factors regulated by mutant TP53</a></li>
+  <li>mutp53 increases ID4 which increases expression of chemokines <strong>!! We don’t have protein or mRNA data for it !!</strong>
+    <ul>
+      <li>Only have mRNA for CXCL1, CXCL2, CXCL8, CXCL16, and CXCR4</li>
+    </ul>
+  </li>
+  <li>mutp53 inactivates p63 which typically decrease expression of chemokines</li>
+  <li><strong>Conclusion:</strong> Don’t include pathway with ID4 in model because it’s not present but we could possibly add the increased expression of chemokines as a <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2727408/">downstream effect of the Wnt pathway</a>, which is downstream of the TGF$\beta$ pathway.</li>
+</ul>
+
+<h2 id="vitamin-d-receptor-mediated-apoptosis">Vitamin D Receptor Mediated Apoptosis</h2>
+<ul>
+  <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2882298/pdf/nihms-207988.pdf">Mutant TP53 interacts functionally and physically with VDR</a> by interfering with the binding of VDR to nVDRE, enabling the relevant target genes to remain transcriptionally active
+    <ul>
+      <li>Turns vitamin D3 from death-promoting into protective</li>
+    </ul>
+  </li>
+  <li>VDR is expressed but no protein data
+    <ul>
+      <li>p-value is 0.09 so not included in DEGs</li>
+    </ul>
+  </li>
+  <li>mutp53 modifies VDR in a way that alters it’s transcription program and increases resistance to apoptosis
+    <blockquote>
+      <p>Specifically, mutp53 is tethered to chromosomal regions
+containing VDRE elements, presumably through association with VDR, and to augment
+transcription from promoters containing such elements.</p>
+    </blockquote>
+  </li>
+  <li><a href="http://software.broadinstitute.org/gsea/msigdb/geneset_page.jsp?geneSetName=STAMBOLSKY_BOUND_BY_MUTATED_TP53">mutp53 can interact functionally and physically with VDR</a>
+    <ul>
+      <li>Mutp53 is recruited to VDR-regulated genes and modulates their expression, augmenting the transactivation of some genes and relieving the repression of others.</li>
+      <li>Mutp53 increases the nuclear accumulation of VDR</li>
+      <li>Mutp53 converts vitamin D into an antiapoptotic agent.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="tgfbeta-induced-metastasis">TGF$\beta$-induced metastasis</h2>
+
+<p><img src="/gastonguay_compsysmed_labnotebook\_assets\images\TGFBeta_pathway.png" alt="TGFbeta pathway" /></p>
+
+<ul>
+  <li>TGF$\beta$ works with oncogenic Ras and mutant-p53 to induce the assembly of a <a href="https://www.sciencedirect.com/science/article/pii/S0092867409000877?via%3Dihub">mutant-p53/p63 protein complex</a></li>
+  <li>TGF$\beta$ is expressed but not in network</li>
+  <li>wt TP53 response to TGF$\beta$ is tumor suppressant but the mutant response is malignant</li>
+  <li>TGFb uses mutant-p53 to surpass the barrier that p63 raises against TGFb-induced malignant cell responses</li>
+  <li>SMAD2 also involved</li>
+  <li><a href="http://jcb.rupress.org/content/192/2/209.long">Cyclin G2 and Sharp-1</a> are targets of p63 and typically prevent cell migration, but p53 prevents p63 from interacting with them
+    <ul>
+      <li>not expressed in our cell line</li>
+    </ul>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>overall pathway: TGFb –&gt; Smad/mutantp53–</td>
+          <td>p63–</td>
+          <td>metastasis</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>Ras signaling promotes mutant-p53 phosphorylation and, in so doing, it is required for the formation of the mutant-p53/Smad complex</li>
+</ul>
+
+<h2 id="wnt-pathway-is-downstream-of-tgfbeta">Wnt Pathway is downstream of TGF$\beta$</h2>
+
+<p><img src="/gastonguay_compsysmed_labnotebook\_assets\images\Wnt_signaling.png" alt="wnt signaling" /></p>
+
+<p><a href="https://link.springer.com/article/10.1007%2Fs10911-011-9205-5">non canonical wnt5a pathway activated</a></p>
+
+<h2 id="hsp">HSP?</h2>
+
+<h1 id="braf-mutation">BRAF mutation</h1>
+<p><a href="https://ckb.jax.org/geneVariant/show?geneVariantId=1791">info</a></p>
+
+<h1 id="mki67-mutation">MKi67 Mutation</h1>
+<p>No one knows what it does!</p>
+
+<h1 id="characterization">Characterization</h1>
+
+<p>Ki67, E-cadherin, claudin-3, claudinin-4 and claudinin-7 low</p>
+
+<ul>
+  <li>MKI67 is differentially expressed and there is protein present but it is not ranked high enough to be included in the FOC
+    <ul>
+      <li>In CL tumors Ki67 expression is low because cells are not proliferating as much, but in the cell lines the Ki67 expression is higher because they are growing</li>
+    </ul>
+  </li>
+  <li>CDH1 (E-cadherin) is expressed but doesn’t have protein present
+    <ul>
+      <li>Not included in DEG even though it has a FC of 13, p-value 0.00005, and FDR of 0.0002 because it’s <strong>NOT IN AN OPEN CHROMATIN REGION</strong></li>
+    </ul>
+  </li>
+  <li>CLDN4 protein is present but it’s not differentially expressed</li>
+  <li>CLDN7 has mRNA data but no protein and it isn’t differentially expressed</li>
+  <li>CLDN4 and CLDN7 have fold changes of 218 and 25 respectively, both with p-values and FDRs of 0 but aren’t in the list of DEGs because they’re <strong>NOT IN AN OPEN CHROMATIN REGION</strong></li>
+  <li>CLDN3 has no mRNA or protein data
+    <ul>
+      <li>Not a bad thing because it’s supposed to be low expression</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="claudins">Claudins</h2>
+<p><a href="https://www.sciencedirect.com/science/article/pii/S0005273607004099?via%3Dihub">source</a></p>
+<ul>
+  <li>Claudins 1-10 are considered classic claudins because of the similarity of their sequences.</li>
+  <li>May be able to polymerize (hexamers preferred oligomer for Claudin-4, smaller oligomer for Claudin-3)</li>
+  <li>Rely on scaffolding proteins ZO-1 and ZO-2 (gene names TJP1 and TJP2) for spatial organization of claudin-based strands in epithelial cells, both of which are expressed AND have proteins present but not in network</li>
+  <li>Claudins have a short half life! (Claudin-4 is 4 hours)</li>
+  <li>Claudins can be short-term regulated by phosphorylation catalyzed by MAPK, PKC, PKA (in claudin-3)</li>
+  <li>Claudin-1 to -4 care phosphorylated by WNK4 (not expressed)</li>
+  <li>“receptor tyrosine kinase EphA2 phosphorylates the PDZ-binding C-terminus of claudin-4, resulting in its dislocation from cell–cell contacts, due to reduced ZO-1 association”
+    <ul>
+      <li>EphA2 expressed and protein present but not in network</li>
+    </ul>
+  </li>
+  <li>Claudin-7 corms a paracellular cation pore for Na+</li>
+  <li>Claudin-4 is a sealing claudin; it selectively decreases the paracellular cation permeability through tight junctions</li>
+  <li>Heterophilic cis interactions for claudins-3 and -4</li>
+</ul>
+
+<p>Check out <a href="http://www.jbc.org/content/282/41/30005.full.pdf">this</a>
+and <a href="https://reader.elsevier.com/reader/sd/pii/S0005273607004099?token=CB209285961D715AD628A1EFC6D1BEA704E327FD704BBEA49A01C77FEC099EB6C4475D71B898527408A6F415DCA96027">this</a></p>
+
+  </article>
+
+</div>
+
+<div class="related-posts">
+  
+  
+  
+  
+  
+  
+  
+  <h3>Related Posts:</h3>
+  <ul>
+  
+  <li class="relatedPost">
+  <a href="/gastonguay_compsysmed_labnotebook/_projects/project2/2020/04/05/NetworkAnlysis-final.html">Final Network Analysis
+  </a> <span class = "post-meta"> • April  5, 2020</span>
+  
+  <span class = "post-meta"> • </span>
+  
+    <a href="/gastonguay_compsysmed_labnotebook/tags.html#project02" title="Pages tagged project02" rel="tag" class = "tag"> project02 </a>  &nbsp
+  
+    <a href="/gastonguay_compsysmed_labnotebook/tags.html#static_network" title="Pages tagged static_network" rel="tag" class = "tag"> static_network </a>  &nbsp
+  
+    <a href="/gastonguay_compsysmed_labnotebook/tags.html#mutations" title="Pages tagged mutations" rel="tag" class = "tag"> mutations </a>  &nbsp
+  
+  
+
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="relatedPost">
+  <a href="/gastonguay_compsysmed_labnotebook/_projects/project2/2020/04/01/SFA-initiliazations.html">SFA Initializations
+  </a> <span class = "post-meta"> • April  1, 2020</span>
+  
+  <span class = "post-meta"> • </span>
+  
+    <a href="/gastonguay_compsysmed_labnotebook/tags.html#project02" title="Pages tagged project02" rel="tag" class = "tag"> project02 </a>  &nbsp
+  
+    <a href="/gastonguay_compsysmed_labnotebook/tags.html#static_network" title="Pages tagged static_network" rel="tag" class = "tag"> static_network </a>  &nbsp
+  
+    <a href="/gastonguay_compsysmed_labnotebook/tags.html#mutations" title="Pages tagged mutations" rel="tag" class = "tag"> mutations </a>  &nbsp
+  
+  
+
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="relatedPost">
+  <a href="/gastonguay_compsysmed_labnotebook/_projects/project2/2020/03/29/NetworkAnlysis3.html">Network Analysis
+  </a> <span class = "post-meta"> • March 29, 2020</span>
+  
+  <span class = "post-meta"> • </span>
+  
+    <a href="/gastonguay_compsysmed_labnotebook/tags.html#project02" title="Pages tagged project02" rel="tag" class = "tag"> project02 </a>  &nbsp
+  
+    <a href="/gastonguay_compsysmed_labnotebook/tags.html#static_network" title="Pages tagged static_network" rel="tag" class = "tag"> static_network </a>  &nbsp
+  
+    <a href="/gastonguay_compsysmed_labnotebook/tags.html#mutations" title="Pages tagged mutations" rel="tag" class = "tag"> mutations </a>  &nbsp
+  
+  
+
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="relatedPost">
+  <a href="/gastonguay_compsysmed_labnotebook/_projects/project2/2020/01/28/SFA-exploration.html">Exploration of the Uses and Applications of SFA
+  </a> <span class = "post-meta"> • January 28, 2020</span>
+  
+  <span class = "post-meta"> • </span>
+  
+    <a href="/gastonguay_compsysmed_labnotebook/tags.html#project02" title="Pages tagged project02" rel="tag" class = "tag"> project02 </a>  &nbsp
+  
+    <a href="/gastonguay_compsysmed_labnotebook/tags.html#static_network" title="Pages tagged static_network" rel="tag" class = "tag"> static_network </a>  &nbsp
+  
+    <a href="/gastonguay_compsysmed_labnotebook/tags.html#mutations" title="Pages tagged mutations" rel="tag" class = "tag"> mutations </a>  &nbsp
+  
+  
+
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </ul>
+  
+</div>
+
+
+
+<div class="wrapper">
+
+
+<div class = "turn" style = " right: 0px" >
+ <a rel = "next" href="/gastonguay_compsysmed_labnotebook/_projects/project2/2019/07/06/mutated-pathways.html"> <span> &rsaquo; </span></a>
+</div>
+
+
+
+
+
+<div class = "turn" style = " left: 0px" >
+ <a rel = "prev" href="/gastonguay_compsysmed_labnotebook/_projects/project2/2019/07/02/upstream-regulator-search-FOC.html"> <span> &lsaquo; </span></a>
+</div>
+
+
+
+</div>
+
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Maddie Gastonguay lab notebook</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Maddie Gastonguay lab notebook</li>
+          <li><a href="mailto:madeleine.gastonguay@uconn.edu">madeleine.gastonguay@uconn.edu</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/MadeleineGastonguay">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="$grey-color-light" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">MadeleineGastonguay</span>
+            </a>
+          </li>
+          
+
+          
+
+
+<li>
+  <a href="/gastonguay_compsysmed_labnotebook/feed.xml">
+    <span class="icon icon-feed">
+      <svg viewBox="0 0 16 16">
+      <circle cx="3" cy="13" r="2" fill="$grey-color-light" />
+        <path fill="$grey-color-light" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M8.5,14.5"/>
+        <path fill="$grey-color-light"  d="M8.708,15c-0.552,0-1-0.447-1-1c0-3.147-2.561-5.708-5.708-5.708c-0.552,0-1-0.448-1-1s0.448-1,1-1
+          c4.25,0,7.708,3.458,7.708,7.708C9.708,14.553,9.261,15,8.708,15L8.708,15z"/>
+        <path fill="$grey-color-light"  d="M13.469,14.999c-0.553,0-1-0.447-1-1C12.469,8.227,7.772,3.531,2,3.531c-0.552,0-1-0.448-1-1s0.448-1,1-1
+          c6.875,0,12.469,5.593,12.469,12.468C14.469,14.552,14.021,14.999,13.469,14.999L13.469,14.999z"/>
+      </svg>
+    </span>
+    <span class="feed"> RSS feed </span>
+  </a>
+</li>
+
+
+
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">This is my lab notebook for my undergraduate honors thesis in Dr. Paola Vera-Licona's Computational Systems Medicine Research Group.
+</p>
+
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0;" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+
+      <p class="text"><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Maddie Gastonguay lab notebook</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://localhost:4000" property="cc:attributionName" rel="cc:attributionURL">Maddie Gastonguay</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

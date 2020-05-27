@@ -1,0 +1,18 @@
+EGFR HDAC3 MAPK1 MAPK6 PLK1 PRPF4 RELA ZBTB17 Npert
+Perturb_6076 inhibited inhibited N inhibited N N N N 3
+Perturb_5115 inhibited inhibited N inhibited N N N activated 4
+Perturb_5477 inhibited inhibited N inhibited N N zero N 4
+Perturb_5893 inhibited inhibited inhibited inhibited N N N N 4
+Perturb_6203 inhibited inhibited N inhibited N N inhibited N 4
+Perturb_0629 inhibited inhibited N inhibited N N inhibited activated 5
+Perturb_4928 inhibited inhibited inhibited inhibited N N N activated 5
+Perturb_5331 inhibited inhibited inhibited inhibited N N zero N 5
+Perturb_6391 inhibited inhibited inhibited inhibited N N inhibited N 5
+Perturb_6437 inhibited inhibited N inhibited N N zero activated 5
+Perturb_0826 inhibited inhibited inhibited inhibited N N inhibited activated 6
+Perturb_6237 inhibited inhibited inhibited inhibited N N zero activated 6
+Percent_activated 0 0 0 0 0 0 0 50 NA
+Percent_inhibited 100 100 50 100 0 0 33.33 0 NA
+Percent_zero 0 0 0 0 0 0 33.33 0 NA
+Percent_N 0 0 50 0 100 100 33.33 50 NA
+basal 1 0 0 0 1 1 1 0 NA

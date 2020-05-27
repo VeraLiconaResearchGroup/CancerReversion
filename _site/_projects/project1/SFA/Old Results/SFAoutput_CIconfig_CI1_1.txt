@@ -1,0 +1,8 @@
+AKT=1
+CSNK2B=-1 x
+GTF2I=1 x
+JUN=-1
+MYC=-1 x
+RELA=-1 x
+TCF7L2=-1
+UBA1=1 x

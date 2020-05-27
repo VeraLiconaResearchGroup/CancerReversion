@@ -1,0 +1,7 @@
+targets, factors
+s1p, !ceramide
+flip, !disc
+fas, !s1p
+ceramide, fas & !s1p
+disc, ceramide | (fas & !flip)
+apoptosis, disc | apoptosis

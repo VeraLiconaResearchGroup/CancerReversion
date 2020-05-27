@@ -1,0 +1,83 @@
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This code will generate a list of TFs that bind to your DEGs  
+INPUTS:  
+1.TFBS table generated from genexplain (directions in PDF). set to variable i  
+2.Symbols= list of Site_Model_ID items from TRANSFAC output  
+3.input_gene_list= list of genes that were used as input in TRANSFAC  
+4.TFs_symbols_file= output table from TRANSFAC analysis  
+  
+  
+OUTPUT: csv file where TF is the sitemodelID of the TF, symbol is the TF, and gene is the DEG of interest, for which the TF has a binding site. This can be given to cytoscape to generate a network with edges from TFs to DEGs
+
+```{r TFBS}
+library(readr)
+
+setwd("~/GitHub/gastonguay_compsysmed_labnotebook/_projects/project2/Network Construction 2/TFs to DEGs") #set working directory
+TF_Binding <- read.csv('TFBS_9_pulldown.csv') #read in TF binding profile
+symbols <- as.data.frame(names(TF_Binding)[-c(1,2,3)])
+names(symbols) <- "V1"
+# symbols <-read.table('TFs_TFID') #Read in TF IDs
+# symbols$V1 <- chartr("V$","V.", symbols$V1)
+#for (i in 1:nrow(symbols)){
+#  TF_Binding$ID<-gsub(symbols$V1[i],symbols$V2[i], TF_Binding$ID)}
+#names(TF_Binding) = gsub(pattern = "V.", replacement = "V$", x = names(TF_Binding)) #fix names in columns
+#names(TF_Binding) = gsub(pattern = "_.*", replacement = "", x = names(TF_Binding)) #fix names in columns
+#Generate dataframe with columns of expressed+ATACed TFs
+TFBS_DF<- data.frame(matrix(ncol = ncol(TF_Binding), nrow = 0)) #create new dataframe
+colnames(TFBS_DF) <- colnames(TF_Binding)
+
+
+
+input_gene_list <- read.table("../../Network Components/FunDEGs/FunDEGs_FOC_LCC_noHKG_80") #read in gene input list
+TFBS_DF <- TF_Binding[TF_Binding$Symbol %in% input_gene_list$V1,] #modify dataframe
+
+#for (i in 1:nrow(Filter))
+ # if is.element(Filter$Gene.symbol[i], TF_relevant$ID)
+#write.csv(TFBS_DF, "C:/Users/marazzi/Dropbox/Marazzi/Control_DynamicalSystems/Log/5/Cis_SOC_1000.csv")
+
+
+g <- as.vector(lapply(colnames(TFBS_DF), FUN = grepl, symbols$V1, fixed = TRUE))
+h <- lapply(g, FUN = any)
+l <- grep(TRUE, h)
+
+TF_relevant <- TFBS_DF[, l]
+TF_relevant <- cbind(TFBS_DF$Symbol, TF_relevant)
+
+#write.csv(TF_relevant, "C:/Users/marazzi/Dropbox/Marazzi/Control_DynamicalSystems/Log/5/Cis_SOC_colfilter.csv")
+
+
+
+TF_sites_DF<- data.frame(matrix(ncol =2))
+colnames(TF_sites_DF)<-c("TF","gene")
+#TF_sites_DF$TF<-TF_relevant$`OFTEN_500_DF$Symbol`
+#TF_sites_DF$contains_TFBS_for=as.vector(TF_sites_DF$contains_TFBS_for)
+for (i in 1:nrow(TF_relevant)){
+  x<-TF_relevant[i,]
+  colnames(x)[1] <- "symbol"
+  y<-x[, colSums(x != 0) > 0]
+  TFBS<-levels(droplevels(y$symbol[1]))
+  TFBS<-c(TFBS,colnames(y))
+  TFBS<-TFBS[-2]
+  for (k in 1:(length(TFBS)-1)){
+
+    TF_sites_DF[nrow(TF_sites_DF) + 1,] = c(TFBS[k+1], TFBS[1])
+    }
+}
+
+TFs_symbols_file<-read.csv('TFs_toTFID.csv', col.names = c('Gene.symbol','Site.model.ID'))
+TFs_symbols<-TFs_symbols_file[,c('Gene.symbol','Site.model.ID')]
+TFs_symbols$Site.model.ID<-chartr("V$","V.", TFs_symbols$Site.model.ID)
+colnames(TFs_symbols) <- c('symbol','TF')
+total <- merge(TFs_symbols,TF_sites_DF,by=c("TF"))
+totallower<-as.data.frame(sapply(total,tolower))
+write.csv(total, "TF_toDEG_table.csv")
+
+```
+
+

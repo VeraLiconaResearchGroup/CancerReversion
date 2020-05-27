@@ -1,0 +1,10 @@
+JUN	inactivates	TP53
+JUN	activates	EGFR
+JUN	activates	VIM
+JUN	activates	TGFB1
+JUN	activates	ATF3
+RELA	activates	ICAM1
+RELA	activates	TP53
+RELA	inactivates	FN1
+RELA	activates	EGFR
+STAT3	activates	EGFR

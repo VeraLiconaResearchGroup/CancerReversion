@@ -1,0 +1,126 @@
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+source("Clustering Functions.R") #read in file with functions for running clusters
+library(devtools)
+library(ggplot2)
+library(ggfortify)
+library(tidyverse)
+library(readxl)
+library(NMF)
+library(factoextra)
+library(cluster)    # clustering algorithms
+library(HSAUR)
+library(fpc)
+
+```
+
+
+```{r cars}
+
+df <- read.table("attractors_discrete.txt", header=FALSE, row.names=1) 
+
+MCF <- read.table("attractor_10A_discrete.txt", header=FALSE, row.names = 1)
+MDA <- read.table("attractor_231_discrete.txt", header=FALSE, row.names = 1)
+names(MCF) <- "attractor_10A"
+names(MDA) <- "attractor_231"
+ 
+all <- cbind(MCF,MDA, df)
+
+df2 <- df%>% t() %>% as.data.frame() #1000 random basal states
+
+# df3 <- dfs[row.names(dfs) %in% RONs$X1,] %>% t() %>% as.data.frame()
+
+```
+
+
+
+```{r pressure, echo=FALSE}
+#PCA plots
+pca <- prcomp(df2, center = TRUE)
+
+screeplot(pca) 
+
+#Not appropriate to use PCA plot
+
+```
+
+```{r pressure, echo=FALSE}
+# Heatmaps
+
+avg_exp <- read_delim("attractor_df.txt", "\t", escape_double = FALSE, col_names = FALSE,  trim_ws = TRUE)
+avg_expr<-data.frame(avg_exp)
+rownames(avg_expr)=avg_expr[,1]
+avg_expr = avg_expr[,-1]
+# names(avg_expr)<-c('MCF10A','MDA-MB-231')
+aheatmap(avg_expr,scale = 'row', hclustfun = "complete",color=colorRampPalette(c('navy','white','firebrick3'))(80),filename="heatmap.pdf")
+
+
+```
+
+
+```{r}
+prefix <- "attractor"
+suffix <- seq(1:1000)
+names <- paste(prefix, suffix, sep="")
+names(all) <- c("attractor_10A", "attractor_231", names)
+df4 <- all %>% t()%>% data.matrix()
+fviz_nbclust(df4, kmeans)
+fviz_nbclust(df4, kmeans, method = "wss")
+# fviz_nbclust(df4, kmeans, method = "gap_stat", print.summary = TRUE)
+
+
+# gradient = list(low = "#00AFBB", mid = "white", high = "#FC4E07")
+# get_dist(df4) %>% fviz_dist(gradient = gradient)
+# get_dist(df4, method = "pearson") %>% fviz_dist(gradient = gradient)
+# get_dist(df4, method = "spearman") %>% fviz_dist(gradient = gradient)
+# get_dist(df4, method = "manhattan") %>% fviz_dist(gradient = gradient)
+# get_dist(df4, method = "kendall") %>% fviz_dist(gradient = gradient)
+
+# k2 <- kmeans(df4, centers = 2, nstart = 25)
+# str(k2)
+# 
+# fviz_cluster(k2, data = df4)
+
+k3 <- kmeans(df4, centers = 5, nstart = 10000, iter.max = 30)
+str(k3)
+
+plotcluster(df4, k3$cluster)
+
+df5 <- df4 %>% as.data.frame() %>% rownames_to_column('attractor')
+df5$cluster <- k3$cluster
+
+cl2 <- df5 %>% filter(cluster== 2) %>% column_to_rownames('attractor')
+cl5 <- df5 %>% filter(cluster== 5) %>% column_to_rownames('attractor')
+RONs <- c("MAPK13", "STAT3", "FYN", "SNAI1", "CCNG2")
+RON_2 <- cl2[, names(cl2) %in% RONs]
+RON_5 <- cl5[, names(cl5) %in% RONs]
+RON_5[nrow(RON_5) +1,] <- RON_5 %>% lapply(sd, 1)
+
+```
+
+```{r}
+k4 <- kmeans(df4, centers = 10, nstart = 10000, iter.max = 30)
+str(k4)
+
+plotcluster(df4, k4$cluster)
+
+```
+
+
+
+
+```{r}
+k5 <- kmeans(df4, centers = 20, nstart = 10000, iter.max = 30)
+str(k5)
+plotcluster(df4, k5$cluster)
+```
+
+```{r}
+df5 <- df4 %>% as.data.frame()
+df5$class <- row.names(df5)
+kn <- knn(train = df5[1:2,-117], test = df5[-c(1,2),-117], cl = df5[1:2,]$class, k = 2)
+kn
+
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

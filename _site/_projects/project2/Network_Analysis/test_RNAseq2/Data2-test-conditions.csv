@@ -1,0 +1,7 @@
+"","type","description"
+"baseMean","intermediate","mean of normalized counts for all samples"
+"log2FoldChange","results","log2 fold change (MLE): condition treated vs control"
+"lfcSE","results","standard error: condition treated vs control"
+"stat","results","Wald statistic: condition treated vs control"
+"pvalue","results","Wald test p-value: condition treated vs control"
+"padj","results","BH adjusted p-values"

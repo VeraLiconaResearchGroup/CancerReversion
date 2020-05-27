@@ -1,0 +1,130 @@
+Attractor 1 is a simple attractor consisting of 4 state(s) and has a basin of 326 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 110111001111110100110010001111011111011011000001101100110000   |
+ 110111001111110100110010001111011111011011000001111100110000   |
+ 110111011111110100110010001111011111011011000001111100110000   |
+ 110111011111110100110010001111011111011011000001101100110000   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 2 is a simple attractor consisting of 4 state(s) and has a basin of 47 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 100000001010111101111010001111111111111011111011101100110000   |
+ 100000001010111101111010001111111111111011111011111100110000   |
+ 100000011010111101111010001111111111111011111011111100110000   |
+ 100000011010111101111010001111111111111011111011101100110000   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Attractor 3 is a simple attractor consisting of 12 state(s) and has a basin of 32 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 100000001010111100111010001111111111011011101011101100110000   |
+ 100000001011111101111010001111111111111011110001111100110000   |
+ 100000011010111101111010001111111111111011011011111100110000   |
+ 100000011010111100111010001111111111011011101011101100110000   |
+ 100000001011111101111010001111111111111011110001101100110000   |
+ 100000001010111101111010001111111111111011011011111100110000   |
+ 100000011010111100111010001111111111011011101011111100110000   |
+ 100000011011111101111010001111111111111011110001101100110000   |
+ 100000001010111101111010001111111111111011011011101100110000   |
+ 100000001010111100111010001111111111011011101011111100110000   |
+ 100000011011111101111010001111111111111011110001111100110000   |
+ 100000011010111101111010001111111111111011011011101100110000   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 il15 stimuli cd45 stimuli2 pdgf tax
+
+Boolean network with 66 genes
+
+Involved genes:
+a20 apoptosis bclxl bid caspase ceramide creb ctla4 cytoskeletonsignaling disc erk fas fasl fast flip fyn gap gpcr grb2 gzmb iap ifng ifngt il2 il2ra il2rat il2rb il2rbt jak lck mcl1 mek nfat nfkb p2 p27 pdgfr pi3k plcg1 proliferation rantes ras s1p sfas smad socs sphk1 stat3 tbet tcr tnf tpl2 tradd zap70 PDGF IL15 Stimuli Stimuli2 CD45 TAX il15 stimuli cd45 stimuli2 pdgf tax
+
+Transition functions:
+a20 = nfkb
+apoptosis = caspase
+bclxl = (nfkb | stat3) & !(bid | gzmb | disc)
+bid = (caspase | gzmb) & !(bclxl | mcl1)
+caspase = (((tradd | gzmb) & bid) & !iap) | disc
+ceramide = fas & !s1p
+creb = erk & ifng
+ctla4 = tcr
+cytoskeletonsignaling = fyn
+disc = fast & ((fas & il2) | ceramide | (fas & !flip))
+erk = mek & pi3k
+fas = fast & fasl & !sfas
+fasl = stat3 | nfkb | nfat | erk
+fast = nfkb
+flip = (nfkb | (creb & ifng)) & !disc
+fyn = tcr | il2rb
+gap = (ras | (pdgfr & gap)) & !(il15 | il2)
+gpcr = s1p
+grb2 = il2rb | zap70
+gzmb = (creb & ifng) | tbet
+iap = nfkb & !bid
+ifng = ((il2 | il15 | stimuli) & ifngt) & !(smad | p2)
+ifngt = tbet | stat3 | nfat
+il2 = (nfkb | stat3 | nfat) & !tbet
+il2ra = il2 & il2rat & !il2ra
+il2rat = il2 & (stat3 | nfkb)
+il2rb = il2rbt & (il2 | il15)
+il2rbt = erk & tbet
+jak = (il2ra | il2rb | rantes | ifng) & !(socs | cd45)
+lck = cd45 | ((tcr | il2rb) & !zap70)
+mcl1 = (il2rb & stat3 & nfkb & pi3k) & !disc
+mek = ras
+nfat = pi3k
+nfkb = (tpl2 | pi3k) | (flip & tradd & iap)
+p2 = (ifng | p2) & !stimuli2
+p27 = stat3
+pdgfr = s1p | pdgf
+pi3k = pdgfr | ras
+plcg1 = grb2 | pdgfr
+proliferation = stat3 & !p27
+rantes = nfkb
+ras = (grb2 | plcg1) & !gap
+s1p = sphk1 & !ceramide
+sfas = fast & s1p & !apoptosis
+smad = gpcr
+socs = jak & !(il2 | il15)
+sphk1 = pdgfr
+stat3 = jak
+tbet = jak | tbet
+tcr = stimuli & !ctla4
+tnf = nfkb
+tpl2 = tax | (pi3k & tnf)
+tradd = tnf & !(iap | a20)
+zap70 = lck & !fyn
+PDGF = 0
+IL15 = 1
+Stimuli = 1
+Stimuli2 = 0
+CD45 = 0
+TAX = 0
+il15 = il15
+stimuli = stimuli
+cd45 = cd45
+stimuli2 = stimuli2
+pdgf = pdgf
+tax = tax
+
+Knocked-out and over-expressed genes:
+PDGF = 0
+IL15 = 1
+Stimuli = 1
+Stimuli2 = 0
+CD45 = 0
+TAX = 0

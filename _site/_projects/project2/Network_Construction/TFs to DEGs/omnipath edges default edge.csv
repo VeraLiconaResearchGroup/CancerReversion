@@ -1,0 +1,11 @@
+SUID,consensus_direction,consensus_inhibition,consensus_stimulation,dip_url,interaction,is_directed,is_inhibition,is_stimulation,name,,
+7334,1,1,0,,interacts with,1,1,inactivates,JUN,inactivates,TP53
+7359,1,0,1,,interacts with,1,0,activates,JUN,activates,EGFR
+7357,1,0,1,,interacts with,1,0,activates,JUN,activates,VIM
+7354,1,0,1,,interacts with,1,0,activates,JUN,activates,TGFB1
+7319,1,0,1,,interacts with,1,0,activates,JUN,activates,ATF3
+5984,1,0,1,,interacts with,1,0,activates,RELA,activates,ICAM1
+5935,1,0,1,,interacts with,1,0,activates,RELA,activates,TP53
+5886,1,1,0,,interacts with,1,1,inactivates,RELA,inactivates,FN1
+5962,1,0,1,,interacts with,1,0,activates,RELA,activates,EGFR
+7155,1,0,1,,interacts with,1,0,activates,STAT3,activates,EGFR

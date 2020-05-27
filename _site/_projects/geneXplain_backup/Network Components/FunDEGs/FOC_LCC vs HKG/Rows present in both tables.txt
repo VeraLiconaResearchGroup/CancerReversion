@@ -1,0 +1,5 @@
+ID	Gene symbol ID	Gene symbol	Gene description
+ENSG00000026025	VIM	VIM	Vimentin  [Source:UniProtKB/Swiss-Prot;Acc:P08670]
+ENSG00000108946	PRKAR1A	PRKAR1A	cAMP-dependent protein kinase type I-alpha regulatory subunit (Tissue-specific extinguisher 1)(TSE1) [Source:UniProtKB/Swiss-Prot;Acc:P10644]
+ENSG00000129084	PSMA1	PSMA1	Proteasome subunit alpha type-1 (EC 3.4.25.1)(Proteasome component C2)(Macropain subunit C2)(Multicatalytic endopeptidase complex subunit C2)(Proteasome nu chain)(30 kDa prosomal protein)(PROS-30) [Source:UniProtKB/Swiss-Prot;Acc:P25786]
+ENSG00000136930	PSMB7	PSMB7	Proteasome subunit beta type-7 Precursor (EC 3.4.25.1)(Proteasome subunit Z)(Macropain chain Z)(Multicatalytic endopeptidase complex chain Z) [Source:UniProtKB/Swiss-Prot;Acc:Q99436]

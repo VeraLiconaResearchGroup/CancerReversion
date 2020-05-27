@@ -1,0 +1,1 @@
+ID	Transpath ID	FDR	Hit names	Hits	Master molecule name	Maximal radius	Ranks sum	Reachable total	Reached from set	Score	Z-Score	Average Intensity	UniProt ID

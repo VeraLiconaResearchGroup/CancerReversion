@@ -1,0 +1,9 @@
+mapping,frequency,inclusive,exclusive
+e<-c,1.0,,
+e<-b,1.0,,
+d<-a,1.0,,
+d<-!c,0.4,,
+d<-b,0.4,,
+d<-b+!c,0.2,,
+g<-!c+e,1.0,,
+f<-d+e,1.0,,

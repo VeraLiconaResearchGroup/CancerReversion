@@ -1,0 +1,21 @@
+apoptosis Clusters: 
+{0.0, 1.0, 2.0, nan}
+
+Cluster Number_of_attrs Percent_of_attrs Percent_of_cluster
+0.0 55 41.67 28.21
+1.0 40 30.3 26.49
+2.0 37 28.03 15.61
+
+
+leukemia Clusters: 
+{0.0, nan, 3.0, nan}
+
+Cluster Number_of_attrs Percent_of_attrs Percent_of_cluster
+0.0 22 75.86 11.28
+3.0 7 24.14 3.68
+
+
+Unique Apop Clusters:
+[1.0, 2.0, nan]
+Unique Leuk Clusters:
+[nan, 3.0, nan]

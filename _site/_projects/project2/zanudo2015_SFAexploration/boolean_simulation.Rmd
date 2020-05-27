@@ -1,0 +1,134 @@
+<style type="text/css">
+.main-container {
+  max-width: 1350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+```{r read in files}
+library(tidyverse)
+library(BoolNet)
+# setwd("C:/Users/marazzi/Google Drive/ALS_IPS/zanudo2015")
+network <- loadNetwork("zanudo_boolean.bn")
+```
+## Step1
+generate initial state where only il15 and stimuli are on
+result should just be a random attractor
+```{r random initial state}
+
+state0<-generateState(network,c("stimuli"=1,"il15"=1))
+attr0<-getAttractors(network, type="synchronous",startStates=list(state0))
+print(attr0)
+
+```
+
+
+## Leukemia Interventions
+
+```{r leukemia interventions}
+#CERAMIDE=OFF, SPHK1=ON
+#result should be apoptosis OFF
+p1<-fixGenes(network,c("ceramide","sphk1"),c(0,1))
+state1<-generateState(network,c("stimuli"=1,"il15"=1,"ceramide"=0,"sphk1"=1))           
+attr1<-getAttractors(p1,type="synchronous",startStates = list(state1))
+print(attr1)
+
+plotAttractors(attr1, 1)
+
+#CERAMIDE=OFF, PDGFR=ON
+#result should be apoptosis OFF
+p2<-fixGenes(network,c("ceramide","pdgfr"),c(0,1))
+state2<-generateState(network,c("stimuli"=1,"il15"=1,"ceramide"=0,"pdgfr"=1))           
+attr2<-getAttractors(p2,type="synchronous",startStates = list(state2))
+print(attr2)
+
+```
+
+
+## Apoptosis Interventions
+
+```{r apoptosis interventions}
+#TBET=ON, CERAMIDE=ON, RAS=ON
+#result should be apoptosis ON
+p3<-fixGenes(network,c("tbet","ceramide","ras"),c(1,1,1))
+state3<-generateState(network,c("stimuli"=1,"il15"=1,"tbet"=1,"ceramide"=1,"ras"=1))
+attr3<-getAttractors(p3,type="synchronous",startStates = list(state3))
+print(attr3)
+
+#TBET=ON, CERAMIDE=ON, GRB2=ON
+#result should be apoptosis ON
+p4<-fixGenes(network,c("tbet","ceramide","grb2"),c(1,1,1))
+state4<-generateState(network,c("stimuli"=1,"il15"=1,"tbet"=1,"ceramide"=1,"grb2"=1))
+attr4<-getAttractors(p4,type="synchronous",startStates = list(state4))
+print(attr4)
+
+#TBET=ON, CERAMIDE=ON, IL2RB=ON
+#result should be apoptosis ON
+p5<-fixGenes(network,c("tbet","ceramide","il2rb"),c(1,1,1))
+state5<-generateState(network,c("stimuli"=1,"il15"=1,"tbet"=1,"ceramide"=1,"il2rb"=1))
+attr5<-getAttractors(p5,type="synchronous",startStates = list(state5))
+print(attr5)
+
+
+#TBET=ON, CERAMIDE=ON, IL2RBT=ON
+#result should be apoptosis ON
+p6<-fixGenes(network,c("tbet","ceramide","il2rbt"),c(1,1,1))
+state6<-generateState(network,c("stimuli"=1,"il15"=1,"tbet"=1,"ceramide"=1,"il2rbt"=1))
+attr6<-getAttractors(p6,type="synchronous",startStates = list(state6))
+print(attr6)
+
+
+#TBET=ON, CERAMIDE=ON, ERK=ON
+#result should be apoptosis ON
+p7<-fixGenes(network,c("tbet","ceramide","erk"),c(1,1,1))
+state7<-generateState(network,c("stimuli"=1,"il15"=1,"tbet"=1,"ceramide"=1,"erk"=1))
+attr7<-getAttractors(p7,type="synchronous",startStates = list(state7))
+print(attr7)
+
+#TBET=ON, CERAMIDE=ON, MEK=ON,PI3K=ON
+#result should be apoptosis ON
+p8<-fixGenes(network,c("tbet","ceramide","mek","pi3k"),c(1,1,1,1))
+state8<-generateState(network,c("stimuli"=1,"il15"=1,"tbet"=1,"ceramide"=1,"mek"=1,"pi3k"=1))
+attr8<-getAttractors(p8,type="synchronous",startStates = list(state8))
+print(attr8)
+```
+
+
+# Find Basin of Attraction for one Apoptosis Attractor
+```{r}
+#TBET=ON, CERAMIDE=ON, ERK=ON
+
+# 15 attractors in the basin
+sink(file="apoptosis_attractor.txt",type="output")
+
+getBasinOfAttraction(attr3, 1)
+getBasinOfAttraction(attr4, 1)
+getBasinOfAttraction(attr5, 1)
+getBasinOfAttraction(attr6, 1)
+getBasinOfAttraction(attr7, 1)
+getBasinOfAttraction(attr8, 1)
+sink(file=NULL)
+```
+
+# Find Basin of Attraction for Leukemia Attractors
+```{r}
+#Leuk1
+#CERAMIDE=OFF, SPHK1=ON
+
+# 19 attractorsr in the basin
+getBasinOfAttraction(attr1, 1)
+
+#Leuk2
+#CERAMIDE=OFF, PDGFR=ON
+#result should be apoptosis OFF
+
+getBasinOfAttraction(attr2, 1)
+
+```
+

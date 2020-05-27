@@ -1,0 +1,87 @@
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## input files
+
+## Instructions:
+When running this file, chage working directory accordingly and make sure 3 files you're inputing are correctly named. Then uncomment the ggsave function and change the name of the image you're saving.
+
+```{r}
+# setwd("~/GitHub/gastonguay_compsysmed_labnotebook/_projects/project1")
+library(readr)
+library(ggplot2)
+library(readr)
+library(tidyverse)
+library(ggpubr)
+library(knitr)
+library(gridExtra)
+library(grid)
+library(formattable)
+library(kableExtra)
+
+#Input File:
+network <- read.csv("network_nodes.txt", header = FALSE)
+
+#Lists we're comparing to:
+HOC<- read_csv("HOC.txt", col_names = FALSE)
+CL<-read_csv("EMT_innateimmune", col_names = FALSE)
+breastDO <-read_csv("breast_DO.txt", col_names = FALSE)
+```
+
+#calculate weighted sums
+```{r}
+weightedsums<-data.frame(gene_set = NA, total_number = NA, number = NA, percent= NA, number = NA, percent= NA, number = NA, percent=NA, sum=NA)
+class(weightedsums$sum)<-'numeric'
+
+varlist<-list(network$V1)
+for (i in varlist){
+  ilen<-length(i)
+  x<-length(intersect(i,HOC$X1))/ilen
+  y<-length(intersect(i,breastDO$X1))/ilen
+  z<-length(intersect(i,CL$X1))/ilen
+  a<-length(intersect(i,HOC$X1))
+  b<-length(intersect(i,breastDO$X1))
+  c<-length(intersect(i,CL$X1))
+  SUM<-((1/3)*x)+((1/3)*y)+((1/3)*z)
+  weightedsums[nrow(weightedsums)+1,] = list(NA,ilen, a, x, b, y, c, z,SUM)
+}
+
+weightedsums<-weightedsums[-1,]
+weightedsums[1,1]<-'Network'
+
+test <- formattable(weightedsums)
+
+n <- weightedsums %>% select(everything()) %>%
+  kable(escape = F) %>%
+  kable_styling("hover", full_width = F) %>%
+  column_spec(5, width = "3cm") %>%
+  add_header_above(c(" ", " ", " ", "HOC" = 2, "breastDO" = 2, "CLgenes" = 2, " "))
+
+HOCint <- as.data.frame(intersect(network$V1,HOC$X1))
+CLint <- as.data.frame(intersect(network$V1, CL$X1))
+DOint <- as.data.frame(intersect(network$V1, breastDO$X1))
+
+# write_tsv(HOCint, "gene_network/network_int_HOC.txt", col_names = FALSE)
+# write_tsv(CLint, "gene_network/network_int_CLgenes.txt", col_names = FALSE)
+# write_tsv(DOint, "gene_network/network_int_breastDO.txt", col_names = FALSE)
+
+
+# write.table(weightedsums,"gene_network/weightedsums_network.txt", row.names=FALSE, quote = FALSE)
+tt <- ttheme_default(colhead=list(fg_params = list(fontface=c( "bold"))),
+                     # fg_params=list(fontface=c(rep("plain", 4), "bold.italic")),
+                     base_size = 7.5,
+                     padding = unit(c(2, 4), "mm"))
+tbl <- tableGrob(weightedsums, rows=NULL, theme = tt)
+
+weightedsums$rounded_sum <- round(weightedsums$sum, 4)
+
+g1 <- ggplot(data= weightedsums, aes(x = gene_set, y =sum)) + geom_bar(stat="identity", aes(fill = gene_set)) +
+  geom_text(aes(label = rounded_sum), vjust=1.6, color="white", size=3.5) +
+  ggtitle("Gene List Weighted Sums") + xlab("Gene list") +ylab("Weighted Sum") + theme(legend.position = "none")
+
+# ggsave("../../_assets/images/weightedsums_plusTABLE.png", arrangeGrob(g1, tbl, nrow = 2, heights = c(3,1)), "png")
+
+# ggsave("../../_assets/images/weightedsums.png", g1, "png")
+
+```

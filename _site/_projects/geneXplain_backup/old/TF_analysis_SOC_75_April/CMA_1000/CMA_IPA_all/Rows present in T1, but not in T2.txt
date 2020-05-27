@@ -1,0 +1,5 @@
+ID	Gene description	Gene symbol	Species	Site model ID
+ENSG00000186446	zinc finger protein 501	ZNF501	Homo sapiens	V$ZNF501_01
+ENSG00000197134	zinc finger protein 257	ZNF257	Homo sapiens	V$ZNF257_04
+ENSG00000198521	zinc finger protein 43	ZNF43	Homo sapiens	V$ZNF43_04
+ENSG00000253293	homeobox A10	HOXA10	Homo sapiens	V$HOXA10_01

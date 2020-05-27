@@ -1,0 +1,73 @@
+ID	Expr Log Ratio	Molecule Type	Predicted Activation State	Activation z-score	p-value of overlap	Target molecules in dataset	Mechanistic Network
+BMI1	 	transcription regulator	 	 	0.027	CDKN1A,TP53	 
+BRCA1	2.812	transcription regulator	 	0.283	7.28E-5	CDKN1A,EGFR,PIN1,PLK1,RAD51,UBE2I	 
+BRCA2	3.467	transcription regulator	 	 	0.0263	TP53	 
+CBL	-1.02	transcription regulator	 	 	0.00203	CDKN1A,ERBB2	 
+CDKN2A	 	transcription regulator	 	1	8.7E-5	CASP3,CDKN1A,RB1,TP53	 
+CEBPA	 	transcription regulator	 	 	0.00654	CDKN1A,MYC	 
+CITED1	 	transcription regulator	 	 	0.0263	TGFA	 
+CUX1	 	transcription regulator	 	 	0.00197	CDH1,PTK2,THBS1,VIM	 
+DNAJB6	 	transcription regulator	 	 	0.00424	CTNNB1,SPARC,VIM	 
+E2F1	 	transcription regulator	 	 	3.81E-4	BRCA1,CDC20,CDC25A,CDK1	 
+ELF1	 	transcription regulator	 	 	0.0263	BRCA2	 
+ELK1	 	transcription regulator	 	 	0.004	ITGAV,ITGB1	 
+EP300	1.188	transcription regulator	 	 	0.0444	MYC,RHOA	 
+EPAS1	 	transcription regulator	 	 	0.0105	EGFR,IGFBP3,IRS2,PRKCA	 
+ERF	 	transcription regulator	 	 	0.0263	MYC	 
+ETS1	 	transcription regulator	 	 	0.00511	FN1,HSPA1A/HSPA1B,PML,SCAMP1	 
+FOXA1	 	transcription regulator	 	0.167	1.8E-4	ANXA1,CDH1,CDKN1A,LYN,MYC,RASSF1,S100A2	 
+FOXC2	 	transcription regulator	 	 	7.07E-5	CDH1,FN1,PDGFRB	 
+FOXO3	 	transcription regulator	 	 	0.0324	CDH1,VIM	 
+HDAC1	1.204	transcription regulator	 	 	0.00189	BRCA2,CDKN1A,MDM2	 
+HDAC2	1.365	transcription regulator	 	 	5.33E-5	BRCA1,CDKN1A,MDM2,MYC	9 (2)
+HDAC3	-1.132	transcription regulator	 	 	9.15E-4	CDH1,CDKN1A,VIM	 
+HDAC6	 	transcription regulator	 	 	6.9E-4	MYC,NR3C1	 
+HEXIM1	 	transcription regulator	 	 	0.0174	ANXA1,TP53	 
+HIF1A	 	transcription regulator	 	-1.455	0.00654	CD44,CTGF,EGFR,IGFBP3,IRS2,MYC,PRKCA	 
+HMGA1	 	transcription regulator	 	 	0.0444	CAV1,STAT3	 
+HNRNPK	1.008	transcription regulator	 	 	0.0263	MYC	 
+HOXA5	 	transcription regulator	 	 	7.07E-5	CDKN1A,MDM2,TP53	 
+HSF1	 	transcription regulator	 	0.237	1.2E-6	CHD3,CTNNB1,FBLN1,HSP90AA1,HSPA1A/HSPA1B,IL7R,ITGB5,MAPT,NCOR2,SHC1,SPTAN1	 
+HTATIP2	 	transcription regulator	 	 	0.0263	MYC	 
+JMY	 	transcription regulator	 	 	0.0263	CDH1	 
+KDM5B	 	transcription regulator	 	-1.937	0.0106	AURKA,BRCA1,CAV1,CDK1,NDC80,PBK,TOP2A	 
+KLF4	 	transcription regulator	 	 	0.027	CDH1,TP53	 
+KLF6	 	transcription regulator	 	 	0.00203	CDH1,CDKN1A	 
+MED1	 	transcription regulator	 	 	0.00254	CDKN1A,ERBB2,MYC	3 (2)
+MRTFA	 	transcription regulator	 	 	0.0133	PFN2,STAT1	 
+MTA1	 	transcription regulator	 	 	3.4E-4	BRCA1,CTNNB1,GSK3B	 
+MYC	3.21	transcription regulator	Activated	2.2	0.00232	CDC25A,CDKN1A,JUN,PDGFRB,RHOA,TP53	 
+NACC2	 	transcription regulator	 	 	0.0263	MDM2	 
+NCOR2	-1.667	transcription regulator	 	 	0.00965	CDKN1A,MYC	 
+NFIC	 	transcription regulator	 	 	0.0263	TP53	 
+NOTCH1	 	transcription regulator	 	 	0.0263	PIN1	 
+PAX2	 	transcription regulator	 	 	0.0263	ERBB2	 
+PTTG1	3.501	transcription regulator	 	 	5.83E-4	CD44,CDH1,VIM	 
+RAD21	 	transcription regulator	 	 	0.00135	IRS2,MYC,THBS1	 
+RELA	 	transcription regulator	 	0	2.78E-4	FAS,MYC,PPM1D,TGM2,TP53	 
+SERTAD1	 	transcription regulator	 	 	0.0263	SET	 
+SMARCA1	 	transcription regulator	 	 	0.004	CDKN1A,TP53	 
+SMARCA4	 	transcription regulator	 	 	7.42E-4	ACTN4,CDKN1A,FN1,ITGA3,ITGA5,ITGB1,JUN,MYC,S100A2	 
+SMARCB1	 	transcription regulator	 	 	3.4E-4	CDKN1A,MDM2,TP53	 
+SMARCE1	 	transcription regulator	 	 	0.0133	BRCA1,BRCA2	 
+SNAI1	 	transcription regulator	 	 	9.15E-4	CDH1,KRT8,SPARC	 
+SNW1	 	transcription regulator	 	 	0.0263	CDKN1A	 
+SP1	-1.556	transcription regulator	 	 	0.00945	CDH1,CDKN1A,IGFBP3,TP53	 
+SP3	 	transcription regulator	 	 	0.0324	IGFBP3,TGFBR1	 
+SPDEF	 	transcription regulator	 	 	7.58E-8	CDKN1A,EGFR,ITGA5,ITGA6,PLAUR,PTPRF,VASP	 
+SRA1	 	transcription regulator	 	 	0.0133	CAV1,TBL1X	 
+STAT3	1.167	transcription regulator	 	 	0.00101	FN1,ITGAV,ITGB1,KAT2B,STAT1	 
+STAT5B	-1.128	transcription regulator	 	 	0.00203	CDH1,MYC	 
+TFAP2A	 	transcription regulator	 	 	0.004	CDH1,ERBB2	 
+TFAP2C	 	transcription regulator	 	0.492	1.22E-5	CDH1,CDKN1A,EGFR,ERBB2,KRT8,TGFA	27 (5)
+TP53	1.816	transcription regulator	Inhibited	-2.919	1.8E-4	BRCA1,CASP1,CDK1,CDKN1A,FAS,IGFBP3,MDM2,MYC,STX6	 
+TP63	 	transcription regulator	 	 	0.011	CDK1,CDKN1A,MDM2	 
+TP73	 	transcription regulator	 	 	0.00783	CDK1,IGFBP3,TP53	 
+TSC22D3	 	transcription regulator	 	 	0.00203	CDKN1A,TP53	 
+TWIST1	 	transcription regulator	 	 	0.00189	CDKN1A,RHOA,TP53	 
+TWIST2	 	transcription regulator	 	-1	1.54E-5	CD44,CDH1,CTNNB1,FN1	 
+WT1	 	transcription regulator	 	 	0.00203	ERBB2,MYC	 
+XBP1	 	transcription regulator	 	 	0.0147	CRK,MYC,TFDP1	 
+YBX1	 	transcription regulator	 	 	0.00529	EGFR,IGFBP3,TGFB1	 
+YY1	 	transcription regulator	 	 	1.8E-5	BRCA1,ERBB2,NR3C1	 
+ZNF148	 	transcription regulator	 	 	0.0263	STAT1	 

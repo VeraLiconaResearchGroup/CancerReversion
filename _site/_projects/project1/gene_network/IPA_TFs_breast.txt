@@ -1,0 +1,36 @@
+© 2000-2019 QIAGEN. All rights reserved.
+
+Upstream Regulator	Expr Log Ratio	Molecule Type	Predicted Activation State	Activation z-score	p-value of overlap	Target molecules in dataset	Mechanistic Network	
+KDM5B	 	transcription regulator	 	-1.698	1.80E-05	AURKA,BRCA1,CAV1,CDK1,NDC80,TOP2A	 
+E2F1	 	transcription regulator	 	 	6.53E-05	BRCA1,CDC20,CDK1	 
+ETS1	 	transcription regulator	 	 	4.97E-04	FN1,PML,SCAMP1	 
+HEXIM1	 	transcription regulator	 	 	9.11E-04	ANXA1,TP53	 
+CDKN2A	 	transcription regulator	 	 	1.45E-03	RB1,TP53	 
+HMGA1	 	transcription regulator	 	 	2.89E-03	CAV1,STAT3	 
+SPDEF	 	transcription regulator	 	 	3.79E-03	EGFR,ITGA5	 
+TP73	 	transcription regulator	 	 	3.79E-03	CDK1,TP53	 
+BRCA2	 	transcription regulator	 	 	5.81E-03	TP53	 
+CITED1	 	transcription regulator	 	 	5.81E-03	TGFA	 
+NFIC	 	transcription regulator	 	 	5.81E-03	TP53	 
+TFAP2C	 	transcription regulator	 	 	6.51E-03	EGFR,TGFA	 
+RELA	 	transcription regulator	 	 	7.78E-03	PPM1D,TP53	 
+SMAD2	-1.219	transcription regulator	 	 	1.16E-02	FN1	 
+RBL1	 	transcription regulator	 	 	1.16E-02	CDK1	 
+GABPB1	 	transcription regulator	 	 	1.16E-02	BRCA1	 
+GABPA	 	transcription regulator	 	 	1.16E-02	BRCA1	 
+TSC22D3	 	transcription regulator	 	 	1.73E-02	TP53	 
+EGR1	 	transcription regulator	 	 	1.73E-02	CAV1	 
+CEBPD	 	transcription regulator	 	 	1.73E-02	CDC27	 
+ETS2	 	transcription regulator	 	 	1.73E-02	BRCA1	 
+YY1	 	transcription regulator	 	 	1.73E-02	BRCA1	 
+EPAS1	 	transcription regulator	 	 	1.75E-02	EGFR,PRKCA	 
+SMARCA1	 	transcription regulator	 	 	2.30E-02	TP53	 
+FOXC2	 	transcription regulator	 	 	2.30E-02	FN1	 
+HOXA5	 	transcription regulator	 	 	2.30E-02	TP53	 
+BTG2	 	transcription regulator	 	 	2.30E-02	BRCA1	 
+NFE2L2	 	transcription regulator	 	 	3.44E-02	BRCA1	 
+MTA1	 	transcription regulator	 	 	3.44E-02	BRCA1	 
+SMARCB1	 	transcription regulator	 	 	3.44E-02	TP53	 
+TWIST2	 	transcription regulator	 	 	4.00E-02	FN1	 
+SMARCE1	 	transcription regulator	 	 	4.00E-02	BRCA1	 
+SIRT1	 	transcription regulator	 	 	4.55E-02	TP53	 

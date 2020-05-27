@@ -1,0 +1,15 @@
+ID	Gene symbol ID	UniProt ID	Average Intensity	Gene symbol	Gene description
+ENSG00000047849	MAP4	P27816,P27816-5	1542.1973941306746	MAP4	Microtubule-associated protein 4 (MAP-4) [Source:UniProtKB/Swiss-Prot;Acc:P27816]
+ENSG00000099817	POLR2E	P19388	211.83243049808604	POLR2E	DNA-directed RNA polymerases I, II, and III subunit RPABC1 (RNA polymerases I, II, and III subunit ABC1)(DNA-directed RNA polymerase II subunit E)(RPB5)(DNA-directed RNA polymerase II 23 kDa polypeptide)(XAP4) [Source:UniProtKB/Swiss-Prot;Acc:P19388]
+ENSG00000104824	HNRNPL	P14866	3332.3027113146013	HNRNPL	Heterogeneous nuclear ribonucleoprotein L (hnRNP L) [Source:UniProtKB/Swiss-Prot;Acc:P14866]
+ENSG00000105401	CDC37	Q16543	1229.420259934702	CDC37	Hsp90 co-chaperone Cdc37 (Hsp90 chaperone protein kinase-targeting subunit)(p50Cdc37) [Source:UniProtKB/Swiss-Prot;Acc:Q16543]
+ENSG00000108953	YWHAE	P62258	18796.94432552887	YWHAE	14-3-3 protein epsilon (14-3-3E) [Source:UniProtKB/Swiss-Prot;Acc:P62258]
+ENSG00000114353	GNAI2	P04899	578.7246160533255	GNAI2	Guanine nucleotide-binding protein G(i), alpha-2 subunit (Adenylate cyclase-inhibiting G alpha protein) [Source:UniProtKB/Swiss-Prot;Acc:P04899]
+ENSG00000116560	SFPQ	P23246	1932.265030521518	SFPQ	Splicing factor, proline- and glutamine-rich (Polypyrimidine tract-binding protein-associated-splicing factor)(PTB-associated-splicing factor)(PSF)(DNA-binding p52/p100 complex, 100 kDa subunit)(100 kDa DNA-pairing protein)(hPOMp100) [Source:UniProtKB/Sw
+ENSG00000122026	RPL21	P46778	4617.617629781827	RPL21	60S ribosomal protein L21  [Source:UniProtKB/Swiss-Prot;Acc:P46778]
+ENSG00000132155	RAF1	P04049	11.984172105543447	RAF1	RAF proto-oncogene serine/threonine-protein kinase (EC 2.7.11.1)(C-RAF)(cRaf)(Raf-1) [Source:UniProtKB/Swiss-Prot;Acc:P04049]
+ENSG00000153187	HNRNPU	Q00839,Q00839-2	4610.372910920476	HNRNPU	Heterogeneous nuclear ribonucleoprotein U (hnRNP U)(Scaffold attachment factor A)(SAF-A)(p120)(pp120) [Source:UniProtKB/Swiss-Prot;Acc:Q00839]
+ENSG00000156508	EEF1A1	P68104	150527.258512342	EEF1A1	Elongation factor 1-alpha 1 (EF-1-alpha-1)(Elongation factor 1 A-1)(eEF1A-1)(Elongation factor Tu)(EF-Tu)(Leukocyte receptor cluster member 7) [Source:UniProtKB/Swiss-Prot;Acc:P68104]
+ENSG00000163468	CCT3	P49368	3714.0322459666786	CCT3	T-complex protein 1 subunit gamma (TCP-1-gamma)(CCT-gamma)(hTRiC5) [Source:UniProtKB/Swiss-Prot;Acc:P49368]
+ENSG00000164924	YWHAZ	P63104	24958.410440240186	YWHAZ	14-3-3 protein zeta/delta (Protein kinase C inhibitor protein 1)(KCIP-1) [Source:UniProtKB/Swiss-Prot;Acc:P63104]
+ENSG00000181163	NPM1	P06748,P06748-3	14025.009884607676	NPM1	Nucleophosmin (NPM)(Nucleolar phosphoprotein B23)(Numatrin)(Nucleolar protein NO38) [Source:UniProtKB/Swiss-Prot;Acc:P06748]

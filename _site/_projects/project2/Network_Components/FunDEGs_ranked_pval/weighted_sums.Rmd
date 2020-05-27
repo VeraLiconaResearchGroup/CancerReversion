@@ -1,0 +1,98 @@
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+setwd("~/Documents/GitHub/gastonguay_compsysmed_labnotebook/_projects/project2/Network_Components/FunDEGs_rankedZscore")
+```
+
+## input files
+
+## Instructions:
+When running this file, chage working directory accordingly and make sure 3 files you're inputing are correctly named. Then uncomment the ggsave function and change the name of the image you're saving.
+
+```{r}
+library(readr)
+library(ggplot2)
+library(readr)
+library(tidyverse)
+library(ggpubr)
+library(knitr)
+library(gridExtra)
+library(grid)
+library(MASS)
+# library(FRACTION)
+# library(stargazer)
+
+#Input Files:
+rankedDEGs<-read.csv("DEG_rankpval_top700", header = FALSE, col.names = "gene")
+FOC<-read.csv("FOC_64", header = FALSE,  col.names = "gene")
+SOC<-read.csv("SOC_pval_LCC_204", header=FALSE,  col.names = "gene")
+
+#Lists we're comparing to:
+HOC<- read.csv("../EMT_innateimmune.txt", header = FALSE,  col.names = "gene")
+CL<-read.csv("../CL_genes.txt", header = FALSE,  col.names = "gene")
+breastDO <-read.csv("../breast_DO.txt", header = FALSE,  col.names = "gene")
+
+names(HOC) <- "gene"
+f = function(x, den) {paste0(x, "/", den)}
+
+
+
+```
+
+#calculate weighted sums
+```{r}
+weightedsums<-data.frame(gene_set = NA, number_genes = NA, HOC= NA, breastDO= NA, CLgenes=NA, sum=NA)
+class(weightedsums$sum)<-'numeric'
+
+varlist<-list(rankedDEGs$gene,FOC$gene,SOC$gene)
+for (i in varlist){
+  ilen<-length(i)
+  x<-length(intersect(i,HOC$gene))
+  y<-length(intersect(i,breastDO$gene))
+  z<-length(intersect(i,CL$gene))
+  SUM<-((1/3)*x/ilen)+((1/3)*y/ilen)+((1/3)*z/ilen)
+  weightedsums[nrow(weightedsums)+1,] = list(NA,ilen,f(x, ilen),f(y,ilen),f(z,ilen),SUM)
+}
+weightedsums<-weightedsums[-1,]
+weightedsums[1,1]<-'DEGs'
+weightedsums[2,1]<-'First order FunDEGs'
+weightedsums[3,1]<-'Second order FunDEGs'
+
+write.table(weightedsums,"weightedsums.txt", row.names=FALSE, quote = FALSE)
+tt <- ttheme_default(colhead=list(fg_params = list(fontface=c( "bold"))),
+                     # fg_params=list(fontface=c(rep("plain", 4), "bold.italic")),
+                     base_size = 7.5,
+                     padding = unit(c(2, 4), "mm"))
+tbl <- tableGrob(weightedsums, rows=NULL, theme = tt)
+
+weightedsums$rounded_sum <- round(weightedsums$sum, 4)
+
+g1 <- ggplot(data= weightedsums, aes(x = gene_set, y =sum)) + geom_bar(stat="identity", aes(fill = gene_set)) +
+  geom_text(aes(label = rounded_sum), vjust=1.6, color="white", size=3.5) +
+  ggtitle("Gene List Weighted Sums") + xlab("Gene list") +ylab("Weighted Sum") + theme(legend.position = "none")
+
+# ggsave("weightedsums_plusTABLE.png", arrangeGrob(g1, tbl, nrow = 2, heights = c(3,1)), "png")
+
+# ggsave("../../../../_assets/images_proj2/weightedsums_plusTABLE.png", arrangeGrob(g1, tbl, nrow = 2, heights = c(3,1)), "png")
+# ggsave("../../../../_assets/images_proj2/weightedsums.png", g1, "png")
+
+```
+
+```{r}
+# Get list of CL genes in SOC and FOC:
+Cl_in_SOC <- as.data.frame(intersect(SOC$gene, CL$gene))
+#126
+HOC_in_SOC <- as.data.frame(intersect(SOC$gene, HOC$gene))
+# 7: "CAV1"  "CDC20" "DSP"   "ERBB2" "KRT8"  "PTTG1" "VIM" 
+Cl_in_FOC <- as.data.frame(intersect(FOC$gene, CL$gene))
+# 2: "CDC20", "VIM"
+HOC_in_FOC <- as.data.frame(intersect(FOC$gene, HOC$gene))
+#24: "ADAM9"  "ATF3"   "EGFR"   "FBLN1"  "FN1"    "FYN"    "GSN"    "HMGA2"  "ICAM1"  "IGF1R"  "IL4R"   "ITGB8"  "LIMK2"  "LRP1"   "MAPK13" "ROCK1" 
+# "SHC1"   "SMAD4"  "TBL1X"  "TGFA"   "TGFB1"  "TNK2"   "TP53"   "VIM"   
+BDO_in_FOC <- as.data.frame(intersect(FOC$gene, breastDO$gene))
+BDO_in_SOC <- as.data.frame(intersect(SOC$gene, breastDO$gene))
+
+
+
+```
+
+g

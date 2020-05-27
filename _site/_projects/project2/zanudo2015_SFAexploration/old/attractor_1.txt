@@ -1,0 +1,14 @@
+Attractor 1 is a simple attractor consisting of 4 state(s) and has a basin of 11 state(s):
+
+ |--<-----------------------------------------------------------|
+ V                                                              |
+ 101111001010011110000010000101001110111000111100011111110011   |
+ 001010001010011110000011100101001110111000111100011111110011   |
+ 011000001010011110000001111101001110111000111100011111110011   |
+ 111101001010011110000000010101001110111000111100011111110011   |
+ V                                                              |
+ |-->-----------------------------------------------------------|
+
+
+Genes are encoded in the following order: CTLA4 TCR PDGFR FYN Cytoskeleton_signaling LCK ZAP70 GRB2 PLCG1 RAS GAP MEK ERK PI3K NFKB NFAT RANTES IL2 IL2RBT IL2RB IL2RAT IL2RA JAK SOCS STAT3 P27 Proliferation TBET CREB IFNGT IFNG P2 GZMB TPL2 TNF TRADD FasL FasT Fas sFas Ceramide DISC Caspase FLIP A20 BID IAP BclxL MCL1 Apoptosis GPCR SMAD SPHK1 S1P Stimuli PDGF CD45 IL15 Stimuli2 TAX
+

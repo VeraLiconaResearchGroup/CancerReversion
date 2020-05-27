@@ -1,0 +1,3359 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Final Network Analysis</title>
+    <meta name="description" content="This is my lab notebook for my undergraduate honors thesis in Dr. Paola Vera-Licona's Computational Systems Medicine Research Group.
+">
+
+    <link rel="stylesheet" href="http://localhost:4000/gastonguay_compsysmed_labnotebook/css/main.css">
+    <link rel="canonical" href="http://localhost:4000/gastonguay_compsysmed_labnotebook/_projects/project2/2020/04/05/NetworkAnlysis-final.html">
+
+<!-- meta robots -->
+    
+     	<meta name="robots" content="noindex" />
+    
+
+<!-- loading fonts -->
+    <!-- Open Sans -->
+    <link href="http://localhost:4000/gastonguay_compsysmed_labnotebook/_assets/open_sans/style.css" rel="stylesheet">
+
+    <!-- own icon font, created via https://icomoon.io/  -->
+    <link href="http://localhost:4000/gastonguay_compsysmed_labnotebook/_assets/lablogIcons/style.css" rel="stylesheet">
+
+    <!-- Ubuntu Mono for code -->
+    <link href="http://localhost:4000/gastonguay_compsysmed_labnotebook/_assets/Ubuntu_Mono/style.css" rel='stylesheet' type='text/css'>
+
+<!-- mathjax.org for math equations -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    imageFont: null,
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]} ,
+    menuSettings: { context: "Browser" }
+    });
+    </script>
+
+    <script type="text/javascript"  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+<!-- highlight.js for code syntax highlighting-->
+<link rel="stylesheet" href="http://localhost:4000/gastonguay_compsysmed_labnotebook/_assets/highlight/styles/github.css">
+<script src="http://localhost:4000/gastonguay_compsysmed_labnotebook/_assets/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!--<link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/default.min.css">
+<script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>-->
+
+
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/gastonguay_compsysmed_labnotebook/index.html">Maddie Gastonguay lab notebook</a>
+
+  <nav  class="main-menu">
+  <input type="checkbox" id="menu" />
+  <label for="menu"></label>
+  <div class="trigger">
+
+    <a class="page-link" href="/gastonguay_compsysmed_labnotebook/index.html"><span style = "font-family: 'lablogIcons';">  &#xe605; </span> Maddie Gastonguay lab notebook</a>
+
+    
+      <a class="page-link" href="/gastonguay_compsysmed_labnotebook/tasks.html"><span style = "font-family: 'lablogIcons';">  &#xf046; </span> Tasks</a>
+    
+
+    
+<a class="page-link" href="/gastonguay_compsysmed_labnotebook/tags.html"><span style = "font-family: 'lablogIcons';">  &#xe600; </span> Tags</a>
+    
+
+    
+      <a class="page-link" href="/gastonguay_compsysmed_labnotebook/archive.html"><span style = "font-family: 'lablogIcons';">  &#xe602; </span> Archive</a>
+    
+
+    <br>
+
+    
+      <a class="page-link" href="/gastonguay_compsysmed_labnotebook/about.html">
+        <span style = "font-family: 'lablogIcons';">  &#xe60a; </span>
+        
+        
+        About
+      </a>
+    
+      <a class="page-link" href="/gastonguay_compsysmed_labnotebook/_projects/project1/project01.html">
+        <span style = "font-family: 'lablogIcons';">  &#xe60a; </span>
+        
+        
+        Preliminary Network For Breast Cancer Reversion
+      </a>
+    
+      <a class="page-link" href="/gastonguay_compsysmed_labnotebook/_projects/project2/project02.html">
+        <span style = "font-family: 'lablogIcons';">  &#xe60a; </span>
+        
+        
+        Cancer Reversion in Claudin Low Triple Negative Breast Cancer
+      </a>
+    
+
+    
+
+    <br>
+
+    
+    <div class="menu-content">
+      
+
+    </div>
+    
+
+    
+
+  </div>
+
+  </nav>
+
+
+  </div>
+
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Final Network Analysis</h1>
+    <p class="post-meta">Apr 5, 2020 • maddie</p>
+
+    
+    <div>
+     
+       <a href="/gastonguay_compsysmed_labnotebook/tags.html#project02" title="Pages tagged project02" rel="tag" class = "tag"> project02 </a>  &nbsp
+     
+       <a href="/gastonguay_compsysmed_labnotebook/tags.html#static_network" title="Pages tagged static_network" rel="tag" class = "tag"> static_network </a>  &nbsp
+     
+    </div>
+    
+
+  </header>
+
+  <article class="post-content">
+    <style>
+table {
+    width:100%;
+}
+</style>
+
+<h1 id="objective">Objective</h1>
+<p>We will employ our pipeline to identify and prioritize putative reversion targets for MDA-MB-231. To do so, virtual screenings of perturbations of the 4 MDA-MB-231 initial conditions (Continuous Normalized RNAseq Expression Data) were run using SFA. The attractors resulting from these perturbations will be classified by knn with the 4 MCF10A and 4 MDA-MB-231 attractors as training sets. We will still “discretize” the output of vitrual screenings in the same way: positive values are represented as 1, negative value are represented as -1, and zeroes remain 0.</p>
+
+<p>The analyses were all done on six datasets:</p>
+<ol>
+  <li>Log steady state</li>
+  <li>DAC</li>
+  <li>Combination of 1+2</li>
+  <li>Discrete log steady state</li>
+  <li>Discrete DAC</li>
+  <li>Combination of 4+5</li>
+</ol>
+
+<h1 id="virtual-screening">Virtual Screening</h1>
+<p>After an exploration of the use of SFA, we have deicded to initilize our virtual screenings with continuous RNAseq expression values as opposed to discretized values. The FVS are eithor knocked-out, knocked-in, or not changed. The value for knocked-out nodes is fixed at 0, while those that aren’t changed are left alone. The question remains: what value should we set knock-in nodes to. We decided it should be specific to the gene as if we choose one value for over expression of any gene, it may not be large enough for some genes.</p>
+
+<p>Since we have four MDAMB231 experimental expression values, we caluclated the mean and standard deviation between them for each FVS node. Then, we set the stimulation activity of a node to the mean activity of the node plus three standard deviations. However, we found that the standard deviation between expression values for the MDAMB231 replicates can be very small, in which case this method doesn’t give a large increase in basal activity for knock-ins.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>FVS node</strong></th>
+      <th style="text-align: center"><strong>Mean</strong></th>
+      <th style="text-align: center"><strong>SD</strong></th>
+      <th style="text-align: center"><strong>Mean + 3SD</strong></th>
+      <th style="text-align: center"><strong>Activity Increase</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">AKT1</td>
+      <td style="text-align: center">11.03917613</td>
+      <td style="text-align: center">0.062919073</td>
+      <td style="text-align: center">11.22793334</td>
+      <td style="text-align: center">0.188757218</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">AURKA</td>
+      <td style="text-align: center">10.57173554</td>
+      <td style="text-align: center">0.525917137</td>
+      <td style="text-align: center">12.14948695</td>
+      <td style="text-align: center">1.577751411</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">CTNNB1</td>
+      <td style="text-align: center">12.17360746</td>
+      <td style="text-align: center">0.026141468</td>
+      <td style="text-align: center">12.25203187</td>
+      <td style="text-align: center">0.078424403</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">FOXM1</td>
+      <td style="text-align: center">10.45660281</td>
+      <td style="text-align: center">0.543256887</td>
+      <td style="text-align: center">12.08637347</td>
+      <td style="text-align: center">1.629770661</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">GSK3B</td>
+      <td style="text-align: center">10.14239603</td>
+      <td style="text-align: center">0.221541258</td>
+      <td style="text-align: center">10.8070198</td>
+      <td style="text-align: center">0.664623775</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">HDAC3</td>
+      <td style="text-align: center">9.91842003</td>
+      <td style="text-align: center">0.1072263</td>
+      <td style="text-align: center">10.24009893</td>
+      <td style="text-align: center">0.321678899</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">JUN</td>
+      <td style="text-align: center">9.99992269</td>
+      <td style="text-align: center">0.21922678</td>
+      <td style="text-align: center">10.65760303</td>
+      <td style="text-align: center">0.657680339</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MAPK1</td>
+      <td style="text-align: center">10.99320419</td>
+      <td style="text-align: center">0.064925597</td>
+      <td style="text-align: center">11.18798098</td>
+      <td style="text-align: center">0.19477679</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">PIAS1</td>
+      <td style="text-align: center">9.476911955</td>
+      <td style="text-align: center">0.062199267</td>
+      <td style="text-align: center">9.663509756</td>
+      <td style="text-align: center">0.186597801</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">RELA</td>
+      <td style="text-align: center">10.65095632</td>
+      <td style="text-align: center">0.082948965</td>
+      <td style="text-align: center">10.89980321</td>
+      <td style="text-align: center">0.248846896</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">STAT3</td>
+      <td style="text-align: center">11.03903899</td>
+      <td style="text-align: center">0.144277973</td>
+      <td style="text-align: center">11.47187291</td>
+      <td style="text-align: center">0.432833919</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">TCF3</td>
+      <td style="text-align: center">10.39763739</td>
+      <td style="text-align: center">0.206599437</td>
+      <td style="text-align: center">11.0174357</td>
+      <td style="text-align: center">0.619798311</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The plot below show the distribution of expression values of all network nodes for both the MDAMB231 and MCF10A experimental replicates. Red x’s mark the value of knock-in expression for the FVS nodes when simulated as mean + 3*sd.</p>
+
+<p><img src="/gastonguay_compsysmed_labnotebook\_assets\images_proj2\dist_sd.png" alt="mean + 3sd" /></p>
+
+<p>Since using the <a href="https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project2/Network_Analysis/virtual_screening/perturbation_level_sd.txt">mean + 3*sd</a> of the activity level of the SFA nodes did not provide enough of an increase in activity level, we explored multiplying the mean expression of each node by a factor. Intuitively, a knock-in of a gene resulting in an additionally copy of it would correlate to 2 times the amount of mRNA. However, after a brief literature search, we found that this is <a href="https://febs.onlinelibrary.wiley.com/doi/pdf/10.1016/j.molonc.2013.02.018">not the case for all genes</a>. There may be a point at which the machinery required for transcrption of a gene is exhausted, resulting in less than a 2 fold increase in activity levels. Therefore, we tested setting knock-in basal values to both <a href="https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project2/Network_Analysis/virtual_screening/perturbation_level_factor1.5.txt">1.5 times the mean</a> and <a href="https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project2/Network_Analysis/virtual_screening/perturbation_level_factor2.txt">2 times the mean</a>. The plots below show the distribution of expression values of all network nodes for both the MDAMB231 and MCF10A experimental replicates. Red x’s mark the value of knock-in expression for the FVS nodes.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>FVS node</strong></th>
+      <th style="text-align: center"><strong>Mean</strong></th>
+      <th style="text-align: center"><strong>1.5 * Mean</strong></th>
+      <th style="text-align: center"><strong>2 * Mean</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">AKT1</td>
+      <td style="text-align: center">11.03917613</td>
+      <td style="text-align: center">16.55876419</td>
+      <td style="text-align: center">22.07835225</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">AURKA</td>
+      <td style="text-align: center">10.57173554</td>
+      <td style="text-align: center">15.85760331</td>
+      <td style="text-align: center">21.14347108</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">CTNNB1</td>
+      <td style="text-align: center">12.17360746</td>
+      <td style="text-align: center">18.26041119</td>
+      <td style="text-align: center">24.34721493</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">FOXM1</td>
+      <td style="text-align: center">10.45660281</td>
+      <td style="text-align: center">15.68490421</td>
+      <td style="text-align: center">20.91320562</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">GSK3B</td>
+      <td style="text-align: center">10.14239603</td>
+      <td style="text-align: center">15.21359404</td>
+      <td style="text-align: center">20.28479205</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">HDAC3</td>
+      <td style="text-align: center">9.91842003</td>
+      <td style="text-align: center">14.87763005</td>
+      <td style="text-align: center">19.83684006</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">JUN</td>
+      <td style="text-align: center">9.99992269</td>
+      <td style="text-align: center">14.99988404</td>
+      <td style="text-align: center">19.99984538</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MAPK1</td>
+      <td style="text-align: center">10.99320419</td>
+      <td style="text-align: center">16.48980628</td>
+      <td style="text-align: center">21.98640838</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">PIAS1</td>
+      <td style="text-align: center">9.476911955</td>
+      <td style="text-align: center">14.21536793</td>
+      <td style="text-align: center">18.95382391</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">RELA</td>
+      <td style="text-align: center">10.65095632</td>
+      <td style="text-align: center">15.97643448</td>
+      <td style="text-align: center">21.30191264</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">STAT3</td>
+      <td style="text-align: center">11.03903899</td>
+      <td style="text-align: center">16.55855849</td>
+      <td style="text-align: center">22.07807798</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">TCF3</td>
+      <td style="text-align: center">10.39763739</td>
+      <td style="text-align: center">15.59645608</td>
+      <td style="text-align: center">20.79527478</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="/gastonguay_compsysmed_labnotebook\_assets\images_proj2\dist_15m.png" alt="1.5mean" />
+<img src="/gastonguay_compsysmed_labnotebook\_assets\images_proj2\dist_2m.png" alt="2mean" /></p>
+
+<p>Previously, we used the average expression level from MDA-MB-231 as the basal state to apply perturbations to. Now, we will use the four replicates of MDA-MB-231 as separate basal conditions and apply perturbations to all 4 basal states. This will act as 4 “experimental” replicates of our perturbations. Perturbations must result in a shift towards normal for all four replicates to be considered successful. We have 12 FVS nodes resulting in $3^{12} = 531441$ possible perturbations. So far, we have only examined 100,000 of these perturbations. We have only considered perturbations of the FVS, not the whole FC.</p>
+
+<h1 id="k-nearest-neighbors-classifier">K-nearest Neighbors Classifier</h1>
+<p>Using the 8 experimental attractors as a training set, we classified the 100,000 attractors resulting from FVS perturbations on all 6 datasets. Two questions arose during this:</p>
+<ol>
+  <li>How many clusters should we use for the training set?</li>
+  <li>What dataset should we use for the analysis?</li>
+  <li>What is the optimal number of neighbors?</li>
+</ol>
+
+<p>The 8 reference attractors clearly fall into 4 clusters with clustered with k-means or multi dimensional scaling. Therefore, I will use 4 clusters for the training set: MDAMB231_A, MDAMB231_B, MCF10A_A, and MCF10A_B.</p>
+
+<p><img src="/gastonguay_compsysmed_labnotebook\_assets\images_proj2\mds_both.png" alt="mds both" />
+<img src="/gastonguay_compsysmed_labnotebook\_assets\images_proj2\mds_both_disc.png" alt="mds both disc" /></p>
+
+<h4 id="exploring-distance-metrics-in-discrete-datasets">Exploring Distance Metrics in discrete datasets</h4>
+
+<p>The default distance metric for knn is euclidean distance. However, knn can be run using different distance metrics. For the discrete datasets only, I tested knn using the hamming distance between the perturbations and the training set. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6739335/pdf/41598_2019_Article_49571.pdf">Choo and Cho</a> use Hamming distnace to determine the boundary of the basin of attraction for an attractor of a Boolean model. States with larger hamming distances are further away from the attractor than states with smaller hamming distances.</p>
+
+<p><strong>Test case: MDAMB231_2</strong>
+(results below from simulation with 2*Mean for knock-in)
+&lt;!—
+Dataset: <strong>Log steady state</strong></p>
+<ul>
+  <li>213 normal perturbations when k = 3</li>
+  <li>2630 normal perutbrations when k = 4</li>
+  <li>3543 when k = 5</li>
+  <li>for k larger than 5, more than 80% of perturbations were classified as normal</li>
+</ul>
+
+<p>Dataset: <strong>DAC</strong></p>
+<ul>
+  <li>213 normal perturbations when k = 3</li>
+  <li>2630 normal perutbrations when k = 4</li>
+  <li>3542 when k = 5</li>
+  <li>for k larger than 5, more than 80% of perturbations were classified as normal</li>
+</ul>
+
+<p>Dataset: <strong>Both</strong></p>
+<ul>
+  <li>213 normal perturbations when k = 3</li>
+  <li>2629 normal perutbrations when k = 4</li>
+  <li>3541 when k = 5</li>
+  <li>for k larger than 5, more than 80% of perturbations were classified as normal
+—&gt;</li>
+</ul>
+
+<!---
+**Test case: MDAMB231_2**
+
+Dataset: **Log steady state discrete** (k=3)
+- Every perturbation was classified as normal regardless of distance metric
+
+Dataset: **DAC discrete** (k = 3)
+- euclidean distance gave 1,455 normal
+- hamming distance gave 1,455 normal
+- Both lists are the same
+- *52811 normal with hamming or euclidean when k = 4*
+
+Dataset: **both discrete** (k = 3)
+- euclidean distance gave 1,455 normal
+- hamming distance gave 1,455 normal
+- both lists are the same
+- *52811 normal with hamming or euclidean when k = 4*
+--->
+
+<p><strong>Table 1.</strong> The number of attractors resulting from perturbations to MDAMB231_2 that are classified as normal based on different datasets and values of k. Stimulations simulated as 2*mean.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>Dataset</strong></th>
+      <th style="text-align: center"><strong>k = 3</strong></th>
+      <th style="text-align: center"><strong>k = 4</strong></th>
+      <th style="text-align: center"><strong>k = 5</strong></th>
+      <th style="text-align: center"><strong>k &gt; 6</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Logss</td>
+      <td style="text-align: center">213</td>
+      <td style="text-align: center">2630</td>
+      <td style="text-align: center">3543</td>
+      <td style="text-align: center">Over 80%</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">DAC</td>
+      <td style="text-align: center">213</td>
+      <td style="text-align: center">2630</td>
+      <td style="text-align: center">3543</td>
+      <td style="text-align: center">Over 80%</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Both</td>
+      <td style="text-align: center">213</td>
+      <td style="text-align: center">2629</td>
+      <td style="text-align: center">3542</td>
+      <td style="text-align: center">Over 80%</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Logss Disc</td>
+      <td style="text-align: center">Everything</td>
+      <td style="text-align: center">Everything</td>
+      <td style="text-align: center">Nothing</td>
+      <td style="text-align: center">…</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">DAC Disc</td>
+      <td style="text-align: center">1455</td>
+      <td style="text-align: center">52811</td>
+      <td style="text-align: center">Over 90%</td>
+      <td style="text-align: center">…</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Both Disc</td>
+      <td style="text-align: center">1455</td>
+      <td style="text-align: center">52811</td>
+      <td style="text-align: center">Over 90%</td>
+      <td style="text-align: center">…</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Logss Disc Hamming</td>
+      <td style="text-align: center">Everything</td>
+      <td style="text-align: center">Everything</td>
+      <td style="text-align: center">Nothing</td>
+      <td style="text-align: center">…</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">DAC Disc Hamming</td>
+      <td style="text-align: center">1455</td>
+      <td style="text-align: center">52811</td>
+      <td style="text-align: center">Over 90%</td>
+      <td style="text-align: center">…</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Both Disc Hamming</td>
+      <td style="text-align: center">1455</td>
+      <td style="text-align: center">52811</td>
+      <td style="text-align: center">Over 90%</td>
+      <td style="text-align: center">…</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Notes:</strong></p>
+<ul>
+  <li>The 8 reference attractors are the same when discretized by their log steady state value</li>
+  <li>Everything classified as normal by DAC discrete is also classified as normal by both discrete, regardless of distance metric.</li>
+  <li>Since there are only two reference attractors per cluster, it makes sense to consider the 3 nearest neighbors. 212 of the normal perturbations from DAC with k = 3 are also normal from logss with k = 3 and both with k = 3.</li>
+  <li>Only 19 of the perturbations calssified as normal by the raw datasets are also classified as normal by the discrete datasets when k = 3.</li>
+</ul>
+
+<h2 id="compare-knn-results-between-simulations-with-stimulation-set-to-15mean-and-2mean">Compare Knn results between simulations with stimulation set to 1.5*mean and 2*mean</h2>
+
+<p><strong>Test case: MDAMB231_2</strong>
+(results below from simulation with 1.5*Mean for knock-in)</p>
+
+<p><strong>Table 2.</strong> The number of attractors resulting from perturbations to MDAMB231_2 that are classified as normal based on different datasets and values of k. Stimulations simulated as 1.5*mean.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>Dataset</strong></th>
+      <th style="text-align: center"><strong>k = 3</strong></th>
+      <th style="text-align: center"><strong>k = 4</strong></th>
+      <th style="text-align: center"><strong>k = 5</strong></th>
+      <th style="text-align: center"><strong>k &gt; 6</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Logss</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">1089</td>
+      <td style="text-align: center">1521</td>
+      <td style="text-align: center">Over 80%</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">DAC</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">1087</td>
+      <td style="text-align: center">1514</td>
+      <td style="text-align: center">Over 80%</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Both</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">1087</td>
+      <td style="text-align: center">1514</td>
+      <td style="text-align: center">Over 80%</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Logss Disc</td>
+      <td style="text-align: center">Everything</td>
+      <td style="text-align: center">Everything</td>
+      <td style="text-align: center">Nothing</td>
+      <td style="text-align: center">…</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">DAC Disc</td>
+      <td style="text-align: center">720</td>
+      <td style="text-align: center">44558</td>
+      <td style="text-align: center">Over 90%</td>
+      <td style="text-align: center">…</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Both Disc</td>
+      <td style="text-align: center">720</td>
+      <td style="text-align: center">44558</td>
+      <td style="text-align: center">Over 90%</td>
+      <td style="text-align: center">…</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Logss Disc Hamming</td>
+      <td style="text-align: center">Everything</td>
+      <td style="text-align: center">Everything</td>
+      <td style="text-align: center">Nothing</td>
+      <td style="text-align: center">…</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">DAC Disc Hamming</td>
+      <td style="text-align: center">720</td>
+      <td style="text-align: center">44558</td>
+      <td style="text-align: center">Over 90%</td>
+      <td style="text-align: center">…</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Both Disc Hamming</td>
+      <td style="text-align: center">720</td>
+      <td style="text-align: center">44558</td>
+      <td style="text-align: center">Over 90%</td>
+      <td style="text-align: center">…</td>
+    </tr>
+  </tbody>
+</table>
+
+<!---
+Dataset: **Log steady state**
+- 3 normal perturbations when k = 3
+- 1089 normal perutbrations when k = 4
+- 1521 when k = 5
+- for k larger than 5, more than 80% of perturbations were classified as normal
+
+Dataset: **DAC**
+- 3 normal perturbations when k = 3
+- 1087 normal perutbrations when k = 4
+- 1514 when k = 5
+- for k larger than 5, more than 80% of perturbations were classified as normal
+
+Dataset: **Both**
+- 3 normal perturbations when k = 3
+- 1087 normal perutbrations when k = 4
+- 1515 when k = 5
+- for k larger than 5, more than 80% of perturbations were classified as normal
+
+Dataset: **Log steady state discrete**
+- either all normal or all cancerous depending on the k, regardless of distance metric
+
+Dataset: **DAC discrete**
+- 720 normal perturbations when k = 3 with hamming or euclidean distance
+- 44,558 normal perutbrations when k = 4 with hamming or euclidean distance
+- for k larger than 4, more than 90% of perturbations were classified as normal with hamming or euclidean distance
+
+Dataset: **Both discrete**
+- 720 normal perturbations when k = 3 with hamming or euclidean distance
+- 44,558 normal perutbrations when k = 4 with hamming or euclidean distance
+- for k larger than 4, more than 90% of perturbations were classified as normal 
+--->
+
+<h3 id="conclusions-from-looking-at-perturbations-from-mdamb231_2">Conclusions from looking at perturbations from MDAMB231_2</h3>
+
+<p>The perturbations from stimulations simultated as 1.5*mean result in fewer normal perturbations than those simulatied with 2*mean. The results from the raw datasets are different from the results from the discrete datasets. For the discrete datasets, it seems that looking at 3 nearest neighbors is the best option. Using hamming distance appears to give the same result as euclidean distance, but I will continue to take the intersection between the two. If these observations are consistent for the other sets of perturbations, we may only need to use the discrete DAC dataset insteda of the discrete both.</p>
+
+<p>These results are quite different from knn on the attractors simulated from discrete initial conditions. Previously, the hamming distance and euclidean distance did not return the same results. Additionally, the raw datasets did not calssify any perturbation as normal. Lastly, the discrete DAC dataset classified more attractors as normal than the discrete both dataset, but now they are classifying the same attractors as normal.</p>
+
+<h2 id="explore-intersection-between-perturbations-on-different-replicates">Explore Intersection between perturbations on different replicates</h2>
+
+<h3 id="data-set--both-discrete-3-nearest-neighbors">Data Set = Both Discrete, 3 Nearest Neighbors</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>replicate</strong></th>
+      <th style="text-align: center"><strong>number of normal perts</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">MDAMB231_1</td>
+      <td style="text-align: center">22521</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_2</td>
+      <td style="text-align: center">1455</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_3</td>
+      <td style="text-align: center">12915</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_4</td>
+      <td style="text-align: center">1</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Intersection between perturbations classified as normal when applied to each replicate:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+      <th style="text-align: center"><strong>MDAMB231_1</strong></th>
+      <th style="text-align: center"><strong>MDAMB231_2</strong></th>
+      <th style="text-align: center"><strong>MDAMB231_3</strong></th>
+      <th style="text-align: center"><strong>MDAMB231_4</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">MDAMB231_1</td>
+      <td style="text-align: center">22521</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">11235</td>
+      <td style="text-align: center">0</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_2</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">1455</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">1</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_3</td>
+      <td style="text-align: center">11235</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">12915</td>
+      <td style="text-align: center">0</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_4</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">1</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="data-set--both-discrete-2-nearest-neighbors">Data Set = Both Discrete, 2 Nearest Neighbors</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>Replicate</strong></th>
+      <th style="text-align: center"><strong>number of normal perts</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">MDAMB231_1</td>
+      <td style="text-align: center">28311</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_2</td>
+      <td style="text-align: center">1936</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_3</td>
+      <td style="text-align: center">17815</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_4</td>
+      <td style="text-align: center">69</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Intersection between perturbations classified as normal when applied to each replicate:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+      <th style="text-align: center"><strong>MDAMB231_1</strong></th>
+      <th style="text-align: center"><strong>MDAMB231_2</strong></th>
+      <th style="text-align: center"><strong>MDAMB231_3</strong></th>
+      <th style="text-align: center"><strong>MDAMB231_4</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">MDAMB231_1</td>
+      <td style="text-align: center">28311</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">15240</td>
+      <td style="text-align: center">0</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_2</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">1936</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">62</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_3</td>
+      <td style="text-align: center">15240</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">17815</td>
+      <td style="text-align: center">0</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_4</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">62</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">69</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="data-set--both-discrete-4-nearest-neighbors">Data Set = Both Discrete, 4 Nearest Neighbors</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>Replicate</strong></th>
+      <th style="text-align: center"><strong>number of normal perts</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">MDAMB231_1</td>
+      <td style="text-align: center">67085</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_2</td>
+      <td style="text-align: center">52811</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_3</td>
+      <td style="text-align: center">49918</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_4</td>
+      <td style="text-align: center">59488</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Intersection between perturbations classified as normal when applied to each replicate:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+      <th style="text-align: center"><strong>MDAMB231_1</strong></th>
+      <th style="text-align: center"><strong>MDAMB231_2</strong></th>
+      <th style="text-align: center"><strong>MDAMB231_3</strong></th>
+      <th style="text-align: center"><strong>MDAMB231_4</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">MDAMB231_1</td>
+      <td style="text-align: center">67085</td>
+      <td style="text-align: center">38616</td>
+      <td style="text-align: center">46630</td>
+      <td style="text-align: center">39413</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_2</td>
+      <td style="text-align: center">38616</td>
+      <td style="text-align: center">52811</td>
+      <td style="text-align: center">32214</td>
+      <td style="text-align: center">38483</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_3</td>
+      <td style="text-align: center">46630</td>
+      <td style="text-align: center">32214</td>
+      <td style="text-align: center">49918</td>
+      <td style="text-align: center">29091</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_4</td>
+      <td style="text-align: center">39413</td>
+      <td style="text-align: center">38483</td>
+      <td style="text-align: center">29091</td>
+      <td style="text-align: center">59488</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Notes:</strong></p>
+<ul>
+  <li>Same results for DAC discrete or both discrete, reagardless of distance metric.</li>
+  <li>Similar results when stimulation simulated as 1.5*mean</li>
+</ul>
+
+<h2 id="check-out-raw-datasets">Check out Raw datasets</h2>
+
+<h3 id="data-set--both-3-nearest-neighbors-stimulation--2mean">Data Set = Both, 3 Nearest Neighbors, Stimulation = 2*mean</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>Replicate</strong></th>
+      <th style="text-align: center"><strong>number of normal perts</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">MDAMB231_1</td>
+      <td style="text-align: center">270</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_2</td>
+      <td style="text-align: center">213</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_3</td>
+      <td style="text-align: center">277</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_4</td>
+      <td style="text-align: center">191</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Intersection between perturbations classified as normal when applied to each replicate:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+      <th style="text-align: center"><strong>MDAMB231_1</strong></th>
+      <th style="text-align: center"><strong>MDAMB231_2</strong></th>
+      <th style="text-align: center"><strong>MDAMB231_3</strong></th>
+      <th style="text-align: center"><strong>MDAMB231_4</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">MDAMB231_1</td>
+      <td style="text-align: center">270</td>
+      <td style="text-align: center">173</td>
+      <td style="text-align: center">256</td>
+      <td style="text-align: center">159</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_2</td>
+      <td style="text-align: center">173</td>
+      <td style="text-align: center">213</td>
+      <td style="text-align: center">185</td>
+      <td style="text-align: center">191</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_3</td>
+      <td style="text-align: center">256</td>
+      <td style="text-align: center">185</td>
+      <td style="text-align: center">277</td>
+      <td style="text-align: center">169</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_4</td>
+      <td style="text-align: center">159</td>
+      <td style="text-align: center">191</td>
+      <td style="text-align: center">169</td>
+      <td style="text-align: center">191</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="data-set--both-3-nearest-neighbors-stimulation--15mean">Data Set = Both, 3 Nearest Neighbors, Stimulation = 1.5*mean</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>Replicate</strong></th>
+      <th style="text-align: center"><strong>number of normal perts</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">MDAMB231_1</td>
+      <td style="text-align: center">5</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_2</td>
+      <td style="text-align: center">3</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_3</td>
+      <td style="text-align: center">4</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_4</td>
+      <td style="text-align: center">2</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Intersection between perturbations classified as normal when applied to each replicate:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+      <th style="text-align: center"><strong>MDAMB231_1</strong></th>
+      <th style="text-align: center"><strong>MDAMB231_2</strong></th>
+      <th style="text-align: center"><strong>MDAMB231_3</strong></th>
+      <th style="text-align: center"><strong>MDAMB231_4</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">MDAMB231_1</td>
+      <td style="text-align: center">5</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">4</td>
+      <td style="text-align: center">2</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_2</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">2</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_3</td>
+      <td style="text-align: center">4</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">4</td>
+      <td style="text-align: center">2</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_4</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">2</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="conclusions">Conclusions</h2>
+<ul>
+  <li>The raw datasets provide more overlap between experimental replicates than the dsicrete datasets, however I don’t know if we should be using them based on how the SFA output should be interpreted.</li>
+  <li>Simulating knock-ins with  2*Mean gives more perturbations than simulating them as  1.5*Mean.</li>
+  <li>I can explore the knn results using 2 clusters for training to see if it makes a difference</li>
+</ul>
+
+<h2 id="decisions-to-make">Decisions to Make:</h2>
+<ol>
+  <li>What basal activity level do we want to consider a stimualtion or knock-in?
+    <ul>
+      <li>A: 2*Mean</li>
+    </ul>
+  </li>
+  <li>Which dataset should we use and how many neighbors should we consider?
+    <ul>
+      <li>More exploring needs to be done (see below)</li>
+    </ul>
+  </li>
+</ol>
+
+<h1 id="exploring-knn-results-using-2-clusters-for-training">Exploring knn results using 2 clusters for training</h1>
+
+<p>To determine if the discrete datasets did not have overlap of perturbations triggering a shift to the normal cluster, we treid knn classification with 2 clusters in the training set: one with all four cancerous attractors and one with all four normal attractors.</p>
+
+<h3 id="mdamb231_1">MDAMB231_1</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>Dataset</strong></th>
+      <th style="text-align: center"><strong>k =1</strong></th>
+      <th style="text-align: center"><strong>k=2</strong></th>
+      <th style="text-align: center"><strong>k=3</strong></th>
+      <th style="text-align: center"><strong>k=4</strong></th>
+      <th style="text-align: center"><strong>k = 5</strong></th>
+      <th style="text-align: center"><strong>k = 6</strong></th>
+      <th style="text-align: center"><strong>k = 7</strong></th>
+      <th style="text-align: center"><strong>k = 8</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">logss</td>
+      <td style="text-align: center">374</td>
+      <td style="text-align: center">555</td>
+      <td style="text-align: center">255</td>
+      <td style="text-align: center">10230</td>
+      <td style="text-align: center">5638</td>
+      <td style="text-align: center">6502</td>
+      <td style="text-align: center">5562</td>
+      <td style="text-align: center">100000</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">DAC</td>
+      <td style="text-align: center">372</td>
+      <td style="text-align: center">551</td>
+      <td style="text-align: center">259</td>
+      <td style="text-align: center">10234</td>
+      <td style="text-align: center">5639</td>
+      <td style="text-align: center">6493</td>
+      <td style="text-align: center">5559</td>
+      <td style="text-align: center">100000</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">both</td>
+      <td style="text-align: center">374</td>
+      <td style="text-align: center">554</td>
+      <td style="text-align: center">256</td>
+      <td style="text-align: center">10236</td>
+      <td style="text-align: center">5638</td>
+      <td style="text-align: center">6497</td>
+      <td style="text-align: center">5558</td>
+      <td style="text-align: center">100000</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">logss disc</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">DAC disc</td>
+      <td style="text-align: center">4730</td>
+      <td style="text-align: center">28311</td>
+      <td style="text-align: center">22521</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">both disc</td>
+      <td style="text-align: center">4730</td>
+      <td style="text-align: center">28311</td>
+      <td style="text-align: center">22521</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">logss disc hamming</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">DAC disc hamming</td>
+      <td style="text-align: center">4730</td>
+      <td style="text-align: center">28311</td>
+      <td style="text-align: center">22521</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">both discrete hamming</td>
+      <td style="text-align: center">4730</td>
+      <td style="text-align: center">28311</td>
+      <td style="text-align: center">22521</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="mdamb231_2">MDAMB231_2</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>Dataset</strong></th>
+      <th style="text-align: center"><strong>k =1</strong></th>
+      <th style="text-align: center"><strong>k=2</strong></th>
+      <th style="text-align: center"><strong>k=3</strong></th>
+      <th style="text-align: center"><strong>k=4</strong></th>
+      <th style="text-align: center"><strong>k = 5</strong></th>
+      <th style="text-align: center"><strong>k = 6</strong></th>
+      <th style="text-align: center"><strong>k = 7</strong></th>
+      <th style="text-align: center"><strong>k = 8</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">logss</td>
+      <td style="text-align: center">245</td>
+      <td style="text-align: center">363</td>
+      <td style="text-align: center">190</td>
+      <td style="text-align: center">2950</td>
+      <td style="text-align: center">1256</td>
+      <td style="text-align: center">1587</td>
+      <td style="text-align: center">1279</td>
+      <td style="text-align: center">100000</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">DAC</td>
+      <td style="text-align: center">244</td>
+      <td style="text-align: center">361</td>
+      <td style="text-align: center">190</td>
+      <td style="text-align: center">2950</td>
+      <td style="text-align: center">1257</td>
+      <td style="text-align: center">1585</td>
+      <td style="text-align: center">1283</td>
+      <td style="text-align: center">100000</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">both</td>
+      <td style="text-align: center">244</td>
+      <td style="text-align: center">363</td>
+      <td style="text-align: center">190</td>
+      <td style="text-align: center">2949</td>
+      <td style="text-align: center">1256</td>
+      <td style="text-align: center">1587</td>
+      <td style="text-align: center">1282</td>
+      <td style="text-align: center">100000</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">logss disc</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">DAC disc</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">1936</td>
+      <td style="text-align: center">778</td>
+      <td style="text-align: center">93933</td>
+      <td style="text-align: center">91341</td>
+      <td style="text-align: center">95631</td>
+      <td style="text-align: center">92695</td>
+      <td style="text-align: center">100000</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">both disc</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">1936</td>
+      <td style="text-align: center">778</td>
+      <td style="text-align: center">93933</td>
+      <td style="text-align: center">91341</td>
+      <td style="text-align: center">95631</td>
+      <td style="text-align: center">92695</td>
+      <td style="text-align: center">100000</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">logss disc hamming</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">DAC disc hamming</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">1936</td>
+      <td style="text-align: center">778</td>
+      <td style="text-align: center">93933</td>
+      <td style="text-align: center">91341</td>
+      <td style="text-align: center">95631</td>
+      <td style="text-align: center">92695</td>
+      <td style="text-align: center">100000</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="mdamb231_3">MDAMB231_3</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>Dataset</strong></th>
+      <th style="text-align: center"><strong>k =1</strong></th>
+      <th style="text-align: center"><strong>k=2</strong></th>
+      <th style="text-align: center"><strong>k=3</strong></th>
+      <th style="text-align: center"><strong>k=4</strong></th>
+      <th style="text-align: center"><strong>k = 5</strong></th>
+      <th style="text-align: center"><strong>k = 6</strong></th>
+      <th style="text-align: center"><strong>k = 7</strong></th>
+      <th style="text-align: center"><strong>k = 8</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">logss</td>
+      <td style="text-align: center">344</td>
+      <td style="text-align: center">533</td>
+      <td style="text-align: center">262</td>
+      <td style="text-align: center">10121</td>
+      <td style="text-align: center">5597</td>
+      <td style="text-align: center">6384</td>
+      <td style="text-align: center">5453</td>
+      <td style="text-align: center">100000</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">DAC</td>
+      <td style="text-align: center">342</td>
+      <td style="text-align: center">530</td>
+      <td style="text-align: center">265</td>
+      <td style="text-align: center">10119</td>
+      <td style="text-align: center">5598</td>
+      <td style="text-align: center">6375</td>
+      <td style="text-align: center">5451</td>
+      <td style="text-align: center">100000</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">both</td>
+      <td style="text-align: center">343</td>
+      <td style="text-align: center">530</td>
+      <td style="text-align: center">263</td>
+      <td style="text-align: center">10118</td>
+      <td style="text-align: center">5597</td>
+      <td style="text-align: center">6380</td>
+      <td style="text-align: center">5453</td>
+      <td style="text-align: center">100000</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">logss disc</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">DAC disc</td>
+      <td style="text-align: center">7060</td>
+      <td style="text-align: center">17815</td>
+      <td style="text-align: center">12915</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">99994</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">99979</td>
+      <td style="text-align: center">100000</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">both disc</td>
+      <td style="text-align: center">7060</td>
+      <td style="text-align: center">17815</td>
+      <td style="text-align: center">12915</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">99994</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">99979</td>
+      <td style="text-align: center">100000</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">logss disc hamming</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">DAC disc hamming</td>
+      <td style="text-align: center">7060</td>
+      <td style="text-align: center">17815</td>
+      <td style="text-align: center">12915</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">99994</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">99979</td>
+      <td style="text-align: center">100000</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">both discrete hamming</td>
+      <td style="text-align: center">7060</td>
+      <td style="text-align: center">17815</td>
+      <td style="text-align: center">12915</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">99994</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">99979</td>
+      <td style="text-align: center">100000</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="mdamb231_4">MDAMB231_4</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>Dataset</strong></th>
+      <th style="text-align: center"><strong>k =1</strong></th>
+      <th style="text-align: center"><strong>k=2</strong></th>
+      <th style="text-align: center"><strong>k=3</strong></th>
+      <th style="text-align: center"><strong>k=4</strong></th>
+      <th style="text-align: center"><strong>k = 5</strong></th>
+      <th style="text-align: center"><strong>k = 6</strong></th>
+      <th style="text-align: center"><strong>k = 7</strong></th>
+      <th style="text-align: center"><strong>k = 8</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">logss</td>
+      <td style="text-align: center">227</td>
+      <td style="text-align: center">336</td>
+      <td style="text-align: center">170</td>
+      <td style="text-align: center">2820</td>
+      <td style="text-align: center">1196</td>
+      <td style="text-align: center">1448</td>
+      <td style="text-align: center">1149</td>
+      <td style="text-align: center">100000</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">DAC</td>
+      <td style="text-align: center">227</td>
+      <td style="text-align: center">333</td>
+      <td style="text-align: center">172</td>
+      <td style="text-align: center">2821</td>
+      <td style="text-align: center">1198</td>
+      <td style="text-align: center">1447</td>
+      <td style="text-align: center">1149</td>
+      <td style="text-align: center">100000</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">both</td>
+      <td style="text-align: center">227</td>
+      <td style="text-align: center">334</td>
+      <td style="text-align: center">171</td>
+      <td style="text-align: center">2821</td>
+      <td style="text-align: center">1198</td>
+      <td style="text-align: center">1447</td>
+      <td style="text-align: center">1149</td>
+      <td style="text-align: center">100000</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">logss disc</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">DAC disc</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">69</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">91812</td>
+      <td style="text-align: center">90173</td>
+      <td style="text-align: center">95881</td>
+      <td style="text-align: center">93016</td>
+      <td style="text-align: center">100000</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">both disc</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">69</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">91812</td>
+      <td style="text-align: center">90173</td>
+      <td style="text-align: center">95881</td>
+      <td style="text-align: center">93016</td>
+      <td style="text-align: center">100000</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">logss disc hamming</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+      <td style="text-align: center">100000</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">DAC disc hamming</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">69</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">91812</td>
+      <td style="text-align: center">90173</td>
+      <td style="text-align: center">95881</td>
+      <td style="text-align: center">93016</td>
+      <td style="text-align: center">100000</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">both discrete hamming</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">69</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">91812</td>
+      <td style="text-align: center">90173</td>
+      <td style="text-align: center">95881</td>
+      <td style="text-align: center">93016</td>
+      <td style="text-align: center">100000</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="compare-replicates">Compare Replicates</h2>
+
+<h3 id="dac-discrete-k--3">DAC discrete, k = 3</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+      <th style="text-align: center"><strong>MDAMB231_1</strong></th>
+      <th style="text-align: center"><strong>MDAMB231_2</strong></th>
+      <th style="text-align: center"><strong>MDAMB231_3</strong></th>
+      <th style="text-align: center"><strong>MDAMB231_4</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">MDAMB231_1</td>
+      <td style="text-align: center">22521</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">11235</td>
+      <td style="text-align: center">0</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_2</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">778</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">1</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_3</td>
+      <td style="text-align: center">11235</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">12915</td>
+      <td style="text-align: center">0</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_4</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">1</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="dac-discrete-k-2">DAC discrete, k =2</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+      <th style="text-align: center"><strong>MDAMB231_1</strong></th>
+      <th style="text-align: center"><strong>MDAMB231_2</strong></th>
+      <th style="text-align: center"><strong>MDAMB231_3</strong></th>
+      <th style="text-align: center"><strong>MDAMB231_4</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">MDAMB231_1</td>
+      <td style="text-align: center">28311</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">15240</td>
+      <td style="text-align: center">0</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_2</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">1936</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">62</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_3</td>
+      <td style="text-align: center">15240</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">17815</td>
+      <td style="text-align: center">0</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_4</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">62</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">69</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>Same results for the other discrete datasets</em></p>
+
+<h3 id="both-k--3">Both, k = 3</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+      <th style="text-align: center"><strong>MDAMB231_1</strong></th>
+      <th style="text-align: center"><strong>MDAMB231_2</strong></th>
+      <th style="text-align: center"><strong>MDAMB231_3</strong></th>
+      <th style="text-align: center"><strong>MDAMB231_4</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">MDAMB231_1</td>
+      <td style="text-align: center">256</td>
+      <td style="text-align: center">162</td>
+      <td style="text-align: center">244</td>
+      <td style="text-align: center">148</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_2</td>
+      <td style="text-align: center">162</td>
+      <td style="text-align: center">190</td>
+      <td style="text-align: center">174</td>
+      <td style="text-align: center">171</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_3</td>
+      <td style="text-align: center">244</td>
+      <td style="text-align: center">174</td>
+      <td style="text-align: center">263</td>
+      <td style="text-align: center">158</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_4</td>
+      <td style="text-align: center">148</td>
+      <td style="text-align: center">171</td>
+      <td style="text-align: center">158</td>
+      <td style="text-align: center">171</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="both-k--5">Both, k = 5</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+      <th style="text-align: center"><strong>MDAMB231_1</strong></th>
+      <th style="text-align: center"><strong>MDAMB231_2</strong></th>
+      <th style="text-align: center"><strong>MDAMB231_3</strong></th>
+      <th style="text-align: center"><strong>MDAMB231_4</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">MDAMB231_1</td>
+      <td style="text-align: center">5638</td>
+      <td style="text-align: center">1256</td>
+      <td style="text-align: center">5580</td>
+      <td style="text-align: center">1198</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_2</td>
+      <td style="text-align: center">1256</td>
+      <td style="text-align: center">1256</td>
+      <td style="text-align: center">1256</td>
+      <td style="text-align: center">1194</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_3</td>
+      <td style="text-align: center">5580</td>
+      <td style="text-align: center">1256</td>
+      <td style="text-align: center">5597</td>
+      <td style="text-align: center">1198</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MDAMB231_4</td>
+      <td style="text-align: center">1198</td>
+      <td style="text-align: center">1194</td>
+      <td style="text-align: center">1198</td>
+      <td style="text-align: center">1198</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="conclusions-1">Conclusions</h2>
+<p>Changing the number of clusters in training set from 4 to 2 does not increse the intersection of perturbations causing a shift to the normal cluster for the four replicates. Use the concatination of the raw datasets and 3 nearest neighbors with 4 custers in the training set because it gives more strigent results.</p>
+
+<h1 id="fvs-node-values-in-training-set">FVS node values in training set</h1>
+
+<p>We are curious as to why the normal attractors cluster in 2 clusters and the cancerous clusters cluster into two clusters. We explored the activity of the FVS nodes in these attractors to determine if their variation could account for the clustering pattern.</p>
+
+<p><strong>Table:</strong> The Log2 Fold Change and P-value of FVS nodes from DESeq2 differentail expression analysis.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>Gene_Symbol</strong></th>
+      <th style="text-align: center"><strong>MDAMB231/MCF10A FoldChange</strong></th>
+      <th style="text-align: center"><strong>pVal</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">AKT1</td>
+      <td style="text-align: center">1.055452027</td>
+      <td style="text-align: center">0.697701145</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">CTNNB1</td>
+      <td style="text-align: center">-1.821171473</td>
+      <td style="text-align: center">1.2659e-05 **</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">FOXM1</td>
+      <td style="text-align: center">3.398758511</td>
+      <td style="text-align: center">1.90655e-05 **</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">GSK3B</td>
+      <td style="text-align: center">-1.853596375</td>
+      <td style="text-align: center">0.000107609 **</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">JUN</td>
+      <td style="text-align: center">-1.672221872</td>
+      <td style="text-align: center">0.281549501</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MAPK1</td>
+      <td style="text-align: center">-1.198183659</td>
+      <td style="text-align: center">0.045203114</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">RELA</td>
+      <td style="text-align: center">1.075617822</td>
+      <td style="text-align: center">0.53606185</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">STAT3</td>
+      <td style="text-align: center">1.167308955</td>
+      <td style="text-align: center">0.429944633</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">AURKA</td>
+      <td style="text-align: center">6.547791762</td>
+      <td style="text-align: center">1.71696e-12 **</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">TCF3</td>
+      <td style="text-align: center">-1.332692592</td>
+      <td style="text-align: center">0.078810701</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">PIAS1</td>
+      <td style="text-align: center">-1.812271525</td>
+      <td style="text-align: center">5.43419e-06 **</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">HDAC3</td>
+      <td style="text-align: center">-1.132226276</td>
+      <td style="text-align: center">0.218909035</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>** Significant at the 0.001 level</p>
+
+<p>In MCF10A replicates, CTNNB1, GSK3B, and PIAS1 are significantly more expressed than in MDAMB231. However, this acitivty level of CTNNB1 and GSK3B does not agree with literature. Conversely, AURKA and FOXM1 are signficantly less expressed in MCF10A replicates than in MDAMB231 replicates.</p>
+
+<p><strong>Table:</strong> The normalized RNAseq expression data for FVS nodes in the eight experinental replicates.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>name</strong></th>
+      <th style="text-align: center"><strong>MCF10A_1</strong></th>
+      <th style="text-align: center"><strong>MCF10A_2</strong></th>
+      <th style="text-align: center"><strong>MCF10A_3</strong></th>
+      <th style="text-align: center"><strong>MCF10A_4</strong></th>
+      <th style="text-align: center"><strong>MDAMB231_1</strong></th>
+      <th style="text-align: center"><strong>MDAMB231_2</strong></th>
+      <th style="text-align: center"><strong>MDAMB231_3</strong></th>
+      <th style="text-align: center"><strong>MDAMB231_4</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">AKT1</td>
+      <td style="text-align: center">10.87854288</td>
+      <td style="text-align: center">11.12959373</td>
+      <td style="text-align: center">10.84834298</td>
+      <td style="text-align: center">11.09126581</td>
+      <td style="text-align: center">11.00299793</td>
+      <td style="text-align: center">11.10279088</td>
+      <td style="text-align: center">10.97003065</td>
+      <td style="text-align: center">11.08088504</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">CTNNB1</td>
+      <td style="text-align: center">12.49892803</td>
+      <td style="text-align: center">12.86679471</td>
+      <td style="text-align: center">12.48924827</td>
+      <td style="text-align: center">12.83456686</td>
+      <td style="text-align: center">12.17006454</td>
+      <td style="text-align: center">12.15239972</td>
+      <td style="text-align: center">12.21129594</td>
+      <td style="text-align: center">12.16066965</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">FOXM1</td>
+      <td style="text-align: center">9.52307189</td>
+      <td style="text-align: center">9.50516907</td>
+      <td style="text-align: center">9.52347905</td>
+      <td style="text-align: center">9.50130126</td>
+      <td style="text-align: center">10.02164228</td>
+      <td style="text-align: center">10.93597817</td>
+      <td style="text-align: center">9.95200219</td>
+      <td style="text-align: center">10.91678859</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">GSK3B</td>
+      <td style="text-align: center">10.7007353</td>
+      <td style="text-align: center">10.62804171</td>
+      <td style="text-align: center">10.72389264</td>
+      <td style="text-align: center">10.6917195</td>
+      <td style="text-align: center">10.33503625</td>
+      <td style="text-align: center">9.95142719</td>
+      <td style="text-align: center">10.33347286</td>
+      <td style="text-align: center">9.9496478</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">JUN</td>
+      <td style="text-align: center">9.51122478</td>
+      <td style="text-align: center">10.95592017</td>
+      <td style="text-align: center">9.4903158</td>
+      <td style="text-align: center">10.96094915</td>
+      <td style="text-align: center">9.81710333</td>
+      <td style="text-align: center">10.21395766</td>
+      <td style="text-align: center">9.80478766</td>
+      <td style="text-align: center">10.16384211</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MAPK1</td>
+      <td style="text-align: center">11.04388966</td>
+      <td style="text-align: center">11.19875118</td>
+      <td style="text-align: center">11.12124377</td>
+      <td style="text-align: center">11.22272887</td>
+      <td style="text-align: center">10.93552864</td>
+      <td style="text-align: center">11.01103932</td>
+      <td style="text-align: center">10.94906267</td>
+      <td style="text-align: center">11.07718612</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">RELA</td>
+      <td style="text-align: center">10.47203188</td>
+      <td style="text-align: center">10.68921492</td>
+      <td style="text-align: center">10.52993798</td>
+      <td style="text-align: center">10.65811428</td>
+      <td style="text-align: center">10.73675295</td>
+      <td style="text-align: center">10.53768567</td>
+      <td style="text-align: center">10.65865677</td>
+      <td style="text-align: center">10.67072988</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">STAT3</td>
+      <td style="text-align: center">10.56428801</td>
+      <td style="text-align: center">10.96178244</td>
+      <td style="text-align: center">10.96925717</td>
+      <td style="text-align: center">11.0879189</td>
+      <td style="text-align: center">11.16121217</td>
+      <td style="text-align: center">10.91066701</td>
+      <td style="text-align: center">11.16668464</td>
+      <td style="text-align: center">10.91759214</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">AURKA</td>
+      <td style="text-align: center">9.06755978</td>
+      <td style="text-align: center">9.10139478</td>
+      <td style="text-align: center">9.11889841</td>
+      <td style="text-align: center">9.039134</td>
+      <td style="text-align: center">10.07625999</td>
+      <td style="text-align: center">11.02582441</td>
+      <td style="text-align: center">10.15813787</td>
+      <td style="text-align: center">11.02671988</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">TCF3</td>
+      <td style="text-align: center">10.64874633</td>
+      <td style="text-align: center">10.77559343</td>
+      <td style="text-align: center">10.5523821</td>
+      <td style="text-align: center">10.64619397</td>
+      <td style="text-align: center">10.19490836</td>
+      <td style="text-align: center">10.60056882</td>
+      <td style="text-align: center">10.24625873</td>
+      <td style="text-align: center">10.54881364</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">PIAS1</td>
+      <td style="text-align: center">10.08320282</td>
+      <td style="text-align: center">9.90076822</td>
+      <td style="text-align: center">10.11744676</td>
+      <td style="text-align: center">9.74628329</td>
+      <td style="text-align: center">9.48901681</td>
+      <td style="text-align: center">9.5292538</td>
+      <td style="text-align: center">9.50232263</td>
+      <td style="text-align: center">9.38705458</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">HDAC3</td>
+      <td style="text-align: center">10.07136987</td>
+      <td style="text-align: center">10.02308142</td>
+      <td style="text-align: center">10.00478498</td>
+      <td style="text-align: center">10.01184598</td>
+      <td style="text-align: center">9.84842798</td>
+      <td style="text-align: center">10.02732455</td>
+      <td style="text-align: center">9.80683273</td>
+      <td style="text-align: center">9.99109486</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Table:</strong> Standard deviation of log steady-state expression of FVS nodes from the eight experimental replicates predicted by SFA.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>FVS Node</strong></th>
+      <th style="text-align: center"><strong>Standard Deviation Amoung MCF10A Replicates</strong></th>
+      <th style="text-align: center"><strong>Standard Deviation Amoung MDAMB231 Replicates</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">PIAS1</td>
+      <td style="text-align: center">0.071345</td>
+      <td style="text-align: center">0.02896</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">AKT1</td>
+      <td style="text-align: center">0.096342</td>
+      <td style="text-align: center">0.069411</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">CTNNB1</td>
+      <td style="text-align: center">0.175762</td>
+      <td style="text-align: center">0.015115</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>JUN</strong></td>
+      <td style="text-align: center"><strong>0.435238</strong></td>
+      <td style="text-align: center">0.11205</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">GSK3B</td>
+      <td style="text-align: center">0.01627</td>
+      <td style="text-align: center">0.107658</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">TCF3</td>
+      <td style="text-align: center">0.042223</td>
+      <td style="text-align: center">0.108971</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MAPK1</td>
+      <td style="text-align: center">0.061739</td>
+      <td style="text-align: center">0.015611</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>AURKA</strong></td>
+      <td style="text-align: center">0.0252</td>
+      <td style="text-align: center"><strong>0.33436</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">STAT3</td>
+      <td style="text-align: center">0.082643</td>
+      <td style="text-align: center">0.11887</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">RELA</td>
+      <td style="text-align: center">0.04879</td>
+      <td style="text-align: center">0.068684</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">HDAC3</td>
+      <td style="text-align: center">0.020685</td>
+      <td style="text-align: center">0.055916</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>FOXM1</strong></td>
+      <td style="text-align: center">0.014138</td>
+      <td style="text-align: center"><strong>0.330261</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>There are other network nodes with larger standard deviations between replicates of the same cell line, such as MVD with a standard deviation of 0.534 among normal replicates, and ICAM1 with a standard deviation of 0.422 among cancer replicates that could also explain why they cluster in 4 groups.</p>
+
+<h1 id="perturbation-frequency-in-100000-randomly-generated-perturbations">Perturbation frequency in 100,000 randomly generated perturbations</h1>
+
+<p>To ensure that we are capturing a realistic representation of all possible perturbation combinations, we examined the frequency of perturbation orientation for each FVS node in the 100,000 randomly generated initial states.</p>
+
+<p><strong>Table:</strong> Percent of perturbations where each FVS node is either knocked-in, knocked-out, or not changed.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>perturbation</strong></th>
+      <th style="text-align: center"><strong>AKT1</strong></th>
+      <th style="text-align: center"><strong>AURKA</strong></th>
+      <th style="text-align: center"><strong>CTNNB1</strong></th>
+      <th style="text-align: center"><strong>FOXM1</strong></th>
+      <th style="text-align: center"><strong>GSK3B</strong></th>
+      <th style="text-align: center"><strong>HDAC3</strong></th>
+      <th style="text-align: center"><strong>JUN</strong></th>
+      <th style="text-align: center"><strong>MAPK1</strong></th>
+      <th style="text-align: center"><strong>PIAS1</strong></th>
+      <th style="text-align: center"><strong>RELA</strong></th>
+      <th style="text-align: center"><strong>STAT3</strong></th>
+      <th style="text-align: center"><strong>TCF3</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Knocked-in</td>
+      <td style="text-align: center">33.426</td>
+      <td style="text-align: center">33.083</td>
+      <td style="text-align: center">33.249</td>
+      <td style="text-align: center">33.389</td>
+      <td style="text-align: center">33.268</td>
+      <td style="text-align: center">33.455</td>
+      <td style="text-align: center">33.306</td>
+      <td style="text-align: center">33.411</td>
+      <td style="text-align: center">33.28</td>
+      <td style="text-align: center">33.318</td>
+      <td style="text-align: center">33.488</td>
+      <td style="text-align: center">33.382</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Knocked-out</td>
+      <td style="text-align: center">33.206</td>
+      <td style="text-align: center">33.264</td>
+      <td style="text-align: center">33.406</td>
+      <td style="text-align: center">33.305</td>
+      <td style="text-align: center">33.473</td>
+      <td style="text-align: center">33.335</td>
+      <td style="text-align: center">33.416</td>
+      <td style="text-align: center">33.332</td>
+      <td style="text-align: center">33.103</td>
+      <td style="text-align: center">33.372</td>
+      <td style="text-align: center">33.275</td>
+      <td style="text-align: center">33.355</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">No Change</td>
+      <td style="text-align: center">33.368</td>
+      <td style="text-align: center">33.653</td>
+      <td style="text-align: center">33.345</td>
+      <td style="text-align: center">33.306</td>
+      <td style="text-align: center">33.259</td>
+      <td style="text-align: center">33.21</td>
+      <td style="text-align: center">33.278</td>
+      <td style="text-align: center">33.257</td>
+      <td style="text-align: center">33.617</td>
+      <td style="text-align: center">33.31</td>
+      <td style="text-align: center">33.237</td>
+      <td style="text-align: center">33.263</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="select-normal-perturbations">Select normal perturbations</h1>
+
+<p>Using 3 nearest neihgbors and the combination of logss and DAC dataset, there are <a href="https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project2/Network_Analysis/virtual_screening/successful_perturbations.txt">157 perturbations</a> causing a shift to normal from all 4 replicates. All of these perturbations also triggered a shift to normal in the DAC dataset, and all but one (Perturb_079281) triggered the shift in the logss dataset.</p>
+
+<!---
+both but not logss: Perturb_079281
+logss but not both:  Perturb_037031
+DAC bot not logss: Perturb_005343, Perturb_017420
+logss but not DAC: Perturb_037031
+DAC but not both: Perturb_005343, Perturb_017420
+--->
+
+<p>The summary of the frequency of the orientation of each FVS node in the 157 perturbations is included in this table:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>perturbation</strong></th>
+      <th style="text-align: center"><strong>AKT1</strong></th>
+      <th style="text-align: center"><strong>AURKA</strong></th>
+      <th style="text-align: center"><strong>CTNNB1</strong></th>
+      <th style="text-align: center"><strong>FOXM1</strong></th>
+      <th style="text-align: center"><strong>GSK3B</strong></th>
+      <th style="text-align: center"><strong>HDAC3</strong></th>
+      <th style="text-align: center"><strong>JUN</strong></th>
+      <th style="text-align: center"><strong>MAPK1</strong></th>
+      <th style="text-align: center"><strong>PIAS1</strong></th>
+      <th style="text-align: center"><strong>RELA</strong></th>
+      <th style="text-align: center"><strong>STAT3</strong></th>
+      <th style="text-align: center"><strong>TCF3</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Knocked-in</td>
+      <td style="text-align: center">12.102</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">82.166</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">89.172</td>
+      <td style="text-align: center">82.166</td>
+      <td style="text-align: center">36.943</td>
+      <td style="text-align: center">29.936</td>
+      <td style="text-align: center">68.79</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">0.637</td>
+      <td style="text-align: center">2.548</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Knocked-out</td>
+      <td style="text-align: center">58.599</td>
+      <td style="text-align: center">68.153</td>
+      <td style="text-align: center">7.006</td>
+      <td style="text-align: center">64.968</td>
+      <td style="text-align: center">1.274</td>
+      <td style="text-align: center">6.369</td>
+      <td style="text-align: center">42.675</td>
+      <td style="text-align: center">31.847</td>
+      <td style="text-align: center">7.006</td>
+      <td style="text-align: center">68.79</td>
+      <td style="text-align: center">57.962</td>
+      <td style="text-align: center">52.229</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">No Change</td>
+      <td style="text-align: center">29.299</td>
+      <td style="text-align: center">31.847</td>
+      <td style="text-align: center">10.828</td>
+      <td style="text-align: center">35.032</td>
+      <td style="text-align: center">9.554</td>
+      <td style="text-align: center">11.465</td>
+      <td style="text-align: center">20.382</td>
+      <td style="text-align: center">38.217</td>
+      <td style="text-align: center">24.204</td>
+      <td style="text-align: center">31.21</td>
+      <td style="text-align: center">41.401</td>
+      <td style="text-align: center">45.223</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The results that do not agree with literature is the upregulation of <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0117097">CTNNB1</a>, <a href="https://breast-cancer-research.biomedcentral.com/articles/10.1186/s13058-019-1125-0">GSK3B</a>, and <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5611517/">HDAC3</a>.</p>
+
+<p>Literature evidence:</p>
+<ul>
+  <li><em>“higher expression of GSK3β correlated with poorer overall patient survival”</em></li>
+  <li><em>“GSK3β inhibitors were identified as EMT inhibitors”</em></li>
+  <li><em>Stable knockdown of β-catenin significantly suppressed migration of MDA-MB-231</em></li>
+  <li><strong>BUT:</strong> <em><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4529819/">CTNNB1 not as highly expresesed in MDAMB231</a> and <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0117097">here</a></em> when comapred to other tnbc cell lines</li>
+  <li><em>Inhibiting histone Deacetylations is a potential therapeutic strategy</em></li>
+</ul>
+
+<p><strong>I wanted to eamine the results from 4 and 5 nearest neighbors to see if it included more perturbations that did not require the activation of CTNNB1  and GSK3B.</strong></p>
+
+<p>When examining 4 nearest neighbors, we see 2464 perturbations trigger a shift to the normal cluster. The frqeuency of their perturbations can be seen below:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>perturbation</strong></th>
+      <th style="text-align: center"><strong>AKT1</strong></th>
+      <th style="text-align: center"><strong>AURKA</strong></th>
+      <th style="text-align: center"><strong>CTNNB1</strong></th>
+      <th style="text-align: center"><strong>FOXM1</strong></th>
+      <th style="text-align: center"><strong>GSK3B</strong></th>
+      <th style="text-align: center"><strong>HDAC3</strong></th>
+      <th style="text-align: center"><strong>JUN</strong></th>
+      <th style="text-align: center"><strong>MAPK1</strong></th>
+      <th style="text-align: center"><strong>PIAS1</strong></th>
+      <th style="text-align: center"><strong>RELA</strong></th>
+      <th style="text-align: center"><strong>STAT3</strong></th>
+      <th style="text-align: center"><strong>TCF3</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Knocked-in</td>
+      <td style="text-align: center">20.698</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">57.752</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">69.44</td>
+      <td style="text-align: center">57.021</td>
+      <td style="text-align: center">20.333</td>
+      <td style="text-align: center">34.253</td>
+      <td style="text-align: center">48.539</td>
+      <td style="text-align: center">11.891</td>
+      <td style="text-align: center">55.032</td>
+      <td style="text-align: center">1.136</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Knocked-out</td>
+      <td style="text-align: center">47.727</td>
+      <td style="text-align: center">67.695</td>
+      <td style="text-align: center">15.828</td>
+      <td style="text-align: center">68.425</td>
+      <td style="text-align: center">14.245</td>
+      <td style="text-align: center">18.588</td>
+      <td style="text-align: center">52.638</td>
+      <td style="text-align: center">33.076</td>
+      <td style="text-align: center">20.049</td>
+      <td style="text-align: center">50.487</td>
+      <td style="text-align: center">12.459</td>
+      <td style="text-align: center">51.502</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">No Change</td>
+      <td style="text-align: center">31.575</td>
+      <td style="text-align: center">32.305</td>
+      <td style="text-align: center">26.42</td>
+      <td style="text-align: center">31.575</td>
+      <td style="text-align: center">16.315</td>
+      <td style="text-align: center">24.391</td>
+      <td style="text-align: center">27.029</td>
+      <td style="text-align: center">32.67</td>
+      <td style="text-align: center">31.412</td>
+      <td style="text-align: center">37.622</td>
+      <td style="text-align: center">32.508</td>
+      <td style="text-align: center">47.362</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>When examining 5 nearest neighbors, we see 3263 perturbations trigger a shift to the normal cluster. The frqeuency of their perturbations can be seen below:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>perturbation</strong></th>
+      <th style="text-align: center"><strong>AKT1</strong></th>
+      <th style="text-align: center"><strong>AURKA</strong></th>
+      <th style="text-align: center"><strong>CTNNB1</strong></th>
+      <th style="text-align: center"><strong>FOXM1</strong></th>
+      <th style="text-align: center"><strong>GSK3B</strong></th>
+      <th style="text-align: center"><strong>HDAC3</strong></th>
+      <th style="text-align: center"><strong>JUN</strong></th>
+      <th style="text-align: center"><strong>MAPK1</strong></th>
+      <th style="text-align: center"><strong>PIAS1</strong></th>
+      <th style="text-align: center"><strong>RELA</strong></th>
+      <th style="text-align: center"><strong>STAT3</strong></th>
+      <th style="text-align: center"><strong>TCF3</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Knocked-in</td>
+      <td style="text-align: center">23.108</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">61.048</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">66.289</td>
+      <td style="text-align: center">52.927</td>
+      <td style="text-align: center">19.43</td>
+      <td style="text-align: center">35.887</td>
+      <td style="text-align: center">48.452</td>
+      <td style="text-align: center">14.097</td>
+      <td style="text-align: center">55.777</td>
+      <td style="text-align: center">2.053</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Knocked-out</td>
+      <td style="text-align: center">45.02</td>
+      <td style="text-align: center">67.729</td>
+      <td style="text-align: center">14.741</td>
+      <td style="text-align: center">68.342</td>
+      <td style="text-align: center">15.538</td>
+      <td style="text-align: center">20.686</td>
+      <td style="text-align: center">50.322</td>
+      <td style="text-align: center">31.934</td>
+      <td style="text-align: center">20.104</td>
+      <td style="text-align: center">48.851</td>
+      <td style="text-align: center">12.994</td>
+      <td style="text-align: center">50.475</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">No Change</td>
+      <td style="text-align: center">31.873</td>
+      <td style="text-align: center">32.271</td>
+      <td style="text-align: center">24.211</td>
+      <td style="text-align: center">31.658</td>
+      <td style="text-align: center">18.173</td>
+      <td style="text-align: center">26.387</td>
+      <td style="text-align: center">30.248</td>
+      <td style="text-align: center">32.179</td>
+      <td style="text-align: center">31.443</td>
+      <td style="text-align: center">37.052</td>
+      <td style="text-align: center">31.229</td>
+      <td style="text-align: center">47.472</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>I think we are seeing that we need to upregulate GSK3B and CTNNB1 because in the initial condition for MCF10A, they are upreagulated compared to MDAMB231 (see logfc above).</p>
+
+<p>It has been observed that activity levels of CTNNB1 are lower in MDAMB231 than in other TNBC cell lines. This makes sense because CTNNB1 regulates cell proliferation and CL tumors have low proliferation rates. However, there is still evidence that inhibition of CTNNB1 in MDAMB231 cell lines decreases rates of metastasis and tumorigenesis, so it still does not make sense to activate it as a therapeutic target.</p>
+
+<p>I’m not sure why we haven’t seen these results before - it’s likely due to the way that we are now simulating knock-ins and knock-outs and classifying perturbations. Instead of using the basin of attraction as the training set, we are using the attractor itself. This may be too restrictive when classifying attractors from perturbations. However, we have seen the SFA cannot accurately predict attractors from random initial conditions.</p>
+
+<p>Out of the 157 perturbations that trigger the shift to the normal phenotype in all four replicates, there are two that do not require the activation of GSK3B and CTNNB1:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>perturbation</strong></th>
+      <th style="text-align: center"><strong>AKT1</strong></th>
+      <th style="text-align: center"><strong>AURKA</strong></th>
+      <th style="text-align: center"><strong>CTNNB1</strong></th>
+      <th style="text-align: center"><strong>FOXM1</strong></th>
+      <th style="text-align: center"><strong>GSK3B</strong></th>
+      <th style="text-align: center"><strong>HDAC3</strong></th>
+      <th style="text-align: center"><strong>JUN</strong></th>
+      <th style="text-align: center"><strong>MAPK1</strong></th>
+      <th style="text-align: center"><strong>PIAS1</strong></th>
+      <th style="text-align: center"><strong>RELA</strong></th>
+      <th style="text-align: center"><strong>STAT3</strong></th>
+      <th style="text-align: center"><strong>TCF3</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Perturb_003761</td>
+      <td style="text-align: center">Knock-out</td>
+      <td style="text-align: center">Knock-out</td>
+      <td style="text-align: center">No Change</td>
+      <td style="text-align: center">Knock-out</td>
+      <td style="text-align: center">No Change</td>
+      <td style="text-align: center">Knock-in</td>
+      <td style="text-align: center">Knock-out</td>
+      <td style="text-align: center">Knock-out</td>
+      <td style="text-align: center">Knock-in</td>
+      <td style="text-align: center">Knock-out</td>
+      <td style="text-align: center">Knock-out</td>
+      <td style="text-align: center">Knock-out</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Perturb_036358</td>
+      <td style="text-align: center">Knock-out</td>
+      <td style="text-align: center">No Change</td>
+      <td style="text-align: center">No Change</td>
+      <td style="text-align: center">Knock-out</td>
+      <td style="text-align: center">No Change</td>
+      <td style="text-align: center">Knock-in</td>
+      <td style="text-align: center">Knock-out</td>
+      <td style="text-align: center">No Change</td>
+      <td style="text-align: center">Knock-in</td>
+      <td style="text-align: center">Knock-out</td>
+      <td style="text-align: center">No Change</td>
+      <td style="text-align: center">Knock-out</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Perturb_003761 requires the pertubration of 10 of the 12 FVS nodes and Perturb_036358 requires perturbation of 7 of the 12 FVS nodes.</p>
+
+<h3 id="exploring-the-number-of-nodes-that-must-be-perturbed-to-trigger-the-shift">Exploring the number of nodes that must be perturbed to trigger the shift.</h3>
+<p>Out of curiosity, I wanted to see if we had to perturb a large fraction of the 12 FVS nodes because we are not activating GSK3B and CTNNNB1, or if it is the case that most of the preturbations that trigger the shift require the perturbation of many FVS nodes.</p>
+
+<ul>
+  <li>1 pertubration with 6 perturbed nodes</li>
+  <li>35 pertubrations with 7 perturbed nodes</li>
+  <li>36 pertubrations with 8 perturbed nodes</li>
+  <li>37 pertubrations with 9 perturbed nodes</li>
+  <li>34 pertubrations with 10 perturbed nodes</li>
+  <li>12 pertubrations with 11 perturbed nodes</li>
+  <li>2 pertubrations with 12 perturbed nodes</li>
+</ul>
+
+<p>Summary Stats:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>Min.</strong></th>
+      <th style="text-align: center"><strong>1st Qu.</strong></th>
+      <th style="text-align: center"><strong>Median</strong></th>
+      <th style="text-align: center"><strong>Mean</strong></th>
+      <th style="text-align: center"><strong>3rd Qu.</strong></th>
+      <th style="text-align: center"><strong>Max.</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">6.000</td>
+      <td style="text-align: center">8.000</td>
+      <td style="text-align: center">9.000</td>
+      <td style="text-align: center">8.713</td>
+      <td style="text-align: center">10.000</td>
+      <td style="text-align: center">12.000</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="are-there-other-normal-perturbations-that-dont-require-activation-of-gsk3b-and-ctnnb1">Are there other normal perturbations that don’t require activation of GSK3B and CTNNB1?</h2>
+<p>Because we only have a sample of 100,000 perturbations out of the 531,441 possibilities, I wanted to lock some of the FVS nodes with consistent perturbation patterns in the parturbations triggering a shft to normal and find all possible perturbations with those constraints.</p>
+
+<p>I will simulate new perturbations fixing:</p>
+<ul>
+  <li>CTNNB1 and GSK3B as no change</li>
+  <li>RELA and FOXM1 as knock-out</li>
+  <li>PIAS1 as knock-in</li>
+</ul>
+
+<p>And all possible combinations for the other 7 nodes (2187 total). This is a concern because the two above perturbations (Perturb_003761 and Perturb_036358) were included in this list of perturbations and triggered a shift to normal in all 4 replicates the first time I ran knn. This time, they only trigger it in one of the replicates. One perturbation triggerse the shift in 3/4 replicates:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>perturbation</strong></th>
+      <th style="text-align: center"><strong>AKT1</strong></th>
+      <th style="text-align: center"><strong>AURKA</strong></th>
+      <th style="text-align: center"><strong>CTNNB1</strong></th>
+      <th style="text-align: center"><strong>FOXM1</strong></th>
+      <th style="text-align: center"><strong>GSK3B</strong></th>
+      <th style="text-align: center"><strong>HDAC3</strong></th>
+      <th style="text-align: center"><strong>JUN</strong></th>
+      <th style="text-align: center"><strong>MAPK1</strong></th>
+      <th style="text-align: center"><strong>PIAS1</strong></th>
+      <th style="text-align: center"><strong>RELA</strong></th>
+      <th style="text-align: center"><strong>STAT3</strong></th>
+      <th style="text-align: center"><strong>TCF3</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Perturb_1216</td>
+      <td style="text-align: center">Knock-out</td>
+      <td style="text-align: center">Knock-out</td>
+      <td style="text-align: center">No Change</td>
+      <td style="text-align: center">Knock-out</td>
+      <td style="text-align: center">No Change</td>
+      <td style="text-align: center">Knock-in</td>
+      <td style="text-align: center">Knock-out</td>
+      <td style="text-align: center">Knock-out</td>
+      <td style="text-align: center">Knock-in</td>
+      <td style="text-align: center">Knock-out</td>
+      <td style="text-align: center">Knock-out</td>
+      <td style="text-align: center">No Change</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>This is the same perturbation as Perturb_003761, but with no change applied to TCF3 instead of kncking it out.</p>
+
+<h3 id="elucidating-why-gsk3b-and-ctnnb1-must-be-upregulated">Elucidating why GSK3B and CTNNB1 must be upregulated</h3>
+
+<p>I wanted to determine if the reason we are seeing the need to upregulatee GSK3B and CTNNB1 is because of an issue with the network topology, or because of the afore mentioned issue of the dicrepencies in expression level at initial conditions. To do so, I simulated the attractors for MDAMB231 and MCF10A, but swapped initial conditions for the FVS nodes that didn’t agree with literature: GSK3B and CTNNB1. Then, I re-calssified the same 100,000 perturbations of FVS nodes using knn. 9 perturbations triggered the shift from normal to cancer in all 4 cancerous replicates. The frequency of their perturbation orientation is below:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>perturbation</strong></th>
+      <th style="text-align: center"><strong>AKT1</strong></th>
+      <th style="text-align: center"><strong>AURKA</strong></th>
+      <th style="text-align: center"><strong>CTNNB1</strong></th>
+      <th style="text-align: center"><strong>FOXM1</strong></th>
+      <th style="text-align: center"><strong>GSK3B</strong></th>
+      <th style="text-align: center"><strong>HDAC3</strong></th>
+      <th style="text-align: center"><strong>JUN</strong></th>
+      <th style="text-align: center"><strong>MAPK1</strong></th>
+      <th style="text-align: center"><strong>PIAS1</strong></th>
+      <th style="text-align: center"><strong>RELA</strong></th>
+      <th style="text-align: center"><strong>STAT3</strong></th>
+      <th style="text-align: center"><strong>TCF3</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Knocked-in</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">100</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">11.111</td>
+      <td style="text-align: center">100</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">0</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Knocked-out</td>
+      <td style="text-align: center">100</td>
+      <td style="text-align: center">77.778</td>
+      <td style="text-align: center">88.889</td>
+      <td style="text-align: center">66.667</td>
+      <td style="text-align: center">33.333</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">88.889</td>
+      <td style="text-align: center">55.556</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">44.444</td>
+      <td style="text-align: center">77.778</td>
+      <td style="text-align: center">55.556</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">No Change</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">22.222</td>
+      <td style="text-align: center">11.111</td>
+      <td style="text-align: center">33.333</td>
+      <td style="text-align: center">66.667</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">11.111</td>
+      <td style="text-align: center">33.333</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">55.556</td>
+      <td style="text-align: center">22.222</td>
+      <td style="text-align: center">44.444</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>This tells me that our results are very sensitive to the initial conditions of the reference attractors.</p>
+
+<!--
+
+To do so, I simulated the attractors for MDAMB231 and MCF10A, but swapped initial conditions for the FVS and source nodes that didn't agree with literature: GSK3B, CTNNB1, PAK2, PPP4C, PRPF4, and PRMT5. Then, I re-calssified the same 100,000 perturbations of FVS nodes using knn. The 18 perturbations that tiggered a shift to normal in all four cell lines have the frequency below:
+
+
+**perturbation**|**AKT1**|**AURKA**|**CTNNB1**|**FOXM1**|**GSK3B**|**HDAC3**|**JUN**|**MAPK1**|**PIAS1**|**RELA**|**STAT3**|**TCF3**
+:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
+Knocked-in|0|0|0|0|0|100|0|33.333|100|0|0|0
+Knocked-out|83.333|66.667|72.222|61.111|50|0|88.889|33.333|0|55.556|83.333|61.111
+No Change|16.667|33.333|27.778|38.889|50|0|11.111|33.333|0|44.444|16.667|38.889
+
+Here, we see that CTNNB1 and GSK3B do not need to be upregulated, which is what we would expect.
+
+I did the same experiment only flipping CTNNB1 and GSK3B (excluding source nodes), and found similar results. 9 perturbations triggered the shift from normal to cancer in all 4 cancerous replicates.
+
+**perturbation**|**AKT1**|**AURKA**|**CTNNB1**|**FOXM1**|**GSK3B**|**HDAC3**|**JUN**|**MAPK1**|**PIAS1**|**RELA**|**STAT3**|**TCF3**
+:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
+Knocked-in|0|0|0|0|0|100|0|11.111|100|0|0|0
+Knocked-out|100|77.778|88.889|66.667|33.333|0|88.889|55.556|0|44.444|77.778|55.556
+No Change|0|22.222|11.111|33.333|66.667|0|11.111|33.333|0|55.556|22.222|44.444
+
+This tells me that our results are very sensitive to the initial conditions of the reference attractors.
+--->
+
+<h1 id="looking-for-similar-trends-in-literature-for-gsk3b-and-ctnnb1">Looking For similar trends in literature for GSK3B and CTNNB1</h1>
+
+<p><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE75168">Here</a>, we observe the same trend in GSK3B but not in CTNNB1 from normalized counts:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>name</strong></th>
+      <th style="text-align: center"><strong>logfc</strong></th>
+      <th style="text-align: center"><strong>p-value</strong></th>
+      <th style="text-align: center"><strong>MCF10A_1</strong></th>
+      <th style="text-align: center"><strong>MCF10A_2</strong></th>
+      <th style="text-align: center"><strong>MCF10A_3</strong></th>
+      <th style="text-align: center"><strong>MDAMB231_1</strong></th>
+      <th style="text-align: center"><strong>MDAMB231_2</strong></th>
+      <th style="text-align: center"><strong>MDAMB231_3</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">GSK3B</td>
+      <td style="text-align: center">-1.135526001</td>
+      <td style="text-align: center">1.01E-05</td>
+      <td style="text-align: center">1788.99</td>
+      <td style="text-align: center">1944.36</td>
+      <td style="text-align: center">1254.37</td>
+      <td style="text-align: center">775.35</td>
+      <td style="text-align: center">741.93</td>
+      <td style="text-align: center">751.92</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">CTNNB1</td>
+      <td style="text-align: center">1.559422991</td>
+      <td style="text-align: center">2.39E-14</td>
+      <td style="text-align: center">8479.24</td>
+      <td style="text-align: center">8861.55</td>
+      <td style="text-align: center">7088.68</td>
+      <td style="text-align: center">23417.67</td>
+      <td style="text-align: center">26209.64</td>
+      <td style="text-align: center">22368.38</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>From <a href="http://lincs.hms.harvard.edu/db/datasets/20348/main">RPKM data</a>, we see the same trend in GSK3B but not CTNNB1</p>
+
+<p><em>there is only one replicate for MDA-MB-231 and two replicates for MCF10A which were averaged together</em></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">name</th>
+      <th style="text-align: center">MCF10A</th>
+      <th style="text-align: center">MDAMB231</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">GSK3B</td>
+      <td style="text-align: center">4.628451756</td>
+      <td style="text-align: center">3.741966099</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">CTNNB1</td>
+      <td style="text-align: center">6.769542581</td>
+      <td style="text-align: center">7.121709815</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="literature-search-these-perturbations">Literature search these perturbations:</h1>
+<ul>
+  <li>= Knock-out, + = Knock-in, nc = no change</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>name</strong></th>
+      <th style="text-align: center"><strong>AKT1</strong></th>
+      <th style="text-align: center"><strong>AURKA</strong></th>
+      <th style="text-align: center"><strong>CTNNB1</strong></th>
+      <th style="text-align: center"><strong>FOXM1</strong></th>
+      <th style="text-align: center"><strong>GSK3B</strong></th>
+      <th style="text-align: center"><strong>HDAC3</strong></th>
+      <th style="text-align: center"><strong>JUN</strong></th>
+      <th style="text-align: center"><strong>MAPK1</strong></th>
+      <th style="text-align: center"><strong>PIAS1</strong></th>
+      <th style="text-align: center"><strong>RELA</strong></th>
+      <th style="text-align: center"><strong>STAT3</strong></th>
+      <th style="text-align: center"><strong>TCF3</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Perturb_006159</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">+</td>
+      <td style="text-align: center">nc</td>
+      <td style="text-align: center">+</td>
+      <td style="text-align: center">+</td>
+      <td style="text-align: center">nc</td>
+      <td style="text-align: center">nc</td>
+      <td style="text-align: center">+</td>
+      <td style="text-align: center">nc</td>
+      <td style="text-align: center">nc</td>
+      <td style="text-align: center">nc</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Perturb_036358</strong></td>
+      <td style="text-align: center"><strong>-</strong></td>
+      <td style="text-align: center"><strong>nc</strong></td>
+      <td style="text-align: center"><strong>nc</strong></td>
+      <td style="text-align: center"><strong>-</strong></td>
+      <td style="text-align: center"><strong>nc</strong></td>
+      <td style="text-align: center"><strong>+</strong></td>
+      <td style="text-align: center"><strong>-</strong></td>
+      <td style="text-align: center"><strong>nc</strong></td>
+      <td style="text-align: center"><strong>+</strong></td>
+      <td style="text-align: center"><strong>-</strong></td>
+      <td style="text-align: center"><strong>nc</strong></td>
+      <td style="text-align: center"><strong>-</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Perturb_003761</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">nc</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">nc</td>
+      <td style="text-align: center">+</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">+</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Perturb_007217</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">nc</td>
+      <td style="text-align: center">+</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">nc</td>
+      <td style="text-align: center">+</td>
+      <td style="text-align: center">+</td>
+      <td style="text-align: center">nc</td>
+      <td style="text-align: center">+</td>
+      <td style="text-align: center">nc</td>
+      <td style="text-align: center">nc</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Perturb_015436</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">+</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">nc</td>
+      <td style="text-align: center">nc</td>
+      <td style="text-align: center">+</td>
+      <td style="text-align: center">nc</td>
+      <td style="text-align: center">+</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">nc</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Perturb_020657</td>
+      <td style="text-align: center">nc</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">+</td>
+      <td style="text-align: center">nc</td>
+      <td style="text-align: center">+</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">+</td>
+      <td style="text-align: center">nc</td>
+      <td style="text-align: center">nc</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Perturb_031922</td>
+      <td style="text-align: center">nc</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">+</td>
+      <td style="text-align: center">nc</td>
+      <td style="text-align: center">+</td>
+      <td style="text-align: center">nc</td>
+      <td style="text-align: center">+</td>
+      <td style="text-align: center">nc</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">nc</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>*If HDAC3 is left unchanged, JUN must be activated</p>
+
+<p><strong>Recall:</strong>
+The summary of the frequency of the orientation of each FVS node in the 157 perturbations is included in this table:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>perturbation</strong></th>
+      <th style="text-align: center"><strong>AKT1</strong></th>
+      <th style="text-align: center"><strong>AURKA</strong></th>
+      <th style="text-align: center"><strong>CTNNB1</strong></th>
+      <th style="text-align: center"><strong>FOXM1</strong></th>
+      <th style="text-align: center"><strong>GSK3B</strong></th>
+      <th style="text-align: center"><strong>HDAC3</strong></th>
+      <th style="text-align: center"><strong>JUN</strong></th>
+      <th style="text-align: center"><strong>MAPK1</strong></th>
+      <th style="text-align: center"><strong>PIAS1</strong></th>
+      <th style="text-align: center"><strong>RELA</strong></th>
+      <th style="text-align: center"><strong>STAT3</strong></th>
+      <th style="text-align: center"><strong>TCF3</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Knocked-in</td>
+      <td style="text-align: center">12.102</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">82.166</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">89.172</td>
+      <td style="text-align: center">82.166</td>
+      <td style="text-align: center">36.943</td>
+      <td style="text-align: center">29.936</td>
+      <td style="text-align: center">68.79</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">0.637</td>
+      <td style="text-align: center">2.548</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Knocked-out</td>
+      <td style="text-align: center">58.599</td>
+      <td style="text-align: center">68.153</td>
+      <td style="text-align: center">7.006</td>
+      <td style="text-align: center">64.968</td>
+      <td style="text-align: center">1.274</td>
+      <td style="text-align: center">6.369</td>
+      <td style="text-align: center">42.675</td>
+      <td style="text-align: center">31.847</td>
+      <td style="text-align: center">7.006</td>
+      <td style="text-align: center">68.79</td>
+      <td style="text-align: center">57.962</td>
+      <td style="text-align: center">52.229</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">No Change</td>
+      <td style="text-align: center">29.299</td>
+      <td style="text-align: center">31.847</td>
+      <td style="text-align: center">10.828</td>
+      <td style="text-align: center">35.032</td>
+      <td style="text-align: center">9.554</td>
+      <td style="text-align: center">11.465</td>
+      <td style="text-align: center">20.382</td>
+      <td style="text-align: center">38.217</td>
+      <td style="text-align: center">24.204</td>
+      <td style="text-align: center">31.21</td>
+      <td style="text-align: center">41.401</td>
+      <td style="text-align: center">45.223</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>AURKA:</p>
+<ul>
+  <li>https://www.jbc.org/content/early/2016/09/20/jbc.M116.738666.full.pdf
+    <ul>
+      <li>inhibition of AURKA by BET leads to apoptosis or senscence in TNBC</li>
+    </ul>
+  </li>
+  <li>AURKA promotes stemness and breast cancer metastases
+    <ul>
+      <li>https://breast-cancer-research.biomedcentral.com/articles/10.1186/s13058-018-1020-0</li>
+    </ul>
+  </li>
+  <li><strong>not many studies done on its direct inhibition</strong></li>
+</ul>
+
+<p>PIAS1:</p>
+<ul>
+  <li>https://www.researchgate.net/publication/270907408_A_novel_role_for_the_SUMO_E3_ligase_PIAS1_in_cancer_metastasis
+    <ul>
+      <li>regulator of EMT, metastasis and stemness</li>
+      <li>it’s inhibition increases metastesis</li>
+    </ul>
+  </li>
+  <li>https://www.nature.com/articles/srep17663
+    <ul>
+      <li>PIAS proteins can deregulate the activity of STAT3</li>
+    </ul>
+  </li>
+  <li><strong>cannot find evidence of its activation being studied</strong></li>
+</ul>
+
+<p>FOXM1 inhibition:</p>
+<ul>
+  <li>https://www.ncbi.nlm.nih.gov/pubmed/30572639</li>
+  <li>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6061948/
+    <ul>
+      <li>it’s a regulator of EMT, invasion, and metastasis</li>
+    </ul>
+  </li>
+  <li>https://europepmc.org/article/pmc/pmc6254995
+    <ul>
+      <li>FOXM1 inhibition significantly suppressed MDA‑MB‑231 cell tumorigenesis in vivo</li>
+      <li>inhibition of FOXM1 leads to reversal of EMT</li>
+    </ul>
+  </li>
+</ul>
+
+<p>CTNNB1 does not match literature</p>
+<ul>
+  <li>https://www.ncbi.nlm.nih.gov/pubmed/27959422
+    <ul>
+      <li>it’s inhibition reverses EMT</li>
+    </ul>
+  </li>
+  <li>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6144355/pdf/ol-16-04-4984.pdf
+    <ul>
+      <li>activation of WNT/CTNNB1 pathway is associated with poor prognosis and metastasis</li>
+    </ul>
+  </li>
+</ul>
+
+<p>GSK3B is against literature</p>
+<ul>
+  <li>regulator of EMT and CSC</li>
+  <li>explored as a therapeutic target</li>
+  <li>its inhibition decreases EMT and stemness</li>
+  <li>https://digitalcommons.library.tmc.edu/utgsbs_dissertations/806/</li>
+  <li>https://breast-cancer-research.biomedcentral.com/articles/10.1186/s13058-019-1125-0</li>
+  <li>https://link.springer.com/article/10.1186/s13058-019-1125-0
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6721324/</li>
+</ul>
+
+<p>HDAC3 inhibition has been tested as a therapeutic strategy</p>
+
+<ul>
+  <li>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6428526/
+    <ul>
+      <li>EZH2 and HDAC inhibition shall co-operate to induce apoptosis in TNBC cell line MDA-MB-231</li>
+    </ul>
+  </li>
+  <li>https://link.springer.com/article/10.1007/s13346-018-0551-3
+    <ul>
+      <li>The histone deacetylase inhibitors (HDACi) are new class of anticancer agents that stimulate differentiation/apoptosis and inhibit the proliferation of cancer cells by inhibiting the function of HDACs</li>
+    </ul>
+  </li>
+  <li>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6144355/pdf/ol-16-04-4984.pdf
+    <ul>
+      <li>A preclinical study
+confirmed a histone deacetylase inhibitor could partially reverse EMT</li>
+    </ul>
+  </li>
+</ul>
+
+<p>AKT inhibition evidence:</p>
+<ul>
+  <li>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6785914/</li>
+  <li>https://www.annalsofoncology.org/article/S0923-7534(19)31239-6/fulltext
+    <ul>
+      <li>helpful in patients with AKT dysregulation</li>
+    </ul>
+  </li>
+  <li>https://www.karger.com/Article/Fulltext/455821</li>
+  <li>https://www.oncotarget.com/article/18166/text/
+    <ul>
+      <li>supresses CSC formation in BC when targeted with HSF1</li>
+    </ul>
+  </li>
+  <li>https://link.springer.com/article/10.1186/s12943-015-0421-2
+    <ul>
+      <li>PDL1 is activated by PI3k/AKT signaling, and its inhibition has been shown to reverse EMT, so inhibiting AKT1 may have a simil
+   ar effect</li>
+    </ul>
+  </li>
+</ul>
+
+<p>STAT3 inhibition:</p>
+<ul>
+  <li>https://www.nature.com/articles/srep17663
+    <ul>
+      <li>Can reverse EMT</li>
+    </ul>
+  </li>
+  <li>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6518732/pdf/13046_2019_Article_1206.pdf
+    <ul>
+      <li>Several inhibitors of STAT3 have been tested and shown to inhibit tumor growth/migration and stem cell properties</li>
+      <li>regulates Stemness, proliferation, migration, EMT</li>
+    </ul>
+  </li>
+</ul>
+
+<p>TCF3 inhibition:</p>
+<ul>
+  <li>https://www.researchgate.net/publication/232610667_Control_of_Breast_Cancer_Growth_and_Initiation_by_the_Stem_Cell-Associated_Transcription_Factor_TCF3
+    <ul>
+      <li>regulates Stem cells, cell growth</li>
+      <li>its inhibition reduces tumor formation</li>
+    </ul>
+  </li>
+</ul>
+
+<p>MAPK1:</p>
+<ul>
+  <li>while there is evidence that inhibtion of the MAPK pathway is a potential therapeutic target, there is not evidence of MAPK1 itself as a target
+    <ul>
+      <li>makes sense that we see it split between the three perturbations</li>
+    </ul>
+  </li>
+  <li>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6827047/
+    <ul>
+      <li>often times MAPK inhibition leads to the activation of compensatory feed-back loops, so combinatorial interventions are necessary</li>
+    </ul>
+  </li>
+</ul>
+
+<p>RELA:</p>
+<ul>
+  <li>https://erc.bioscientifica.com/view/journals/erc/26/6/ERC-19-0087.xml
+    <ul>
+      <li>inhibiting NFKB pathway may increases sensitivity to endocrine care in TNBC</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="depmap-essentiality-of-genes-for-mda-mb-231">Depmap Essentiality of Genes for MDA-MB-231</h2>
+
+<p>As the goal is to trigger tumor reversion and not cell death, we want to make sure that we are not knocking out any genes necessary for cell survival. DEPMAP provides a Gene Effect score for each gene on a cell line denoting the dependency of the cell line on said gene. Cell lines aree dependent on genes with a gene effect score less than -1. The gene effect score of our FVS nodes are below:</p>
+
+<p><a href="https://depmap.org/portal/gene/AURKA?tab=dependency&amp;dependency=Avana&amp;characterization=expression">AURKA:</a> -0.89</p>
+
+<p><a href="https://depmap.org/portal/gene/FOXM1?tab=overview&amp;dependency=Avana&amp;characterization=expression">FOXM1:</a> -0.145</p>
+
+<p><a href="https://depmap.org/portal/gene/AKT1?tab=overview&amp;dependency=Avana&amp;characterization=expression">AKT1:</a> 0.145</p>
+
+<p><a href="https://depmap.org/portal/gene/JUN?tab=overview&amp;dependency=Avana&amp;characterization=expression">JUN:</a> -0.299</p>
+
+<p><a href="https://depmap.org/portal/gene/RELA?tab=overview&amp;dependency=Avana&amp;characterization=expression">RELA:</a> - 0.28</p>
+
+<p><a href="https://depmap.org/portal/gene/STAT3?tab=overview&amp;dependency=Avana&amp;characterization=expression">STAT3:</a> 0.246</p>
+
+<p><a href="https://depmap.org/portal/gene/TCF3?tab=overview&amp;dependency=Avana&amp;characterization=expression">TCF3:</a> 0.149</p>
+
+<p><a href="https://depmap.org/portal/gene/MAPK1?tab=overview&amp;dependency=Avana&amp;characterization=expression">MAPK1:</a> -0.522</p>
+
+<p><a href="https://depmap.org/portal/gene/HDAC3?tab=overview&amp;dependency=Avana&amp;characterization=expression">HDAC3</a> has score -1.31 –&gt; wouldn’t want to inhibit it</p>
+
+<p><a href="https://depmap.org/portal/gene/GSK3B?tab=overview">GSK3B</a> -0.0388</p>
+
+<p><a href="https://depmap.org/portal/gene/CTNNB1?tab=dependency&amp;dependency=Avana">CTNNB1</a> : -0.1686</p>
+
+<p><a href="https://depmap.org/portal/gene/PIAS1?tab=dependency&amp;dependency=Avana">PIAS1:</a> -0.323</p>
+
+<p>The only FVS node that MDA-MB-231 upon which exhibits dependncy (Esentiality score &lt; -1) is HDAC3. Thus, perturbations that require its inhibition will not be considered for expermiental validaion.</p>
+
+<h2 id="conclusions-2">Conclusions</h2>
+<p>More experimentation needs to be done with different FVS sets and including perturbations of the source nodes. Running virtual screenings using RNAseq data from the additionally study would be another control to identify successful perturbations. As of now, I would prioritize <strong>Perturb_036358</strong> for experimental validation because only 7 nodes need to be perturbed, and it does not require activation of GSK3B or CTNNB1.</p>
+
+  </article>
+
+</div>
+
+<div class="related-posts">
+  
+  
+  
+  
+  
+  
+  
+  <h3>Related Posts:</h3>
+  <ul>
+  
+  <li class="relatedPost">
+  <a href="/gastonguay_compsysmed_labnotebook/_projects/project2/2020/04/01/SFA-initiliazations.html">SFA Initializations
+  </a> <span class = "post-meta"> • April  1, 2020</span>
+  
+  <span class = "post-meta"> • </span>
+  
+    <a href="/gastonguay_compsysmed_labnotebook/tags.html#project02" title="Pages tagged project02" rel="tag" class = "tag"> project02 </a>  &nbsp
+  
+    <a href="/gastonguay_compsysmed_labnotebook/tags.html#static_network" title="Pages tagged static_network" rel="tag" class = "tag"> static_network </a>  &nbsp
+  
+  
+
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="relatedPost">
+  <a href="/gastonguay_compsysmed_labnotebook/_projects/project2/2020/03/29/NetworkAnlysis3.html">Network Analysis
+  </a> <span class = "post-meta"> • March 29, 2020</span>
+  
+  <span class = "post-meta"> • </span>
+  
+    <a href="/gastonguay_compsysmed_labnotebook/tags.html#project02" title="Pages tagged project02" rel="tag" class = "tag"> project02 </a>  &nbsp
+  
+    <a href="/gastonguay_compsysmed_labnotebook/tags.html#static_network" title="Pages tagged static_network" rel="tag" class = "tag"> static_network </a>  &nbsp
+  
+  
+
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="relatedPost">
+  <a href="/gastonguay_compsysmed_labnotebook/_projects/project2/2020/01/28/SFA-exploration.html">Exploration of the Uses and Applications of SFA
+  </a> <span class = "post-meta"> • January 28, 2020</span>
+  
+  <span class = "post-meta"> • </span>
+  
+    <a href="/gastonguay_compsysmed_labnotebook/tags.html#project02" title="Pages tagged project02" rel="tag" class = "tag"> project02 </a>  &nbsp
+  
+    <a href="/gastonguay_compsysmed_labnotebook/tags.html#static_network" title="Pages tagged static_network" rel="tag" class = "tag"> static_network </a>  &nbsp
+  
+  
+
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="relatedPost">
+  <a href="/gastonguay_compsysmed_labnotebook/_projects/project2/2019/12/20/SFA-test.html">Preliminary SFA Exploration
+  </a> <span class = "post-meta"> • December 20, 2019</span>
+  
+  <span class = "post-meta"> • </span>
+  
+    <a href="/gastonguay_compsysmed_labnotebook/tags.html#project02" title="Pages tagged project02" rel="tag" class = "tag"> project02 </a>  &nbsp
+  
+    <a href="/gastonguay_compsysmed_labnotebook/tags.html#static_network" title="Pages tagged static_network" rel="tag" class = "tag"> static_network </a>  &nbsp
+  
+  
+
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </ul>
+  
+</div>
+
+
+
+<div class="wrapper">
+
+
+<div class = "turn" style = " right: 0px" >
+  <span> &rsaquo; </span>
+</div>
+
+
+
+
+<div class = "turn" style = " left: 0px" >
+ <a rel = "prev" href="/gastonguay_compsysmed_labnotebook/_projects/project2/2020/04/01/SFA-initiliazations.html"> <span> &lsaquo; </span></a>
+</div>
+
+
+
+</div>
+
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Maddie Gastonguay lab notebook</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Maddie Gastonguay lab notebook</li>
+          <li><a href="mailto:madeleine.gastonguay@uconn.edu">madeleine.gastonguay@uconn.edu</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/MadeleineGastonguay">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="$grey-color-light" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">MadeleineGastonguay</span>
+            </a>
+          </li>
+          
+
+          
+
+
+<li>
+  <a href="/gastonguay_compsysmed_labnotebook/feed.xml">
+    <span class="icon icon-feed">
+      <svg viewBox="0 0 16 16">
+      <circle cx="3" cy="13" r="2" fill="$grey-color-light" />
+        <path fill="$grey-color-light" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M8.5,14.5"/>
+        <path fill="$grey-color-light"  d="M8.708,15c-0.552,0-1-0.447-1-1c0-3.147-2.561-5.708-5.708-5.708c-0.552,0-1-0.448-1-1s0.448-1,1-1
+          c4.25,0,7.708,3.458,7.708,7.708C9.708,14.553,9.261,15,8.708,15L8.708,15z"/>
+        <path fill="$grey-color-light"  d="M13.469,14.999c-0.553,0-1-0.447-1-1C12.469,8.227,7.772,3.531,2,3.531c-0.552,0-1-0.448-1-1s0.448-1,1-1
+          c6.875,0,12.469,5.593,12.469,12.468C14.469,14.552,14.021,14.999,13.469,14.999L13.469,14.999z"/>
+      </svg>
+    </span>
+    <span class="feed"> RSS feed </span>
+  </a>
+</li>
+
+
+
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">This is my lab notebook for my undergraduate honors thesis in Dr. Paola Vera-Licona's Computational Systems Medicine Research Group.
+</p>
+
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0;" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+
+      <p class="text"><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Maddie Gastonguay lab notebook</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://localhost:4000" property="cc:attributionName" rel="cc:attributionURL">Maddie Gastonguay</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

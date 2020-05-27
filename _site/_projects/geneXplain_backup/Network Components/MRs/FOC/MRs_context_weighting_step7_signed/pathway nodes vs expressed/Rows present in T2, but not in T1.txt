@@ -1,0 +1,2 @@
+ID	Gene symbol ID
+ENSG00000143851	PTPN7

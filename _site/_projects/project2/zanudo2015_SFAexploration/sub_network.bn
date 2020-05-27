@@ -1,0 +1,17 @@
+targets, factors
+creb,ifng & !apoptosis
+ifng,!(smad | p2 | apoptosis)
+p2,(ifng | p2) & !apoptosis
+gpcr,s1p & !apoptosis
+smad,gpcr & !apoptosis
+fas,!(sfas | apoptosis)
+sfas,s1p & !apoptosis
+ceramide,fas & !(s1p | apoptosis)
+disc,(ceramide | (fas & !flip)) & !apoptosis
+caspase,((bid & !iap) | disc) & !apoptosis
+flip,!(disc | apoptosis)
+bid,!(mcl1 | apoptosis)
+iap,!(bid | apoptosis)
+mcl1,!(disc | apoptosis)
+s1p,!(ceramide | apoptosis)
+apoptosis,caspase | apoptosis

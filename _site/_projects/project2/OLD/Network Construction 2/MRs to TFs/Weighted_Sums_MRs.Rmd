@@ -1,0 +1,72 @@
+## Instructions:
+When running this file, chage working directory accordingly and make sure 5 files you're inputing are correctly named. Then uncomment the ggsave function and change the name of the image you're saving.
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+setwd("~/Documents/GitHub/gastonguay_compsysmed_labnotebook/_projects/project2/Network Construction 2/MRs to TFs")
+```
+
+## input files
+
+```{r}
+library(readr)
+library(tidyverse)
+library(ggplot2)
+library(ggpubr)
+library(knitr)
+library(gridExtra)
+library(grid)
+
+#Input Files:
+MR7 <- read.csv("Context_step7/MOs Gene symbol.txt", sep = "\t", stringsAsFactors = FALSE)
+MR9 <- read.csv("Context_step9 protein only/MOs_proteinMR Gene symbol.txt", sep = "\t", stringsAsFactors = FALSE)
+
+#Lists we're comparing to:
+HOC<- read.csv("../../Network Components/EMT_innateimmune.txt", header = FALSE)
+CL<-read.csv("../../Network Components/CL_genes.txt", header = FALSE)
+breastDO <-read.csv("../../Network Components/breast_DO.txt", header = FALSE)
+
+f = function(x, den) {paste0(x, "/", den)}
+```
+
+#calculate weighted sums
+```{r}
+weightedsums<-data.frame(step_size = NA, number_genes = NA, HOC= NA, breastDO= NA, CLgenes=NA, sum=NA)
+class(weightedsums$sum)<-'numeric'
+
+varlist<-list(MR7$ID, MR9$ID)
+for (i in varlist){
+  ilen<-length(i)
+  x<-length(intersect(i,HOC$V1))
+  y<-length(intersect(i,breastDO$V1))
+  z<-length(intersect(i,CL$V1))
+  SUM<-((1/3)*x/ilen)+((1/3)*y/ilen)+((1/3)*z/ilen)
+  weightedsums[nrow(weightedsums)+1,] = list(NA,ilen,f(x,ilen),f(y,ilen),f(z,ilen),SUM)
+}
+weightedsums<-weightedsums[-1,]
+weightedsums[1,1]<-'MR7'
+weightedsums[2,1]<-'MR9'
+
+write.table(weightedsums,"weightedsums_MRs.txt", row.names=FALSE, quote = FALSE)
+
+weightedsums2 <- weightedsums
+weightedsums2$rounded_sum <- round(weightedsums$sum, 4)
+
+positions <- c("MR7", "MR9")
+
+g1 <- ggplot(data= weightedsums2, aes(x = step_size, y =sum)) + geom_bar(stat="identity", aes(fill = step_size)) +
+  scale_x_discrete(limits = positions) +
+  geom_text(aes(label = rounded_sum), vjust=1.6, color="white", size=3.5) +
+  ggtitle("Master Regulators Weighted Sums") + xlab("Step Size") +ylab("Weighted Sum") + theme(legend.position = "none")
+
+tt <- ttheme_default(colhead=list(fg_params = list(fontface=c( "bold"))),
+                     # fg_params=list(fontface=c(rep("plain", 4), "bold.italic")),
+                     base_size = 7.5,
+                     padding = unit(c(2, 4), "mm"))
+tbl <- tableGrob(weightedsums, rows=NULL, theme = tt)
+
+ggsave("weightedsums_MR.png", g1, "png")
+ggsave("MRs_weightedsums_graph_table.png", arrangeGrob(g1, tbl, nrow = 2, heights = c(3,1)), "png")
+
+```

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>About</title>
+    <meta name="description" content="This is my lab notebook for my undergraduate honors thesis in Dr. Paola Vera-Licona's Computational Systems Medicine Research Group.
+">
+
+    <link rel="stylesheet" href="http://localhost:4000/gastonguay_compsysmed_labnotebook/css/main.css">
+    <link rel="canonical" href="http://localhost:4000/gastonguay_compsysmed_labnotebook/about.html">
+
+<!-- meta robots -->
+    
+     	<meta name="robots" content="noindex" />
+    
+
+<!-- loading fonts -->
+    <!-- Open Sans -->
+    <link href="http://localhost:4000/gastonguay_compsysmed_labnotebook/_assets/open_sans/style.css" rel="stylesheet">
+
+    <!-- own icon font, created via https://icomoon.io/  -->
+    <link href="http://localhost:4000/gastonguay_compsysmed_labnotebook/_assets/lablogIcons/style.css" rel="stylesheet">
+
+    <!-- Ubuntu Mono for code -->
+    <link href="http://localhost:4000/gastonguay_compsysmed_labnotebook/_assets/Ubuntu_Mono/style.css" rel='stylesheet' type='text/css'>
+
+<!-- mathjax.org for math equations -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    imageFont: null,
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]} ,
+    menuSettings: { context: "Browser" }
+    });
+    </script>
+
+    <script type="text/javascript"  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+<!-- highlight.js for code syntax highlighting-->
+<link rel="stylesheet" href="http://localhost:4000/gastonguay_compsysmed_labnotebook/_assets/highlight/styles/github.css">
+<script src="http://localhost:4000/gastonguay_compsysmed_labnotebook/_assets/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!--<link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/default.min.css">
+<script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>-->
+
+
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/gastonguay_compsysmed_labnotebook/index.html">Maddie Gastonguay lab notebook</a>
+
+  <nav  class="main-menu">
+  <input type="checkbox" id="menu" />
+  <label for="menu"></label>
+  <div class="trigger">
+
+    <a class="page-link" href="/gastonguay_compsysmed_labnotebook/index.html"><span style = "font-family: 'lablogIcons';">  &#xe605; </span> Maddie Gastonguay lab notebook</a>
+
+    
+      <a class="page-link" href="/gastonguay_compsysmed_labnotebook/tasks.html"><span style = "font-family: 'lablogIcons';">  &#xf046; </span> Tasks</a>
+    
+
+    
+<a class="page-link" href="/gastonguay_compsysmed_labnotebook/tags.html"><span style = "font-family: 'lablogIcons';">  &#xe600; </span> Tags</a>
+    
+
+    
+      <a class="page-link" href="/gastonguay_compsysmed_labnotebook/archive.html"><span style = "font-family: 'lablogIcons';">  &#xe602; </span> Archive</a>
+    
+
+    <br>
+
+    
+      <a class="page-link" href="/gastonguay_compsysmed_labnotebook/about.html">
+        <span style = "font-family: 'lablogIcons';">  &#xe60a; </span>
+        
+        
+        About
+      </a>
+    
+      <a class="page-link" href="/gastonguay_compsysmed_labnotebook/_projects/project1/project01.html">
+        <span style = "font-family: 'lablogIcons';">  &#xe60a; </span>
+        
+        
+        Preliminary Network For Breast Cancer Reversion
+      </a>
+    
+      <a class="page-link" href="/gastonguay_compsysmed_labnotebook/_projects/project2/project02.html">
+        <span style = "font-family: 'lablogIcons';">  &#xe60a; </span>
+        
+        
+        Cancer Reversion in Claudin Low Triple Negative Breast Cancer
+      </a>
+    
+
+    
+
+    <br>
+
+    
+    <div class="menu-content">
+      
+
+    </div>
+    
+
+    
+
+  </div>
+
+  </nav>
+
+
+  </div>
+
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">About</h1>
+  </header>
+
+  <article class="post-content">
+    <p>This is my lab notebook for my undergraduate honors thesis in Dr. Paola Vera-Licona’s Computational Systems Medicine Research Group at the Center for Quantitative Medicine at UConn Health.</p>
+
+<h2 id="overview-of-contents">Overview of Contents</h2>
+
+<p>In <strong>project1</strong>, we focused on developing a pipeleine for the reconstruction of an intracelular signaling network with multi-omics data. In <strong>project2</strong>, we construct the final intracellular signaling network for MDA-MB-231, using the pipeline refined in project1. Then, we focus on developing a pipeline for network analysis. This includes identifying control targets throufh structure-based attractor-based control methods for non-linear systems, and estimating the system dynamics based on network topology.</p>
+
+<h3 id="functionally-realted-differentially-expressed-genees-fundegs">Functionally Realted Differentially Expressed Genees (FunDEGs)</h3>
+<p>We explored <a href="/gastonguay_compsysmed_labnotebook/_projects/project1/2019/04/08/functionally-related-genes.html">two DEG ranking methods to identifying FunDEGs</a> with BiNOM in Cytoscape. In the first, we ranked the DEGs by ascending FDR before applying BiNOM. In the second method, we ranked the DEGs be descending psuedo z-score and then applied BiNOM. We found that ranking by z-score produced a higher score and larger Largest Connected Component.</p>
+
+<h3 id="methylation-profiles">Methylation Profiles</h3>
+<p>One of the first hurdles of this development was incorporating methylation profiles. The network constructed in <strong>project1</strong> was constructed by <a href="/gastonguay_compsysmed_labnotebook/_projects/project1/2019/04/08/functionally-related-genes.html">removing genes in closed chromatin regions</a> (according to Chip-seq data) from the set of DEGs before identifying the functionally enriched module. This posed a problem because some of the genes in closed chromatin regions had gene expression or protein abundance data. This discrepency is likely due to temporal differences in data collection or growth conditions of the cell line in each experiment. Thus, we concluded that we would not remove DEGs in closed chromatin regions since they are expressed in the cell. Instead, we remove Transcription Factors that are not in open chromatin regions. In <strong>project2</strong>, we used <a href="/gastonguay_compsysmed_labnotebook/_projects/project2/2019/06/20/transcription-factor-analysis.html">bisulfite data</a>instead of Chip-seq data to identify open chromatin regions because we had bisulfite data for all CL TNBC cell lines we were interested in studying.</p>
+
+<h3 id="mutational-profiles">Mutational Profiles</h3>
+<p>We also spent a long time determining how to incorporate mutational profiles in the construction of the signaling network. We used <a href="/gastonguay_compsysmed_labnotebook/_projects/project2/2019/07/06/mutated-pathways.html">Ensembl VEP to identify the nature of each mutation in the network</a>. The impact of mutations in regulatory regions of FunDEGs was used to identify <a href="/gastonguay_compsysmed_labnotebook/_projects/project2/2019/06/20/transcription-factor-analysis.html">increase or decrease of binding affinity for TFs</a>. Gain-of-function mutations were <a href="/gastonguay_compsysmed_labnotebook/_projects/project2/2019/07/06/mutated-pathways.html">literature searched</a> and pathways affected by them were added to the network manually. Genes with nonsense mutations were removed from the network. <a href="/gastonguay_compsysmed_labnotebook/_projects/project2/2019/07/07/ReKINect.html">ReKINect</a> was used to determine the effect of mutations in kinase pathways on signaling pathways in the network. We spent a breif amount of time exploring <a href="https://www.cell.com/cell-systems/pdf/S2405-4712(19)30154-1.pdf">CHASMplus</a>, a software to identify driver mutations, but decided we would rather consider the effect of all network mutations and not jsut “driver” mutations.</p>
+
+<h3 id="proteomics-data">Proteomics Data</h3>
+<p>Quantitative Mass Spec data provided the average intensity of each protein in MDA-MB-231. This data was used as context and weighting when searching for <a href="/gastonguay_compsysmed_labnotebook/_projects/project2/2019/06/21/upstream-regulator-search.html">upstream regulators</a> of Transcription Factors in GeneXplain. I was also curious if proteomics data could be used for network construction the same way that we us gene expression so I did a brief exploration of identifying a set of <a href="/gastonguay_compsysmed_labnotebook/_projects/project1/2019/05/06/functionally-related-proteins.html">functionally related proteins</a> with BiNOM and the HPRD in cytoscape. I found that there was no overlap between the module of functionally enriched proteins and the module of functionally enriched genes. The module of funtionally enriched genes contained more CL TNBC relavant genes.</p>
+
+<h3 id="identifying-control-targets">Identifying Control Targets</h3>
+<p>Nodes whose override can steer the network towards any naturally occuring attractor were identified via Feedback Vertex Set Control implemented in OCSANA+. The anlayses were only run on the FVS set, and perturbations of source nodes should be explored in future studies.</p>
+
+<h3 id="estimation-of-attractor-landscape">Estimation of Attractor Landscape</h3>
+<p>In earlier drafts of our pipeline, we estimated the <a href="/gastonguay_compsysmed_labnotebook/_projects/project2/2019/07/19/attractor-clustering.html">attractor landscape</a> of the network using Signal Flow Analysis (SFA). 100,000 random initial network states (consisting of -1, 0, or 1) were generated and the resultant attractors were estimated with SFA. Then, unspervised k-means clustering was used to group random attractors and associate them to phenotypes. An in-depth analysis of this methodology applied to a well characterized network for T-LGL Leukemia (our <a href="/gastonguay_compsysmed_labnotebook/_projects/project2/2020/01/28/SFA-exploration.html">SFA exploration</a>) reveled that k-means clustering may not group randomly generated attractors with similar expression of phenotypic markers together. Thus, we abandoned this step until it can be refined in future analyses.</p>
+
+<h3 id="virtual-screenings">Virtual Screenings</h3>
+<p>We randomly generated perturbations of FVS nodes, applied them to initial conditions of the MDA-MB-231 experimental data, and simulated the resultant attractors with SFA. At first, we did this with discretized initial values of MDA-MB-231. Knock-in perturbations were initialzed to 1, knock-outs were intialized to -1, and no change was initialized to 0. After the SFA exploration, we realized that we should fix FVS node states instead of just initializing them to better simulate the biological meaning of a knock-in and knock-out perturbation. Thus, we <a href="https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/tree/dev/_projects/project2/sfa-0.0.1-py3.6.egg">altered the SFA algorithm</a> so that we could override the state of each FVS node at each time step when run iteratively, and ran <a href="/gastonguay_compsysmed_labnotebook/_projects/project2/2020/03/29/NetworkAnlysis3.html">virtual screenings</a>. After further reading about previous applications of SFA, we decideed that we should <a href="/gastonguay_compsysmed_labnotebook/_projects/project2/2020/04/01/SFA-initiliazations.html">initialize with continuous normalized RNAseq expression values instead of the discrete versions</a>. In this framework, knock-out perturbations were simulated by fixing the FVS node to 0 and no changes were left untouched. Naturally, the next question was what value knock-ins should be simualted as. We did not want to pick one knock-in value for all FVS nodes because a value that may be highly overexpressed for one gene my not be very overexpressed for another depending on their baseline expression levels. Thus, we explored <a href="/gastonguay_compsysmed_labnotebook/_projects/project2/2020/04/05/NetworkAnlysis-final.html">simulating knock-in perturbations several different ways</a> and finally decided they should be simulated as 2 times the mean expression value of the FVS node in the four MDA-MB-231 replicates. When running virtual screenings, we first set the inital condition for the cancerous attractor as the mean expression value for the four MDA-MB-231 replicates. We realized that we could have replicated virtual screenings if we kept the experimental replicates as separate initial conditions and applied the same perturbations to each of them, so we now <a href="/gastonguay_compsysmed_labnotebook/_projects/project2/2020/04/05/NetworkAnlysis-final.html">apply the same perturbations to all replciated of the undesired phenotype</a>.</p>
+
+<h3 id="classifying-results-of-virtual-screenings">Classifying Results of Virtual Screenings</h3>
+<p>The output of Virtual Screenings is a dataframe of 100,000 attractors estimated by SFA from the perturbations to MDA-MB-231. These attractors need to be associated to a phenotype to identify perturbations that trigger a shift to the normal phenotype. Our first attempt to do this was to identify readout nodes (RONs) as markers of the phenotype. If the DAC between the RONa of an attractor resulting from a perturabtions and the cancerous reference attractor matched the DAC between the RONs of the normal and cancerous reference attractors, we considered it successful. However, this method does not take into consideration the attractor as a whole. Thus, we decided to use the attractor landscape to classify virtual screening results. k-nearest neighbors calssifier was applied to the virtual screening results with the clustered attractor landscape as the training set. Perturbations resulting in attractors classified in the normal-like cluster (the cluster with reference attractors of MCF10A) were deemed successful. However, our SFA exploration showed that this may not be classifying attractors representing the same phenotype together. In the end, we just used the <a href="/gastonguay_compsysmed_labnotebook/_projects/project2/2020/04/05/NetworkAnlysis-final.html">reference attractors estimated from RNAseq data for the experimental replicates as the training set</a> instead of the whole attractor landscape. Perturbations were deemed successful if they resulted in an attractor classified in the normal-like cluster when applied to all four initial conditions of MDA-MB-231.</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Maddie Gastonguay lab notebook</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Maddie Gastonguay lab notebook</li>
+          <li><a href="mailto:madeleine.gastonguay@uconn.edu">madeleine.gastonguay@uconn.edu</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/MadeleineGastonguay">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="$grey-color-light" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">MadeleineGastonguay</span>
+            </a>
+          </li>
+          
+
+          
+
+
+<li>
+  <a href="/gastonguay_compsysmed_labnotebook/feed.xml">
+    <span class="icon icon-feed">
+      <svg viewBox="0 0 16 16">
+      <circle cx="3" cy="13" r="2" fill="$grey-color-light" />
+        <path fill="$grey-color-light" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M8.5,14.5"/>
+        <path fill="$grey-color-light"  d="M8.708,15c-0.552,0-1-0.447-1-1c0-3.147-2.561-5.708-5.708-5.708c-0.552,0-1-0.448-1-1s0.448-1,1-1
+          c4.25,0,7.708,3.458,7.708,7.708C9.708,14.553,9.261,15,8.708,15L8.708,15z"/>
+        <path fill="$grey-color-light"  d="M13.469,14.999c-0.553,0-1-0.447-1-1C12.469,8.227,7.772,3.531,2,3.531c-0.552,0-1-0.448-1-1s0.448-1,1-1
+          c6.875,0,12.469,5.593,12.469,12.468C14.469,14.552,14.021,14.999,13.469,14.999L13.469,14.999z"/>
+      </svg>
+    </span>
+    <span class="feed"> RSS feed </span>
+  </a>
+</li>
+
+
+
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">This is my lab notebook for my undergraduate honors thesis in Dr. Paola Vera-Licona's Computational Systems Medicine Research Group.
+</p>
+
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0;" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+
+      <p class="text"><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Maddie Gastonguay lab notebook</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://localhost:4000" property="cc:attributionName" rel="cc:attributionURL">Maddie Gastonguay</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

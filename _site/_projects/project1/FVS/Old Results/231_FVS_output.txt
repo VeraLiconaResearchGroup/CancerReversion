@@ -1,0 +1,6 @@
+['GTF2I', 'JUN', 'TCF7L2', 'CSNK2B', 'MYC', 'EP300', 'RELA']
+['JUN', 'CSNK2B', 'GSK3B', 'MYC', 'EP300', 'RELA']
+['JUN', 'TCF7L2', 'AKT', 'CSNK2B', 'MYC', 'GTF2I', 'RELA']
+['JUN', 'TCF7L2', 'CSNK2B', 'MYC', 'EP300', 'RELA']
+['MYC', 'JUN', 'RELA', 'CSNK2B', 'AKT']
+['RELA', 'JUN', 'TCF7L2', 'AKT', 'MYC', 'CSNK2B']

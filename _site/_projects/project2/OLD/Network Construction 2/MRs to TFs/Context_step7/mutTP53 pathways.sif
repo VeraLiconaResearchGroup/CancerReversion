@@ -1,0 +1,15 @@
+WNT5A	activates	RHOA
+TP63	inactivates	WNT5A
+TP63	activates	CCNG2
+SMAD2	activates	TP53:SMAD2
+TP53:SMAD2	inactivates	TP63
+VDR	activates	WNT
+FDPS	activates	RHOA
+MVD	activates	FDPS
+PMVK	activates	MVD
+MVK	activates	PMVK
+HMGCR	activates	MVK
+SREBF2	activates	HMGCR
+TP53	activates	TP53:SMAD2
+TP53	activates	VDR
+TP53	activates	SREBF2

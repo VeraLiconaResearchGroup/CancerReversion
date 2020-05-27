@@ -1,0 +1,64 @@
+<style type="text/css">
+.main-container {
+  max-width: 1350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+```{r read in files}
+library(tidyverse)
+library(BoolNet)
+library(Matrix)
+# setwd("C:/Users/marazzi/Google Drive/ALS_IPS/zanudo2015")
+network <- loadNetwork("zanudo_boolean.bn")
+
+```
+
+# Gerenate Random Initial States all with il15 and stimuli on, all other source nodes off
+```{r}
+states <- read.table("initial_states.txt", row.names = 1, header = TRUE) %>%t() %>%as.data.frame() # Dataframe without fixed values
+states2 <- states # Dataframe with fixed values
+states2[c("il15", "stimuli"),] <- 1
+
+```
+
+
+# Chosen with il15 and stimuli ON
+```{r random initial state}
+
+attr0<-getAttractors(network, type="synchronous",method="chosen", startStates=states2,returnTable = TRUE)
+sink(file="100000_il15_stim_ON.txt",type="output")
+attr0
+sink(file=NULL)
+
+```
+
+# Chosen with il15 and stimuli ON, other source nodes OFF
+```{r}
+states2[c("stimuli2", "cd45", "tax", "pdgf"),] <- 0
+attr1<-getAttractors(network, type="synchronous",method="chosen", startStates=states2,returnTable = TRUE)
+sink(file="100000_il15_stim_ON_s2_cd45_tax_pdgf_OFF.txt",type="output")
+attr1
+sink(file=NULL)
+```
+
+
+```{r}
+attr3<-getAttractors(network, type="synchronous",method="chosen", startStates=states,returnTable = TRUE)
+sink(file="100000.txt",type="output")
+attr3
+sink(file=NULL)
+```
+
+
+
+
+
+
+

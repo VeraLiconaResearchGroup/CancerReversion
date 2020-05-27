@@ -1,0 +1,7 @@
+ID	Gene symbol ID	Expr Log Ratio	Molecule Type	Predicted Activation State	p-value of overlap	Target molecules in dataset	Mechanistic Network
+ENSG00000100811	YY1		transcription regulator		0.00742	BRCA1	
+ENSG00000101412	E2F1		transcription regulator		0.00111	CDC20,CDK1	
+ENSG00000116016	EPAS1		transcription regulator		0.0365	EGFR	
+ENSG00000134954	ETS1		transcription regulator		7.97E-4	FN1,PML,SCAMP1	
+ENSG00000213523	SRA1		transcription regulator		0.0221	CAV1	
+ENSG00000221869	CEBPD		transcription regulator		0.0148	CDC27	
