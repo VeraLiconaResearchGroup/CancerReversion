@@ -8,7 +8,7 @@ baseurl: "/gastonguay_compsysmed_labnotebook" # the subpath of your site, e.g. /
 url: "" # the base hostname & protocol for your site
 include: [ _assets , _projects ]
 
-name : Maddie Gastonguay
+name : Madeleine Gastonguay
 email : madeleine.gastonguay@uconn.edu
 github_username: VeraLiconaResearchGroup
 
