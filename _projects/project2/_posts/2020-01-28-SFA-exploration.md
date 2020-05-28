@@ -14,4 +14,4 @@ The purpose of this exploration was to identify the limitations and appropriate 
 ## Conclusions
 We found that SFA can accurately associate attractors to phenotypes by computing the DAC between attractors from different conditions when simulated with fixed nodes. Thus, we expect it to be able to predict effect of perturbations of the FVS nodes on the long-term behavior of the network with reasonably good accuracy. We also concluded that SFA cannot be used the way we are currently using it to estimate the attractor landscape of the network. Further work will be done by Lauren to determine if there are modifications to its application that can produce more biologically relevant attractors. 
 
-**See more details in the [writeup](https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project2/Writing/SFA_exploration.pdf)**
+**See more details in the [writeup](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Writing/SFA_exploration.pdf)**

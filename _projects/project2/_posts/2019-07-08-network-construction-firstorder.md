@@ -13,7 +13,7 @@ tags:
 Assemble the network in Cytoscape!
 
 ## MRs to TFs    
-See [Upstream Rgulator Search]({{ site.baseurl }}{% post_url 2019-07-02-upstream-regulator-search-FOC %}) for more details about the pathways between the MRs and TFs. After running these workflows at different step sizes, the smallest size that produced MRs covering all 9 TFs was a step size of 9. These MRs were filtered for a **p-value < 0.05**, **Z-score > 1.5**, and by protein data, leaving us with [50](https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project2/Network_Components/MRs/MRs%20expressed%20(prtn%20only)%20Genes%20Ensembl.txt) MRs.
+See [Upstream Rgulator Search]({{ site.baseurl }}{% post_url 2019-07-02-upstream-regulator-search-FOC %}) for more details about the pathways between the MRs and TFs. After running these workflows at different step sizes, the smallest size that produced MRs covering all 9 TFs was a step size of 9. These MRs were filtered for a **p-value < 0.05**, **Z-score > 1.5**, and by protein data, leaving us with [50](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Components/MRs/MRs%20expressed%20(prtn%20only)%20Genes%20Ensembl.txt) MRs.
 
 ## TFs to FunDEGs  
 

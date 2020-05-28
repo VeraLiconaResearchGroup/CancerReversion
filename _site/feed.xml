@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/gastonguay_compsysmed_labnotebook/</link>
     <atom:link href="http://localhost:4000/gastonguay_compsysmed_labnotebook/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 27 May 2020 17:24:28 -0400</pubDate>
-    <lastBuildDate>Wed, 27 May 2020 17:24:28 -0400</lastBuildDate>
+    <pubDate>Thu, 28 May 2020 15:17:47 -0400</pubDate>
+    <lastBuildDate>Thu, 28 May 2020 15:17:47 -0400</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -138,7 +138,7 @@ table {
 
 &lt;p&gt;&lt;img src=&quot;/gastonguay_compsysmed_labnotebook\_assets\images_proj2\dist_sd.png&quot; alt=&quot;mean + 3sd&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Since using the &lt;a href=&quot;https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project2/Network_Analysis/virtual_screening/perturbation_level_sd.txt&quot;&gt;mean + 3*sd&lt;/a&gt; of the activity level of the SFA nodes did not provide enough of an increase in activity level, we explored multiplying the mean expression of each node by a factor. Intuitively, a knock-in of a gene resulting in an additionally copy of it would correlate to 2 times the amount of mRNA. However, after a brief literature search, we found that this is &lt;a href=&quot;https://febs.onlinelibrary.wiley.com/doi/pdf/10.1016/j.molonc.2013.02.018&quot;&gt;not the case for all genes&lt;/a&gt;. There may be a point at which the machinery required for transcrption of a gene is exhausted, resulting in less than a 2 fold increase in activity levels. Therefore, we tested setting knock-in basal values to both &lt;a href=&quot;https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project2/Network_Analysis/virtual_screening/perturbation_level_factor1.5.txt&quot;&gt;1.5 times the mean&lt;/a&gt; and &lt;a href=&quot;https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project2/Network_Analysis/virtual_screening/perturbation_level_factor2.txt&quot;&gt;2 times the mean&lt;/a&gt;. The plots below show the distribution of expression values of all network nodes for both the MDAMB231 and MCF10A experimental replicates. Red x’s mark the value of knock-in expression for the FVS nodes.&lt;/p&gt;
+&lt;p&gt;Since using the &lt;a href=&quot;https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Analysis/virtual_screening/perturbation_level_sd.txt&quot;&gt;mean + 3*sd&lt;/a&gt; of the activity level of the SFA nodes did not provide enough of an increase in activity level, we explored multiplying the mean expression of each node by a factor. Intuitively, a knock-in of a gene resulting in an additionally copy of it would correlate to 2 times the amount of mRNA. However, after a brief literature search, we found that this is &lt;a href=&quot;https://febs.onlinelibrary.wiley.com/doi/pdf/10.1016/j.molonc.2013.02.018&quot;&gt;not the case for all genes&lt;/a&gt;. There may be a point at which the machinery required for transcrption of a gene is exhausted, resulting in less than a 2 fold increase in activity levels. Therefore, we tested setting knock-in basal values to both &lt;a href=&quot;https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Analysis/virtual_screening/perturbation_level_factor1.5.txt&quot;&gt;1.5 times the mean&lt;/a&gt; and &lt;a href=&quot;https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Analysis/virtual_screening/perturbation_level_factor2.txt&quot;&gt;2 times the mean&lt;/a&gt;. The plots below show the distribution of expression values of all network nodes for both the MDAMB231 and MCF10A experimental replicates. Red x’s mark the value of knock-in expression for the FVS nodes.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -1937,7 +1937,7 @@ Dataset: **Both discrete**
 
 &lt;h1 id=&quot;select-normal-perturbations&quot;&gt;Select normal perturbations&lt;/h1&gt;
 
-&lt;p&gt;Using 3 nearest neihgbors and the combination of logss and DAC dataset, there are &lt;a href=&quot;https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project2/Network_Analysis/virtual_screening/successful_perturbations.txt&quot;&gt;157 perturbations&lt;/a&gt; causing a shift to normal from all 4 replicates. All of these perturbations also triggered a shift to normal in the DAC dataset, and all but one (Perturb_079281) triggered the shift in the logss dataset.&lt;/p&gt;
+&lt;p&gt;Using 3 nearest neihgbors and the combination of logss and DAC dataset, there are &lt;a href=&quot;https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Analysis/virtual_screening/successful_perturbations.txt&quot;&gt;157 perturbations&lt;/a&gt; causing a shift to normal from all 4 replicates. All of these perturbations also triggered a shift to normal in the DAC dataset, and all but one (Perturb_079281) triggered the shift in the logss dataset.&lt;/p&gt;
 
 &lt;!---
 both but not logss: Perturb_079281
@@ -3788,7 +3788,7 @@ pvalue=0.6178509&lt;/p&gt;
 &lt;h2 id=&quot;conclusions&quot;&gt;Conclusions&lt;/h2&gt;
 &lt;p&gt;We found that SFA can accurately associate attractors to phenotypes by computing the DAC between attractors from different conditions when simulated with fixed nodes. Thus, we expect it to be able to predict effect of perturbations of the FVS nodes on the long-term behavior of the network with reasonably good accuracy. We also concluded that SFA cannot be used the way we are currently using it to estimate the attractor landscape of the network. Further work will be done by Lauren to determine if there are modifications to its application that can produce more biologically relevant attractors.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;See more details in the &lt;a href=&quot;https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project2/Writing/SFA_exploration.pdf&quot;&gt;writeup&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;See more details in the &lt;a href=&quot;https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Writing/SFA_exploration.pdf&quot;&gt;writeup&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 28 Jan 2020 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/gastonguay_compsysmed_labnotebook/_projects/project2/2020/01/28/SFA-exploration.html</link>
@@ -3851,7 +3851,7 @@ pvalue=0.6178509&lt;/p&gt;
   &lt;li&gt;Compared the final SFA attractor as discretized all the qualifying methods from above to the BoolNet attractor and found approximately 60% accuracy.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;more detail &lt;a href=&quot;https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project2/Writing/SFA_exploration.pdf&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;more detail &lt;a href=&quot;https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Writing/SFA_exploration.pdf&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 20 Dec 2019 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/gastonguay_compsysmed_labnotebook/_projects/project2/2019/12/20/SFA-test.html</link>
@@ -4401,7 +4401,7 @@ Cell Survival:
   &lt;li&gt;CCNG2 (EMT)&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;The other nodes were excluded because their observed expression in both our attractor states and our differential expression data were opposite of what would be predicted based on literature, or because they would not be good readout nodes. Literature evidence is found &lt;a href=&quot;https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project2/OLD/NetworkAnalysis%201/SFA_2/candidateRONs.xlsx&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The other nodes were excluded because their observed expression in both our attractor states and our differential expression data were opposite of what would be predicted based on literature, or because they would not be good readout nodes. Literature evidence is found &lt;a href=&quot;https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/OLD/NetworkAnalysis%201/SFA_2/candidateRONs.xlsx&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;!---
 CTNNB1 should be up but it's down  

@@ -164,13 +164,13 @@
 
 <h2 id="filtering-expressed-genes">Filtering Expressed Genes</h2>
 <p><a href="https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-018-4533-0">RNA-seq data</a> was used to calculate <a href="https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/tree/dev/_projects/project2/Differential_Expression">differential gene expression</a> between our Claudin Low cell line of interest, MDA-MB-231, and our control normal-like breast cell line, MCF10A.<br />
-We are using the list of unfiltered DEGs as the list of all <a href="https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project2/Network%20Components/FunDEGs/FunDEGs_rankDEGs_zscore_12359">12359 expressed genes</a> in MDA-MB-231 because if they have a calculated fold change, they had enough reads to be considered expressed.</p>
+We are using the list of unfiltered DEGs as the list of all <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network%20Components/FunDEGs/FunDEGs_rankDEGs_zscore_12359">12359 expressed genes</a> in MDA-MB-231 because if they have a calculated fold change, they had enough reads to be considered expressed.</p>
 
 <p>Filtering via CNV loss data from <a href="https://cansar.icr.ac.uk/cansar/cell-lines/MDA-MB-231/copy_number_variation/loss/">canSAR</a> webpage. If the gene is listed as having a CNV loss, we removed it from the list of genes.</p>
 
 <p>However, we found that the list of expressed genes didn’t include any genes with CNV loss because list of genes in CNloss file are either not in the raw data, or have zeros for all runs.</p>
 <ul>
-  <li>ex: DAZ, USP9Y, IFNA5 have zeros for all 8 reads in <a href="https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project2/Network_Components/data2.csv">raw data.</a></li>
+  <li>ex: DAZ, USP9Y, IFNA5 have zeros for all 8 reads in <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Components/data2.csv">raw data.</a></li>
 </ul>
 
 <div style="text-align:center">
@@ -180,7 +180,7 @@ We are using the list of unfiltered DEGs as the list of all <a href="https://git
 </div>
 
 <h2 id="calculating-z-scores">Calculating z-scores</h2>
-<p>After filtering the list of expressed genes for <strong>FDR&lt;0.05</strong> and <strong>P-value&lt;0.001</strong>, we ranked the remaining 4652 genes from <a href="https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project2/Network_Components/FunDEGs_ranked_Zscore/FunDEGs_rankDEGs_zscore_pvalFDR_4652">highest to lowest z-score</a>.</p>
+<p>After filtering the list of expressed genes for <strong>FDR&lt;0.05</strong> and <strong>P-value&lt;0.001</strong>, we ranked the remaining 4652 genes from <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Components/FunDEGs_ranked_Zscore/FunDEGs_rankDEGs_zscore_pvalFDR_4652">highest to lowest z-score</a>.</p>
 
 <p>The Z-score was calculated according to the equation below where $e_{ca}$ is the average expression of a gene in the cancerous cell line, $\mu_N$ is the average expression of the same gene in the normal cell line, and $\sigma_N$ is the standard deviation of the 4 gene expression measurements in the normal cell line. The absolute value of the Z-score was used when ranking lists.</p>
 
@@ -227,11 +227,11 @@ We are using the list of unfiltered DEGs as the list of all <a href="https://git
 
 <p><strong>Conclusions:</strong> Use the First 650 DEGs ranked by z-score to identify the set of First Order FunDEGs because the score is higher and the largest connected component is larger.</p>
 
-<p>There are 4 house keeping genes in the largest connected component created by this analysis. One of these is VIM, which is an important marker of EMT in claudin low TNBC, so we removed all HKG but VIM, resulting in a final <a href="https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project2/Network_Components/FunDEGs_ranked_Zscore/FunDEGs_FOC_LCC_noHKG_80">First Order FunDEG LCC</a> of 80 genes.</p>
+<p>There are 4 house keeping genes in the largest connected component created by this analysis. One of these is VIM, which is an important marker of EMT in claudin low TNBC, so we removed all HKG but VIM, resulting in a final <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Components/FunDEGs_ranked_Zscore/FunDEGs_FOC_LCC_noHKG_80">First Order FunDEG LCC</a> of 80 genes.</p>
 
 <h2 id="second-order-connectivity">Second Order Connectivity</h2>
 
-<p>We then ran second order connectivity analysis from BiNOM on the set of First Order FunDEGs. This produced a SOC set of 378 genes that was reduced to a LCC of <a href="https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project2/Network_Components/FunDEGs_ranked_Zscore/FunDEGs_SOC_exprnoHKG_316.txt">316</a> genes after removing house keeping genes and those genes without protein OR gene data.</p>
+<p>We then ran second order connectivity analysis from BiNOM on the set of First Order FunDEGs. This produced a SOC set of 378 genes that was reduced to a LCC of <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Components/FunDEGs_ranked_Zscore/FunDEGs_SOC_exprnoHKG_316.txt">316</a> genes after removing house keeping genes and those genes without protein OR gene data.</p>
 
 <h2 id="weighted-sums">Weighted Sums</h2>
 
@@ -239,9 +239,9 @@ We are using the list of unfiltered DEGs as the list of all <a href="https://git
 
 <p>When calculating weighted sums, we will compare the list of differentially expressed genes, first order connectivity largest component, and second order connectivity largest component to the following three lists:</p>
 <ol>
-  <li><a href="https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project2/Network_Components/breast_DO.txt">Breast Cancer Disease Ontology</a> genes associated to breast cancer DO term from <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2687947/">DOLite</a> in <a href="http://www.bioconductor.org/packages/2.5/bioc/html/GeneAnswers.html">GeneAnswers</a> R package</li>
-  <li>Only the genes from list 2 associated with <a href="https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project2/Network_Components/EMT_innateimmune.txt">EMT and innate immune reseponse</a> as these hallmarks are claudin-low specific</li>
-  <li><a href="https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project2/Network_Components/CL_genes.txt">CL specific genes</a> as identified in <a href="http://cancerres.aacrjournals.org/content/77/9/2213">literature</a></li>
+  <li><a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Components/breast_DO.txt">Breast Cancer Disease Ontology</a> genes associated to breast cancer DO term from <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2687947/">DOLite</a> in <a href="http://www.bioconductor.org/packages/2.5/bioc/html/GeneAnswers.html">GeneAnswers</a> R package</li>
+  <li>Only the genes from list 2 associated with <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Components/EMT_innateimmune.txt">EMT and innate immune reseponse</a> as these hallmarks are claudin-low specific</li>
+  <li><a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Components/CL_genes.txt">CL specific genes</a> as identified in <a href="http://cancerres.aacrjournals.org/content/77/9/2213">literature</a></li>
 </ol>
 
 <h3 id="calculating-weighted-sums">Calculating Weighted Sums</h3>
@@ -273,7 +273,7 @@ g1 &lt;- ggplot(data= weightedsums, aes(x = gene_set, y =sum)) +
 
 <p>Clearly, the set of SOC genes has the highest weighted sum. The claudin-low related genes in this list are CAV1, CDC20, DSP, ERBB2, KRT8, PTTG1, and VIM. It is interesting to notice that FOXA1 and GATA3 are not in the SOC or FOC set but are in the list of DEGs.</p>
 
-<p><strong>Conclusion:</strong> Run TRANSFAC and TF analysis in IPA with the <a href="https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project2/Network_Components/FunDEGs_ranked_Zscore/FunDEGs_SOC_exprnoHKG_316.txt">SOC</a> list of 316 genes because it has the highest wieghted sums.</p>
+<p><strong>Conclusion:</strong> Run TRANSFAC and TF analysis in IPA with the <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Components/FunDEGs_ranked_Zscore/FunDEGs_SOC_exprnoHKG_316.txt">SOC</a> list of 316 genes because it has the highest wieghted sums.</p>
 
   </article>
 

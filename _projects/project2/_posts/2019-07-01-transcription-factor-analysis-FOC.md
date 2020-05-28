@@ -26,5 +26,5 @@ After taking the intersection between the expressed TFs in unmethylated regions 
 
 ![weighted sums]({{ site.baseurl }}\_assets\images_proj2\TFs_weightedsums_graph_table_FOC.png)
 
-Surprisingly, 4 of the 5 lists of TFs have the same weighted sum. I decided to move forward with the intersection with the list from promotor window size of [500](https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project2/Network_Components/TFs/FirstOrder_FunDEG_analysis/TFs_APIPA_0500.csv) because it includes the most TFs and therefore the most CL TNBC related TFs.
+Surprisingly, 4 of the 5 lists of TFs have the same weighted sum. I decided to move forward with the intersection with the list from promotor window size of [500](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Components/TFs/FirstOrder_FunDEG_analysis/TFs_APIPA_0500.csv) because it includes the most TFs and therefore the most CL TNBC related TFs.
 

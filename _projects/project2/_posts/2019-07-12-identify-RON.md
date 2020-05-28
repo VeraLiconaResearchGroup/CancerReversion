@@ -98,7 +98,7 @@ Cell Survival:
 4. FYN (EMT)
 5. CCNG2 (EMT)
 
-The other nodes were excluded because their observed expression in both our attractor states and our differential expression data were opposite of what would be predicted based on literature, or because they would not be good readout nodes. Literature evidence is found [here](https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project2/OLD/NetworkAnalysis%201/SFA_2/candidateRONs.xlsx).
+The other nodes were excluded because their observed expression in both our attractor states and our differential expression data were opposite of what would be predicted based on literature, or because they would not be good readout nodes. Literature evidence is found [here](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/OLD/NetworkAnalysis%201/SFA_2/candidateRONs.xlsx).
 
 <!---
 CTNNB1 should be up but it's down  

@@ -48,6 +48,6 @@ Removing it would make DUSP4 a source node. (DUSP4 activates MAPK1)
 
 The only one of these mutations that is nonsense is TAB2, which is a master regulator regulating MAP3K7. Removing it will not create a source node.
 
-The LRRK2 mutation was included in the [ReKINect output](https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project2/Mutations/VEP_runs/ReKINectOutput.txt) from the last time I constructed the network. However, it doesn't hit a phosphorylation site or domain, and there is no literature regarding the mutatio nn's effect so I cannot determine it's function.
+The LRRK2 mutation was included in the [ReKINect output](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Mutations/VEP_runs/ReKINectOutput.txt) from the last time I constructed the network. However, it doesn't hit a phosphorylation site or domain, and there is no literature regarding the mutatio nn's effect so I cannot determine it's function.
 
 I then moved forward to [network construction]({{ site.baseurl }}{% post_url 2019-07-08-network-construction-firstorder %}) with this new MR to TF network.
