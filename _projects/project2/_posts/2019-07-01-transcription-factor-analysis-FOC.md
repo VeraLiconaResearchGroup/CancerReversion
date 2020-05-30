@@ -8,7 +8,7 @@ tags:
  - static_network
 ---
 # Overview
-After [constructing the network]({{ site.baseurl }}{% post_url 2019-06-26-network-construction %}) based on the 316 Second Order FunDEGs, I faced issues in finding edges between TFs and SOC genes. Specifcially, 244 SOC genes were not covered before using pearson correlation and even after going down to 0.5, I was left with 72 uncovered SOC genes and no way to cover them.   
+After [constructing the network]({{ site.baseurl }}{% link _projects/project2/_posts/2019-06-26-network-construction.md %}) based on the 316 Second Order FunDEGs, I faced issues in finding edges between TFs and SOC genes. Specifcially, 244 SOC genes were not covered before using pearson correlation and even after going down to 0.5, I was left with 72 uncovered SOC genes and no way to cover them.   
 
 I explored the TFs predicted by IPA that were not included in the intersection between IPA and geneXplain's analyze promoters. I looked at the targets of 36 expressed TFs that passed filtering criteria, and found that if they were all included in the network, less than 80 of the 244 uncovered SOC genes would be covered. Therefore, I decided we needed to take a different approach.  
 
@@ -20,7 +20,7 @@ By using the First order FunDEGs, we will lose 102 genes from the hallmarks of c
 
 # Transcription Factor Analysis
 
-I followed the same procedure as last time using both GeneXplain and IPA. 
+I followed the same procedure as [last time]({{ site.baseurl }}{% link _projects/project2/_posts/2019-06-21-transcription-factor-analysis.md %}) using both GeneXplain and IPA. 
 
 After taking the intersection between the expressed TFs in unmethylated regions and the results from IPA all tissues and breast cancer cell lines, I ran weighted sums on the resulting lists.
 

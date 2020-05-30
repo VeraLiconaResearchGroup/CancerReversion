@@ -16,7 +16,8 @@ tags:
 While traditional network construction methods use the most differentially expressed genes as the basis for their network, our approach to building the static network starts with [functionally related genes](https://waset.org/publications/307/categorization-and-estimation-of-relative-connectivity-of-genes-from-meta-often-network). These genes may not necessarily be the *most* differentially expressed in the set (they must be expressed in the cell), but form  a functional core of genes. This poses a problem  because highly differentially expressed genes tend to be downstream of trascription factors and other regulators that may not exhibit large changes in activity. Hence, traditional methods may exclude upstream elements that play an important role in regulation of differentially expressed genes. We will use the Cytoscape plugin BiNOM with the Human Protein Reference Database (HPRD) to identify these functional relationships amoung differentially expressed genes.
 
 ## Filtering Expressed Genes
-[RNA-seq data](https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-018-4533-0) was used to calculate [differential gene expression](https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/tree/dev/_projects/project2/Differential_Expression) between our Claudin Low cell line of interest, MDA-MB-231, and our control normal-like breast cell line, MCF10A.  
+[RNA-seq data](https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-018-4533-0) was used to calculate [differential gene expression](https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/tree/dev/_projects/project2/Differential_Expression) between our Claudin Low cell line of interest, MDA-MB-231, and our control normal-like breast cell line, MCF10A. The raw data was sent to Macrogen for processing and [differential expression analysis](https://github.com/VeraLiconaResearchGroup/CancerReversion/tree/master/_projects/project2/Differential_Expression) using DESeq2.
+
 We are using the list of unfiltered DEGs as the list of all [12359 expressed genes](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network%20Components/FunDEGs/FunDEGs_rankDEGs_zscore_12359) in MDA-MB-231 because if they have a calculated fold change, they had enough reads to be considered expressed.
 
 Filtering via CNV loss data from [canSAR](https://cansar.icr.ac.uk/cansar/cell-lines/MDA-MB-231/copy_number_variation/loss/ ) webpage. If the gene is listed as having a CNV loss, we removed it from the list of genes.
@@ -32,17 +33,19 @@ However, we found that the list of expressed genes didn't include any genes with
 </div>
 
 ## Calculating z-scores
-After filtering the list of expressed genes for **FDR<0.05** and **P-value<0.001**, we ranked the remaining 4652 genes from [highest to lowest z-score](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Components/FunDEGs_ranked_Zscore/FunDEGs_rankDEGs_zscore_pvalFDR_4652).
+After filtering the list of expressed genes for **FDR<0.05** and **P-value<0.001**, we ranked the remaining 4652 genes from [highest to lowest pseudo z-score](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Components/FunDEGs_ranked_Zscore/FunDEGs_rankDEGs_zscore_pvalFDR_4652).
 
-The Z-score was calculated according to the equation below where $e_{ca}$ is the average expression of a gene in the cancerous cell line, $\mu_N$ is the average expression of the same gene in the normal cell line, and $\sigma_N$ is the standard deviation of the 4 gene expression measurements in the normal cell line. The absolute value of the Z-score was used when ranking lists.
+The Z-score was calculated with [`Calculate_Zscore.Rmd`](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Components/FunDEGs_ranked_Zscore/Calculate_Zscore.Rmd), using the equation below. 
 
 <p align="center">
 	$Z = \frac{e_{ca}-\mu_N}{\sigma_N}$
 </p>
 
-This method was taken from [Rathi et al., 2015](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4160810/). The Z-score reflects the cancerous expression level compared to the distribution of normal samples, and is related to the probability that the expression in the tumor is from the same distribution as is in the normal tissue.
+ Where $e_{ca}$ is the average expression of a gene in the cancerous cell line, $\mu_N$ is the average expression of the same gene in the normal cell line, and $\sigma_N$ is the standard deviation of the 4 gene expression measurements in the normal cell line. The absolute value of the Z-score was used when ranking lists.
 
-The R code used to calculate the Z-scores is shown below:
+This method was adapted from [Rathi et al., 2015](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4160810/). The Z-score reflects the cancerous expression level compared to the distribution of normal samples, and is related to the probability that the expression in the tumor is from the same distribution as is in the normal tissue.
+
+<!-- The R code used to calculate the Z-scores is shown below:
 
 ```R
 # Read in expression data for all expressed genes (all DEGs) filtered by CNL
@@ -59,9 +62,9 @@ df1 <- data2
 df1$sd_mcf10a <- df$SD
 df1$zscore <- (df1$MDA_MB.231.mean-df1$MCF10A.mean)/df1$sd_mcf10a
 df1$abs_zscore <- abs(df1$zscore)
-```
+``` -->
 
-## First Order Connectivity
+## First Order Connectivity of DEGs
 
 We ran the First Order Connectivity analysis on the DEGs ranked by z-score using BiNOM. 
 
@@ -82,7 +85,7 @@ The first 700 differentially expressed genes ranked by p-value produces a larges
 
 There are 4 house keeping genes in the largest connected component created by this analysis. One of these is VIM, which is an important marker of EMT in claudin low TNBC, so we removed all HKG but VIM, resulting in a final [First Order FunDEG LCC](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Components/FunDEGs_ranked_Zscore/FunDEGs_FOC_LCC_noHKG_80) of 80 genes.
 
-## Second Order Connectivity
+## Second Order Connectivity of DEGs
 
 We then ran second order connectivity analysis from BiNOM on the set of First Order FunDEGs. This produced a SOC set of 378 genes that was reduced to a LCC of [316](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Components/FunDEGs_ranked_Zscore/FunDEGs_SOC_exprnoHKG_316.txt) genes after removing house keeping genes and those genes without protein OR gene data.
 
@@ -96,7 +99,9 @@ When calculating weighted sums, we will compare the list of differentially expre
 3. [CL specific genes](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Components/CL_genes.txt) as identified in [literature](http://cancerres.aacrjournals.org/content/77/9/2213)
 
 ### Calculating Weighted Sums
-```{r}
+Weighted sums are caluclated using the [`weighted_sums.Rmd`](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Components/FunDEGs_ranked_Zscore/weighted_sums.Rmd) script.
+
+<!-- ```{r}
 weightedsums<-data.frame(gene_set = NA, number_genes = NA, HOC= NA, breastDO= NA, CLgenes=NA, sum=NA)
 class(weightedsums$sum)<-'numeric'
 
@@ -119,7 +124,7 @@ g1 <- ggplot(data= weightedsums, aes(x = gene_set, y =sum)) +
 		geom_bar(stat="identity", aes(fill = gene_set)) +
 		ggtitle("Weighted Sums") + xlab("Gene list") +
 		ylab("Weighted Sum") + theme(legend.position = "none")
-```
+``` -->
 
 ![weighted sums]({{ site.baseurl }}\_assets\images_proj2\weightedsums_plusTABLE.png)
 

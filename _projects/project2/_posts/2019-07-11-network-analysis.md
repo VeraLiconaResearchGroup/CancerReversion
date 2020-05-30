@@ -13,7 +13,7 @@ The objective of Network Analysis is to identify and prioritize putative reversi
 
 # FVS
 
-I ran FVS on both the network constructed with MRs from a step size of 9 and on the network constructed with MRs from a step size of 7. The first network produced several FVS sets, ranging in size from 15 to 17 nodes, while the second produced two FVS sets of 3 nodes each. They are:
+I [ran FVS](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/OLD/NetworkAnalysis%201/FVS_step7/FVS_run.py) on both the network constructed with MRs from a step size of 9 and on the network constructed with MRs from a step size of 7. The first network produced several FVS sets, ranging in size from 15 to 17 nodes, while the second produced two FVS sets of 3 nodes each. They are:
 
 ['EGFR', 'RELA', 'FOXM1']  
 ['PLK1', 'RELA', 'EGFR']

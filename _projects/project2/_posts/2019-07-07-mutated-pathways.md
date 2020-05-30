@@ -22,8 +22,7 @@ Using VEP in GeneXplain, we identified [879 mutations](https://github.com/VeraLi
 
 
 # TP53 mutation
-**R280K**
-[COSMIC](https://cancer.sanger.ac.uk/cosmic/mutation/overview?id=330620#pathway)
+The TP53 mutation in MDA-MB-231 is the well characterized [R280K](https://cancer.sanger.ac.uk/cosmic/mutation/overview?id=330620#pathway) mutation. Below are some pathways it non-canonically activates.
 
 
 ## Mevalonate Pathway
@@ -85,12 +84,12 @@ transcription from promoters containing such elements.
 
 
 # BRAF mutation
-[info](https://ckb.jax.org/geneVariant/show?geneVariantId=1791)
+The BRAF mutation in MDA-MB-231 is a [G464V](https://ckb.jax.org/geneVariant/show?geneVariantId=1791) mutation known to increase the activty of MEK and ERK.
 
 # MKi67 Mutation
 No one knows what it does!
 
-# Characterization
+# Characterization of Claudin-Low TNBC
 
 Ki67, E-cadherin, claudin-3, claudinin-4 and claudinin-7 low
 
@@ -105,7 +104,7 @@ Ki67, E-cadherin, claudin-3, claudinin-4 and claudinin-7 low
   - Not a bad thing because it's supposed to be low expression
 
 ## Claudins
-[source](https://www.sciencedirect.com/science/article/pii/S0005273607004099?via%3Dihub)
+
 - Claudins 1-10 are considered classic claudins because of the similarity of their sequences.
 - May be able to polymerize (hexamers preferred oligomer for Claudin-4, smaller oligomer for Claudin-3)
 -  Rely on scaffolding proteins ZO-1 and ZO-2 (gene names TJP1 and TJP2) for spatial organization of claudin-based strands in epithelial cells, both of which are expressed AND have proteins present but not in network
@@ -118,5 +117,4 @@ Ki67, E-cadherin, claudin-3, claudinin-4 and claudinin-7 low
 - Claudin-4 is a sealing claudin; it selectively decreases the paracellular cation permeability through tight junctions
 - Heterophilic cis interactions for claudins-3 and -4
 
-Check out [this](http://www.jbc.org/content/282/41/30005.full.pdf)
-and [this](https://reader.elsevier.com/reader/sd/pii/S0005273607004099?token=CB209285961D715AD628A1EFC6D1BEA704E327FD704BBEA49A01C77FEC099EB6C4475D71B898527408A6F415DCA96027)
+See: [source 1](https://www.sciencedirect.com/science/article/pii/S0005273607004099?via%3Dihub), [source 2]((https://reader.elsevier.com/reader/sd/pii/S0005273607004099?token=CB209285961D715AD628A1EFC6D1BEA704E327FD704BBEA49A01C77FEC099EB6C4475D71B898527408A6F415DCA96027))

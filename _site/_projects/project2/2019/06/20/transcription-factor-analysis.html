@@ -183,13 +183,13 @@
 
 <p>To further validate the results of transcription factor analysis using geneXplain, we ran a similar analysis using Ingeneuity Pathway Analysis. We first ran the workflow looking at experimental data from breast cancer samples only, which produced 21 TFs with a p-value less than 0.001. But when these 21 TFs were intersected with the geneXplain lists, there were never more than 2 transcription factors in common. So, we ran IPA again using experimental data from all tissues as well as breast cancer samples. This analysis produced 69 TFs with a p-value less than 0.001, and an overlap with the geneXplain lists ranging from 3-7 transcription factors.</p>
 
-<h2 id="intersection-of-ipa-and-genexplain-step-">Intersection of IPA and geneXplain step :</h2>
+<h2 id="weighted-sums-for-intersection-of-ipa-and-genexplain-step">Weighted Sums for Intersection of IPA and geneXplain step</h2>
 
-<p>As mentioned above, we use the intersection of the list of TFs produced by geneXplain and IPA. We computed weighted sums for the geneXplain lists intersected with the IPA list from all tissues plus breast cancer samples. The results are shown below.</p>
+<p>As mentioned above, we use the intersection of the list of TFs produced by geneXplain and IPA. We computed weighted sums for the geneXplain lists intersected with the IPA list from all tissues plus breast cancer samples. The results from the <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Components/TFs/SecondOrder_FunDEG_analysis/weighted_sums_TFs.Rmd"><code class="highlighter-rouge">weighted_sums_TFs.Rmd</code></a> script are shown below.</p>
 
 <p><img src="/gastonguay_compsysmed_labnotebook\_assets\images_proj2\TFs_weightedsums_graph_table.png" alt="TF weighted sums" /></p>
 
-<p>Although the list from a promoter window of size 2000 and 2500 have the same weighted sum and size, they actually have different TFs. We decided to compare the coverage of the intersected lists from a winow size of 500, 2000, and 2500 before chosing a list to move forward with.</p>
+<p>Although the list from a promoter window of size 2000 and 2500 have the same weighted sum and size, they actually have different TFs. We decided to compare the coverage of the intersected lists from a winow size of <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Components/TFs/SecondOrder_FunDEG_analysis/TFs_APIPA_500.csv">500</a>, <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Components/TFs/SecondOrder_FunDEG_analysis/TFs_APIPA_2000.csv">2000</a>, and <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Components/TFs/SecondOrder_FunDEG_analysis/TFs_APIPA_2500.csv">2500</a> before chosing a list to move forward with.</p>
 
 <h2 id="checking-downstream-coverage-of-trasncription-factors">Checking Downstream Coverage of Trasncription Factors</h2>
 

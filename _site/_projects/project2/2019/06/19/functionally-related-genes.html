@@ -163,8 +163,9 @@
 <p>While traditional network construction methods use the most differentially expressed genes as the basis for their network, our approach to building the static network starts with <a href="https://waset.org/publications/307/categorization-and-estimation-of-relative-connectivity-of-genes-from-meta-often-network">functionally related genes</a>. These genes may not necessarily be the <em>most</em> differentially expressed in the set (they must be expressed in the cell), but form  a functional core of genes. This poses a problem  because highly differentially expressed genes tend to be downstream of trascription factors and other regulators that may not exhibit large changes in activity. Hence, traditional methods may exclude upstream elements that play an important role in regulation of differentially expressed genes. We will use the Cytoscape plugin BiNOM with the Human Protein Reference Database (HPRD) to identify these functional relationships amoung differentially expressed genes.</p>
 
 <h2 id="filtering-expressed-genes">Filtering Expressed Genes</h2>
-<p><a href="https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-018-4533-0">RNA-seq data</a> was used to calculate <a href="https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/tree/dev/_projects/project2/Differential_Expression">differential gene expression</a> between our Claudin Low cell line of interest, MDA-MB-231, and our control normal-like breast cell line, MCF10A.<br />
-We are using the list of unfiltered DEGs as the list of all <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network%20Components/FunDEGs/FunDEGs_rankDEGs_zscore_12359">12359 expressed genes</a> in MDA-MB-231 because if they have a calculated fold change, they had enough reads to be considered expressed.</p>
+<p><a href="https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-018-4533-0">RNA-seq data</a> was used to calculate <a href="https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/tree/dev/_projects/project2/Differential_Expression">differential gene expression</a> between our Claudin Low cell line of interest, MDA-MB-231, and our control normal-like breast cell line, MCF10A. The raw data was sent to Macrogen for processing and <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/tree/master/_projects/project2/Differential_Expression">differential expression analysis</a> using DESeq2.</p>
+
+<p>We are using the list of unfiltered DEGs as the list of all <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network%20Components/FunDEGs/FunDEGs_rankDEGs_zscore_12359">12359 expressed genes</a> in MDA-MB-231 because if they have a calculated fold change, they had enough reads to be considered expressed.</p>
 
 <p>Filtering via CNV loss data from <a href="https://cansar.icr.ac.uk/cansar/cell-lines/MDA-MB-231/copy_number_variation/loss/">canSAR</a> webpage. If the gene is listed as having a CNV loss, we removed it from the list of genes.</p>
 
@@ -180,35 +181,38 @@ We are using the list of unfiltered DEGs as the list of all <a href="https://git
 </div>
 
 <h2 id="calculating-z-scores">Calculating z-scores</h2>
-<p>After filtering the list of expressed genes for <strong>FDR&lt;0.05</strong> and <strong>P-value&lt;0.001</strong>, we ranked the remaining 4652 genes from <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Components/FunDEGs_ranked_Zscore/FunDEGs_rankDEGs_zscore_pvalFDR_4652">highest to lowest z-score</a>.</p>
+<p>After filtering the list of expressed genes for <strong>FDR&lt;0.05</strong> and <strong>P-value&lt;0.001</strong>, we ranked the remaining 4652 genes from <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Components/FunDEGs_ranked_Zscore/FunDEGs_rankDEGs_zscore_pvalFDR_4652">highest to lowest pseudo z-score</a>.</p>
 
-<p>The Z-score was calculated according to the equation below where $e_{ca}$ is the average expression of a gene in the cancerous cell line, $\mu_N$ is the average expression of the same gene in the normal cell line, and $\sigma_N$ is the standard deviation of the 4 gene expression measurements in the normal cell line. The absolute value of the Z-score was used when ranking lists.</p>
+<p>The Z-score was calculated with <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Components/FunDEGs_ranked_Zscore/Calculate_Zscore.Rmd"><code class="highlighter-rouge">Calculate_Zscore.Rmd</code></a>, using the equation below.</p>
 
 <p align="center">
 	$Z = \frac{e_{ca}-\mu_N}{\sigma_N}$
 </p>
 
-<p>This method was taken from <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4160810/">Rathi et al., 2015</a>. The Z-score reflects the cancerous expression level compared to the distribution of normal samples, and is related to the probability that the expression in the tumor is from the same distribution as is in the normal tissue.</p>
+<p>Where $e_{ca}$ is the average expression of a gene in the cancerous cell line, $\mu_N$ is the average expression of the same gene in the normal cell line, and $\sigma_N$ is the standard deviation of the 4 gene expression measurements in the normal cell line. The absolute value of the Z-score was used when ranking lists.</p>
 
-<p>The R code used to calculate the Z-scores is shown below:</p>
+<p>This method was adapted from <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4160810/">Rathi et al., 2015</a>. The Z-score reflects the cancerous expression level compared to the distribution of normal samples, and is related to the probability that the expression in the tumor is from the same distribution as is in the normal tissue.</p>
 
-<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Read in expression data for all expressed genes (all DEGs) filtered by CNL</span><span class="w">
-</span><span class="c1">## Note: In this case, none of our genes had CNL</span><span class="w">
-</span><span class="n">data2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read.csv</span><span class="p">(</span><span class="s2">"data2.csv"</span><span class="p">)</span><span class="w">
+<!-- The R code used to calculate the Z-scores is shown below:
 
-</span><span class="c1">#Create data table with only normalized data for MCF10a</span><span class="w">
-</span><span class="n">df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data2</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">select</span><span class="p">(</span><span class="n">Gene_Symbol</span><span class="p">,</span><span class="w"> </span><span class="n">N_MCF10A_1</span><span class="p">,</span><span class="w"> </span><span class="n">N_MCF10A_2</span><span class="p">,</span><span class="w"> </span><span class="n">N_MCF10A_3</span><span class="p">,</span><span class="w"> </span><span class="n">N_MCF10A_4</span><span class="p">)</span><span class="w">
-</span><span class="n">df</span><span class="o">$</span><span class="n">SD</span><span class="o">&lt;-</span><span class="w"> </span><span class="n">apply</span><span class="p">(</span><span class="n">df</span><span class="p">[,</span><span class="m">-1</span><span class="p">],</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">sd</span><span class="p">)</span><span class="w">
-</span><span class="n">df</span><span class="o">$</span><span class="n">mean</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data2</span><span class="o">$</span><span class="n">MCF10A.mean</span><span class="w">
+```R
+# Read in expression data for all expressed genes (all DEGs) filtered by CNL
+## Note: In this case, none of our genes had CNL
+data2 <- read.csv("data2.csv")
 
-</span><span class="c1">#Create new data table with all info from data2 as well as z-scores</span><span class="w">
-</span><span class="n">df1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data2</span><span class="w">
-</span><span class="n">df1</span><span class="o">$</span><span class="n">sd_mcf10a</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">df</span><span class="o">$</span><span class="n">SD</span><span class="w">
-</span><span class="n">df1</span><span class="o">$</span><span class="n">zscore</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="p">(</span><span class="n">df1</span><span class="o">$</span><span class="n">MDA_MB.231.mean</span><span class="o">-</span><span class="n">df1</span><span class="o">$</span><span class="n">MCF10A.mean</span><span class="p">)</span><span class="o">/</span><span class="n">df1</span><span class="o">$</span><span class="n">sd_mcf10a</span><span class="w">
-</span><span class="n">df1</span><span class="o">$</span><span class="n">abs_zscore</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">abs</span><span class="p">(</span><span class="n">df1</span><span class="o">$</span><span class="n">zscore</span><span class="p">)</span><span class="w">
-</span></code></pre></div></div>
+#Create data table with only normalized data for MCF10a
+df <- data2 %>% select(Gene_Symbol, N_MCF10A_1, N_MCF10A_2, N_MCF10A_3, N_MCF10A_4)
+df$SD<- apply(df[,-1], 1, sd)
+df$mean <- data2$MCF10A.mean
 
-<h2 id="first-order-connectivity">First Order Connectivity</h2>
+#Create new data table with all info from data2 as well as z-scores
+df1 <- data2
+df1$sd_mcf10a <- df$SD
+df1$zscore <- (df1$MDA_MB.231.mean-df1$MCF10A.mean)/df1$sd_mcf10a
+df1$abs_zscore <- abs(df1$zscore)
+``` -->
+
+<h2 id="first-order-connectivity-of-degs">First Order Connectivity of DEGs</h2>
 
 <p>We ran the First Order Connectivity analysis on the DEGs ranked by z-score using BiNOM.</p>
 
@@ -229,7 +233,7 @@ We are using the list of unfiltered DEGs as the list of all <a href="https://git
 
 <p>There are 4 house keeping genes in the largest connected component created by this analysis. One of these is VIM, which is an important marker of EMT in claudin low TNBC, so we removed all HKG but VIM, resulting in a final <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Components/FunDEGs_ranked_Zscore/FunDEGs_FOC_LCC_noHKG_80">First Order FunDEG LCC</a> of 80 genes.</p>
 
-<h2 id="second-order-connectivity">Second Order Connectivity</h2>
+<h2 id="second-order-connectivity-of-degs">Second Order Connectivity of DEGs</h2>
 
 <p>We then ran second order connectivity analysis from BiNOM on the set of First Order FunDEGs. This produced a SOC set of 378 genes that was reduced to a LCC of <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Components/FunDEGs_ranked_Zscore/FunDEGs_SOC_exprnoHKG_316.txt">316</a> genes after removing house keeping genes and those genes without protein OR gene data.</p>
 
@@ -245,29 +249,32 @@ We are using the list of unfiltered DEGs as the list of all <a href="https://git
 </ol>
 
 <h3 id="calculating-weighted-sums">Calculating Weighted Sums</h3>
-<pre><code class="language-{r}">weightedsums&lt;-data.frame(gene_set = NA, number_genes = NA, HOC= NA, breastDO= NA, CLgenes=NA, sum=NA)
-class(weightedsums$sum)&lt;-'numeric'
+<p>Weighted sums are caluclated using the <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Components/FunDEGs_ranked_Zscore/weighted_sums.Rmd"><code class="highlighter-rouge">weighted_sums.Rmd</code></a> script.</p>
 
-varlist&lt;-list(rankedDEGs$X1,FOC$X1,SOC$X1)
+<!-- ```{r}
+weightedsums<-data.frame(gene_set = NA, number_genes = NA, HOC= NA, breastDO= NA, CLgenes=NA, sum=NA)
+class(weightedsums$sum)<-'numeric'
+
+varlist<-list(rankedDEGs$X1,FOC$X1,SOC$X1)
 for (i in varlist){
-  ilen&lt;-length(i)
-  x&lt;-length(intersect(i,HOC$X1))/ilen
-  y&lt;-length(intersect(i,breastDO$X1))/ilen
-  z&lt;-0
-  SUM&lt;-((1/3)*x)+((1/3)*y)+((1/3)*z)
+  ilen<-length(i)
+  x<-length(intersect(i,HOC$X1))/ilen
+  y<-length(intersect(i,breastDO$X1))/ilen
+  z<-0
+  SUM<-((1/3)*x)+((1/3)*y)+((1/3)*z)
   weightedsums[nrow(weightedsums)+1,] = list(NA,ilen,x,y,z,SUM)
 }
-weightedsums&lt;-weightedsums[-1,]
-weightedsums[2,1]&lt;-'DEG'
-weightedsums[3,1]&lt;-'FOC'
-weightedsums[4,1]&lt;-'SOC'
+weightedsums<-weightedsums[-1,]
+weightedsums[2,1]<-'DEG'
+weightedsums[3,1]<-'FOC'
+weightedsums[4,1]<-'SOC'
 
 
-g1 &lt;- ggplot(data= weightedsums, aes(x = gene_set, y =sum)) +
+g1 <- ggplot(data= weightedsums, aes(x = gene_set, y =sum)) +
 		geom_bar(stat="identity", aes(fill = gene_set)) +
 		ggtitle("Weighted Sums") + xlab("Gene list") +
 		ylab("Weighted Sum") + theme(legend.position = "none")
-</code></pre>
+``` -->
 
 <p><img src="/gastonguay_compsysmed_labnotebook\_assets\images_proj2\weightedsums_plusTABLE.png" alt="weighted sums" /></p>
 

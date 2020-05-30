@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/gastonguay_compsysmed_labnotebook/</link>
     <atom:link href="http://localhost:4000/gastonguay_compsysmed_labnotebook/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 28 May 2020 15:17:47 -0400</pubDate>
-    <lastBuildDate>Thu, 28 May 2020 15:17:47 -0400</lastBuildDate>
+    <pubDate>Thu, 28 May 2020 17:53:35 -0400</pubDate>
+    <lastBuildDate>Thu, 28 May 2020 17:53:35 -0400</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -4440,7 +4440,7 @@ Furhtermore, while beta catenin and TCF3 are related to TNBC tumorigenesis, thei
 
 &lt;h1 id=&quot;fvs&quot;&gt;FVS&lt;/h1&gt;
 
-&lt;p&gt;I ran FVS on both the network constructed with MRs from a step size of 9 and on the network constructed with MRs from a step size of 7. The first network produced several FVS sets, ranging in size from 15 to 17 nodes, while the second produced two FVS sets of 3 nodes each. They are:&lt;/p&gt;
+&lt;p&gt;I &lt;a href=&quot;https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/OLD/NetworkAnalysis%201/FVS_step7/FVS_run.py&quot;&gt;ran FVS&lt;/a&gt; on both the network constructed with MRs from a step size of 9 and on the network constructed with MRs from a step size of 7. The first network produced several FVS sets, ranging in size from 15 to 17 nodes, while the second produced two FVS sets of 3 nodes each. They are:&lt;/p&gt;
 
 &lt;p&gt;[‘EGFR’, ‘RELA’, ‘FOXM1’]&lt;br /&gt;
 [‘PLK1’, ‘RELA’, ‘EGFR’]&lt;/p&gt;

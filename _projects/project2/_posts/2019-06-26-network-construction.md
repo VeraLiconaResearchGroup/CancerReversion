@@ -14,9 +14,9 @@ Assemble the network components in Cytoscape 3. Total nodes: 460
 
 ## MRs to TFs
 
-Used Lauren's new processing SBML script! (Love it)  
+We used Lauren's new [`read_SBML.py`](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Construction/MRs%20to%20TFs/read_SBML.py) script to convert the .xml file downloaded from GeneXplain into a csv file of edges. Then we used [`transpathtogenesymbol.py'](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Construction/MRs%20to%20TFs/transpathtogenesymbol.py) to convert TRANSPATH IDs into gene symbol ids.
 
-Removed several nodes that were not expressed but incorporated in the network: PGR, SEPT4, MAPK10, PRKN. This did not produce any additional source nodes. If there were unexpressed proteins in complexes, I left them as is. There are 184 nodes in this level (47 of which are SOC nodes)
+We removed several nodes that were not expressed but incorporated in the network: PGR, SEPT4, MAPK10, PRKN. This did not produce any additional source nodes. If there were unexpressed proteins in complexes, I left them as is. There are 184 nodes in this level (47 of which are SOC nodes)
 
 ![venn]({{ site.baseurl }}\_assets\images_proj2\venn_MRpathway_vs_SOC.png)
 

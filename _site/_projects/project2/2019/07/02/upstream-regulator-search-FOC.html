@@ -166,10 +166,10 @@
 <h2 id="results">Results</h2>
 <p>Running the analysis at a step size of 10 and then comparing to the union of gene and protein expression data covered all TFs but resulted in a network that was too large to visualize. However, comparing to just protein data as we did last time was a more manageable size and did visualize. I decided to try smaller step sizes to see how small I could go with still covering all 9 TFs and found that only a step size of 9 or 10 covered all the TFs. However, MRs that covered all the TFs at these steps were included in the results of the MR search with a smaller step size, but not all TFs were included in their hits. We hypothesize that this is because the proteins in these pathways are not highly expressed so using the workflow with weighting avoided them at a smaller step size.</p>
 
-<p>We decided on the list of 81 MRs with either <strong>gene or protein expression</strong> generated from running TRANSPATH with a step size of 9.</p>
+<p>At first, we decided on the list of <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/geneXplain_backup/Network%20Components/MRs/FOC/MRs_context_weighting_step9_signed/MRs%20expressed%20(gene%20and%20prtn)%20Genes%20Ensembl.txt">81 MRs</a> with either <strong>gene or protein expression</strong> generated from running TRANSPATH with a step size of 9.</p>
 
 <h2 id="filtering-by-protein-data">Filtering by protein data</h2>
-<p>After looking at the results from filtering MRs for those with either gene or protein data present, we decided we needed a more stringent filter. Therefore, we decided to filter the MRs from step 9 for only those with protein present. This left us with <a href="http://platform.genexplain.com/bioumlweb/#de=data/Projects/SalazarCortes%20DataAnalysis/Data/Gastonguay/MDAMB231_TAKE2/Network%20Components/MRs/FOC/MRs_context_weighting_step9_signed/MRs%20expressed%20(prtn%20only)%20Genes%20Ensembl">50</a> MRs.</p>
+<p>After looking at the results from filtering MRs for those with either gene or protein data present, we decided we needed a more stringent filter. Therefore, we decided to filter the MRs from step 9 for only those with protein present and for a  <strong>p-value &lt; 0.05</strong> and <strong>Z-score &gt; 1.5</strong>. This left us with <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Components/MRs/MRs%20expressed%20(prtn%20only)%20Genes%20Ensembl.txt">50 MRs</a>.</p>
 
 <p>3 nodes in the TRANSPATH pathways were mutated: TP53, BRAF, and LRRK2. Additionally, 6 nodes weren’t expressed, one of which was LRRK2. I removed all of the unexpressed nodes except for SP1 because it would have created a source node from one of the TFs: ZBTB17.</p>
 
@@ -183,16 +183,19 @@
   <li>LRRK2 (I2323S, I2330S)</li>
 </ul>
 
-<p>We know the effects of both TP53 and BRAF so they will be added to the network manually see <a href="">Mutated Pathways Post</a></p>
+<p>We know the effects of both TP53 and BRAF so they will be added to the network manually. (See <a href="/gastonguay_compsysmed_labnotebook/_projects/project2/2019/07/06/mutated-pathways.html">Mutated Pathways Post</a>)</p>
 
-<p><strong>Question:</strong> How do we deal with TP53 loss-of-function?
-TP53 (activates) DUSP4<br />
-TP53 (activates) MDM2<br />
-TP53 (activates) NOTCH1<br />
-TP53 (inactivates) AURKA<br />
-TP53 (inactivates) CDC25A</p>
+<p>$\quad$ <strong>Question:</strong> How do we deal with TP53 loss-of-function?</p>
 
-<p>Removing it would make DUSP4 a source node. (DUSP4 activates MAPK1)</p>
+<p>$\quad$ TP53 (activates) DUSP4<br />
+$\quad$ TP53 (activates) MDM2<br />
+$\quad$ TP53 (activates) NOTCH1<br />
+$\quad$ TP53 (inactivates) AURKA<br />
+$\quad$ TP53 (inactivates) CDC25A</p>
+
+<p>$\quad$ Removing it would make DUSP4 a source node. (DUSP4 activates MAPK1)</p>
+
+<p>$\quad$ <strong>Conclusion:</strong> Remove outgoing edges that don’t have literature evidence with R280K mutant TP53. Thus, the only edge that remains is <em>TP52 activates NOTCH1</em>.</p>
 
 <p>The only one of these mutations that is nonsense is TAB2, which is a master regulator regulating MAP3K7. Removing it will not create a source node.</p>
 
