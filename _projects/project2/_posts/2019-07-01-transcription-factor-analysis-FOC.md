@@ -22,7 +22,7 @@ By using the First order FunDEGs, we will lose 102 genes from the hallmarks of c
 
 I followed the same procedure as [last time]({{ site.baseurl }}{% link _projects/project2/_posts/2019-06-21-transcription-factor-analysis.md %}) using both GeneXplain and IPA. 
 
-After taking the intersection between the expressed TFs in unmethylated regions and the results from IPA all tissues and breast cancer cell lines, I ran weighted sums on the resulting lists.
+After taking the intersection between the expressed TFs in unmethylated regions and the results from IPA all tissues and breast cancer cell lines, I ran weighted sums on the resulting lists using [`weighted_sums_TFs.Rmd`](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Components/TFs/FirstOrder_FunDEG_analysis/weighted_sums_TFs.Rmd).
 
 ![weighted sums]({{ site.baseurl }}\_assets\images_proj2\TFs_weightedsums_graph_table_FOC.png)
 
