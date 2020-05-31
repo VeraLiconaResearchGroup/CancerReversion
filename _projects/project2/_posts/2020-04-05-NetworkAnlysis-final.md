@@ -8,11 +8,6 @@ tags:
  - static_network
 ---
 
-<style>
-table {
-    width:100%;
-}
-</style>
 
 # Objective
 We will employ our pipeline to identify and prioritize putative reversion targets for MDA-MB-231. To do so, virtual screenings of perturbations of the 4 MDA-MB-231 initial conditions (Continuous Normalized RNAseq Expression Data) were run using SFA. The attractors resulting from these perturbations will be classified by knn with the 4 MCF10A and 4 MDA-MB-231 attractors as training sets. We will still "discretize" the output of vitrual screenings in the same way: positive values are represented as 1, negative value are represented as -1, and zeroes remain 0.
@@ -27,9 +22,9 @@ The analyses were all done on six datasets:
 
 
 # Virtual Screening
-After an exploration of the use of SFA, we have deicded to initilize our virtual screenings with continuous RNAseq expression values as opposed to discretized values. The FVS are eithor knocked-out, knocked-in, or not changed. The value for knocked-out nodes is fixed at 0, while those that aren't changed are left alone. The question remains: what value should we set knock-in nodes to. We decided it should be specific to the gene as if we choose one value for over expression of any gene, it may not be large enough for some genes.
+After reading about [previous applications of SFA]({{ site.baseurl }}{% link _projects/project2/_posts/2020-04-01-SFA-initializations.md %}), we have deicded to initilize our virtual screenings with continuous noramlized RNAseq expression values as opposed to discretized values. The reference attractors resulting from experimental data for MDA-MB-231 and MCF10A were generated with [`1_estimate_reference_attractors.py`](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Analysis/scripts/1_estimate_reference_attractors.py). The FVS are eithor knocked-out, knocked-in, or not changed. The value for knocked-out nodes is fixed at 0, while those that aren't changed are left alone. The question remains: what value should we set knock-in nodes to. We decided it should be specific to the gene as if we choose one value for over expression of any gene, it may not be large enough for some genes. We tried mutliple different methods for calculating the activation level with the [`4b_calculate_activation.py`](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Analysis/scripts/4b_calculate_activation.py) script.
 
-Since we have four MDAMB231 experimental expression values, we caluclated the mean and standard deviation between them for each FVS node. Then, we set the stimulation activity of a node to the mean activity of the node plus three standard deviations. However, we found that the standard deviation between expression values for the MDAMB231 replicates can be very small, in which case this method doesn't give a large increase in basal activity for knock-ins.
+Since we have four MDAMB231 experimental expression values, we caluclated the mean and standard deviation between them for each FVS node. Then, we tried setting the stimulation activity of a node to the mean activity of the node plus three standard deviations. However, we found that the standard deviation between expression values for the MDAMB231 replicates can be very small, in which case this method doesn't give a large increase in basal activity for knock-ins.
 
 **FVS node**|**Mean**|**SD**|**Mean + 3SD**|**Activity Increase**
 :-----:|:-----:|:-----:|:-----:|:-----:
@@ -73,15 +68,19 @@ TCF3|10.39763739|15.59645608|20.79527478
 ![2mean]({{ site.baseurl }}\_assets\images_proj2\dist_2m.png)
 
 
-Previously, we used the average expression level from MDA-MB-231 as the basal state to apply perturbations to. Now, we will use the four replicates of MDA-MB-231 as separate basal conditions and apply perturbations to all 4 basal states. This will act as 4 "experimental" replicates of our perturbations. Perturbations must result in a shift towards normal for all four replicates to be considered successful. We have 12 FVS nodes resulting in $3^{12} = 531441$ possible perturbations. So far, we have only examined 100,000 of these perturbations. We have only considered perturbations of the FVS, not the whole FC.
+Previously, we used the average expression level from MDA-MB-231 as the basal state to apply perturbations to. Now, we will use the four replicates of MDA-MB-231 as separate basal conditions and apply perturbations to all 4 basal states. This will act as 4 "experimental" replicates of our perturbations. Perturbations must result in a shift towards normal for all four replicates to be considered successful. We have 12 FVS nodes resulting in $3^{12} = 531441$ possible perturbations. So far, we have only examined 100,000 of these perturbations. We have only considered perturbations of the FVS, not the whole FC. 
+
+100,000 random perturbations of the FVS nodes (1, 0, -1) were generated with [`4a_generate_basal_states.py`](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Analysis/scripts/4a_generate_basal_states.py). These perturbations were applied to each of the four initial conditions of MDA-MB-231, once using 1.5\*mean as the activation level and once using 2\*mean as the activation level. The resulant attractors were simulated with [`5_virtual_screening.py`](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Analysis/scripts/5_virtual_screenings.py).
 
 # K-nearest Neighbors Classifier
-Using the 8 experimental attractors as a training set, we classified the 100,000 attractors resulting from FVS perturbations on all 6 datasets. Two questions arose during this:
+Using the 8 experimental attractors as a training set, we classified all 6 datasets of the 100,000 attractors resulting from FVS perturbations. Three questions arose during this:
 1. How many clusters should we use for the training set?
 2. What dataset should we use for the analysis?
 3. What is the optimal number of neighbors?
 
-The 8 reference attractors clearly fall into 4 clusters with clustered with k-means or multi dimensional scaling. Therefore, I will use 4 clusters for the training set: MDAMB231_A, MDAMB231_B, MCF10A_A, and MCF10A_B. 
+And, we still need to determine what activation level should be used.
+
+The 8 reference attractors clearly fall into 4 clusters with clustered with k-means or multi dimensional scaling. This was done using the [`2_mds_reference.R`](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Analysis/scripts/2_mds_reference.R) and [`3_kmeans_reference.py`](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Analysis/scripts/3_kmeans_reference.py) scripts. Therefore, I will use 4 clusters for the training set: MDAMB231_A, MDAMB231_B, MCF10A_A, and MCF10A_B. 
 
 ![mds both]({{ site.baseurl }}\_assets\images_proj2\mds_both.png)
 ![mds both disc]({{ site.baseurl }}\_assets\images_proj2\mds_both_disc.png)
@@ -89,6 +88,8 @@ The 8 reference attractors clearly fall into 4 clusters with clustered with k-me
 #### Exploring Distance Metrics in discrete datasets
 
 The default distance metric for knn is euclidean distance. However, knn can be run using different distance metrics. For the discrete datasets only, I tested knn using the hamming distance between the perturbations and the training set. [Choo and Cho](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6739335/pdf/41598_2019_Article_49571.pdf) use Hamming distnace to determine the boundary of the basin of attraction for an attractor of a Boolean model. States with larger hamming distances are further away from the attractor than states with smaller hamming distances.
+
+Knn was run with [`7_knn.py`](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Analysis/scripts/7_knn.py) using hamming and euclidean distance.
 
 **Test case: MDAMB231_2**
 (results below from simulation with 2\*Mean for knock-in)
@@ -466,7 +467,7 @@ TCF3|10.64874633|10.77559343|10.5523821|10.64619397|10.19490836|10.60056882|10.2
 PIAS1|10.08320282|9.90076822|10.11744676|9.74628329|9.48901681|9.5292538|9.50232263|9.38705458
 HDAC3|10.07136987|10.02308142|10.00478498|10.01184598|9.84842798|10.02732455|9.80683273|9.99109486
 
-**Table:** Standard deviation of log steady-state expression of FVS nodes from the eight experimental replicates predicted by SFA.
+**Table:** Standard deviation of log steady-state expression of FVS nodes from the eight experimental replicates predicted by SFA. Parsed with [`examine_attractors.py`](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Analysis/scripts/examine_atttractors.py).
 
 **FVS Node**|**Standard Deviation Amoung MCF10A Replicates**|**Standard Deviation Amoung MDAMB231 Replicates**
 :-----:|:-----:|:-----:
@@ -501,7 +502,7 @@ No Change|33.368|33.653|33.345|33.306|33.259|33.21|33.278|33.257|33.617|33.31|33
 
 # Select normal perturbations
 
-Using 3 nearest neihgbors and the combination of logss and DAC dataset, there are [157 perturbations](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Analysis/virtual_screening/successful_perturbations.txt) causing a shift to normal from all 4 replicates. All of these perturbations also triggered a shift to normal in the DAC dataset, and all but one (Perturb_079281) triggered the shift in the logss dataset.
+Using 3 nearest neihghbors and the combination of logss and DAC dataset, there are [157 perturbations](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Analysis/virtual_screening/successful_perturbations.txt) causing a shift to normal from all 4 replicates. All of these perturbations also triggered a shift to normal in the DAC dataset, and all but one (Perturb_079281) triggered the shift in the logss dataset.
 
 <!---
 both but not logss: Perturb_079281
@@ -511,7 +512,7 @@ logss but not DAC: Perturb_037031
 DAC but not both: Perturb_005343, Perturb_017420
 --->
 
-The summary of the frequency of the orientation of each FVS node in the 157 perturbations is included in this table:
+The summary of the frequency of the orientation of each FVS node in the 157 perturbations is included in this table (acheived via [`9_fvs_direction.py`](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Analysis/scripts/9_fvs_direction.py)):
 
 **perturbation**|**AKT1**|**AURKA**|**CTNNB1**|**FOXM1**|**GSK3B**|**HDAC3**|**JUN**|**MAPK1**|**PIAS1**|**RELA**|**STAT3**|**TCF3**
 :-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:

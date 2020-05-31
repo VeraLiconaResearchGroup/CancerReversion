@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/gastonguay_compsysmed_labnotebook/</link>
     <atom:link href="http://localhost:4000/gastonguay_compsysmed_labnotebook/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 31 May 2020 13:26:47 -0400</pubDate>
-    <lastBuildDate>Sun, 31 May 2020 13:26:47 -0400</lastBuildDate>
+    <pubDate>Sun, 31 May 2020 14:27:20 -0400</pubDate>
+    <lastBuildDate>Sun, 31 May 2020 14:27:20 -0400</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -3813,7 +3813,7 @@ pvalue=0.6178509&lt;/p&gt;
 &lt;h2 id=&quot;comparing-sfa-results-on-static-network-to-boolean-network&quot;&gt;Comparing SFA results on static network to Boolean network&lt;/h2&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;Selected one initial state&lt;/li&gt;
+  &lt;li&gt;Selected one random initial state of the network&lt;/li&gt;
   &lt;li&gt;Simulated the resulting attractor with iterative SFA to get the trajectory&lt;/li&gt;
   &lt;li&gt;Used &lt;strong&gt;getPathtoAttractor()&lt;/strong&gt; function to get path from that initial condition to the attractor in BoolNet&lt;/li&gt;
 &lt;/ol&gt;
@@ -3843,15 +3843,10 @@ pvalue=0.6178509&lt;/p&gt;
       &lt;li&gt;kmeans with k = 2 across columns (pvalue = 0.115, MABC = 12.45)&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;em&gt;Interesting:&lt;/em&gt; The only discretization method that passed 1 did not qualify for 2!&lt;/p&gt;
-
-&lt;ol&gt;
   &lt;li&gt;Compared the final SFA attractor as discretized all the qualifying methods from above to the BoolNet attractor and found approximately 60% accuracy.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;more detail &lt;a href=&quot;https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Writing/SFA_exploration.pdf&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;A more &lt;a href=&quot;/gastonguay_compsysmed_labnotebook/_projects/project2/2020/01/28/SFA-exploration.html&quot;&gt;robust analysis&lt;/a&gt; was carried out to determine the capabilities of SFA.&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 20 Dec 2019 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/gastonguay_compsysmed_labnotebook/_projects/project2/2019/12/20/SFA-test.html</link>
@@ -3874,7 +3869,9 @@ pvalue=0.6178509&lt;/p&gt;
 
 &lt;p&gt;The network constructed using Master Regulators from the MR search with a step of 7 had an unrealistically small FVS set of 3 nodes. Hence, we decided to reconstruct the network using MRs from a step size of 9. This regulator search was done using the signed TRANSPATH database, and a literature search was done to vrify the resultant edges.&lt;/p&gt;
 
-&lt;h3 id=&quot;edges-lacking-listerature-evidence&quot;&gt;Edges lacking listerature evidence&lt;/h3&gt;
+&lt;h3 id=&quot;edges-lacking-literature-evidence&quot;&gt;Edges lacking literature evidence&lt;/h3&gt;
+
+&lt;p&gt;The following edges were removed due to a lack of literature evidence.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;PLK1 phosphorylates SIRT1
@@ -3895,11 +3892,13 @@ pvalue=0.6178509&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;mutations&quot;&gt;Mutations&lt;/h3&gt;
-&lt;p&gt;BRAF mutation upregulates MEK (MAP2k1) and ERK (MAPK1). These edges are already in the network.
-Adding in TP53 pathways
-removing all downstream TP53 targets besides notch1 due to literature evidence
-LRKK2 not expressed
-removing TAB2 cause nonsense mutation&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;BRAF mutation upregulates MEK (MAP2k1) and ERK (MAPK1). These edges are already in the network.&lt;/li&gt;
+  &lt;li&gt;Adding in pathways non-canonically activated by mutP53&lt;/li&gt;
+  &lt;li&gt;Removing all downstream TP53 targets besides NOTCH1 due to literature evidence&lt;/li&gt;
+  &lt;li&gt;LRKK2 not expressed&lt;/li&gt;
+  &lt;li&gt;removing TAB2 because it’s a nonsense mutation&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h3 id=&quot;condensing-source-nodes&quot;&gt;Condensing Source Nodes&lt;/h3&gt;
 &lt;p&gt;Several source nodes are subunits of the same gene. FC states that they must be controlled to steer the system to any desired attractor. Thus, if the nodes had similar out going edges, I combined them into one node to reduce the number of nodes that must be controlled.&lt;/p&gt;
@@ -3928,7 +3927,7 @@ removing TAB2 cause nonsense mutation&lt;/p&gt;
   &lt;li&gt;25 source nodes&lt;/li&gt;
   &lt;li&gt;225 nodes&lt;/li&gt;
   &lt;li&gt;572 edges&lt;/li&gt;
-  &lt;li&gt;2 mFVSes of 12 each (FVS_12 and FVS_34)&lt;/li&gt;
+  &lt;li&gt;2 mFVSes of 12 each (FVS_12 and FVS_34) when excluding FVSes containing complexes&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;ocasana-fc-output&quot;&gt;OCASANA+ FC output&lt;/h2&gt;
@@ -4030,35 +4029,30 @@ removing TAB2 cause nonsense mutation&lt;/p&gt;
   &lt;li&gt;RELA in self- feedback loop&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;fc-node-details&quot;&gt;FC Node Details&lt;/h2&gt;
+&lt;h2 id=&quot;literature-search-fc-nodes&quot;&gt;Literature Search FC Nodes&lt;/h2&gt;
 &lt;h3 id=&quot;egfr&quot;&gt;EGFR&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;receptor&lt;/li&gt;
   &lt;li&gt;it’s inhibition can revert teh HMT-3522 mammary epethelial cell line (TNBC) to a normal, growth-arrested state.&lt;/li&gt;
-  &lt;li&gt;doesn’t make a difference in MDA-MB-231 when perturbed alone
-https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2975573/&lt;/li&gt;
+  &lt;li&gt;doesn’t make a difference in MDA-MB-231 when perturbed alone [&lt;a href=&quot;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2975573/&quot;&gt;2975573&lt;/a&gt;]&lt;/li&gt;
   &lt;li&gt;its inhibition has been effective in non-small cell lung cancer and colorectal cancer&lt;/li&gt;
-  &lt;li&gt;small molecule tyrosine kinase inhibitors (TKIs) and monoclonal antibodies (mAbs)
-https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5004067/&lt;/li&gt;
+  &lt;li&gt;small molecule tyrosine kinase inhibitors (TKIs) and monoclonal antibodies (mAbs) [&lt;a href=&quot;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5004067/&quot;&gt;5004067&lt;/a&gt;]&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;mapk1&quot;&gt;MAPK1&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;when perturbed with ITGB1, it reverted MDA-MB-231
-  https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2975573/&lt;/li&gt;
-  &lt;li&gt;pirfenidone inhibits MAPK12 which decreases the number of cancer stem cells
-  https://stemcellsjournals.onlinelibrary.wiley.com/doi/epdf/10.1002/stem.2068&lt;/li&gt;
+  &lt;li&gt;when perturbed with ITGB1, it reverted MDA-MB-231 [&lt;a href=&quot;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2975573/&quot;&gt;2975573&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;pirfenidone inhibits MAPK12 which decreases the number of cancer stem cells (&lt;a href=&quot;https://stemcellsjournals.onlinelibrary.wiley.com/doi/epdf/10.1002/stem.2068&quot;&gt;source&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;hdac3&quot;&gt;HDAC3&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;entinostat&lt;/strong&gt; is an HDAC inhibitor and has been shown to reverse EMT in MDAMB231&lt;/li&gt;
   &lt;li&gt;HDAC inhibitors are a new class of anitcancer agents&lt;/li&gt;
-  &lt;li&gt;doesn’t require permanent changes in DNA sequence
-  https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5611517/
+  &lt;li&gt;doesn’t require permanent changes in DNA sequence &lt;a href=&quot;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5611517/
   https://onlinelibrary.wiley.com/doi/pdf/10.1002/jcp.22574
   https://link.springer.com/article/10.1007/s10549-018-4815-x
-  http://www.oncotarget.com/index.php?journal=oncotarget&amp;amp;page=article&amp;amp;op=view&amp;amp;path[]=23169&amp;amp;path[]=73050&lt;/li&gt;
+  http://www.oncotarget.com/index.php?journal=oncotarget&amp;amp;page=article&amp;amp;op=view&amp;amp;path[]=23169&amp;amp;path[]=73050&quot;&gt;source&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;mapk6-erk3&quot;&gt;MAPK6 (ERK3)&lt;/h3&gt;
@@ -4076,36 +4070,31 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5004067/&lt;/li&gt;
       &lt;li&gt;it’s inhibition doesn’t impede cell migration&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;used &lt;strong&gt;shRNA&lt;/strong&gt; to target it
-source: (All experiments done in MDAMB231)
-https://www.researchgate.net/publication/284274541_A_novel_role_for_atypical_MAPK_kinase_ERK3_in_regulating_breast_cancer_cell_morphology_and_migration&lt;/li&gt;
+  &lt;li&gt;used &lt;strong&gt;shRNA&lt;/strong&gt; to target it&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.researchgate.net/publication/284274541_A_novel_role_for_atypical_MAPK_kinase_ERK3_in_regulating_breast_cancer_cell_morphology_and_migration&quot;&gt;source&lt;/a&gt; (All experiments done in MDAMB231)&lt;/p&gt;
 
 &lt;h3 id=&quot;rela&quot;&gt;RELA&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;inactivation (by preventing phosphorylation) can reverse EMT&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Zoledronic acid&lt;/strong&gt; is a bisphosphonate that targets RELA and reverses EMT and decreases self renewal in MDAMB231
-https://mct.aacrjournals.org/content/molcanther/12/7/1356.full.pdf&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Zoledronic acid&lt;/strong&gt; is a bisphosphonate that targets RELA and reverses EMT and decreases self renewal in MDAMB231 (&lt;a href=&quot;https://mct.aacrjournals.org/content/molcanther/12/7/1356.full.pdf&quot;&gt;source&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;plk1&quot;&gt;PLK1&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;BI-2536&lt;/strong&gt;, a selective inhibitor for PLK1, triggered apoptosis in MDA-MB-231 and other TNBC cell lines&lt;/li&gt;
-  &lt;li&gt;PLK1 drives transition from G2/M so inhibiting it causes a fatal error in mitosis
-https://www.nature.com/articles/s41374-019-0247-4.pdf?origin=ppub&lt;/li&gt;
+  &lt;li&gt;PLK1 drives transition from G2/M so inhibiting it causes a fatal error in mitosis (&lt;a href=&quot;https://www.nature.com/articles/s41374-019-0247-4.pdf?origin=ppub&quot;&gt;source&lt;/a&gt;)&lt;/li&gt;
   &lt;li&gt;correlation between high levels of PLK1 and poor outcome&lt;/li&gt;
   &lt;li&gt;PLK1 inhibitors can inhibit other PLK family members and lead to off-target effects&lt;/li&gt;
   &lt;li&gt;design &lt;strong&gt;siRNA&lt;/strong&gt; to target just PLK1&lt;/li&gt;
-  &lt;li&gt;siRNA inhibition of PLK1 leads to apoptosis
-https://mct.aacrjournals.org/content/16/4/763.long&lt;/li&gt;
+  &lt;li&gt;siRNA inhibition of PLK1 leads to apoptosis (&lt;a href=&quot;https://mct.aacrjournals.org/content/16/4/763.long&quot;&gt;source&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;foxm1&quot;&gt;FOXM1&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;inhibition leads to apopotosis in 231
-https://ascopubs.org/doi/abs/10.1200/jco.2013.31.15_suppl.e22063&lt;/li&gt;
-  &lt;li&gt;FOXM1 complex a potential target
-https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6315782/pdf/cancers-10-00525.pdf&lt;/li&gt;
+  &lt;li&gt;inhibition leads to apopotosis in 231 (&lt;a href=&quot;https://ascopubs.org/doi/abs/10.1200/jco.2013.31.15_suppl.e22063&quot;&gt;source&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;FOXM1 complex a potential target (&lt;a href=&quot;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6315782/pdf/cancers-10-00525.pdf&quot;&gt;source&lt;/a&gt;)&lt;/li&gt;
   &lt;li&gt;FOXM1 inhibition suppressed MDA-MB-231 tumorigenesis &lt;em&gt;in vivo&lt;/em&gt;&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Thiostrepton&lt;/strong&gt; is a specific inhibitor of FOXM1
     &lt;ul&gt;
@@ -4114,21 +4103,25 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6315782/pdf/cancers-10-00525.pdf&lt
   &lt;/li&gt;
   &lt;li&gt;its inhibition decreases proliferation&lt;/li&gt;
   &lt;li&gt;its inhibition may inhibit EMT&lt;/li&gt;
-  &lt;li&gt;thiostrepton cannot comepletely inhibit tumor growth &lt;em&gt;in vivo&lt;/em&gt;
-    &lt;blockquote&gt;
-      &lt;p&gt;There are a number of different aspects of the
+  &lt;li&gt;thiostrepton cannot comepletely inhibit tumor growth &lt;em&gt;in vivo&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;“There are a number of different aspects of the
 inhibitory effects of Thiostrepton. Metabolic pathways were
 considerably enriched among the pathways. Notably, tumor
 metabolism is associated with the tumor microenvironment
-and tumor progression
-https://www.spandidos-publications.com/ijo/54/1/87&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
+and tumor progression “ (&lt;a href=&quot;https://www.spandidos-publications.com/ijo/54/1/87&quot;&gt;source&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Nothing relating PRPF4 and ZBTB17 to  CL TNBC.&lt;/p&gt;
 
-&lt;p&gt;Potentially succsful perturbation:&lt;/p&gt;
+&lt;h2 id=&quot;in-silico-screening-results&quot;&gt;In Silico Screening Results&lt;/h2&gt;
+
+&lt;p&gt;We ran &lt;em&gt;in silico&lt;/em&gt; screenings by generating all possible perturbations (0, 1, or -1) of the FC nodes (3^8 = 6561). Then we estimated the attractors resulting from these perturbations applied to the basal state of MDA-MB-231. We applied k-nearest neighbors classifier, using the 100,000 randomly simulated attractors as a training set and labels from k-means clustering of the 100,000 attractors, to classify the attractors resulting from &lt;em&gt;in silico&lt;/em&gt; screenings.&lt;/p&gt;
+
+&lt;p&gt;Below are the results of knn classification of the attractors from &lt;em&gt;in silico&lt;/em&gt; with 19 nearest neighbors (optimal number) using kmeans clustering with 3 centroids:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/gastonguay_compsysmed_labnotebook\_assets\images_proj2\insilico_prelim.png&quot; alt=&quot;insilico&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;An example of a potentially successful perturbation of 3 nodes that resulted in an attractor clustering in the same cluster as the attractor simulated from the basal state of MCF10A:&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;Inhibition of: EGFR, HDAC3, and MAPK6&lt;/li&gt;
 &lt;/ol&gt;
@@ -4160,7 +4153,7 @@ https://www.spandidos-publications.com/ijo/54/1/87&lt;/p&gt;
 &lt;ol type=&quot;A&quot;&gt;
 &lt;li&gt;The raw values produced by signal flow rounded to three decimal places&lt;/li&gt;
 &lt;li&gt;The values produced by signal flow &quot;discretized&quot; so that positive values are 1, negative values are -1, and 0 values remain 0&lt;/li&gt;
-&lt;li&gt;The direction of activity change for each attractor calculated by the difference between the raw signal flow data for MDA-MB-231 and each attractor&lt;/li&gt;
+&lt;li&gt;The direction of activity change (DAC) for each attractor calculated by the difference between the log steady state acttractor for MDA-MB-231 and each attractor&lt;/li&gt;
 &lt;li&gt;The &quot;discretized&quot; values of the above dataset&lt;/li&gt;
 &lt;li&gt;The combination of datasets 1 and 3&lt;/li&gt;
 &lt;li&gt;The combination of datasets 2 and 4&lt;/li&gt;
@@ -4192,68 +4185,64 @@ https://www.spandidos-publications.com/ijo/54/1/87&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/gastonguay_compsysmed_labnotebook\_assets\images_proj2\knn.png&quot; alt=&quot;knn&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;identifying-attractors-that-cluster-together&quot;&gt;Identifying attractors that cluster together&lt;/h1&gt;
-&lt;p&gt;Even though I did different clustering methods on different datasets, I only looked at those with “descritized” values because the magnitude doesn’t matter! Of these, I decided to use the dataset with the combo of DAC and raw because the hierarchical and kmeans clustering looked good. I identifed approximately 240 attractors that always cluster with MDA-MB-231 and approximately 445 attractors that always cluster with MCF10A whether you use hierarchical or kmeans with 2 or 3 clusters. This leaves about 320 other attractors, representing neither a cancerous or normal phenotype.&lt;/p&gt;
+&lt;p&gt;Even though I did different clustering methods on different datasets, I only looked at those with “discretized” values because the magnitude doesn’t matter! Of these, I decided to use the dataset with the combo of DAC and raw because the hierarchical and kmeans clustering looked good. I identifed approximately 240 attractors that always cluster with MDA-MB-231 and approximately 445 attractors that always cluster with MCF10A whether you use hierarchical or kmeans with 2 or 3 clusters. This leaves about 320 other attractors, representing neither a cancerous or normal phenotype.&lt;/p&gt;
 
 &lt;h2 id=&quot;readout-nodes-in-those-clusters&quot;&gt;Readout nodes in those clusters&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;FYN, HUWE1, MAPK13&lt;/strong&gt; were 1 in 99% of the cancerous attractors whereas in the normal attrctors, there was about a 50/50 split between 1s and -1s for these readout nodes. CDC20 was a 1 in 75% of the normal attractors but it was also a 1 in 62% of cancerous attractors - are these frequencies different enough to distinguish the attractors? Two of the other readout nodes: STAT3 and SNAI1 were a 1 in 100% (STAT3) and 96% (SNAI1) of both the cancerous attractors and normal attractors. (aka they had the same frequency in the normal and cancerous attractors)  Lastly, CCNG2 and GSK3B were split pretty evenly between 1s and -1s in both the cancerous and normal attractors meaning they aren’t good readout nodes.&lt;/p&gt;
 
-&lt;h2 id=&quot;new-readout-nodes&quot;&gt;New Readout Nodes?&lt;/h2&gt;
+&lt;!-- ## New Readout Nodes?
 
-&lt;p&gt;&lt;strong&gt;Genes that are expressed in at least 70% of the “cancerous” attractors and less than 70% of the time in “normal” attractors:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;FBLN1&lt;/li&gt;
-  &lt;li&gt;FYN&lt;/li&gt;
-  &lt;li&gt;HUWE1&lt;/li&gt;
-  &lt;li&gt;LRP1&lt;/li&gt;
-  &lt;li&gt;LTBP3&lt;/li&gt;
-  &lt;li&gt;MAPT&lt;/li&gt;
-  &lt;li&gt;MOCOS&lt;/li&gt;
-  &lt;li&gt;PIAS3&lt;/li&gt;
-  &lt;li&gt;TAF12&lt;/li&gt;
-  &lt;li&gt;TBL1X&lt;/li&gt;
-  &lt;li&gt;SKIL&lt;/li&gt;
-  &lt;li&gt;MAPK13&lt;/li&gt;
-  &lt;li&gt;CXXC5&lt;/li&gt;
-  &lt;li&gt;RASGRF1&lt;/li&gt;
-  &lt;li&gt;BIRC6&lt;/li&gt;
-  &lt;li&gt;DNAJB2&lt;/li&gt;
-  &lt;li&gt;SHC1&lt;/li&gt;
-  &lt;li&gt;SH3YL1&lt;/li&gt;
-  &lt;li&gt;CHEK2&lt;/li&gt;
-  &lt;li&gt;CTNNB1&lt;/li&gt;
-  &lt;li&gt;ITGB8&lt;/li&gt;
-  &lt;li&gt;RHOD&lt;/li&gt;
-&lt;/ul&gt;
+**Genes that are expressed in at least 70% of the &quot;cancerous&quot; attractors and less than 70% of the time in &quot;normal&quot; attractors:**
+- FBLN1
+- FYN
+- HUWE1
+- LRP1
+- LTBP3
+- MAPT
+- MOCOS
+- PIAS3
+- TAF12
+- TBL1X
+- SKIL
+- MAPK13
+- CXXC5
+- RASGRF1
+- BIRC6
+- DNAJB2
+- SHC1
+- SH3YL1
+- CHEK2
+- CTNNB1
+- ITGB8
+- RHOD
 
-&lt;p&gt;&lt;strong&gt;Genes that are expressed in at least 70% of the “normal” attractors and less than 70% of the time in “cancerous” attractors:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;AURKA&lt;/li&gt;
-  &lt;li&gt;HMGB2&lt;/li&gt;
-  &lt;li&gt;BUB1&lt;/li&gt;
-  &lt;li&gt;KAT2A&lt;/li&gt;
-  &lt;li&gt;LIMK2&lt;/li&gt;
-  &lt;li&gt;ROCK1&lt;/li&gt;
-  &lt;li&gt;SRPK1&lt;/li&gt;
-  &lt;li&gt;TAF1B&lt;/li&gt;
-  &lt;li&gt;TPR&lt;/li&gt;
-  &lt;li&gt;CKAP5&lt;/li&gt;
-  &lt;li&gt;S100A2&lt;/li&gt;
-  &lt;li&gt;HMGA2&lt;/li&gt;
-  &lt;li&gt;SNRPA&lt;/li&gt;
-  &lt;li&gt;FGF13&lt;/li&gt;
-  &lt;li&gt;FOXM1&lt;/li&gt;
-  &lt;li&gt;TACC1&lt;/li&gt;
-  &lt;li&gt;JUN&lt;/li&gt;
-  &lt;li&gt;MAD2L2&lt;/li&gt;
-  &lt;li&gt;RPS6KA1&lt;/li&gt;
-  &lt;li&gt;TCF3&lt;/li&gt;
-  &lt;li&gt;CDC20&lt;/li&gt;
-&lt;/ul&gt;
+**Genes that are expressed in at least 70% of the &quot;normal&quot; attractors and less than 70% of the time in &quot;cancerous&quot; attractors:**
+- AURKA
+- HMGB2
+- BUB1
+- KAT2A
+- LIMK2
+- ROCK1
+- SRPK1
+- TAF1B
+- TPR
+- CKAP5
+- S100A2
+- HMGA2
+- SNRPA
+- FGF13
+- FOXM1
+- TACC1
+- JUN
+- MAD2L2
+- RPS6KA1
+- TCF3
+- CDC20 --&gt;
 
 &lt;h1 id=&quot;knn-take-2&quot;&gt;Knn Take 2&lt;/h1&gt;
 &lt;p&gt;I decided to try Knn with the clusters that always cluster with 231 or with 10A as the training set for cancerous and normal, and some of the results from our perturbation analysis as the test case. If we do this, we can compare to more than 2 neighbors, and effectively classify the perturbations as either cancerous or normal.&lt;/p&gt;
 
-&lt;h1 id=&quot;going-to-do-this-with-100000-attractors&quot;&gt;Going to do this with 100,000 attractors&lt;/h1&gt;
+&lt;h1 id=&quot;going-to-do-this-same-analysis-with-100000-attractors&quot;&gt;Going to do this same analysis with 100,000 attractors&lt;/h1&gt;
 
 &lt;p&gt;TO DO:&lt;/p&gt;
 
@@ -4263,7 +4252,7 @@ https://www.spandidos-publications.com/ijo/54/1/87&lt;/p&gt;
   &lt;li&gt;Determine the attractors that always cluster with 231 or 10A
     &lt;ul&gt;
       &lt;li&gt;via cluster_patterns.py script&lt;/li&gt;
-      &lt;li&gt;input: dataframe from 2 with attractors as rows and clustering methods as columns&lt;/li&gt;
+      &lt;li&gt;input: dataframe from (2) with attractors as rows and clustering methods as columns&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Next, determine if the nodes in these clusters have similar expression patterns

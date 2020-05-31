@@ -12,7 +12,9 @@ tags:
 
 The network constructed using Master Regulators from the MR search with a step of 7 had an unrealistically small FVS set of 3 nodes. Hence, we decided to reconstruct the network using MRs from a step size of 9. This regulator search was done using the signed TRANSPATH database, and a literature search was done to vrify the resultant edges.
 
-### Edges lacking listerature evidence
+### Edges lacking literature evidence
+
+The following edges were removed due to a lack of literature evidence.
 
 - PLK1 phosphorylates SIRT1
     - [should be SIRT1 regulating PLK1](https://www.cell.com/cell-reports/pdfExtended/S2211-1247(18)31771-6	https://www.researchgate.net/publication/273151432_Sirt1_Regulates_Microtubule_Dynamics_Through_Negative_Regulation_of_Plk1_in_Mitosis)
@@ -28,11 +30,11 @@ The network constructed using Master Regulators from the MR search with a step o
 
 
 ### Mutations
-BRAF mutation upregulates MEK (MAP2k1) and ERK (MAPK1). These edges are already in the network.
-Adding in TP53 pathways
-removing all downstream TP53 targets besides notch1 due to literature evidence
-LRKK2 not expressed
-removing TAB2 cause nonsense mutation
+- BRAF mutation upregulates MEK (MAP2k1) and ERK (MAPK1). These edges are already in the network.
+- Adding in pathways non-canonically activated by mutP53
+- Removing all downstream TP53 targets besides NOTCH1 due to literature evidence
+- LRKK2 not expressed
+- removing TAB2 because it's a nonsense mutation
 
 ### Condensing Source Nodes
 Several source nodes are subunits of the same gene. FC states that they must be controlled to steer the system to any desired attractor. Thus, if the nodes had similar out going edges, I combined them into one node to reduce the number of nodes that must be controlled.
@@ -58,7 +60,7 @@ Keep self loop for Aurka, which [auto phoshporylates](https://www.ncbi.nlm.nih.g
 - 25 source nodes
 - 225 nodes
 - 572 edges
-- 2 mFVSes of 12 each (FVS_12 and FVS_34)
+- 2 mFVSes of 12 each (FVS_12 and FVS_34) when excluding FVSes containing complexes
 
 ## OCASANA+ FC output
 
