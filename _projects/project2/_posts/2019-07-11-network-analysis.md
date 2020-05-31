@@ -13,9 +13,10 @@ The objective of Network Analysis is to identify and prioritize putative reversi
 
 # FVS
 
-I [ran FVS](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/OLD/NetworkAnalysis%201/FVS_step7/FVS_run.py) on both the network constructed with MRs from a step size of 9 and on the network constructed with MRs from a step size of 7. The first network produced several FVS sets, ranging in size from 15 to 17 nodes, while the second produced two FVS sets of 3 nodes each. They are:
+I [ran FVS](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/OLD/NetworkAnalysis%201/FVS_step7/FVS_run.py) on both the network constructed with MRs from a step size of 9 and on the network constructed with MRs from a step size of 7. The first network produced [several FVS sets](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/OLD/NetworkAnalysis%201/FVS_step9/231_FVS_output2.txt), ranging in size from 15 to 17 nodes, while the second produced [two FVS sets of 3 nodes each](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/OLD/NetworkAnalysis%201/FVS_step7/231_FVS_output2.txt). They are:
 
 ['EGFR', 'RELA', 'FOXM1']  
+
 ['PLK1', 'RELA', 'EGFR']
 
 
@@ -29,11 +30,11 @@ Considering the smaller size of the FVS set and the smaller number of source nod
 
 # SFA
 
-I ran signal flow analysis to determine the attractors of the MCF10A and the MDAMB231 cell lines. Then I identified candidate readout nodes as those nodes whose expression flipped between the two attractors.  
+I ran signal flow analysis to determine the attractors of the [MCF10A](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/OLD/NetworkAnalysis%201/SFA_2/attractor_10A.txt) and the [MDAMB231](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/OLD/NetworkAnalysis%201/SFA_2/attractor_231.txt) cell lines. Then I identified candidate readout nodes as those nodes whose expression flipped between the two attractors.  
 
-In order to identify other attractors of the network, I wrote a script to produce k *unique* random sets of n zeroes and ones to use a basal levels. In this case, **n = 114** (114 nodes with gene expression data), and I started with **k = 1000**.  
+In order to identify other attractors of the network, I wrote a script, [`randomStateGenerator.py`](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/OLD/NetworkAnalysis%201/SFA/Identify%20Attractors/randomStateGenerator.py) , to produce k *unique* random sets of n zeroes and ones to use a basal levels. In this case, **n = 114** (114 nodes with gene expression data), and I started with **k = 1000**.  
 
-I then adapted the SFA script to take these 1000 basal level inputs and generate the corresponding attractors.
+I then wrote [`SimulateAttractors.py`](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/OLD/NetworkAnalysis%201/SFA/Identify%20Attractors/SimulateAttractors.py) to take these 1000 basal level inputs and generate the corresponding attractors.
 
 # Clustering  
 
@@ -46,7 +47,7 @@ I next tried a heatmap of the 1000 attractors but that wasn't helpful either.
 ![heatmap]({{ site.baseurl }}\_assets\images_proj2\heatmap_attractors.png)
 
 
-After reading the Quaranta paper, I found that they used the R package [*ConsensusClusterPlus*](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2881355/) to cluster their attractors. This is an unsupervised clustering approach that tests different numbers of clusters (from 2 to 20 in this case) and can use different algorithms.
+After reading the [Quaranta paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5532541/) (2017), I found that they used the R package [*ConsensusClusterPlus*](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2881355/) to cluster their attractors. This is an unsupervised clustering approach that tests different numbers of clusters (from 2 to 20 in this case) and can use different algorithms.
 
 I ran this with 1000 reps, taking subsets of 80% of the nodes (features) and 80% of the attractors (items) and tested out on four different algorithms: hierarchical clustering, partitioning around medoids, k-means, and k-means upon distance matrices. I also tested different distance functions including pearson and spearman. 
 

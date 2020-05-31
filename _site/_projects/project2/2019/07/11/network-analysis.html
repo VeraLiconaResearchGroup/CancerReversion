@@ -156,10 +156,11 @@
 
 <h1 id="fvs">FVS</h1>
 
-<p>I <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/OLD/NetworkAnalysis%201/FVS_step7/FVS_run.py">ran FVS</a> on both the network constructed with MRs from a step size of 9 and on the network constructed with MRs from a step size of 7. The first network produced several FVS sets, ranging in size from 15 to 17 nodes, while the second produced two FVS sets of 3 nodes each. They are:</p>
+<p>I <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/OLD/NetworkAnalysis%201/FVS_step7/FVS_run.py">ran FVS</a> on both the network constructed with MRs from a step size of 9 and on the network constructed with MRs from a step size of 7. The first network produced <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/OLD/NetworkAnalysis%201/FVS_step9/231_FVS_output2.txt">several FVS sets</a>, ranging in size from 15 to 17 nodes, while the second produced <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/OLD/NetworkAnalysis%201/FVS_step7/231_FVS_output2.txt">two FVS sets of 3 nodes each</a>. They are:</p>
 
-<p>[‘EGFR’, ‘RELA’, ‘FOXM1’]<br />
-[‘PLK1’, ‘RELA’, ‘EGFR’]</p>
+<p>[‘EGFR’, ‘RELA’, ‘FOXM1’]</p>
+
+<p>[‘PLK1’, ‘RELA’, ‘EGFR’]</p>
 
 <p><strong>Notes:</strong></p>
 <ul>
@@ -173,11 +174,11 @@
 
 <h1 id="sfa">SFA</h1>
 
-<p>I ran signal flow analysis to determine the attractors of the MCF10A and the MDAMB231 cell lines. Then I identified candidate readout nodes as those nodes whose expression flipped between the two attractors.</p>
+<p>I ran signal flow analysis to determine the attractors of the <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/OLD/NetworkAnalysis%201/SFA_2/attractor_10A.txt">MCF10A</a> and the <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/OLD/NetworkAnalysis%201/SFA_2/attractor_231.txt">MDAMB231</a> cell lines. Then I identified candidate readout nodes as those nodes whose expression flipped between the two attractors.</p>
 
-<p>In order to identify other attractors of the network, I wrote a script to produce k <em>unique</em> random sets of n zeroes and ones to use a basal levels. In this case, <strong>n = 114</strong> (114 nodes with gene expression data), and I started with <strong>k = 1000</strong>.</p>
+<p>In order to identify other attractors of the network, I wrote a script, <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/OLD/NetworkAnalysis%201/SFA/Identify%20Attractors/randomStateGenerator.py"><code class="highlighter-rouge">randomStateGenerator.py</code></a> , to produce k <em>unique</em> random sets of n zeroes and ones to use a basal levels. In this case, <strong>n = 114</strong> (114 nodes with gene expression data), and I started with <strong>k = 1000</strong>.</p>
 
-<p>I then adapted the SFA script to take these 1000 basal level inputs and generate the corresponding attractors.</p>
+<p>I then wrote <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/OLD/NetworkAnalysis%201/SFA/Identify%20Attractors/SimulateAttractors.py"><code class="highlighter-rouge">SimulateAttractors.py</code></a> to take these 1000 basal level inputs and generate the corresponding attractors.</p>
 
 <h1 id="clustering">Clustering</h1>
 
@@ -189,7 +190,7 @@
 
 <p><img src="/gastonguay_compsysmed_labnotebook\_assets\images_proj2\heatmap_attractors.png" alt="heatmap" /></p>
 
-<p>After reading the Quaranta paper, I found that they used the R package <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2881355/"><em>ConsensusClusterPlus</em></a> to cluster their attractors. This is an unsupervised clustering approach that tests different numbers of clusters (from 2 to 20 in this case) and can use different algorithms.</p>
+<p>After reading the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5532541/">Quaranta paper</a> (2017), I found that they used the R package <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2881355/"><em>ConsensusClusterPlus</em></a> to cluster their attractors. This is an unsupervised clustering approach that tests different numbers of clusters (from 2 to 20 in this case) and can use different algorithms.</p>
 
 <p>I ran this with 1000 reps, taking subsets of 80% of the nodes (features) and 80% of the attractors (items) and tested out on four different algorithms: hierarchical clustering, partitioning around medoids, k-means, and k-means upon distance matrices. I also tested different distance functions including pearson and spearman.</p>
 

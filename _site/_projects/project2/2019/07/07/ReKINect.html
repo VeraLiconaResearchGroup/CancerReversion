@@ -164,19 +164,22 @@ B - Determinants of specificity in protein domains (Kinase and SH2 domains).<br 
 C - Phosphorylation sites in any protein.</p>
 
 <h2 id="data-processing">Data Processing</h2>
-<p>ReKINect requires reference AA sequence and mutated AA sequence.<br />
-Our list of mutant protein IDs is from <a href="https://platform.genexplain.com/bioumlweb/#de=data/Projects/SalazarCortes%20DataAnalysis/Data/Gastonguay/MDAMB231/231SNV_COSMIC%20table%20filtered_framemisssplicedel%20Ensembl">COSMIC mutations</a>.</p>
+<p>ReKINect requires reference AA sequence and mutated AA sequence. To identify said sequences, the <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Mutations/VEP_runs/231_SNV_correct.vcf">vcf of SNVs</a> was passed through the variant effect predictor with the ProteinSeqs plugin. This characterizes the effect of each mutation in the <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Mutations/VEP_runs/231_SNV_correct_output.vcf">output file</a>, and provides the <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Mutations/VEP_runs/reference.fa">reference</a> and <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Mutations/VEP_runs/mutated.fa">mutant</a> AA sequences of all mutated proteins.</p>
 
-<p>The list of SNPs was passed through the variant effect predictor with the ProteinSeqs plugin. This provides the reference and mutant AA sequences.</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vep -i 231SNV.vcf -o 231.txt --plugin ProteinSeqs 231ref.fa,231mut.fa --database
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vep --input_file 231_SNV_correct.vcf --merged --output_file 231_SNV_correct_output.vcf --plugin ProteinSeqs,reference.fa,mutated.fa --use_given_ref
 </code></pre></div></div>
 
-<h2 id="output">Output</h2>
-<p>run using complete.fa</p>
+<blockquote>
+  <p><strong>Note:</strong> Due  to issues with the strand VEP was reading, some file manipulation was necessary to acheive the correct output. The VCF of SNVs as downloaded from COSMIC was given to VEP, but some of the prediceted amino acid changes were incorrect. So, we flipped the amino acids in the VCF to their complement (A –&gt; T, C –&gt; G) to represent what they would be on the other strand. Then we ran VEP on that file and took the entries from each VCF that produced the correct amino acid ouptut via VEP. This is the <code class="highlighter-rouge">231_SNV_correct.vcf</code> file, which was used for the analysis.</p>
+</blockquote>
 
-<p><strong><a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Mutations/VEP_runs/ReKINectOutput.txt">Results</a></strong>
-<img src="/gastonguay_compsysmed_labnotebook\_assets\images_proj2\reKINect.png" alt="reKINect" /></p>
+<h2 id="run-rekinect">Run ReKINect</h2>
+<p>We ran <a href="https://rekinect.science/home">ReKINect</a> using <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Mutations/VEP_runs/complete.fa">complete.fa</a>, which has the contents of <code class="highlighter-rouge">reference.fa</code> and <code class="highlighter-rouge">mutated.fa</code> in one file. Reference protein sequences are labeled as <strong>&gt;<em>transcript</em>_reference</strong> and mutated protein sequences are labeled as <strong>&gt;<em>transcript</em>:p.<em>mutation</em></strong>, where <em>transcript</em> is the Ensmebl ID of the gene, and <em>mutation</em> is the amino acid subsitution and location (ex: His499Asn).</p>
+
+<h3 id="results">Results</h3>
+<p>The <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Mutations/VEP_runs/ReKINectOutput.txt">ReKINect Output</a> is shown below:</p>
+
+<p><img src="/gastonguay_compsysmed_labnotebook\_assets\images_proj2\reKINect.png" alt="reKINect" /></p>
 
 <p>None of these mutant Kinases are in our network, but I wanted to determine their effect on elements in our network. The only mutation with existing information is the BRAF mutation, which overactivates MEK. However, MEK is not in our network so I don’t need to consider BRAF’s effect on the network. Additionaly, EPAHA3 is a damaged transpath protein in the mutant pathways TRANSPATH workflow, so it’s effect is already being taken into consideration.</p>
 

@@ -1,4 +1,4 @@
-Cancer Reversion
+Cancer Reversion: A Dynamical Systems Approach
 =============================
 This lab notebook is developed from a jekyll template developed by [Florian Schneider](https://github.com/fdschneider/jekyll-lablog). It contains data, scripts, and documentation of the work for my undergraduate honors thesis with the [Computational Systems Medicine Team](https://veraliconaresearchgroup.github.io/) at UConn Health's Center for Quantitative Medicine.
 
@@ -11,6 +11,7 @@ Claudin-Low Triple Negative Breast Cancer (CL TNBC) has high relapse and low sur
 
 
 
+## Serving the Notebook
 ### Requirements
 - install Developer Ruby
   - if you already have hombrew installed

@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/gastonguay_compsysmed_labnotebook/</link>
     <atom:link href="http://localhost:4000/gastonguay_compsysmed_labnotebook/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 30 May 2020 16:38:21 -0400</pubDate>
-    <lastBuildDate>Sat, 30 May 2020 16:38:21 -0400</lastBuildDate>
+    <pubDate>Sun, 31 May 2020 13:01:09 -0400</pubDate>
+    <lastBuildDate>Sun, 31 May 2020 13:01:09 -0400</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -4304,7 +4304,7 @@ Execution halted
       <item>
         <title>Identifying Readout Nodes</title>
         <description>&lt;h1 id=&quot;objective&quot;&gt;Objective&lt;/h1&gt;
-&lt;p&gt;Identify nodes in the network that are markers of TNBC tumorigenesis such as EMT, proliferation, and migration that can be used to determine the phenotype associated with an attractor.&lt;/p&gt;
+&lt;p&gt;Identify nodes in the network that are markers of TNBC tumorigenesis such as EMT, proliferation, and migration that can be used as an internal control for the phenotype associated with an attractor.&lt;/p&gt;
 
 &lt;h2 id=&quot;characteristic-phenotypes&quot;&gt;Characteristic Phenotypes:&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -4440,10 +4440,11 @@ Furhtermore, while beta catenin and TCF3 are related to TNBC tumorigenesis, thei
 
 &lt;h1 id=&quot;fvs&quot;&gt;FVS&lt;/h1&gt;
 
-&lt;p&gt;I &lt;a href=&quot;https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/OLD/NetworkAnalysis%201/FVS_step7/FVS_run.py&quot;&gt;ran FVS&lt;/a&gt; on both the network constructed with MRs from a step size of 9 and on the network constructed with MRs from a step size of 7. The first network produced several FVS sets, ranging in size from 15 to 17 nodes, while the second produced two FVS sets of 3 nodes each. They are:&lt;/p&gt;
+&lt;p&gt;I &lt;a href=&quot;https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/OLD/NetworkAnalysis%201/FVS_step7/FVS_run.py&quot;&gt;ran FVS&lt;/a&gt; on both the network constructed with MRs from a step size of 9 and on the network constructed with MRs from a step size of 7. The first network produced &lt;a href=&quot;https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/OLD/NetworkAnalysis%201/FVS_step9/231_FVS_output2.txt&quot;&gt;several FVS sets&lt;/a&gt;, ranging in size from 15 to 17 nodes, while the second produced &lt;a href=&quot;https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/OLD/NetworkAnalysis%201/FVS_step7/231_FVS_output2.txt&quot;&gt;two FVS sets of 3 nodes each&lt;/a&gt;. They are:&lt;/p&gt;
 
-&lt;p&gt;[‘EGFR’, ‘RELA’, ‘FOXM1’]&lt;br /&gt;
-[‘PLK1’, ‘RELA’, ‘EGFR’]&lt;/p&gt;
+&lt;p&gt;[‘EGFR’, ‘RELA’, ‘FOXM1’]&lt;/p&gt;
+
+&lt;p&gt;[‘PLK1’, ‘RELA’, ‘EGFR’]&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Notes:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -4457,11 +4458,11 @@ Furhtermore, while beta catenin and TCF3 are related to TNBC tumorigenesis, thei
 
 &lt;h1 id=&quot;sfa&quot;&gt;SFA&lt;/h1&gt;
 
-&lt;p&gt;I ran signal flow analysis to determine the attractors of the MCF10A and the MDAMB231 cell lines. Then I identified candidate readout nodes as those nodes whose expression flipped between the two attractors.&lt;/p&gt;
+&lt;p&gt;I ran signal flow analysis to determine the attractors of the &lt;a href=&quot;https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/OLD/NetworkAnalysis%201/SFA_2/attractor_10A.txt&quot;&gt;MCF10A&lt;/a&gt; and the &lt;a href=&quot;https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/OLD/NetworkAnalysis%201/SFA_2/attractor_231.txt&quot;&gt;MDAMB231&lt;/a&gt; cell lines. Then I identified candidate readout nodes as those nodes whose expression flipped between the two attractors.&lt;/p&gt;
 
-&lt;p&gt;In order to identify other attractors of the network, I wrote a script to produce k &lt;em&gt;unique&lt;/em&gt; random sets of n zeroes and ones to use a basal levels. In this case, &lt;strong&gt;n = 114&lt;/strong&gt; (114 nodes with gene expression data), and I started with &lt;strong&gt;k = 1000&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;In order to identify other attractors of the network, I wrote a script, &lt;a href=&quot;https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/OLD/NetworkAnalysis%201/SFA/Identify%20Attractors/randomStateGenerator.py&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;randomStateGenerator.py&lt;/code&gt;&lt;/a&gt; , to produce k &lt;em&gt;unique&lt;/em&gt; random sets of n zeroes and ones to use a basal levels. In this case, &lt;strong&gt;n = 114&lt;/strong&gt; (114 nodes with gene expression data), and I started with &lt;strong&gt;k = 1000&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;I then adapted the SFA script to take these 1000 basal level inputs and generate the corresponding attractors.&lt;/p&gt;
+&lt;p&gt;I then wrote &lt;a href=&quot;https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/OLD/NetworkAnalysis%201/SFA/Identify%20Attractors/SimulateAttractors.py&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;SimulateAttractors.py&lt;/code&gt;&lt;/a&gt; to take these 1000 basal level inputs and generate the corresponding attractors.&lt;/p&gt;
 
 &lt;h1 id=&quot;clustering&quot;&gt;Clustering&lt;/h1&gt;
 
@@ -4473,7 +4474,7 @@ Furhtermore, while beta catenin and TCF3 are related to TNBC tumorigenesis, thei
 
 &lt;p&gt;&lt;img src=&quot;/gastonguay_compsysmed_labnotebook\_assets\images_proj2\heatmap_attractors.png&quot; alt=&quot;heatmap&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;After reading the Quaranta paper, I found that they used the R package &lt;a href=&quot;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2881355/&quot;&gt;&lt;em&gt;ConsensusClusterPlus&lt;/em&gt;&lt;/a&gt; to cluster their attractors. This is an unsupervised clustering approach that tests different numbers of clusters (from 2 to 20 in this case) and can use different algorithms.&lt;/p&gt;
+&lt;p&gt;After reading the &lt;a href=&quot;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5532541/&quot;&gt;Quaranta paper&lt;/a&gt; (2017), I found that they used the R package &lt;a href=&quot;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2881355/&quot;&gt;&lt;em&gt;ConsensusClusterPlus&lt;/em&gt;&lt;/a&gt; to cluster their attractors. This is an unsupervised clustering approach that tests different numbers of clusters (from 2 to 20 in this case) and can use different algorithms.&lt;/p&gt;
 
 &lt;p&gt;I ran this with 1000 reps, taking subsets of 80% of the nodes (features) and 80% of the attractors (items) and tested out on four different algorithms: hierarchical clustering, partitioning around medoids, k-means, and k-means upon distance matrices. I also tested different distance functions including pearson and spearman.&lt;/p&gt;
 
