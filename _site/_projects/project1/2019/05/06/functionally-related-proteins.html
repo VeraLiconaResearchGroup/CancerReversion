@@ -152,7 +152,7 @@
 
   <article class="post-content">
     <h1 id="objective">Objective</h1>
-<p>While the application of BiNOM on the HPRD is valuable when using DEG data, it may be even more useful and representative of what’s occurring in the cell using the <a href="https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project1/231_protein_ranked_7744">ranked proteomics data</a>.</p>
+<p>While the application of BiNOM on the HPRD is valuable when using DEG data, it may be even more useful and representative of what’s occurring in the cell using the <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/231_protein_ranked_7744">ranked proteomics data</a>.</p>
 
 <h2 id="comparison-of-rna-seq-and-protein-data">Comparison of RNA-Seq and Protein Data</h2>
 <div style="text-align:center">
@@ -183,19 +183,19 @@
   <p><img src="/gastonguay_compsysmed_labnotebook\_assets\images\FOC_analysis_protein.png" alt="alt text" /></p>
 </div>
 
-<p>We determined the first order connectivity largest connected component (FOC LCC) generated from both the first 100 and 300 ranked proteins, corresponding to the first two peaks of the above graph. After removing housekeeping genes and then taking the resulting largest connected component, we have FOC LCCs of <a href="https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project1/protein_FOC_100_noHKG_LCC_32">32</a> and <a href="https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project1/protein_FOC_300_noHKG_LCC_161">161</a> proteins, respectively.</p>
+<p>We determined the first order connectivity largest connected component (FOC LCC) generated from both the first 100 and 300 ranked proteins, corresponding to the first two peaks of the above graph. After removing housekeeping genes and then taking the resulting largest connected component, we have FOC LCCs of <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/protein_FOC_100_noHKG_LCC_32">32</a> and <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/protein_FOC_300_noHKG_LCC_161">161</a> proteins, respectively.</p>
 
 <h2 id="second-order-connectivity">Second Order Connectivity</h2>
-<p>We ran second order connectivity on both the 32 and 161 protein FOC LCCs. After comparing to the expressed proteins and removing housekeeping genes, we were left with SOC lists of <a href="https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project1/protein_SOC_expressed_noHKG_97">97</a> and <a href="https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project1/protein_SOC_expressed_noHKG_466">466</a> proteins from the FOC lists of 32 and 161, respectively. The removal of non-expressed proteins and HKG did not disrupt the largest connected component of the SOC proteins.</p>
+<p>We ran second order connectivity on both the 32 and 161 protein FOC LCCs. After comparing to the expressed proteins and removing housekeeping genes, we were left with SOC lists of <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/protein_SOC_expressed_noHKG_97">97</a> and <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/protein_SOC_expressed_noHKG_466">466</a> proteins from the FOC lists of 32 and 161, respectively. The removal of non-expressed proteins and HKG did not disrupt the largest connected component of the SOC proteins.</p>
 
 <h2 id="weighted-sums">Weighted Sums</h2>
-<p>We ran <a href="https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project1/weighted_sums_proteins.Rmd">weighted sums</a> by slightly altering the script from the gene lists to be specific to the protein lists.
+<p>We ran <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/weighted_sums_proteins.Rmd">weighted sums</a> by slightly altering the script from the gene lists to be specific to the protein lists.
 We compared the protein lists to the same three lists as in the <a href="/gastonguay_compsysmed_labnotebook/_projects/project1/2019/04/08/functionally-related-genes.html">identification of functionally related genes</a>:</p>
 
 <ol>
-  <li><a href="https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project1/breast_DO.txt">Breast Cancer Disease Ontology</a> genes associated to breast cancer DO term from <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2687947/">DOLite</a> in <a href="http://www.bioconductor.org/packages/2.5/bioc/html/GeneAnswers.html">GeneAnswers</a> R package</li>
-  <li>The complete <a href="https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project1/HOC.txt">hallmark of cancer list</a> from the <a href="https://acsn.curie.fr/ACSN2/ACSN2.html">atlas of cancer signalling network</a></li>
-  <li>Only the genes from list 2 associated with <a href="https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project1/EMT_innateimmune">EMT and innate immune reseponse</a> as these hallmarks are claudin-low specific</li>
+  <li><a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/breast_DO.txt">Breast Cancer Disease Ontology</a> genes associated to breast cancer DO term from <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2687947/">DOLite</a> in <a href="http://www.bioconductor.org/packages/2.5/bioc/html/GeneAnswers.html">GeneAnswers</a> R package</li>
+  <li>The complete <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/HOC.txt">hallmark of cancer list</a> from the <a href="https://acsn.curie.fr/ACSN2/ACSN2.html">atlas of cancer signalling network</a></li>
+  <li>Only the genes from list 2 associated with <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/EMT_innateimmune">EMT and innate immune reseponse</a> as these hallmarks are claudin-low specific</li>
 </ol>
 
 <h3 id="for-the-lists-generated-from-the-first-100-ranked-proteins-we-have">For the lists generated from the first 100 ranked proteins, we have:</h3>

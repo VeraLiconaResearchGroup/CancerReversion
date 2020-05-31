@@ -33,9 +33,9 @@ We ran the network nodes through weighted sums to see their relevance to CL TNBC
 
 ![weighted sums]({{ site.baseurl }}\_assets\images\WeightedSums_network.png)
 
-[Network intersection with HOC](https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project1/gene_network/network_int_HOC.txt)  
-[Netowrk intersection with CL genes](https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project1/gene_network/network_int_CLgenes.txt)  
-[Network intersection with Breast DO](https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project1/gene_network/network_int_breastDO.txt)  
+[Network intersection with HOC](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/gene_network/network_int_HOC.txt)  
+[Netowrk intersection with CL genes](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/gene_network/network_int_CLgenes.txt)  
+[Network intersection with Breast DO](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/gene_network/network_int_breastDO.txt)  
 
 
 # New Mutations in Network
@@ -57,9 +57,9 @@ Protein intensity: ~800
 We couldn't determine the nature of the interaction between our transcription factors and ARIH2, but we do know that it activates TP53 so we glued it into the network that way. We also removed NF2 from the network because of its loss of function mutation.  
 
 After making this change, we now have:  
-- **[197](https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project1/network_nodes.txt)** nodes in the network 
+- **[197](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/network_nodes.txt)** nodes in the network 
     - because we removed NF2  
-- **[28](https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project1/gene_network/sourcenodes.txt)** source nodes because we removed NF2 but added ARIH2  
+- **[28](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/gene_network/sourcenodes.txt)** source nodes because we removed NF2 but added ARIH2  
 - **387** edges  
 
 

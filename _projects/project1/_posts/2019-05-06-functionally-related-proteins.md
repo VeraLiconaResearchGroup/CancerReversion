@@ -8,7 +8,7 @@ tags:
  - static_network
 ---
 # Objective
-While the application of BiNOM on the HPRD is valuable when using DEG data, it may be even more useful and representative of what's occurring in the cell using the [ranked proteomics data](https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project1/231_protein_ranked_7744).
+While the application of BiNOM on the HPRD is valuable when using DEG data, it may be even more useful and representative of what's occurring in the cell using the [ranked proteomics data](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/231_protein_ranked_7744).
 
 ## Comparison of RNA-Seq and Protein Data
 <div style="text-align:center" markdown="1">
@@ -35,18 +35,18 @@ We wanted to compare the difference between using the proteomic data and the gen
 ![alt text]({{ site.baseurl }}\_assets\images\FOC_analysis_protein.png)
 </div>
 
- We determined the first order connectivity largest connected component (FOC LCC) generated from both the first 100 and 300 ranked proteins, corresponding to the first two peaks of the above graph. After removing housekeeping genes and then taking the resulting largest connected component, we have FOC LCCs of [32](https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project1/protein_FOC_100_noHKG_LCC_32) and [161](https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project1/protein_FOC_300_noHKG_LCC_161) proteins, respectively.
+ We determined the first order connectivity largest connected component (FOC LCC) generated from both the first 100 and 300 ranked proteins, corresponding to the first two peaks of the above graph. After removing housekeeping genes and then taking the resulting largest connected component, we have FOC LCCs of [32](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/protein_FOC_100_noHKG_LCC_32) and [161](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/protein_FOC_300_noHKG_LCC_161) proteins, respectively.
 
 ## Second Order Connectivity
-We ran second order connectivity on both the 32 and 161 protein FOC LCCs. After comparing to the expressed proteins and removing housekeeping genes, we were left with SOC lists of [97](https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project1/protein_SOC_expressed_noHKG_97) and [466](https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project1/protein_SOC_expressed_noHKG_466) proteins from the FOC lists of 32 and 161, respectively. The removal of non-expressed proteins and HKG did not disrupt the largest connected component of the SOC proteins.
+We ran second order connectivity on both the 32 and 161 protein FOC LCCs. After comparing to the expressed proteins and removing housekeeping genes, we were left with SOC lists of [97](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/protein_SOC_expressed_noHKG_97) and [466](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/protein_SOC_expressed_noHKG_466) proteins from the FOC lists of 32 and 161, respectively. The removal of non-expressed proteins and HKG did not disrupt the largest connected component of the SOC proteins.
 
 ## Weighted Sums
-We ran [weighted sums](https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project1/weighted_sums_proteins.Rmd) by slightly altering the script from the gene lists to be specific to the protein lists.
+We ran [weighted sums](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/weighted_sums_proteins.Rmd) by slightly altering the script from the gene lists to be specific to the protein lists.
 We compared the protein lists to the same three lists as in the [identification of functionally related genes]({{ site.baseurl }}{% post_url 2019-04-08-functionally-related-genes %}):
 
-1. [Breast Cancer Disease Ontology](https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project1/breast_DO.txt) genes associated to breast cancer DO term from [DOLite](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2687947/) in [GeneAnswers](http://www.bioconductor.org/packages/2.5/bioc/html/GeneAnswers.html) R package
-2. The complete [hallmark of cancer list](https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project1/HOC.txt) from the [atlas of cancer signalling network](https://acsn.curie.fr/ACSN2/ACSN2.html)
-3. Only the genes from list 2 associated with [EMT and innate immune reseponse](https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project1/EMT_innateimmune) as these hallmarks are claudin-low specific
+1. [Breast Cancer Disease Ontology](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/breast_DO.txt) genes associated to breast cancer DO term from [DOLite](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2687947/) in [GeneAnswers](http://www.bioconductor.org/packages/2.5/bioc/html/GeneAnswers.html) R package
+2. The complete [hallmark of cancer list](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/HOC.txt) from the [atlas of cancer signalling network](https://acsn.curie.fr/ACSN2/ACSN2.html)
+3. Only the genes from list 2 associated with [EMT and innate immune reseponse](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/EMT_innateimmune) as these hallmarks are claudin-low specific
 
 
 ### For the lists generated from the first 100 ranked proteins, we have:

@@ -19,7 +19,7 @@ However, we found that the list of expressed genes didn't include any genes with
 
 We are also filtering by [methylation and acetylation data](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4868673/). Inclusion criteria is that genes have both a methylation AND acetylation fold enhancement value whose absolute value is greater than or equal to 2. If this proves to be too stringent, we will use the absolute value of the methylation OR acetylation fold enhancement greater than or equal to 2.
 
-This filtering resulted in [6783](https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project1/expressed_openregions_6784.txt) *unique* genes.
+This filtering resulted in [6783](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/expressed_openregions_6784.txt) *unique* genes.
 
 
 <div style="text-align:center" markdown="1">
@@ -30,10 +30,10 @@ This filtering resulted in [6783](https://github.com/MadeleineGastonguay/gastong
 
 ## Calculating z-scores
 After filtering the list of expressed genes for FDR<0.05 and P-value<0.001, we will try two ways of ranked DEGs when running BiNOM:
-1. From [lowest to highest p-value](https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project1/gene_network/rankedDEGs_FDR05_Pval001.txt)
+1. From [lowest to highest p-value](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/gene_network/rankedDEGs_FDR05_Pval001.txt)
 
 
-2. From [highest to lowest z-score](https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project1/gene_network/rankedDEGs_FDR05_Pval001_rankedzscore.txt)
+2. From [highest to lowest z-score](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/gene_network/rankedDEGs_FDR05_Pval001_rankedzscore.txt)
 
 The Z-score was calculated according to the equation below where $e_{ca}$ is the average expression of a gene in the cancerous cell line, $\mu_N$ is the average expression of the same gene in the normal cell line, and $\sigma_N$ is the standard deviation of the 4 gene expression measurements in the normal cell line. The absolute value of the Z-score was used when ranking lists.
 
@@ -67,22 +67,22 @@ df1$zscore <- (df1$MDA_MB.231.mean-df1$MCF10A.mean)/df1$sd_mcf10a
 ![Zscore_FOC]({{ site.baseurl }}\_assets\images\FOC_analysis_zscore.png)
 
 
-**Conclusion:** Move forward with the list of [differentially expressed genes ranked by z-score](https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project1/gene_network/rankedDEGs_FDR05_Pval001_rankedzscore.txt). This produces a largest connected component of [30 genes](https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project1/gene_network/FOC_LCC).
+**Conclusion:** Move forward with the list of [differentially expressed genes ranked by z-score](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/gene_network/rankedDEGs_FDR05_Pval001_rankedzscore.txt). This produces a largest connected component of [30 genes](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/gene_network/FOC_LCC).
 
 ## Second Order Connectivity
 
-Moving forward with list of first [250 differentially expressed genes](https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project1/gene_network/rankedDEGs_FDR05_Pval001_rankedzscore_top250.txt) ranked by z-score.
+Moving forward with list of first [250 differentially expressed genes](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/gene_network/rankedDEGs_FDR05_Pval001_rankedzscore_top250.txt) ranked by z-score.
 
-After filtering second order connectivity results for those that are expressed in our data, removing house keeping genes, and then taking the largest connected component, we are left with a list of [75 genes](https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project1/gene_network/SOC_LCC_expr_nohkg).
+After filtering second order connectivity results for those that are expressed in our data, removing house keeping genes, and then taking the largest connected component, we are left with a list of [75 genes](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/gene_network/SOC_LCC_expr_nohkg).
 
 ## Weighted Sums
 
 ### Compiling Lists
 
 When calculating weighted sums, we will compare the list of differentially expressed genes, first order connectivity largest component, and second order connectivity largest component to the following three lists:
-1. [Breast Cancer Disease Ontology](https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project1/breast_DO.txt) genes associated to breast cancer DO term from [DOLite](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2687947/) in [GeneAnswers](http://www.bioconductor.org/packages/2.5/bioc/html/GeneAnswers.html) R package
-2. The complete [hallmark of cancer list](https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project1/HOC.txt) from the [atlas of cancer signalling network](https://acsn.curie.fr/ACSN2/ACSN2.html)
-3. Only the genes from list 2 associated with [EMT and innate immune reseponse](https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project1/EMT_innateimmune) as these hallmarks are claudin-low specific
+1. [Breast Cancer Disease Ontology](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/breast_DO.txt) genes associated to breast cancer DO term from [DOLite](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2687947/) in [GeneAnswers](http://www.bioconductor.org/packages/2.5/bioc/html/GeneAnswers.html) R package
+2. The complete [hallmark of cancer list](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/HOC.txt) from the [atlas of cancer signalling network](https://acsn.curie.fr/ACSN2/ACSN2.html)
+3. Only the genes from list 2 associated with [EMT and innate immune reseponse](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/EMT_innateimmune) as these hallmarks are claudin-low specific
 
 ### Calculating Weighted Sums
 ```{r}
@@ -111,4 +111,4 @@ g1 <- ggplot(data= weightedsums, aes(x = gene_set, y =sum)) +
 ```
 ![weighted sums]({{ site.baseurl }}\_assets\images\weightedsums_plusTABLE.png)
 
-**Conclusion:** Run TRANSFAC and TF analysis in IPA with the [SOC](https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project1/gene_network/SOC_LCC_expr_nohkg) list of 75 genes because it has the highest [weighted sum](https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project1/gene_network/weightedsums_fegm.txt).
+**Conclusion:** Run TRANSFAC and TF analysis in IPA with the [SOC](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/gene_network/SOC_LCC_expr_nohkg) list of 75 genes because it has the highest [weighted sum](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/gene_network/weightedsums_fegm.txt).

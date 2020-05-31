@@ -8,14 +8,19 @@ tags:
  - static_network
  - boolean_network
 ---
+# About
+This post contains links to interesting and relevant papers to look into.
+
 # Look into?
 [Principles and Strategies for Developing Network Models in Cancer](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3082135/pdf/nihms283558.pdf)
+
 [On the Dependency of Cellular Protein Levels on mRNA Abundance](https://www.sciencedirect.com/science/article/pii/S0092867416302707?via%3Dihub)
+
 [Cancer Attractors](https://www.sciencedirect.com/science/article/pii/S1084952109001499?via%3Dihub)
 
 # Weighted Sums
 [Innate Imune Response](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5669567/)
-	- not effective to target adaptive immunity
+- not effective to target adaptive immunity
 
 # Random
 [CMA and TRANSPATH with feedback loop](https://link.springer.com/epdf/10.1186/s12859-019-2687-7?author_access_token=sVKkYS1vthjs4IRR996zWG_BpE1tBhCbnbw3BuzI2RPhTLlVAL5qq8LtDv8FankfDgVDIqk0LGtYnBvOyZmdZODwt45qEYsirKS_SU5CgtJn3M-l8KDgIgttz64tXmFosEIyOXhw9lVO4lK-ETDVhw%3D%3D)   
@@ -37,7 +42,7 @@ Lauren:
 [Making CNV profiles](https://www.nature.com/articles/s41588-018-0179-8)
 
 [Gain of and Loss of TF binding site mutations](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0174032)
-**ADD MUTATIONAL PAPERS FOR ReKINect, KinomeXplorer, TP53 mutations, TF GOB and LOB sites, CHASM**
+
 
 
 # Proteomics networks

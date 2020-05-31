@@ -6,19 +6,13 @@
 </description>
     <link>http://localhost:4000/gastonguay_compsysmed_labnotebook/</link>
     <atom:link href="http://localhost:4000/gastonguay_compsysmed_labnotebook/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 31 May 2020 14:27:20 -0400</pubDate>
-    <lastBuildDate>Sun, 31 May 2020 14:27:20 -0400</lastBuildDate>
+    <pubDate>Sun, 31 May 2020 15:00:00 -0400</pubDate>
+    <lastBuildDate>Sun, 31 May 2020 15:00:00 -0400</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
         <title>Final Network Analysis</title>
-        <description>&lt;style&gt;
-table {
-    width:100%;
-}
-&lt;/style&gt;
-
-&lt;h1 id=&quot;objective&quot;&gt;Objective&lt;/h1&gt;
+        <description>&lt;h1 id=&quot;objective&quot;&gt;Objective&lt;/h1&gt;
 &lt;p&gt;We will employ our pipeline to identify and prioritize putative reversion targets for MDA-MB-231. To do so, virtual screenings of perturbations of the 4 MDA-MB-231 initial conditions (Continuous Normalized RNAseq Expression Data) were run using SFA. The attractors resulting from these perturbations will be classified by knn with the 4 MCF10A and 4 MDA-MB-231 attractors as training sets. We will still “discretize” the output of vitrual screenings in the same way: positive values are represented as 1, negative value are represented as -1, and zeroes remain 0.&lt;/p&gt;
 
 &lt;p&gt;The analyses were all done on six datasets:&lt;/p&gt;
@@ -32,9 +26,9 @@ table {
 &lt;/ol&gt;
 
 &lt;h1 id=&quot;virtual-screening&quot;&gt;Virtual Screening&lt;/h1&gt;
-&lt;p&gt;After an exploration of the use of SFA, we have deicded to initilize our virtual screenings with continuous RNAseq expression values as opposed to discretized values. The FVS are eithor knocked-out, knocked-in, or not changed. The value for knocked-out nodes is fixed at 0, while those that aren’t changed are left alone. The question remains: what value should we set knock-in nodes to. We decided it should be specific to the gene as if we choose one value for over expression of any gene, it may not be large enough for some genes.&lt;/p&gt;
+&lt;p&gt;After reading about &lt;a href=&quot;/gastonguay_compsysmed_labnotebook/_projects/project2/2020/04/01/SFA-initializations.html&quot;&gt;previous applications of SFA&lt;/a&gt;, we have deicded to initilize our virtual screenings with continuous noramlized RNAseq expression values as opposed to discretized values. The reference attractors resulting from experimental data for MDA-MB-231 and MCF10A were generated with &lt;a href=&quot;https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Analysis/scripts/1_estimate_reference_attractors.py&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;1_estimate_reference_attractors.py&lt;/code&gt;&lt;/a&gt;. The FVS are eithor knocked-out, knocked-in, or not changed. The value for knocked-out nodes is fixed at 0, while those that aren’t changed are left alone. The question remains: what value should we set knock-in nodes to. We decided it should be specific to the gene as if we choose one value for over expression of any gene, it may not be large enough for some genes. We tried mutliple different methods for calculating the activation level with the &lt;a href=&quot;https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Analysis/scripts/4b_calculate_activation.py&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;4b_calculate_activation.py&lt;/code&gt;&lt;/a&gt; script.&lt;/p&gt;
 
-&lt;p&gt;Since we have four MDAMB231 experimental expression values, we caluclated the mean and standard deviation between them for each FVS node. Then, we set the stimulation activity of a node to the mean activity of the node plus three standard deviations. However, we found that the standard deviation between expression values for the MDAMB231 replicates can be very small, in which case this method doesn’t give a large increase in basal activity for knock-ins.&lt;/p&gt;
+&lt;p&gt;Since we have four MDAMB231 experimental expression values, we caluclated the mean and standard deviation between them for each FVS node. Then, we tried setting the stimulation activity of a node to the mean activity of the node plus three standard deviations. However, we found that the standard deviation between expression values for the MDAMB231 replicates can be very small, in which case this method doesn’t give a large increase in basal activity for knock-ins.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -230,15 +224,19 @@ table {
 
 &lt;p&gt;Previously, we used the average expression level from MDA-MB-231 as the basal state to apply perturbations to. Now, we will use the four replicates of MDA-MB-231 as separate basal conditions and apply perturbations to all 4 basal states. This will act as 4 “experimental” replicates of our perturbations. Perturbations must result in a shift towards normal for all four replicates to be considered successful. We have 12 FVS nodes resulting in $3^{12} = 531441$ possible perturbations. So far, we have only examined 100,000 of these perturbations. We have only considered perturbations of the FVS, not the whole FC.&lt;/p&gt;
 
+&lt;p&gt;100,000 random perturbations of the FVS nodes (1, 0, -1) were generated with &lt;a href=&quot;https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Analysis/scripts/4a_generate_basal_states.py&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;4a_generate_basal_states.py&lt;/code&gt;&lt;/a&gt;. These perturbations were applied to each of the four initial conditions of MDA-MB-231, once using 1.5*mean as the activation level and once using 2*mean as the activation level. The resulant attractors were simulated with &lt;a href=&quot;https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Analysis/scripts/5_virtual_screenings.py&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;5_virtual_screening.py&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+
 &lt;h1 id=&quot;k-nearest-neighbors-classifier&quot;&gt;K-nearest Neighbors Classifier&lt;/h1&gt;
-&lt;p&gt;Using the 8 experimental attractors as a training set, we classified the 100,000 attractors resulting from FVS perturbations on all 6 datasets. Two questions arose during this:&lt;/p&gt;
+&lt;p&gt;Using the 8 experimental attractors as a training set, we classified all 6 datasets of the 100,000 attractors resulting from FVS perturbations. Three questions arose during this:&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;How many clusters should we use for the training set?&lt;/li&gt;
   &lt;li&gt;What dataset should we use for the analysis?&lt;/li&gt;
   &lt;li&gt;What is the optimal number of neighbors?&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;The 8 reference attractors clearly fall into 4 clusters with clustered with k-means or multi dimensional scaling. Therefore, I will use 4 clusters for the training set: MDAMB231_A, MDAMB231_B, MCF10A_A, and MCF10A_B.&lt;/p&gt;
+&lt;p&gt;And, we still need to determine what activation level should be used.&lt;/p&gt;
+
+&lt;p&gt;The 8 reference attractors clearly fall into 4 clusters with clustered with k-means or multi dimensional scaling. This was done using the &lt;a href=&quot;https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Analysis/scripts/2_mds_reference.R&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;2_mds_reference.R&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Analysis/scripts/3_kmeans_reference.py&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;3_kmeans_reference.py&lt;/code&gt;&lt;/a&gt; scripts. Therefore, I will use 4 clusters for the training set: MDAMB231_A, MDAMB231_B, MCF10A_A, and MCF10A_B.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/gastonguay_compsysmed_labnotebook\_assets\images_proj2\mds_both.png&quot; alt=&quot;mds both&quot; /&gt;
 &lt;img src=&quot;/gastonguay_compsysmed_labnotebook\_assets\images_proj2\mds_both_disc.png&quot; alt=&quot;mds both disc&quot; /&gt;&lt;/p&gt;
@@ -246,6 +244,8 @@ table {
 &lt;h4 id=&quot;exploring-distance-metrics-in-discrete-datasets&quot;&gt;Exploring Distance Metrics in discrete datasets&lt;/h4&gt;
 
 &lt;p&gt;The default distance metric for knn is euclidean distance. However, knn can be run using different distance metrics. For the discrete datasets only, I tested knn using the hamming distance between the perturbations and the training set. &lt;a href=&quot;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6739335/pdf/41598_2019_Article_49571.pdf&quot;&gt;Choo and Cho&lt;/a&gt; use Hamming distnace to determine the boundary of the basin of attraction for an attractor of a Boolean model. States with larger hamming distances are further away from the attractor than states with smaller hamming distances.&lt;/p&gt;
+
+&lt;p&gt;Knn was run with &lt;a href=&quot;https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Analysis/scripts/7_knn.py&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;7_knn.py&lt;/code&gt;&lt;/a&gt; using hamming and euclidean distance.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Test case: MDAMB231_2&lt;/strong&gt;
 (results below from simulation with 2*Mean for knock-in)
@@ -1786,7 +1786,7 @@ Dataset: **Both discrete**
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;&lt;strong&gt;Table:&lt;/strong&gt; Standard deviation of log steady-state expression of FVS nodes from the eight experimental replicates predicted by SFA.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Table:&lt;/strong&gt; Standard deviation of log steady-state expression of FVS nodes from the eight experimental replicates predicted by SFA. Parsed with &lt;a href=&quot;https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Analysis/scripts/examine_atttractors.py&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;examine_attractors.py&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -1937,7 +1937,7 @@ Dataset: **Both discrete**
 
 &lt;h1 id=&quot;select-normal-perturbations&quot;&gt;Select normal perturbations&lt;/h1&gt;
 
-&lt;p&gt;Using 3 nearest neihgbors and the combination of logss and DAC dataset, there are &lt;a href=&quot;https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Analysis/virtual_screening/successful_perturbations.txt&quot;&gt;157 perturbations&lt;/a&gt; causing a shift to normal from all 4 replicates. All of these perturbations also triggered a shift to normal in the DAC dataset, and all but one (Perturb_079281) triggered the shift in the logss dataset.&lt;/p&gt;
+&lt;p&gt;Using 3 nearest neihghbors and the combination of logss and DAC dataset, there are &lt;a href=&quot;https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Analysis/virtual_screening/successful_perturbations.txt&quot;&gt;157 perturbations&lt;/a&gt; causing a shift to normal from all 4 replicates. All of these perturbations also triggered a shift to normal in the DAC dataset, and all but one (Perturb_079281) triggered the shift in the logss dataset.&lt;/p&gt;
 
 &lt;!---
 both but not logss: Perturb_079281
@@ -1947,7 +1947,7 @@ logss but not DAC: Perturb_037031
 DAC but not both: Perturb_005343, Perturb_017420
 ---&gt;
 
-&lt;p&gt;The summary of the frequency of the orientation of each FVS node in the 157 perturbations is included in this table:&lt;/p&gt;
+&lt;p&gt;The summary of the frequency of the orientation of each FVS node in the 157 perturbations is included in this table (acheived via &lt;a href=&quot;https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Analysis/scripts/9_fvs_direction.py&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;9_fvs_direction.py&lt;/code&gt;&lt;/a&gt;):&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -3289,8 +3289,8 @@ pvalue=0.6178509&lt;/p&gt;
 &lt;/ol&gt;
 </description>
         <pubDate>Wed, 01 Apr 2020 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/gastonguay_compsysmed_labnotebook/_projects/project2/2020/04/01/SFA-initiliazations.html</link>
-        <guid isPermaLink="true">http://localhost:4000/gastonguay_compsysmed_labnotebook/_projects/project2/2020/04/01/SFA-initiliazations.html</guid>
+        <link>http://localhost:4000/gastonguay_compsysmed_labnotebook/_projects/project2/2020/04/01/SFA-initializations.html</link>
+        <guid isPermaLink="true">http://localhost:4000/gastonguay_compsysmed_labnotebook/_projects/project2/2020/04/01/SFA-initializations.html</guid>
         
         <category>project02</category>
         

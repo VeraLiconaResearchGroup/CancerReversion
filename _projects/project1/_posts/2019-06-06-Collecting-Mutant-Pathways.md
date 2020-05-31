@@ -38,7 +38,7 @@ TP63 inactivates WNT5A
 WNT5A activates RHOA  
 
 
-# Possible [Readout Nodes](https://github.com/MadeleineGastonguay/gastonguay_compsysmed_labnotebook/blob/dev/_projects/project1/PossibleReadoutNodes)
+# Possible [Readout Nodes](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/PossibleReadoutNodes)
 
 **Cell Migration/Proliferation**  
 - WNT5A (leads to increased CXC chemokines)
