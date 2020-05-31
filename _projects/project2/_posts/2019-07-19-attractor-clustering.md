@@ -9,11 +9,11 @@ tags:
 ---
 
 # Objective
-Identify those attractors associated to cancerous-like and normal-like phenotypes through clustering methods.
+Identify those attractors of the attractor landscape associated to cancerous-like and normal-like phenotypes through clustering methods.
 
 ## Generation of Data
 
-I generated 1,000 random initial states and ran signal flow to get the 1,000 corresponding attractors. From this I constructed 6 datasets:
+[Previously]({{ site.baseurl }}{% link _projects/project2/_posts/2019-07-11-network-analysis.md %}), I generated 1,000 random initial states and ran signal flow to get the 1,000 corresponding attractors. From this I constructed 6 datasets:
 
 <ol type="A">
 <li>The raw values produced by signal flow rounded to three decimal places</li>
@@ -121,4 +121,4 @@ Error in hclust(dist(scale(all_T)), method = "complete") :
 Execution halted
 ```
 
-From what I've read, hierarchical clustering does not scale well to large data sets because it approaces O(n^2) in runtime and O(n^3) in memory complexity. Also, since I am clustering 100,000 attractors, I am creating a 100,000 x 100,000 distance matrix, which is too large for R.
+From what I've read, hierarchical clustering does not scale well to large data sets because it approaces O(n^2) in runtime and O(n^3) in memory complexity. Also, since I am clustering 100,000 attractors, I am creating a 100,000 x 100,000 distance matrix, which is too large for R. Thus, we will use unserpervised k-means clustering on the estimated attractor landscape.

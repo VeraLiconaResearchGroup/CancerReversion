@@ -38,7 +38,7 @@ I then wrote [`SimulateAttractors.py`](https://github.com/VeraLiconaResearchGrou
 
 # Clustering  
 
-In order to classify attractor states, I investigated the feasability of clustering the attractors. I first did this with a PCA plot, which did not prove helpful.
+In order to classify attractors of the attractor landscape, I investigated the feasability of clustering the attractors. I first did this with a PCA plot, which did not prove helpful.
 
 ![PCA]({{ site.baseurl }}\_assets\images_proj2\pca_attractors.png)  
 
@@ -50,5 +50,7 @@ I next tried a heatmap of the 1000 attractors but that wasn't helpful either.
 After reading the [2017 Quaranta paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5532541/), I found that they used the R package [*ConsensusClusterPlus*](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2881355/) to cluster their attractors. This is an unsupervised clustering approach that tests different numbers of clusters (from 2 to 20 in this case) and can use different algorithms.
 
 I ran this with 1000 reps, taking subsets of 80% of the nodes (features) and 80% of the attractors (items) and tested out on four different algorithms: hierarchical clustering, partitioning around medoids, k-means, and k-means upon distance matrices. I also tested different distance functions including pearson and spearman to determine if we could cluster our attractors. 
+
+Further exploration of clustering the attractor landscape was done [here]({{ site.baseurl }}{% link _projects/project2/_posts/2019-07-19-attractor-clustering.md %}).
 
 

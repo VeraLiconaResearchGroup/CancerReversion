@@ -152,11 +152,11 @@
 
   <article class="post-content">
     <h1 id="objective">Objective</h1>
-<p>Identify those attractors associated to cancerous-like and normal-like phenotypes through clustering methods.</p>
+<p>Identify those attractors of the attractor landscape associated to cancerous-like and normal-like phenotypes through clustering methods.</p>
 
 <h2 id="generation-of-data">Generation of Data</h2>
 
-<p>I generated 1,000 random initial states and ran signal flow to get the 1,000 corresponding attractors. From this I constructed 6 datasets:</p>
+<p><a href="/gastonguay_compsysmed_labnotebook/_projects/project2/2019/07/11/network-analysis.html">Previously</a>, I generated 1,000 random initial states and ran signal flow to get the 1,000 corresponding attractors. From this I constructed 6 datasets:</p>
 
 <ol type="A">
 <li>The raw values produced by signal flow rounded to three decimal places</li>
@@ -282,7 +282,7 @@
 Execution halted
 </code></pre></div></div>
 
-<p>From what I’ve read, hierarchical clustering does not scale well to large data sets because it approaces O(n^2) in runtime and O(n^3) in memory complexity. Also, since I am clustering 100,000 attractors, I am creating a 100,000 x 100,000 distance matrix, which is too large for R.</p>
+<p>From what I’ve read, hierarchical clustering does not scale well to large data sets because it approaces O(n^2) in runtime and O(n^3) in memory complexity. Also, since I am clustering 100,000 attractors, I am creating a 100,000 x 100,000 distance matrix, which is too large for R. Thus, we will use unserpervised k-means clustering on the estimated attractor landscape.</p>
 
   </article>
 

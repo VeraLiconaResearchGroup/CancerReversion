@@ -21,7 +21,7 @@ I gathered edges from IPA, omnipath, and pearson correlation to assemble a netwo
 
 ## Scaling back  
 
-The smallest step size to cover 8 of the 9 TFs was a step size of 7, so I constructed the network using those MRs. After comparing to protein data, I was left with 4 MRs. There were no mutated nodes in the pathways between the MRs and the TFs, and I removed the single unexpressed node, making MAPK1 a source node. The addition of mutTP53-related pathways also generated a source node of SMAD2, and of course ZBTB17 is a source node because it's not covered by any of the MRs. This left me with a network of **116 nodes, 6 of which are source nodes, and 259 edges**. I did not include the pathways affected by mutBRAF, because our mutation overactivates MEK and ERK, and we have neither of those in the network.  
+The smallest step size to cover 8 of the 9 TFs was a step size of 7, so I constructed the network using those MRs. After comparing to protein data, I was left with 4 MRs. There were no mutated nodes in the pathways between the MRs and the TFs, and I removed the single unexpressed node, making MAPK1 a source node. The addition of mutTP53-related pathways also generated a source node of SMAD2, and of course ZBTB17 is a source node because it's not covered by any of the MRs. This left me with a [network](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/OLD/Network%20Construction%202/Network_full.sif) of **116 nodes, 6 of which are source nodes, and 259 edges**. I did not include the pathways affected by mutBRAF, because our mutation overactivates MEK and ERK, and we have neither of those in the network.  
 
 ### TFs to FunDEGs
 **IPA:** 47  

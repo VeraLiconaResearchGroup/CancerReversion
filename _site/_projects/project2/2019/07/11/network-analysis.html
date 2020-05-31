@@ -182,7 +182,7 @@
 
 <h1 id="clustering">Clustering</h1>
 
-<p>In order to classify attractor states, I investigated the feasability of clustering the attractors. I first did this with a PCA plot, which did not prove helpful.</p>
+<p>In order to classify attractors of the attractor landscape, I investigated the feasability of clustering the attractors. I first did this with a PCA plot, which did not prove helpful.</p>
 
 <p><img src="/gastonguay_compsysmed_labnotebook\_assets\images_proj2\pca_attractors.png" alt="PCA" /></p>
 
@@ -193,6 +193,8 @@
 <p>After reading the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5532541/">2017 Quaranta paper</a>, I found that they used the R package <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2881355/"><em>ConsensusClusterPlus</em></a> to cluster their attractors. This is an unsupervised clustering approach that tests different numbers of clusters (from 2 to 20 in this case) and can use different algorithms.</p>
 
 <p>I ran this with 1000 reps, taking subsets of 80% of the nodes (features) and 80% of the attractors (items) and tested out on four different algorithms: hierarchical clustering, partitioning around medoids, k-means, and k-means upon distance matrices. I also tested different distance functions including pearson and spearman to determine if we could cluster our attractors.</p>
+
+<p>Further exploration of clustering the attractor landscape was done <a href="/gastonguay_compsysmed_labnotebook/_projects/project2/2019/07/19/attractor-clustering.html">here</a>.</p>
 
 
   </article>
