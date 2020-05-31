@@ -9,7 +9,7 @@ tags:
 ---
 
 # Objective
-Identify those attractors with cancerous-like and normal-like phenotypes through clustering methods.
+Identify those attractors associated to cancerous-like and normal-like phenotypes through clustering methods.
 
 ## Generation of Data
 
@@ -35,8 +35,7 @@ For each of the datasets listed above, I ran several different clustering method
 4. K-means
     - After a silhouette and elbow plot
 
-### Notes
-Goodness of fit for MDS was so bad (<5% for each of first two components) that I didn't bother looking at what the first two components were. The issue I was having with KNN is that I can an only do KNN with 2 nearest neighbors using this data because we only have two values in the training set.
+> **Notes:** Goodness of fit for MDS was so bad (<5% for each of first two components) that I didn't bother looking at what the first two components were. The issue I was having with KNN is that I can an only do KNN with 2 nearest neighbors using this data because we only have two values in the training set.
 
 ![knn]({{ site.baseurl }}\_assets\images_proj2\knn.png)
 

@@ -30,9 +30,9 @@ Considering the smaller size of the FVS set and the smaller number of source nod
 
 # SFA
 
-I ran signal flow analysis to determine the attractors of the [MCF10A](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/OLD/NetworkAnalysis%201/SFA_2/attractor_10A.txt) and the [MDAMB231](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/OLD/NetworkAnalysis%201/SFA_2/attractor_231.txt) cell lines. Then I identified candidate readout nodes as those nodes whose expression flipped between the two attractors.  
+I ran [signal flow analysis](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/OLD/NetworkAnalysis%201/SFA/sfastart_attractors.py) to determine the attractors of the [MCF10A](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/OLD/NetworkAnalysis%201/SFA/attractor_10A.txt) and the [MDAMB231](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/OLD/NetworkAnalysis%201/SFA/attractor_231.txt) cell lines. Then I identified candidate readout nodes as those nodes whose expression flipped between the two attractors.  
 
-In order to identify other attractors of the network, I wrote a script, [`randomStateGenerator.py`](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/OLD/NetworkAnalysis%201/SFA/Identify%20Attractors/randomStateGenerator.py) , to produce k *unique* random sets of n zeroes and ones to use a basal levels. In this case, **n = 114** (114 nodes with gene expression data), and I started with **k = 1000**.  
+In order to approximate the attractor landscape of the network, I wrote a script, [`randomStateGenerator.py`](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/OLD/NetworkAnalysis%201/SFA/Identify%20Attractors/randomStateGenerator.py), to produce k *unique* random sets of n zeroes and ones to use as initial states. In this case, **n = 114** (114 nodes with gene expression data), and I started with **k = 1000**.  
 
 I then wrote [`SimulateAttractors.py`](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/OLD/NetworkAnalysis%201/SFA/Identify%20Attractors/SimulateAttractors.py) to take these 1000 basal level inputs and generate the corresponding attractors.
 
@@ -47,8 +47,8 @@ I next tried a heatmap of the 1000 attractors but that wasn't helpful either.
 ![heatmap]({{ site.baseurl }}\_assets\images_proj2\heatmap_attractors.png)
 
 
-After reading the [Quaranta paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5532541/) (2017), I found that they used the R package [*ConsensusClusterPlus*](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2881355/) to cluster their attractors. This is an unsupervised clustering approach that tests different numbers of clusters (from 2 to 20 in this case) and can use different algorithms.
+After reading the [2017 Quaranta paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5532541/), I found that they used the R package [*ConsensusClusterPlus*](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2881355/) to cluster their attractors. This is an unsupervised clustering approach that tests different numbers of clusters (from 2 to 20 in this case) and can use different algorithms.
 
-I ran this with 1000 reps, taking subsets of 80% of the nodes (features) and 80% of the attractors (items) and tested out on four different algorithms: hierarchical clustering, partitioning around medoids, k-means, and k-means upon distance matrices. I also tested different distance functions including pearson and spearman. 
+I ran this with 1000 reps, taking subsets of 80% of the nodes (features) and 80% of the attractors (items) and tested out on four different algorithms: hierarchical clustering, partitioning around medoids, k-means, and k-means upon distance matrices. I also tested different distance functions including pearson and spearman to determine if we could cluster our attractors. 
 
 

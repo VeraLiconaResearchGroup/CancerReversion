@@ -11,7 +11,7 @@ tags:
 # Objective
 Identify nodes in the network that are markers of TNBC tumorigenesis such as EMT, proliferation, and migration that can be used as an internal control for the phenotype associated with an attractor.
 
-## Characteristic Phenotypes:
+## Characteristic Phenotypes of CL TNBC
 >A number of groups have further characterized this new tumor subtype and shown that CL tumors account for 7–14% of all invasive breast cancers, are enriched for genes associated with **epithelial to mesenchymal transition (EMT)**, **immune cell infiltration**, **IFNγ activation**, **mammary stem cells**/breast tumor initiating cells and typically demonstrate high levels of genomic instability. [(Dias, 2017)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5207440/)
 
 >Claudin-low tumors are characterized by the low to absent expression of luminal differentiation markers, **high enrichment for epithelial-to-mesenchymal transition markers, immune response genes and cancer stem cell-like features**...  
