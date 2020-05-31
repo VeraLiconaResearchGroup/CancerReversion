@@ -42,8 +42,6 @@ We ran TF analysis with IPA 4 different ways:
 
 Next, I checked the downstream coverage of the transcription factor lists.
 
-*insert how one does this*
-
 Both the list of 3 transcription factors from the IPA breast tissue list and the 8 TFs from the IPA all tissues list covered all of the downstream genes. However, the list of 3 TFs only has 3 known edges while the list of 8 has 16.
 
 **Conclusion:** Move forward to TRANSPATH with both the list of 3 TFs and 8 TFs.

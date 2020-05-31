@@ -32,7 +32,7 @@ We ran shortest paths from tp53 (MO000019548) to the first targets of the 3 path
 - TP63 and SMAD2 (TGF$\beta$ pathway)  
 - SREBF1 (Mevalonate Pathway)  
 
-We visualized the [results](http://platform.genexplain.com/bioumlweb/#de=data/Projects/SalazarCortes%20DataAnalysis/Data/Gastonguay/MDAMB231/Exploring_Mutations_2.0/find%20shortest%20paths/TP53%20Proteins%20Transpath%20to%20mutTP53_firstTargets%20Proteins%20Transpath%20paths%20Both%2010%20viz) from this and looked to see if there were direct interactions between TP53 and any of the four targets. While in some cases there were indirect paths connected the two, GeneXplain did not provide a direct link from TP53 to any of the targets. This is to be expected as these are noncanonical pathways specific to our R280K TP53 mutation.
+We visualized the results from this and looked to see if there were direct interactions between TP53 and any of the four targets. While in some cases there were indirect paths connected the two, GeneXplain did not provide a direct link from TP53 to any of the targets. This is to be expected as these are noncanonical pathways specific to our R280K TP53 mutation.
 
 ## TRANSPATH
 We ran TRANSPATH with all proteins as context instead of the usual SOC set. This run produced ~175 MR that covered all 8 TFs. 

@@ -8,6 +8,8 @@ tags:
  - static_network
  - mutations
 ---
+# About
+This post includes information about the mutations in MDA-MB-231.
 
 # TP53 mutation
 **R280K**

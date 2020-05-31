@@ -8,7 +8,7 @@ tags:
  - static_network
 ---
 # Objective
-While the application of BiNOM on the HPRD is valuable when using DEG data, it may be even more useful and representative of what's occurring in the cell using the [ranked proteomics data](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/231_protein_ranked_7744).
+The application of BiNOM on the HPRD is valuable when using DEG data, which makes us curious if it is useful when applied to [ranked proteomics data](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/231_protein_ranked_7744).
 
 ## Comparison of RNA-Seq and Protein Data
 <div style="text-align:center" markdown="1">

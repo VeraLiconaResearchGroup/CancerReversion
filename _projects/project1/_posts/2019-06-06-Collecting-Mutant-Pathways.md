@@ -9,7 +9,7 @@ tags:
  - mutations
 ---
 # Objective
-Collecting nodes involved in mutant pathways and determining their interactions. See [Investigating Mutational Pathways]({{ site.baseurl }}{ % post_url 2019-05-27-thinking-about-mutations % }) and [Investigating Phosphorylation Mutations]({{ site.baseurl }}{ % post_url 2019-05-15-ReKINect % }) for more details regarding the pathways.
+Collecting nodes involved in mutant pathways and determining their interactions. See [Investigating Mutational Pathways]({{ site.baseurl }}{ % link _projects/project1/_posts/2019-05-27-thinking-about-mutations.md % }) and [Investigating Phosphorylation Mutations]({{ site.baseurl }}{ % link _projects/project1/_posts/2019-05-15-ReKINect.md % }) for more details regarding the pathways.
 
 # Interactions
 

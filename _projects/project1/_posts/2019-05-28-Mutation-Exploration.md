@@ -31,12 +31,12 @@ tags:
 The Goal of this experiment is to determine a systematic and as automated as possible way to incorporate mutational data into our network building. We will characterize the 231 mutations using VEP, filter them for expression in our tumor samples, and then use TRANSPATH as our pathway database. After obtaining results, we will map expression onto the TRANSPATH pathways to observe enrichment or lack thereof in the mutated genes.
 
 ## Inputs
-COSMIC mutations in [VCF format](https://platform.genexplain.com/bioumlweb/#de=databases/EnsemblHuman91/Sequences/chromosomes%20GRCh38&pos=1:34784807-34785304).
+COSMIC mutations in VCF format.
 
 ## VEP
 [VEP](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0974-4) determines the effect of your variants (SNPs, insertions, deletions, CNVs or structural variants) on genes, transcripts, and protein sequence, as well as regulatory regions.
 
-Using VEP in GeneXplain, we identified [879 mutations](https://platform.genexplain.com/bioumlweb/#de=data/Projects/SalazarCortes%20DataAnalysis/Data/Gastonguay/MDAMB231/231_SNV_COSMIC%20table) from the VCF file. We then filtered these mutations to those that cause missense, deletion, splice site changes, or frameshift changes, leaving [370 mutations](https://platform.genexplain.com/bioumlweb/#de=data/Projects/SalazarCortes%20DataAnalysis/Data/Gastonguay/MDAMB231/231SNV_COSMIC%20table%20filtered_framemisssplicedel). This corresponds to [81 genes](https://platform.genexplain.com/bioumlweb/#de=data/Projects/SalazarCortes%20DataAnalysis/Data/Gastonguay/MDAMB231/231SNV_COSMIC%20table%20filtered_framemisssplicedel%20Ensembl).
+Using VEP in GeneXplain, we identified [879 mutations](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/geneXplain_backup/old/231_SNV_COSMIC%20table.txt) from the VCF file. We then filtered these mutations to those that cause missense, deletion, splice site changes, or frameshift changes, leaving [370 mutations](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/geneXplain_backup/old/231SNV_COSMIC%20table%20filtered_framemisssplicedel.txt). This corresponds to [81 genes](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/geneXplain_backup/old/231SNV_COSMIC%20table%20filtered_framemisssplicedel%20Ensembl.txt).
 
 **Note:** When filtering by mutation you should also include stop_gained and "NMD" mutations! (learned this the hard way)
 
@@ -117,14 +117,13 @@ ZBTB1
 
 #### Characterization of GOF and LOF
 
-According to Jax,  
+According to the Jackson Laboratory,  
 $\quad$ A [**gain-of-function**](http://www.informatics.jax.org/glossary/gain-of-function) mutation is characterized as "a type of mutation in which the altered gene product possesses a new molecular function or a new pattern of gene expression. Gain-of-function mutations are almost always Dominant or Semidominant."  
 $\quad$ A [**loss-of-function**](http://www.informatics.jax.org/glossary/loss-of-function) mutation is characterized as "a type of mutation in which the altered gene product lacks the molecular function of the wild-type gene."
 
 
 ### TRANSPATH Results
 **TRANSPATH Pipeline:** Find master regulators in networks, step 10, with context genes (all expressed genes)
-<u>48 expressed genes</u>  
-[link to network](https://platform.genexplain.com/bioumlweb/#de=data/Projects/SalazarCortes%20DataAnalysis/Data/Gastonguay/MDAMB231/Exploring_Mutational_Data/Expressed_COSMICgenes%20(Master%20regulators%20with%20context%20Transpath)/Regulators%20upstream%2010%20filtered%20viz)  
-<u>19 expressed proteins</u>  
-[link to network](https://platform.genexplain.com/bioumlweb/#de=data/Projects/SalazarCortes%20DataAnalysis/Data/Gastonguay/MDAMB231/Exploring_Mutational_Data/expressedCOSMICgenes_vs_proteindata/Expressed_Protein_COSMICgenes%20(Master%20regulators%20with%20context%20no%20int%20Transpath)/Joined%20viz)
+
+
+

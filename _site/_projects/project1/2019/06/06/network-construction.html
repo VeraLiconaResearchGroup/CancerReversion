@@ -173,9 +173,9 @@
   <li><strong>384</strong> edges (wihtout ARIH2)</li>
 </ul>
 
-<h2 id="weigthed-sums-for-network">Weigthed Sums for Network</h2>
+<h2 id="cl-tnbc-nodes-in-the-network">Cl TNBC nodes in the Network</h2>
 
-<p>We ran the network nodes through weighted sums to see their relevance to CL TNBC. Details regarding the lists we compare to can be found in <a href="/gastonguay_compsysmed_labnotebook/_projects/project1/2019/04/08/functionally-related-genes.html">Identifying Functionally Related Genes</a></p>
+<p>We comparted the network nodes to the genes in the weighted sums list to see how may CL TNBC related genes were captured. Details regarding the lists we compare to can be found in <a href="/gastonguay_compsysmed_labnotebook/_projects/project1/2019/04/08/functionally-related-genes.html">Identifying Functionally Related Genes</a></p>
 
 <p><img src="/gastonguay_compsysmed_labnotebook\_assets\images\WeightedSums_network.png" alt="weighted sums" /></p>
 
@@ -183,7 +183,7 @@
 <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/gene_network/network_int_CLgenes.txt">Netowrk intersection with CL genes</a><br />
 <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/gene_network/network_int_breastDO.txt">Network intersection with Breast DO</a></p>
 
-<h1 id="new-mutations-in-network">New Mutations in Network</h1>
+<h2 id="new-mutations-in-network">New Mutations in Network</h2>
 
 <p><strong>NF2</strong></p>
 
@@ -202,10 +202,9 @@ Protein intensity: ~800</p>
       <li>then we’d only have 27 source nodes!</li>
     </ul>
   </li>
-  <li>geneXplain gives us the wrong sign</li>
 </ul>
 
-<h3 id="after-network-modifications">After Network Modifications:</h3>
+<h2 id="network-modifications">Network Modifications:</h2>
 <p>We couldn’t determine the nature of the interaction between our transcription factors and ARIH2, but we do know that it activates TP53 so we glued it into the network that way. We also removed NF2 from the network because of its loss of function mutation.</p>
 
 <p>After making this change, we now have:</p>
@@ -219,7 +218,7 @@ Protein intensity: ~800</p>
   <li><strong>387</strong> edges</li>
 </ul>
 
-<h1 id="fvs-set">FVS set</h1>
+<h2 id="fvs-set">FVS set</h2>
 
 <p>We ran FVS with 50 iterations and got 6 FC sets:</p>
 

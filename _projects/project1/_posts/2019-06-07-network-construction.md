@@ -27,9 +27,9 @@ Assemble all the network components and add signed edges in Cytoscape 3.
 - **384** edges (wihtout ARIH2)
 
 
-## Weigthed Sums for Network
+## Cl TNBC nodes in the Network
 
-We ran the network nodes through weighted sums to see their relevance to CL TNBC. Details regarding the lists we compare to can be found in [Identifying Functionally Related Genes]({{ site.baseurl }}{% post_url 2019-04-08-functionally-related-genes %})
+We comparted the network nodes to the genes in the weighted sums list to see how may CL TNBC related genes were captured. Details regarding the lists we compare to can be found in [Identifying Functionally Related Genes]({{ site.baseurl }}{% link _projects/project1/_posts/2019-04-08-functionally-related-genes.md %})
 
 ![weighted sums]({{ site.baseurl }}\_assets\images\WeightedSums_network.png)
 
@@ -38,7 +38,7 @@ We ran the network nodes through weighted sums to see their relevance to CL TNBC
 [Network intersection with Breast DO](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project1/gene_network/network_int_breastDO.txt)  
 
 
-# New Mutations in Network
+## New Mutations in Network
 
 **NF2**
 
@@ -50,10 +50,9 @@ Protein intensity: ~800
 	- our nonsense mutation means that they will be activated
 - We think we should remove NF2 from the network becasue the mutation causes the protein to be extremely truncated and nonfunctional 
 	- then we'd only have 27 source nodes!
-- geneXplain gives us the wrong sign
 
 
-### After Network Modifications:  
+## Network Modifications:  
 We couldn't determine the nature of the interaction between our transcription factors and ARIH2, but we do know that it activates TP53 so we glued it into the network that way. We also removed NF2 from the network because of its loss of function mutation.  
 
 After making this change, we now have:  
@@ -63,7 +62,7 @@ After making this change, we now have:
 - **387** edges  
 
 
-# FVS set
+## FVS set
 
 We ran FVS with 50 iterations and got 6 FC sets:
 

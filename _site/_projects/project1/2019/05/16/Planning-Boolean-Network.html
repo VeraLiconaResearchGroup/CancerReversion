@@ -155,22 +155,26 @@
   <article class="post-content">
     <h2 id="objective">Objective</h2>
 <p>To lay out the steps to take and identify objectives for the next portion of this project.<br />
-<em>~~ After finishing Static Network construction and run signal flow and FVS~~</em></p>
+<em>~~ After finishing Static Network construction and running virtual screenings~~</em></p>
 
 <h2 id="questions">Questions</h2>
 <ol>
   <li>Are the nodes we include in this model the same nodes from the static network?</li>
   <li>Will we use weighted sums?</li>
   <li>How do we classify the attractor states as cancerous or normal like?</li>
-  <li>Will we do a double node perturbation?</li>
 </ol>
 
 <h1 id="game-plan">Game Plan</h1>
 
 <ol>
-  <li>Write Boolean equations</li>
+  <li>Write Boolean equations
+    <ul>
+      <li>train with time series phosphoproteomics</li>
+    </ul>
+  </li>
   <li>Convert the Boolean operator’s equation based on biological action mechanisms into <strong>weighted sum logics</strong>
     <ul>
+      <li><strong>NOTE:</strong> Cho does this in his Boolean model for Colorectal cancer, but it is not necessary.</li>
       <li><strong>What it is:</strong> Defines both the basal node states and node relationships quantitatively as weights.</li>
       <li><strong>Purpose:</strong> It’s difficult to define node states and adjust logic based of experimental data because we cannot adjust values quantitatively, so weighted sums gives us a way to do that.</li>
       <li><strong>How:</strong> Give an input to each node via a weighted sum vector $W_S = M_C \cdot V^t+V_B$. Where $M_C$ is the connectivity matrix and its entities are determined from the logical equations. $V^t$ is a vector of each nodes’ state at time t, and $V_B$ is a vector of each nodes’ basal state determined from gene expression data. Mutational data can be incorporated at this step by altering the basal level of nodes. Then, the next state of the node is determined by:</li>
@@ -186,6 +190,7 @@
   	\end{cases}
   $$
 </p>
+
 <ol>
   <li>Run synchronous updating</li>
   <li>Validate Model
@@ -208,8 +213,8 @@
 </ol>
 
 <h2 id="exploratory-model">Exploratory Model</h2>
-<p>I looked into the R package BoolNet to see if I could use it for the construction of this model.
-From what I’ve concluded, if I write the model as an SBML file, BoolNet can easily read it in, predict attractor states, and run perturbation analyses. The only concern is that I don’t think I can use weighted sums logic through the R-package itself. Maybe it can be incorporated in the SBML file, but I’m not sure.</p>
+<p>I looked into the R package <a href="https://cran.r-project.org/web/packages/BoolNet/BoolNet.pdf">BoolNet</a> to see if I could use it for the construction of this model.
+From what I’ve concluded, if I write the model as an SBML file, BoolNet can easily read it in, predict attractor states, and run perturbation analyses.</p>
 
 <pre><code class="language-{R}">library("BoolNet")
 library("XML")

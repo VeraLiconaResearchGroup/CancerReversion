@@ -11,18 +11,19 @@ tags:
 
 ## Objective
 To lay out the steps to take and identify objectives for the next portion of this project.  
-*~~ After finishing Static Network construction and run signal flow and FVS~~*
+*~~ After finishing Static Network construction and running virtual screenings~~*
 
 ## Questions
 1. Are the nodes we include in this model the same nodes from the static network?
 2. Will we use weighted sums?
 3. How do we classify the attractor states as cancerous or normal like?
-4. Will we do a double node perturbation?
 
 # Game Plan
 
 1. Write Boolean equations
+  - train with time series phosphoproteomics
 2. Convert the Boolean operator’s equation based on biological action mechanisms into **weighted sum logics**
+  - **NOTE:** Cho does this in his Boolean model for Colorectal cancer, but it is not necessary.
   - **What it is:** Defines both the basal node states and node relationships quantitatively as weights.
   - **Purpose:** It's difficult to define node states and adjust logic based of experimental data because we cannot adjust values quantitatively, so weighted sums gives us a way to do that.
   - **How:** Give an input to each node via a weighted sum vector $W_S = M_C \cdot V^t+V_B$. Where $M_C$ is the connectivity matrix and its entities are determined from the logical equations. $V^t$ is a vector of each nodes' state at time t, and $V_B$ is a vector of each nodes' basal state determined from gene expression data. Mutational data can be incorporated at this step by altering the basal level of nodes. Then, the next state of the node is determined by:
@@ -35,6 +36,7 @@ To lay out the steps to take and identify objectives for the next portion of thi
   	\end{cases}
   $$
 </p>
+
 3. Run synchronous updating
 4. Validate Model
   - Need to find CRISPR data
@@ -46,8 +48,8 @@ To lay out the steps to take and identify objectives for the next portion of thi
   - Restoration
 
 ## Exploratory Model
-I looked into the R package BoolNet to see if I could use it for the construction of this model.
-From what I've concluded, if I write the model as an SBML file, BoolNet can easily read it in, predict attractor states, and run perturbation analyses. The only concern is that I don't think I can use weighted sums logic through the R-package itself. Maybe it can be incorporated in the SBML file, but I'm not sure.
+I looked into the R package [BoolNet](https://cran.r-project.org/web/packages/BoolNet/BoolNet.pdf) to see if I could use it for the construction of this model.
+From what I've concluded, if I write the model as an SBML file, BoolNet can easily read it in, predict attractor states, and run perturbation analyses.
 
 ```{R}
 library("BoolNet")

@@ -187,12 +187,12 @@
 <p>The Goal of this experiment is to determine a systematic and as automated as possible way to incorporate mutational data into our network building. We will characterize the 231 mutations using VEP, filter them for expression in our tumor samples, and then use TRANSPATH as our pathway database. After obtaining results, we will map expression onto the TRANSPATH pathways to observe enrichment or lack thereof in the mutated genes.</p>
 
 <h2 id="inputs">Inputs</h2>
-<p>COSMIC mutations in <a href="https://platform.genexplain.com/bioumlweb/#de=databases/EnsemblHuman91/Sequences/chromosomes%20GRCh38&amp;pos=1:34784807-34785304">VCF format</a>.</p>
+<p>COSMIC mutations in VCF format.</p>
 
 <h2 id="vep">VEP</h2>
 <p><a href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0974-4">VEP</a> determines the effect of your variants (SNPs, insertions, deletions, CNVs or structural variants) on genes, transcripts, and protein sequence, as well as regulatory regions.</p>
 
-<p>Using VEP in GeneXplain, we identified <a href="https://platform.genexplain.com/bioumlweb/#de=data/Projects/SalazarCortes%20DataAnalysis/Data/Gastonguay/MDAMB231/231_SNV_COSMIC%20table">879 mutations</a> from the VCF file. We then filtered these mutations to those that cause missense, deletion, splice site changes, or frameshift changes, leaving <a href="https://platform.genexplain.com/bioumlweb/#de=data/Projects/SalazarCortes%20DataAnalysis/Data/Gastonguay/MDAMB231/231SNV_COSMIC%20table%20filtered_framemisssplicedel">370 mutations</a>. This corresponds to <a href="https://platform.genexplain.com/bioumlweb/#de=data/Projects/SalazarCortes%20DataAnalysis/Data/Gastonguay/MDAMB231/231SNV_COSMIC%20table%20filtered_framemisssplicedel%20Ensembl">81 genes</a>.</p>
+<p>Using VEP in GeneXplain, we identified <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/geneXplain_backup/old/231_SNV_COSMIC%20table.txt">879 mutations</a> from the VCF file. We then filtered these mutations to those that cause missense, deletion, splice site changes, or frameshift changes, leaving <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/geneXplain_backup/old/231SNV_COSMIC%20table%20filtered_framemisssplicedel.txt">370 mutations</a>. This corresponds to <a href="https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/geneXplain_backup/old/231SNV_COSMIC%20table%20filtered_framemisssplicedel%20Ensembl.txt">81 genes</a>.</p>
 
 <p><strong>Note:</strong> When filtering by mutation you should also include stop_gained and “NMD” mutations! (learned this the hard way)</p>
 
@@ -311,16 +311,13 @@ LONP1</li>
 
 <h4 id="characterization-of-gof-and-lof">Characterization of GOF and LOF</h4>
 
-<p>According to Jax,<br />
+<p>According to the Jackson Laboratory,<br />
 $\quad$ A <a href="http://www.informatics.jax.org/glossary/gain-of-function"><strong>gain-of-function</strong></a> mutation is characterized as “a type of mutation in which the altered gene product possesses a new molecular function or a new pattern of gene expression. Gain-of-function mutations are almost always Dominant or Semidominant.”<br />
 $\quad$ A <a href="http://www.informatics.jax.org/glossary/loss-of-function"><strong>loss-of-function</strong></a> mutation is characterized as “a type of mutation in which the altered gene product lacks the molecular function of the wild-type gene.”</p>
 
 <h3 id="transpath-results">TRANSPATH Results</h3>
-<p><strong>TRANSPATH Pipeline:</strong> Find master regulators in networks, step 10, with context genes (all expressed genes)
-<u>48 expressed genes</u><br />
-<a href="https://platform.genexplain.com/bioumlweb/#de=data/Projects/SalazarCortes%20DataAnalysis/Data/Gastonguay/MDAMB231/Exploring_Mutational_Data/Expressed_COSMICgenes%20(Master%20regulators%20with%20context%20Transpath)/Regulators%20upstream%2010%20filtered%20viz">link to network</a><br />
-<u>19 expressed proteins</u><br />
-<a href="https://platform.genexplain.com/bioumlweb/#de=data/Projects/SalazarCortes%20DataAnalysis/Data/Gastonguay/MDAMB231/Exploring_Mutational_Data/expressedCOSMICgenes_vs_proteindata/Expressed_Protein_COSMICgenes%20(Master%20regulators%20with%20context%20no%20int%20Transpath)/Joined%20viz">link to network</a></p>
+<p><strong>TRANSPATH Pipeline:</strong> Find master regulators in networks, step 10, with context genes (all expressed genes)</p>
+
 
   </article>
 

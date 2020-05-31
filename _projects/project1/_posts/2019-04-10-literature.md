@@ -9,7 +9,7 @@ tags:
  - boolean_network
 ---
 # About
-This post contains links to interesting and relevant papers to look into.
+This post contains links to interesting and relevant papers or data sources to look into.
 
 # Look into?
 [Principles and Strategies for Developing Network Models in Cancer](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3082135/pdf/nihms283558.pdf)
