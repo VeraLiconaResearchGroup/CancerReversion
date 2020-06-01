@@ -1,5 +1,5 @@
 #------------------------------------------------
-# examine_atttractors.py returns a summary about the reference attractors
+# examine_attractors.py returns a summary about the reference attractors
 #
 # INPUTS:
 # 1. Log steady state of reference attractors
@@ -27,6 +27,9 @@ ns = norm.std(axis = 0)
 cs = ca.std(axis = 0)
 
 df3 = pd.concat([ns, cs], axis = 1)
+df3.columns = ["normal", "cancerous"]
 
 df3.to_csv('Attractor_sd.txt', sep = " ")
+
+
 

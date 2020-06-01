@@ -17,11 +17,12 @@ import os
 import sys
 import re
 
-#########
+######################## INPUTS #####################
 FCname = sys.argv[1] #Name of FVS or FC file
 undesired = sys.argv[2] #Prefix of replicates for undesired phenotype
 factor = int(sys.argv[3]) #Setting activation level to 2*mean expression value for undesired phenotype
 nexp = sys.argv[4]
+#####################################################
 
 dpath = os.path.dirname('inputfiles/') #specifies input folder used to look for input files
 FCset = pd.read_csv(os.path.join(dpath, FCname), delim_whitespace=True,index_col = ["name"])#FC set for perturbations
@@ -43,9 +44,13 @@ df.to_csv('virtual_screening/perturbation_level_sd.txt', sep = " ")
 pert = mean*factor #Calculate activation level
 df2 = pd.concat([mean, pert], axis = 1) # create dataframe with FVS node, mean, and activation level of mean
 df2.columns = ["Mean", str(factor)+"*Mean"]
-pert.columns = str(factor)+"*Mean"
-pert.to_csv('virtual_screening/perturbation_level_factor'+ str(factor) + '.txt', sep = " ")
+
+pert = pert.to_frame()
+pert.columns = [str(factor) + '*Mean']
 
 print(pert)
+pert.to_csv('virtual_screening/perturbation_level_factor'+ str(factor) + '.txt', sep = " ", index_label = 'name')
+
+
 
                 

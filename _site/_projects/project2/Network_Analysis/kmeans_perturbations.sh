@@ -28,19 +28,19 @@ echo $dataset
 mkdir -p $folder/kmeans_$dataset
 
 # Run kmeans with 2 - 15 clusters
-srun -N 1 -n 1 python3 ./scripts/kmeans.py 2 $folder $dataset 0 &
-srun -N 1 -n 1 python3 ./scripts/kmeans.py 3 $folder $dataset 1 &
-srun -N 1 -n 1 python3 ./scripts/kmeans.py 4 $folder $dataset 2 &
-srun -N 1 -n 1 python3 ./scripts/kmeans.py 5 $folder $dataset 3 &
-srun -N 1 -n 1 python3 ./scripts/kmeans.py 6 $folder $dataset 4 &
-srun -N 1 -n 1 python3 ./scripts/kmeans.py 7 $folder $dataset 5 &
-srun -N 1 -n 1 python3 ./scripts/kmeans.py 8 $folder $dataset 6 &
-srun -N 1 -n 1 python3 ./scripts/kmeans.py 9 $folder $dataset 7 &
-srun -N 1 -n 1 python3 ./scripts/kmeans.py 10 $folder $dataset 8 &
-srun -N 1 -n 1 python3 ./scripts/kmeans.py 11 $folder $dataset 9 &
-srun -N 1 -n 1 python3 ./scripts/kmeans.py 12 $folder $dataset 10 &
-srun -N 1 -n 1 python3 ./scripts/kmeans.py 13 $folder $dataset 11 &
-srun -N 1 -n 1 python3 ./scripts/kmeans.py 14 $folder $dataset 12 &
-srun -N 1 -n 1 python3 ./scripts/kmeans.py 15 $folder $dataset 13 &
+srun -N 1 -n 1 python3 ./scripts/kmeans_perturbations.py 2 $folder $dataset 0 &
+srun -N 1 -n 1 python3 ./scripts/kmeans_perturbations.py 3 $folder $dataset 1 &
+srun -N 1 -n 1 python3 ./scripts/kmeans_perturbations.py 4 $folder $dataset 2 &
+srun -N 1 -n 1 python3 ./scripts/kmeans_perturbations.py 5 $folder $dataset 3 &
+srun -N 1 -n 1 python3 ./scripts/kmeans_perturbations.py 6 $folder $dataset 4 &
+srun -N 1 -n 1 python3 ./scripts/kmeans_perturbations.py 7 $folder $dataset 5 &
+srun -N 1 -n 1 python3 ./scripts/kmeans_perturbations.py 8 $folder $dataset 6 &
+srun -N 1 -n 1 python3 ./scripts/kmeans_perturbations.py 9 $folder $dataset 7 &
+srun -N 1 -n 1 python3 ./scripts/kmeans_perturbations.py 10 $folder $dataset 8 &
+srun -N 1 -n 1 python3 ./scripts/kmeans_perturbations.py 11 $folder $dataset 9 &
+srun -N 1 -n 1 python3 ./scripts/kmeans_perturbations.py 12 $folder $dataset 10 &
+srun -N 1 -n 1 python3 ./scripts/kmeans_perturbations.py 13 $folder $dataset 11 &
+srun -N 1 -n 1 python3 ./scripts/kmeans_perturbations.py 14 $folder $dataset 12 &
+srun -N 1 -n 1 python3 ./scripts/kmeans_perturbations.py 15 $folder $dataset 13 &
 wait
 

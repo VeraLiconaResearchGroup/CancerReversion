@@ -30,7 +30,7 @@ import csv
 import sys
 import re
 
-#################INPUTS##########################
+##################INPUTS##########################
 FCname = sys.argv[1] # Name of filee with FVS nodes
 init = sys.argv[2] # Which replicate to use as basal value
 bfile = sys.argv[3] # Which file of basal perturbations
@@ -44,17 +44,23 @@ fpath = os.path.join(dpath, 'network.sif') #location of network.sif
 dirname = os.path.dirname("virtual_screening/") #Directory with basal states 
 
 FCset = pd.read_csv(os.path.join(dpath, FCname), delim_whitespace=True,index_col = ["name"]) #FC set for perturbations
+FCset = FCset.sort_values(by = 'name', axis = 0) #Sort list of FC nodes alphabetically
 
 exp_nodes = pd.read_csv(os.path.join(dpath, nexp), delim_whitespace = True, index_col = ['name']) #RNAseq expression values for the 8 experimental replicates
-cols = [name for name in exp_nodes.columns if re.search(undesired, name)]
-comp = exp_nodes.loc[:,cols].median().tolist() #median of expression values of undesired phenotype to calculate DAC
+
+# Find median expression of reference attractors for undesired state to compute DAC
+ref = pd.read_csv(os.path.join('reference_attrs', 'ref_attrs_logss.txt'), delim_whitespace = True, index_col = ['name'])
+undesired_list = [name for name in exp_nodes.columns if re.search(undesired, name)]
+comp = ref.loc[undesired_list,:].median().tolist() #median of attractor values of undesired phenotype to calculate DAC
 
 # Read in values for activation perturbations:
 stim = pd.read_csv(os.path.join(dirname, 'perturbation_level_factor' + factor +  '.txt'),delim_whitespace=True,index_col = ['name']) 
 
 # Read in perturbation orientation file with perturbations as columns, FVS nodes as rows:
-basal_states=pd.read_csv(os.path.join(dirname, 'basal_states' + bfile +  '.txt'),delim_whitespace=True, index_col = 'name') 
+basal_states=pd.read_csv(os.path.join(dirname, 'basal_states' + bfile +  '.txt'), delim_whitespace=True, index_col = ['name']) 
+basal_states = basal_states.transpose(copy = True)
 basal_states.index = FCset.index
+print(basal_states)
 
 # Make dataframe of perturbation values
 pert_val = pd.DataFrame(columns = basal_states.columns, index = basal_states.index)
@@ -90,7 +96,7 @@ class ThreeNodeCascade(sfa.base.Data):
         self._abbr = "TNC"
         self._name = "A simple three node cascade"
 
-        signs = {'activates':1, 'inhibits':-1}
+        signs = {'activates':1, 'inactivates':-1}
         A, n2i, dg = sfa.read_sif(fpath, signs=signs, as_nx=True)
         self._A = A
         self._n2i = n2i
@@ -119,11 +125,11 @@ if __name__ == "__main__":
     n = data.dg.number_of_nodes() #the number of nodes
     b = np.zeros((n,))
 
-    network = exp_nodes.index
-    nw_state=exp_nodes[init].tolist()
     
-    for node in network:
-        b[data.n2i[node]]=float(nw_state[0]) #set node to it's initial state
+    nw_state=exp_nodes[init].tolist() #Subset expression data to include only data for network nodes for specific replicate
+    
+    for node in exp_nodes.index:
+        b[data.n2i[node]]=float(nw_state[0]) #set node to it's initial state if there is expression data for it
         nw_state.pop(0)
     for name, item in pert_val.iteritems():
         FC = item.tolist()
@@ -145,6 +151,7 @@ if __name__ == "__main__":
             perturb_logss.loc[current,data.i2n[i]]=act
 
 # Populate "DAC" and "both" tables
+
     perturb_DAC=perturb_logss.copy(deep=True)
     perturb_DAC=perturb_DAC.apply(DAC, axis = 1, args = [comp])
     DACcol = [name + "_DAC" for name in perturb_logss.columns.tolist()]
@@ -154,21 +161,21 @@ if __name__ == "__main__":
 
 
 #Discretize tables
-   perturb_logss_disc = perturb_logss.copy(deep=True).apply(disc,0)
-   perturb_DAC_disc = perturb_DAC.copy(deep=True).apply(disc, 0)
-   perturb_both_disc = perturb_both.copy(deep=True).apply(disc, 0)
+    perturb_logss_disc = perturb_logss.copy(deep=True).apply(disc,0)
+    perturb_DAC_disc = perturb_DAC.copy(deep=True).apply(disc, 0)
+    perturb_both_disc = perturb_both.copy(deep=True).apply(disc, 0)
 
 #Write out results tables
-   if len(bfile) > 0:
+    if len(bfile) > 0:
        split = 'splitfiles'
-   else:
+    else:
        split = ''
        
-   perturb_logss_disc.to_csv(os.path.join(dirname, init,  split, "perturb_logss_disc"+bfile+'.txt'), sep=' ',float_format='%.0f',index_label="name",chunksize=10000) 
-   perturb_DAC_disc.to_csv(os.path.join(dirname, init,  split, 'perturb_DAC_disc'+bfile+'.txt'), sep=' ',float_format='%.0f',index_label="name",chunksize=10000) 
-   perturb_both_disc.to_csv(os.path.join(dirname, init,  split, 'perturb_both_disc'+bfile+'.txt'), sep=' ',float_format='%.0f',index_label="name",chunksize=10000) 
-   perturb_logss.to_csv(os.path.join(dirname, init,  split, 'perturb_logss'+bfile+'.txt'),sep=' ',float_format='%.4f',index_label="name",chunksize=10000) 
-   perturb_DAC.to_csv(os.path.join(dirname, init, split, 'perturb_DAC'+bfile+'.txt'),sep=' ',float_format='%.4f',index_label="name",chunksize=10000)
-   perturb_both.to_csv(os.path.join(dirname, init, split,'perturb_both'+bfile+'.txt'), sep=' ',float_format='%.4f',index_label="name",chunksize=10000)
+    perturb_logss_disc.to_csv(os.path.join(dirname, init,  FCname, split, "perturb_logss_disc"+bfile+'.txt'), sep=' ',float_format='%.0f',index_label="name",chunksize=10000) 
+    perturb_DAC_disc.to_csv(os.path.join(dirname, init, FCname,  split, 'perturb_DAC_disc'+bfile+'.txt'), sep=' ',float_format='%.0f',index_label="name",chunksize=10000) 
+    perturb_both_disc.to_csv(os.path.join(dirname, init, FCname,  split, 'perturb_both_disc'+bfile+'.txt'), sep=' ',float_format='%.0f',index_label="name",chunksize=10000) 
+    perturb_logss.to_csv(os.path.join(dirname, init, FCname,  split, 'perturb_logss'+bfile+'.txt'),sep=' ',float_format='%.4f',index_label="name",chunksize=10000) 
+    perturb_DAC.to_csv(os.path.join(dirname, init,FCname,  split, 'perturb_DAC'+bfile+'.txt'),sep=' ',float_format='%.4f',index_label="name",chunksize=10000)
+    perturb_both.to_csv(os.path.join(dirname, init, FCname, split,'perturb_both'+bfile+'.txt'), sep=' ',float_format='%.4f',index_label="name",chunksize=10000)
 
-   
+

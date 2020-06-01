@@ -11,11 +11,19 @@
 #------------------------------------------------------
 
 import pandas as pd
+import os
+import sys
 
 
-basal = pd.read_csv('virtual_screening/basal_states.txt', delim_whitespace = True, index_col = ['name']) #Read in FVS node perturbations 
-subset = pd.read_csv('virtual_screening/normalPerts_273.txt', delim_whitespace = True, index_col = ['name']) #Read in list of successful perturbations
-fvs = pd.read_csv('inputfiles/FVS_12', index_col = ['name']) #Read in list of FVS nodes
+###################### User Inputs: #####################
+sub = sys.argv[1] #File with names of perturbations of inteerest
+FCname = sys.argv[2] #Name of perturbed FVS set
+#########################################################
+
+dirname = os.path.dirname('virtual_screening/')
+basal = pd.read_csv(os.path.join(dirname, 'basal_states.txt'), delim_whitespace = True, index_col = ['name']) #Read in FVS node perturbations 
+subset = pd.read_csv(os.path.join(dirname, sub), delim_whitespace = True, index_col = ['name']) #Read in list of successful perturbations
+fvs = pd.read_csv(os.path.join('inputfiles', FCname), index_col = ['name']) #Read in list of FVS nodes
 
 #Create dataframe with perturbation orientations for successful perturbations
 df = basal.loc[basal.index.isin(subset.index), :] 
@@ -33,7 +41,8 @@ for node, col in df.iteritems():
     freq.loc['No_Change', node] = round(nc/npert*100,3)
 
 print(freq)
-freq.to_csv('virtual_screenings/normalPerts_273_fvsDir.txt', sep = " ")
+outf = sub.split('.txt')[0] + '_fvsDir.txt'
+freq.to_csv(os.path.join(dirname, outf), sep = " ")
 
 #### Write out dataframe including number of nodes that must be perturbed (not no-change) in a successful perturbation:
 count = pd.DataFrame(index = basal.index, columns = ['Number_of_Perturbed_Nodes'])
@@ -43,5 +52,5 @@ for pert, row in df.iterrows():
     nc = row.count(0)
     npert = len(basal.columns) - nc
     count.loc[pert, 'Number_of_Perturbed_Nodes'] = npert
-count.to_csv('number_of_perturbed_nodes_k3.txt', sep = " ", index_label = 'name')
+count.to_csv(os.path.join(dirname, 'number_of_perturbed_nodes_' + sub), sep = " ", index_label = 'name')
 print(count.Number_of_Perturbed_Nodes.value_counts())

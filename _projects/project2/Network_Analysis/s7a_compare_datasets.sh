@@ -27,9 +27,9 @@ export numneigh=3
 
 
 # Path to knn results
-export pert_foler=virtual_screening/$initialState/$FC
+export pert_folder=virtual_screening/$initialState/$FC
 
 module load python/3.6.3
 
 #Run comparison
-python3 ./scripts/8a_compare_datasets.py $pertfolder $numneigh
+python3 ./scripts/8a_compare_datasets.py $pert_folder $numneigh

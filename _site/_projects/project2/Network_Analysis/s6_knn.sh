@@ -29,7 +29,7 @@ echo $initialState
 echo $FC
 echo $ncl
 
-export pert_folder=virtual_screening/$init/$FC
+export pert_folder=virtual_screening/$initialState/$FC
 
 # Make directories for output
 mkdir -p $pert_folder/knn_logss

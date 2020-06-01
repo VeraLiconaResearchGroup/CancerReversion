@@ -26,7 +26,7 @@ import os
 import re
 
 
-def main():
+dedef main():
     ############ inputs#################
     dataset = sys.argv[1] # Dataset for classification (logss, DAC, both, or disc versions)
     pert_folder = sys.argv[2] # Folder holding attractors from virtual screenings

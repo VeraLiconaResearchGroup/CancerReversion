@@ -27,6 +27,7 @@ import random
 import sfa
 import csv
 import sys
+import re
 
 ##############Input files and user specified variables###################
 dpath = os.path.dirname('inputfiles/') #specifies input folder used to look for input files
@@ -98,7 +99,7 @@ if __name__ == "__main__":
     for index, row in basal_states.iterrows(): #Estimate attractor for each initial condition with SFA
         nwstates = row.tolist() #Get basal state
         current = index
-        for node in netnodes:
+        for node in basal_states.columns:
             nw_state=float(nwstates[0])
             b[data.n2i[node]]=nw_state  #set node to its experimental basal state
             nwstates.pop(0)
@@ -135,6 +136,10 @@ if __name__ == "__main__":
     attr_logss.to_csv(os.path.join(outpath, 'ref_attrs_logss.txt'),sep=' ',float_format='%.4f',index_label="name") 
     attr_DAC.to_csv(os.path.join(outpath, 'ref_attrs_DAC.txt'),sep=' ',float_format='%.4f',index_label="name",)
     attr_both.to_csv(os.path.join(outpath, 'ref_attrs_both.txt'), sep=' ',float_format='%.4f',index_label="name")
+
+    
+
+    
 
     
 

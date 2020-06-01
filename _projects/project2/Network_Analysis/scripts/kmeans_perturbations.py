@@ -31,16 +31,16 @@ def main():
 #####Input files and user specifications###########
     k = int(sys.argv[1]) #Specify the number of clusters
     folder = sys.argv[2] # Path to virtual screening results
-    dataset = sys.argv[3]
-    
+    dataset = sys.argv[3] 
 ##############################
+
     # Read in attractors from virtual screenings
     fpath = os.path.join(folder, "perturb_"+dataset+'.txt')
     df1=pd.read_csv(fpath ,delim_whitespace=True, index_col='name')
 
     # Read in reference attractors
     reffile = "ref_attrs_" + dataset + ".txt"
-    ref = pd.read_csv(os.path.join("inputfiles", reffile), delim_whitespace=True, index_col='name')
+    ref = pd.read_csv(os.path.join("reference_attrs", reffile), delim_whitespace=True, index_col='name')
     
     df = pd.concat([ref, df1], axis = 0)
 

@@ -9,8 +9,7 @@
 # 3. plots of first two dimensions of reference attractors 
 ##########################
 
-setwd("~/Documents/GitHub/gastonguay_compsysmed_labnotebook/_projects/project2/Network_Analysis/reference_attrs")
-# .libPaths('~/R_libs')
+setwd("../reference_attrs")
 library(MASS)
 library(tidyverse)
 library(e1071)
@@ -28,7 +27,7 @@ scree.plot = function(d, k, ds) { #Function to create scree plot of stress at ea
 
 ds <- c("logss", "DAC", "both", "logss_disc", "DAC_disc", "both_disc")
 
-pdf('../images/TEEST_mds_reference_attractors.pdf') #Open pdf to capture scree plots and results of MDS
+pdf('../images/mds_reference_attractors.pdf') #Open pdf to capture scree plots and results of MDS
 
 for(dataset in ds){
   ref <- read.table(paste('ref_attrs_', dataset, '.txt', sep = ""), header = T, row.names = 1)
@@ -39,7 +38,7 @@ for(dataset in ds){
   
   plotdf <- fit$points %>%  as.data.frame()
   names(plotdf) <- paste("PC", 1:ncol(plotdf), sep = "")
-  write.table(plotdf, paste("TEST_ref_attrs_mds_", dataset, ".txt", sep = ""), row.names = T, quote = F) #Write out results of MDS
+  write.table(plotdf, paste("ref_attrs_mds_", dataset, ".txt", sep = ""), row.names = T, quote = F) #Write out results of MDS
   
   plotdf$phenotype <- c(rep("Normal-like",4), rep("Cancer", 4))
   
@@ -55,7 +54,7 @@ for(dataset in ds){
     
     plotdf <- fit$points %>%  as.data.frame()
     names(plotdf) <- paste("PC", 1:ncol(plotdf), sep = "")
-    write.table(plotdf, paste("TEST_ref_attrs_mds_hamming_", dataset, ".txt", sep = ""), row.names = T, quote = F) #Write out results of MDS
+    write.table(plotdf, paste("ref_attrs_mds_hamming_", dataset, ".txt", sep = ""), row.names = T, quote = F) #Write out results of MDS
     
     plotdf$phenotype <- c(rep("Normal-like",4), rep("Cancer", 4))
     

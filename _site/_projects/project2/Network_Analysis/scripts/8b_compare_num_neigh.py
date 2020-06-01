@@ -14,9 +14,11 @@ import pandas as pd
 import os
 import sys
 
+################ User Inputs: ####################
 knn_folder = sys.argv[1] #Name of folder containing knn results
 replicate = sys.argv[2] #Name of experimental replicate used for virtual screenings
 FVS_name = sys.argv[3] #Name of perturbed FVS set
+#############################################
 
 print('knn_folder: ', knn_folder)
 print('replicate: ', replicate)
