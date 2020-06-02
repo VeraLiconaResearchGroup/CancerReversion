@@ -5,7 +5,7 @@ virtual_screening
 
 Signal Flow Analysis (SFA) is originally described in [Lee and Cho, 2018](https://www.nature.com/articles/s41598-018-23643-5). The source code in this repository has been modified from [This Github repository](https://github.com/dwgoon/sfa). Here, we use SFA to estimate the effect of perturbations on the long term behavior of the network using only the topology of the network and identify perturbations that may trigger tumor reversion. The SFA algorithm calculates the steady state activity of the network with the following equation:
 
-$`x_s= (1-\alpha)(I-\alpha W)^{-1}b`$
+$x_s= (1-\alpha)(I-\alpha W)^{-1}b$
 
 where x_s is a matrix of the log of the activity of each network node at steady state, $`\alpha`$ is a hyper parameter, W is a matrix with the weight of links between network nodes, and b is a matrix with the basal activity of each network node.
 
