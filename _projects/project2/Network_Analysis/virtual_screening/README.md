@@ -7,10 +7,6 @@ Signal Flow Analysis (SFA) is originally described in [Lee and Cho, 2018](https:
 
 ![equation](https://latex.codecogs.com/gif.latex?x_s%3D%20%281-%5Calpha%29%28I-%5Calpha%20W%29%5E%7B-1%7Db)
 
-[
-x_s= (1-\alpha)(I-\alpha W)^{-1}b
-]
-
 where x_s is a matrix of the log of the activity of each network node at steady state, $`\alpha`$ is a hyper parameter, W is a matrix with the weight of links between network nodes, and b is a matrix with the basal activity of each network node.
 
 This folder contains inputs and outputs of virtual screening and classification of attractors estimated from concerted perturbations of FVS nodes.
