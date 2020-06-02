@@ -9,7 +9,7 @@ Claudin-Low Triple Negative Breast Cancer (CL TNBC) has high relapse and low sur
 ## Folder Architecture
 **\_projects** Contains data, scripts, and results from the development of a quantitative pipeline for the identification of reversion targets in Claudin-Low Triple Negative Breast Cancer.
 
-
+All other folders contain files necessary for deploying the notebook.
 
 ## Serving the Notebook
 ### Requirements
