@@ -1,3 +1,10 @@
+# -------------------
+# getRIGHTAA.py parses the output of VEP on the COSMIC vcf file and the vcf file with
+# reversed bases to identify which file produces the correct amino acid substition when
+# VEP is applied. The output is a new vcf file (231_SNV_correct.vcf) that has the
+# correct base pair change so that when VEP is applied the correct amino acid change is predicted.
+# -------------------
+
 # Compare VCF and COSMIC
 
 import re

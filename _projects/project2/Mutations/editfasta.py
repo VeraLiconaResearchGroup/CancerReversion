@@ -1,3 +1,8 @@
+# ----------------------
+# editfasta.py removes unneccesary new line characters from the output reference.fa and mutant.fa from ensembl VEP with the
+# protein seqs plug-in and returns mut1.fa and ref1.fa without them.
+# ----------------------
+
 import re
 def main():
     with open('reference.fa',"r") as newFile:

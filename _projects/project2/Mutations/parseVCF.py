@@ -1,10 +1,17 @@
-# Parse VCF for protein eliminating mutations
+# -------------------
+# parseVCF.py parses the vcf file of mutations to include only those that are
+# nonsense mutations according to COSMIC.
+# -------------------
+
 
 import re
 def main():
-    inputfile=open('vcf_otherstrand.vcf').read().split('\n')
+    inputfile=open('231_SNV_correct.vcf').read().split('\n')
     nodes=open('nonsense_mutations_COSMIC.txt').read().split('\n')
 
+    header = inputfile[:6]
+    for line in header:
+        print(line)
     for node in nodes:
         row = node.split('\t')
         for line in inputfile:

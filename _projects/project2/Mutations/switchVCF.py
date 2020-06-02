@@ -1,10 +1,18 @@
-# Switch VCF strands
+#----------------------
+# switchVCF.py switches the bases in the vcf file to their complement to
+# return the mutation on the other DNA strand.
+#----------------------
+
 
 import re
 import statistics
 def main():
-    inputfile=open('231_SNV_COSMIC_edit.vcf').read().split('\n')
-    
+    inputfile=open('231_SNV_COSMIC.vcf').read().split('\n')
+    header = inputfile[:6] #save header
+    inputfile = inputfile[6:] #remove first five lines
+
+    for line in header:
+        print(line)
     for lines in inputfile:
         line = lines.split('\t')
         if line[3] == 'A':
