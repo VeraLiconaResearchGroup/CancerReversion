@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/gastonguay_compsysmed_labnotebook/</link>
     <atom:link href="http://localhost:4000/gastonguay_compsysmed_labnotebook/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 02 Jun 2020 15:11:42 -0400</pubDate>
-    <lastBuildDate>Tue, 02 Jun 2020 15:11:42 -0400</lastBuildDate>
+    <pubDate>Tue, 02 Jun 2020 16:43:34 -0400</pubDate>
+    <lastBuildDate>Tue, 02 Jun 2020 16:43:34 -0400</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -3374,9 +3374,7 @@ pvalue=0.6178509&lt;/p&gt;
 
 &lt;p&gt;When doing this with perutrbations from MDAMB231_1, we have 3062 normal perturbations.&lt;/p&gt;
 
-&lt;p&gt;FVS nodes from these normal perturbations: &lt;em&gt;see excel sheet&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Compared to FVS nodes in MDAMB231 and MCF10A basal states: &lt;em&gt;see excel sheet&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;FVS nodes from these normal perturbations:&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -3757,13 +3755,6 @@ pvalue=0.6178509&lt;/p&gt;
 &lt;/table&gt;
 
 &lt;p&gt;Comparing the orientation of the FVS nodes for these “normal” perturbations as opposed to the perturbations classified as normal by knn, there does not appear to be a common orientation for the majority of these FVS nodes. In the perturbations classified as normal by knn, we do see a pattern for several FVS nodes.&lt;/p&gt;
-
-&lt;h2 id=&quot;examiming-source-nodes&quot;&gt;Examiming Source nodes&lt;/h2&gt;
-
-&lt;p&gt;Perturbing the source nodes that are clearly different between the MDAMB231 basal states and the MCF10A basal states moves the attractors closer to the normal attractors. However, there are 17 such nodes, and we cannot target 17 source nodes as 12 FVS nodes, so I need to systematically determine which source nodes should be perturbed in concert with several FVS nodes.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;See excel sheet&lt;/em&gt;&lt;/p&gt;
-
 </description>
         <pubDate>Sun, 29 Mar 2020 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/gastonguay_compsysmed_labnotebook/_projects/project2/2020/03/29/NetworkAnlysis3.html</link>

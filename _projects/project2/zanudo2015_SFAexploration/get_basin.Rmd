@@ -11,7 +11,7 @@ library(BoolNet)
 library(Matrix)
 library(prodlim)
 
-
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path)) #set wd to wherever script is located
 network <- loadNetwork("zanudo_boolean.bn")
 states <- read.table("initial_states.txt", row.names = 1, header = TRUE) %>%t() %>%as.data.frame() # Dataframe of initial states
 bn <- read.table('boolnet_attractors.txt', header = TRUE, row.names = 1) # Dataframe of attractors resulting from initial states

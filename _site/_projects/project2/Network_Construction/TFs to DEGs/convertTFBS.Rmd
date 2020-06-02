@@ -1,6 +1,6 @@
 ```{r setup, include=FALSE}
-
 knitr::opts_chunk$set(echo = TRUE)
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path)) #set wd to wherever script is located
 ```
 
 ## R Markdown
@@ -18,7 +18,6 @@ OUTPUT: csv file where TF is the sitemodelID of the TF, symbol is the TF, and ge
 ```{r TFBS}
 library(readr)
 
-setwd("~/GitHub/gastonguay_compsysmed_labnotebook/_projects/project2/Network Construction 2/TFs to DEGs") #set working directory
 TF_Binding <- read.csv('TFBS_9_pulldown.csv') #read in TF binding profile
 symbols <- as.data.frame(names(TF_Binding)[-c(1,2,3)])
 names(symbols) <- "V1"

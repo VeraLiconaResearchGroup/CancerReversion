@@ -9,7 +9,8 @@
 # 3. plots of first two dimensions of reference attractors 
 ##########################
 
-setwd("../reference_attrs")
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path)) #set wd to wherever script folder is located
+setwd("../reference_attrs") #Change wd to reference attractors
 library(MASS)
 library(tidyverse)
 library(e1071)

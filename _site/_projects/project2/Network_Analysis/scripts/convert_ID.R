@@ -7,7 +7,8 @@
 # 3. Normalized expression data
 #---------------------------------------------------------
 
-setwd("~/Documents/GitHub/gastonguay_compsysmed_labnotebook/_projects/project2/Network_Analysis/test_RNAseq2")
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path)) #set wd to wherever script folder is located
+setwd("../test_RNAseq2") #Change wd to test_RNAseq2 folder
 
 # Read in dataframe with ensembl and gene symbol IDs
 df <- read.delim("~/Documents/GitHub/gastonguay_compsysmed_labnotebook/_projects/geneXplain_backup/231_prtn_genes_all_expressed.txt", stringsAsFactors = F)

@@ -3,15 +3,15 @@
 output: html_document
 ---
   
-  ```{r setup, include=FALSE}
+```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path)) #set wd to wherever script is located
 ```
 
 ## input files
 This file takes the lists of CL TNBC related genes (EMT/innate immunity Hallmarks of cancer, Breast Disease Ontology, and Claudin-Low related genes) and compares the nodes in the network to them.
 
 ```{r}
-setwd("~/Documents/GitHub/gastonguay_compsysmed_labnotebook/_projects/project2/Network_Construction")
 library(readr)
 library(ggplot2)
 library(readr)

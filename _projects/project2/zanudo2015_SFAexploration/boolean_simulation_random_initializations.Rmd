@@ -17,6 +17,7 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path)) #set wd to wherever script is located
 ```
 
 ## R Markdown
@@ -24,7 +25,6 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(BoolNet)
 library(Matrix)
-# setwd("C:/Users/marazzi/Google Drive/ALS_IPS/zanudo2015")
 network <- loadNetwork("zanudo_boolean.bn")
 
 ```

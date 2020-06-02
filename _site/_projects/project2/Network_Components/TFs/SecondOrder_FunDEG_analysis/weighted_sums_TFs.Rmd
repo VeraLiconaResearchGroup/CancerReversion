@@ -4,7 +4,7 @@ When running this file, chage working directory accordingly and make sure 5 file
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-setwd("~/Documents/GitHub/gastonguay_compsysmed_labnotebook/_projects/project2/Network_Components/TFs/SecondOrder_FunDEG_analysis")
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path)) #set wd to wherever script is located
 ```
 
 ## input files

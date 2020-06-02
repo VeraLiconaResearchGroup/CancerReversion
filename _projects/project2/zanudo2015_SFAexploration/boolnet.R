@@ -1,6 +1,6 @@
 library(tidyverse)
 library(BoolNet)
-setwd("C:/Users/marazzi/Dropbox/Marazzi/Control_DynamicalSystems/Fall_2019/zanudo2015")
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path)) #set wd to wherever script is located
 network <- loadNetwork("zanudo_boolean.bn")
 states <- read.table('basal_states.txt', header = TRUE)
 nodes <- c("ctla4", "tcr", "pdgfr", "fyn", "cytoskeletonsignaling", "lck", "zap70", "grb2", "plcg1", "ras", "gap", "mek", "erk", "pi3k", "nfkb", "nfat", "rantes", "il2", "il2rbt", "il2rb", "il2rat", "il2ra", "jak", "socs", "stat3", "p27", "proliferation", "tbet", "creb", "ifngt", "ifng", "p2", "gzmb", "tpl2", "tnf", "tradd", "fasl", "fast", "fas", "sfas", "ceramide", "disc", "caspase", "flip", "a20", "bid", "iap", "bclxl", "mcl1", "apoptosis", "gpcr", "smad", "sphk1", "s1p", "stimuli", "pdgf", "cd45", "il15", "stimuli2", "tax")

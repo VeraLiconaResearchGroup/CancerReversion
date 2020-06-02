@@ -15,7 +15,9 @@
 # 2. A table with log fold change and adjusted p-value for each FVS node
 #--------------------------------------------------
 
-setwd("~/Documents/GitHub/gastonguay_compsysmed_labnotebook/_projects/project2/Network_Analysis")
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path)) #set wd to wherever script folder is located
+setwd("..") #cahange working directory to Network_Analysis Folder
+
 library(reshape)
 library(tidyverse)
 

@@ -69,15 +69,14 @@ For the both discrete dataset, using the hamming distance is more stringent in d
 
 When doing this with perutrbations from MDAMB231_1, we have 3062 normal perturbations.
 
-FVS nodes from these normal perturbations: *see excel sheet*
-
-Compared to FVS nodes in MDAMB231 and MCF10A basal states: *see excel sheet*
+FVS nodes from these normal perturbations: 
 
 **name**|**AKT1**|**AURKA**|**CTNNB1**|**FOXM1**|**GSK3B**|**HDAC3**|**JUN**|**MAPK1**|**PIAS1**|**RELA**|**STAT3**|**TCF3**
 :-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
 one|1433|792|1597|30|685|1052|393|1289|1166|1280|2768|11
 zero|799|1163|302|549|713|1007|1088|900|939|617|294|66
 negone|830|1107|1163|2483|1664|1003|1581|873|957|1165|0|2985
+
 
 ### Comparing Knn results from different MDA-MB-231 Replicates
 
@@ -157,11 +156,3 @@ zero|2865|2937|2833|2451|2825|2889|3695|2851|2862|2866|3709|4896
 negone|2865|2849|2920|6183|2882|2874|2497|2919|2871|2921|0|0
 
 Comparing the orientation of the FVS nodes for these "normal" perturbations as opposed to the perturbations classified as normal by knn, there does not appear to be a common orientation for the majority of these FVS nodes. In the perturbations classified as normal by knn, we do see a pattern for several FVS nodes.
-
-
-## Examiming Source nodes
-
-Perturbing the source nodes that are clearly different between the MDAMB231 basal states and the MCF10A basal states moves the attractors closer to the normal attractors. However, there are 17 such nodes, and we cannot target 17 source nodes as 12 FVS nodes, so I need to systematically determine which source nodes should be perturbed in concert with several FVS nodes.
-
-*See excel sheet*
-

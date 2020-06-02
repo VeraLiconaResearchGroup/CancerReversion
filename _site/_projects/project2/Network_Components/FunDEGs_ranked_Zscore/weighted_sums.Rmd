@@ -1,5 +1,6 @@
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path)) #set wd to wherever script is located
 ```
 
 ## input files
@@ -8,7 +9,6 @@ knitr::opts_chunk$set(echo = TRUE)
 When running this file, chage working directory accordingly and make sure 3 files you're inputing are correctly named. Then uncomment the ggsave function and change the name of the image you're saving.
 
 ```{r}
-# setwd("~/GitHub/gastonguay_compsysmed_labnotebook/_projects/project2/Network Components/FunDEGs")
 library(readr)
 library(ggplot2)
 library(readr)

@@ -10,8 +10,9 @@
 #---------------------------------------------------------
 library(DESeq2)
 # Set the working directory
-directory <- "~/Documents/GitHub/gastonguay_compsysmed_labnotebook/_projects/project2/Network_Analysis/test_RNAseq2"
-setwd(directory)
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path)) #set wd to wherever script folder is located
+directory <- "../test_RNAseq2"
+setwd(directory) # Change directory to test_RNAseq2 folder
 
 # Set the prefix for each output file name
 outputPrefix <- "Data2"

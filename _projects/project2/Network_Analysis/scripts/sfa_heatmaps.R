@@ -9,10 +9,13 @@
 # 1. Heatmaps
 #----------------------------------------------------------
 
-setwd("~/Documents/GitHub/gastonguay_compsysmed_labnotebook/_projects/project2/Network_Analysis")
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path)) #set wd to wherever script folder is located
+setwd("..") #Change wd to Network_Anlaysis Folder
 library(tidyverse)
 library(NMF)
 
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path)) #set wd to wherever script folder is located
+setwd("..") # Change working directory to Network_Analysis
 
 # Read in normalized RNAseq experssion data from experimental replicates
 d <- read.table('inputfiles/network_nodes_normalized_expression_replicates.txt', header = T, row.names = 1)

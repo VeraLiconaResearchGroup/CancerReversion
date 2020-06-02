@@ -1,4 +1,4 @@
-setwd("~/Google Drive File Stream/My Drive/ALS_IPS/zanudo2015")
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path)) #set wd to wherever script is located
 library(tidyverse)
 library(NMF)
 

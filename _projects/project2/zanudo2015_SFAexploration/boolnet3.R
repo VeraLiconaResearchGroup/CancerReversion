@@ -1,6 +1,6 @@
 library(tidyverse)
 library(BoolNet)
-setwd("C:/Users/marazzi/Dropbox/Marazzi/Control_DynamicalSystems/Fall_2019/zanudo2015")
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path)) #set wd to wherever script is located
 network <- loadNetwork("zanudo_boolean.bn")
 
 #generate initial state where only il15 and stimuli are on
