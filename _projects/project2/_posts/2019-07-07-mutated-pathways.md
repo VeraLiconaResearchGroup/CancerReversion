@@ -16,9 +16,7 @@ Mutations play an important role in the development of cancer. The mutational pr
 COSMIC mutations in [VCF format](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Mutations/231_SNV_COSMIC.vcf).
 
 ## VEP
-[VEP](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0974-4) determines the effect of your variants (SNPs, insertions, deletions, CNVs or structural variants) on genes, transcripts, and protein sequence, as well as regulatory regions.
-
-Using VEP in GeneXplain, we identified [879 mutations](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Mutations/231_SNV_COSMIC%20table.txt) from the VCF file. We then filtered these mutations to those that cause missense, deletion, splice site changes, or frameshift changes, stop_gained, and NMD, leaving [388 mutations](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Mutations/231_SNV_COSMIC%20table%20filtered%20strand%3D1.txt) in [60](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Mutations/mutant_framshiftdel)  genes.
+[VEP](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0974-4) determines the effect of your variants (SNPs, insertions, deletions, CNVs or structural variants) on genes, transcripts, and protein sequence, as well as regulatory regions. We applied VEP to the vcf of mutations in MDA-MB-231 and literature searched several mutations.
 
 
 # TP53 mutation
