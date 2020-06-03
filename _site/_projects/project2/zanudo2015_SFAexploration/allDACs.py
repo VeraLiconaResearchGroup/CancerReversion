@@ -1,3 +1,10 @@
+# ---------------
+# allDACs.py calculates the direction of activity change (DAC) pairwise between
+# attractors estimated with SFA from initial conditions in the basin of Leukemia
+# and Apoptosis attractors of the Boolean model.
+# --------------
+
+
 import os
 import numpy as np
 import pandas as pd
@@ -32,18 +39,12 @@ def main():
     df = pd.DataFrame(index = mI, columns = apop.columns)
     
 
-    ##    DACall = pd.dataframe(columns = apop.columns 
-
     for index,row in leuk.iterrows():
         x=apop.apply(DAC, axis = 1, args =[row])
-    ##        x = apop.round(decimals=2)
-    ##        x.to_csv('check_this_out.csv', sep = ',', index_label = "name")
-    ##        die
         xd=x.copy(deep=True).apply(disc,0).astype(np.int64)
         xd2 = xd
         for index2,row in xd2.iterrows():
             df.loc[(index, index2)] = row
-##            xd.to_csv("Rounding Exploration/DAC_results_L1A/apop_vs_"+str(index)+".txt",sep=' ',index_label="name")
     df.to_csv("DAC_results_L1A/DAC_all.txt",sep=' ',index_label=["leuk_attr", "apop_attr"])
 
 main()

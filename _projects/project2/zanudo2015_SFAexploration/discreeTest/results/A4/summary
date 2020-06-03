@@ -1,0 +1,28 @@
+mabc values: {'Jan29/data/discretized_data/A4/max25.csv': inf
+'Jan29/data/discretized_data/A4/TDT.csv': inf
+'Jan29/data/discretized_data/A4/top25.csv': inf
+'Jan29/data/discretized_data/A4/kmeans2.csv': inf
+'Jan29/data/discretized_data/A4/top50.csv': inf
+'Jan29/data/discretized_data/A4/bikmeans2.csv': inf
+'Jan29/data/discretized_data/A4/mean.csv': inf
+'Jan29/data/discretized_data/A4/max50.csv': inf
+'Jan29/data/discretized_data/A4/q2.csv': 25.26908649494889
+'Jan29/data/discretized_data/A4/median.csv': inf
+'Jan29/data/discretized_data/A4/max75.csv': inf
+'Jan29/data/discretized_data/A4/top75.csv': 25.569765589529432}
+
+2020-01-29 17:16:38,400  [ INFO ] __main__  best discretization: Jan29/data/discretized_data/A4/q2.csv with mabc = 25.26908649494889
+
+{'Jan29/data/discretized_data/A4/max25.csv': 7.48821652948618e-181
+'Jan29/data/discretized_data/A4/TDT.csv': 1.1677381227789125e-272
+'Jan29/data/discretized_data/A4/top25.csv': 9.314615067801684e-124
+'Jan29/data/discretized_data/A4/kmeans2.csv': 6.216804392649875e-262
+'Jan29/data/discretized_data/A4/top50.csv': 5e-324
+'Jan29/data/discretized_data/A4/bikmeans2.csv': 3.963381359271587e-261
+'Jan29/data/discretized_data/A4/mean.csv': 1.0280236468862108e-121
+'Jan29/data/discretized_data/A4/max50.csv': 3.862554540039444e-175
+'Jan29/data/discretized_data/A4/q2.csv': 0.08774977753928893
+'Jan29/data/discretized_data/A4/median.csv': 5e-324
+'Jan29/data/discretized_data/A4/max75.csv': 7.837142219648943e-53
+'Jan29/data/discretized_data/A4/top75.csv': 0.09342424947156013}
+2020-01-29 17:16:38,400  [ INFO ] __main__  total script duration: 0.93100905418396 seconds

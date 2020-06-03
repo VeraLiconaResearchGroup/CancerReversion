@@ -3,11 +3,11 @@ zanduo2015_SFAexploration
 
 ## Description
 
-This folder contains files and scripts from the SFA exploration to determine the limitations and approproate uses of Signal Flow Analysis.
+This folder contains files, scripts, and results from the SFA exploration to determine the limitations and appropiate uses of Signal Flow Analysis.
 
 ## Folder Architecture
 
-**100000_il15_stim_ON_s2_cd45_tax_pdgf_OFF.txt** contains the attractors of the Boolean network when simulated with 100000 initial states with IL15 and Stimuli1 ON, stimuli2, CD45 TAX, and PDGF OFF, all other nodes randomly intialized.
+**100000_il15_stim_ON_s2_cd45_tax_pdgf_OFF.txt** contains the attractors of the Boolean network when simulated with 100000 initial states with IL15 and Stimuli1 ON, stimuli2, CD45 TAX, and PDGF OFF, all other nodes randomly intiailized.
 
 **100000_il15_stim_ON.txt** contains the attractors of the Boolean network when simulated with 100000 initial states with IL15 and Stimuli1 ON, and all other nodes randomly initialized. 
 
@@ -17,29 +17,26 @@ This folder contains files and scripts from the SFA exploration to determine the
 
 **apoptosis_attractors.txt** Are apoptosis attractors from the Boolean model classified according to the DAC of the readout nodes.
 
-**apoptosis_attractors.txt** Are apoptosis attractors from the Boolean model classified according to the DAC of the readout nodes.
-
 **apoptosis5.txt** Contains intial conditions that lead to the apoptosis attractor achieved by fixing nodes in apoptosis intervention 5 when simulated wtih the Boolean model.
+
+**atttractors.txt** ...
 
 **bn_a_attr.txt** Contains the apoptosis attractor of the Boolean model identified by zanudo.
 
 **bn_l1_attr.txt** Contains the Leukemia1 attractor of the Boolean model identified by zanudo.
 
-**boolean_simulation_random_initializations.Rmd** Is a R markdown document where 100,000 pre generated random states are used as intiializations and the resultant attractors simulated with the Boolean model.
+**boolean_simulation_random_initializations.Rmd** Is a R markdown document where 100,000 pre generated random states are used as initializations and the resultant attractors simulated with the Boolean model.
 
 **boolean_simulation.Rmd** Simulates attractors of the boolean network with stable motif nodes fixed as described in Zanudo et al.
 
 **boolnet_A_L_attractors.txt** Leukemia and Apoptosis quasi-attractors of the Boolean model.
 
-**boolnet_apoptosis_attractors_kmeans.txt** .....
 
-**boolnet_attractors_RONS.\*** Attractor values of readout nodes (RONs) for 877 attractors from 100,000 random initial conditions.
+**boolnet_attractors_RONS.\*** Attractor values of readout nodes (RONs) for 877 attractors simulated from 100,000 random initial conditions with the Boolean model.
 
 **boolnet_attractors.txt** 877 quasi-attractors simulated from the 100,000 random initial conditions with the Boolean model.
 
 **boolnet_DAC.\*** Contains the DAC of each of the 877 attractors of the Boolean model compared to the Leukemia1 attractor.
-
-**boolnet.R** ...
 
 **boolnet3.R** Is a draft script for simulating the network with fixed nodes.
 
@@ -65,21 +62,23 @@ This folder contains files and scripts from the SFA exploration to determine the
 
 **get_basin.Rmd** Is a script to find which initial states lead to each attractor of the Boolean model.
 
-**get_quasi_attractors.py** Reads the output of Boolnet and generates a datafrmae of quasi-attractors.
+**get_quasi_attractors.py** Reads the output of Boolnet and generates a dataframe of quasi-attractors.
 
 **hamming_distance.py** Calculates the Hamming Distance between the DAC of RONs for each combination of SFA attractor and the DAC of the RONs of the Leukemia and Apoptosis attractors of the Boolean model.
 
+**images** contains figures generated from the analysis.
+
 **initial_states_Leuk_Apop.txt** Consists of initial states used to simulate Apoptosis and Leukemia attractors with the Boolean model.
 
-**inital_states.txt** consists of 100,000 random intializations for the model.
+**inital_states.txt** consists of 100,000 random initializations for the model.
 
 **inputfiles** consists the network and reference attractors.
 
 **is_attrs_bn.txt** Is a dataframe that matches initial states to their Boolean attractors.
 
-**is_bn_map.txt** Is a dataframe that matches initial states to their Boolean attractors and their phenotype according to 
+**is_bn_map.txt** Is a dataframe that matches initial states to their Boolean attractors and their phenotype according to readout nodes of the attractor. The Phenotype2 column marks states in the basin of the Apoptosis attractor from zanudo as apoptosis and states in the basin of either Leukemai attractor from Zanudo as Leukemia. Other states that lead to different apoptosis and leukemia attractors are marked as other in this column.
 
-**is_to_A_L_inBN.txt** is a map of initial states that lead to apoptosis and leukemia attractors and their corresponding phenotype.
+**is_to_A_L_inBN.txt** is a map of initial states that lead to Zanudo's apoptosis and leukemia attractors and their corresponding phenotype.
 
 **kmeans.xlsx** contains the number of SFA and Boolean attractors classified as Leukemia and Apoptosis by kmeans.
 
@@ -97,9 +96,11 @@ This folder contains files and scripts from the SFA exploration to determine the
 
 **other_attractors.txt** RON values of attractors that are neither Leukemia nor Apoptosis associated.
 
-**other.txt** is a list of attractors that are neitheere Leukemia nor Apoptosis associated.
+**other.txt** is a list of attractors that are neither Leukemia nor Apoptosis associated according to RONs.
 
 **quasi_DAC_RONs.xlsx** Contains results of DAC analysis in RONs.
+
+**SFA experimentation on Zañudo 2015.ppt** contains results from the start of the analysis.
 
 **sfa_A_L.csv** Contains the estimated SFA attractors from the Leukemia and Apoptosis intial conditions.
 
@@ -119,17 +120,15 @@ This folder contains files and scripts from the SFA exploration to determine the
 
 **SFA1.py** Is the script used to estimate attractors with SFA.
 
-**sub_network.bn** Is a reduced network for T-LGL from _______
+**sub_network.bn** Is a reduced network for T-LGL from Zanudo.
 
 **sub_network2.bn** Is a reduced network for T-LGL from Saadatpour et al.
 
-**Tolerance Exploration** Contains the results of SFA with different tolerance levels.
-
-**Tolerance Exploration** Contains the results of SFA with fixed nodes and different tolerance levels.
+**Tolerance Exploration** Contains the DAC between the attractors estimated with different tolerance levels for SFA from the initial conditions of apoptosis1 and Leukemia1. (Outdated: see sfa_fixednodes/Tolerance_fixednodes for final analysis.)
 
 **zanudo_boolean.bn** The T-LGL Boolean netework from Zanudo et al.
 
-
+**zanudo2.pptx** is the final power point presentation for this analysis.
 
 
 

@@ -1,3 +1,8 @@
+# ----------
+# This script converts the output of get_attractors.py into a dataframe of quasi-attractors
+# where the activity of nodes that oscillate between 0 and 1 is denoted as X.
+# ----------
+
 from re import *
 import pandas as pd
 import itertools

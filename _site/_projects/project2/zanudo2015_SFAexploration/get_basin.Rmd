@@ -1,3 +1,5 @@
+This script identifies the inital states in the basin of each attractor of the Boolean model.
+
 ```{r}
 library(tidyverse)
 library(BoolNet)

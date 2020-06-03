@@ -1,0 +1,32 @@
+mabc values: {'Jan29/data/discretized_data/leuk2/max25.csv': inf
+'Jan29/data/discretized_data/leuk2/TDT.csv': inf
+'Jan29/data/discretized_data/leuk2/top25.csv': inf
+'Jan29/data/discretized_data/leuk2/kmeans2.csv': inf
+'Jan29/data/discretized_data/leuk2/top50.csv': inf
+'Jan29/data/discretized_data/leuk2/bikmeans2.csv': inf
+'Jan29/data/discretized_data/leuk2/mean.csv': inf
+'Jan29/data/discretized_data/leuk2/max50.csv': inf
+'Jan29/data/discretized_data/leuk2/q2.csv': inf
+'Jan29/data/discretized_data/leuk2/median.csv': inf
+'Jan29/data/discretized_data/leuk2/max75.csv': inf
+'Jan29/data/discretized_data/leuk2/top75.csv': inf}
+
+
+2020-01-29 17:17:59,865  [ INFO ] __main__  best discretization: Jan29/data/discretized_data/leuk2/max25.csv with mabc = inf
+
+
+{'Jan29/data/discretized_data/leuk2/max25.csv': 5e-324
+'Jan29/data/discretized_data/leuk2/TDT.csv': 5e-324
+'Jan29/data/discretized_data/leuk2/top25.csv': 2.379288796098308e-09
+'Jan29/data/discretized_data/leuk2/kmeans2.csv': 5e-324
+'Jan29/data/discretized_data/leuk2/top50.csv': 0.0
+'Jan29/data/discretized_data/leuk2/bikmeans2.csv': 5e-324
+'Jan29/data/discretized_data/leuk2/mean.csv': 0.0
+'Jan29/data/discretized_data/leuk2/max50.csv': 5e-324
+'Jan29/data/discretized_data/leuk2/q2.csv': 9.033214875543988e-10
+'Jan29/data/discretized_data/leuk2/median.csv': 0.0
+'Jan29/data/discretized_data/leuk2/max75.csv': 5.462154114158042e-183
+'Jan29/data/discretized_data/leuk2/top75.csv': 5.150488547029334e-16}
+
+
+2020-01-29 17:17:59,865  [ INFO ] __main__  total script duration: 0.8590700626373291 seconds

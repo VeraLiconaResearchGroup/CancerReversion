@@ -1,3 +1,5 @@
+Identifies the attractors of the reduced networks of Zanduo Saadatpour.
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path)) #set wd to wherever script is located
@@ -6,6 +8,7 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path)) #set wd to wherever 
 ```{r read in files}
 library(tidyverse)
 library(BoolNet)
+# Reduced network from stable motif Zanudo
 network <- loadNetwork("sub_network.bn")
 ```
 
@@ -18,6 +21,7 @@ getAttractorSequence(yo, 3)
 ```
 
 ```{r}
+# Network from Saadatpour 
 network2 <- loadNetwork("sub_network2.bn")
 ya <-getAttractors(network2, type="synchronous", method = 'exhaustive')
 print(ya)
