@@ -1,7 +1,7 @@
 MDAMB231_1/FVS_12
 =========
 ## Description
-Results of Virtual Screeenings of perturbations of FVS_12 applied to MDAMB231_1.
+Results from Virtual Screeenings of perturbations of FVS_12 applied to the initial condition MDAMB231_1.
 
 ## Folder Architecture
 
