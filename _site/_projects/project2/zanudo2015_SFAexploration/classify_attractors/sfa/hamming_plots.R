@@ -1,4 +1,4 @@
-setwd("~/Google Drive File Stream/My Drive/ALS_IPS/zanudo2015/classify_attractors/sfa")
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path)) #set wd to wherever script is located
 h1 <- read.table('hamming_DAC_A_L1.txt', header = TRUE)
 h2 <- read.table('new_RONs_DACandHam2/hamming_DAC_A_L1.txt', header = TRUE)
 h1$RONs <- 'old'

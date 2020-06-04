@@ -17,10 +17,6 @@ This folder contains files, scripts, and results from the SFA exploration to det
 
 **apoptosis_attractors.txt** Are apoptosis attractors from the Boolean model classified according to the DAC of the readout nodes.
 
-**apoptosis5.txt** Contains intial conditions that lead to the apoptosis attractor achieved by fixing nodes in apoptosis intervention 5 when simulated wtih the Boolean model.
-
-**atttractors.txt** ...
-
 **bn_a_attr.txt** Contains the apoptosis attractor of the Boolean model identified by zanudo.
 
 **bn_l1_attr.txt** Contains the Leukemia1 attractor of the Boolean model identified by zanudo.
@@ -105,8 +101,6 @@ This folder contains files, scripts, and results from the SFA exploration to det
 **sfa_A_L.csv** Contains the estimated SFA attractors from the Leukemia and Apoptosis intial conditions.
 
 **sfa_apoptosis.txt** SFA attractors simulated from states in the basin of the Apoptosis attractor in the Boolean model.
-
-**sfa_apoptosis5.txt** SFA attractors simulated from states in the basin of Apoptosis5 attractor in the Boolean model.
 
 **sfa_fixednodes** contains results of the analysis run with fixed interventions.
 

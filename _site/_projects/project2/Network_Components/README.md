@@ -2,7 +2,9 @@ Network Components
 ==========
 
 ### Description  
-This folder contains all the layers of the network along with the necessary related files to get them.
+The proposed intracellular signaling network consists of an input layer, a target layer, and an intermediate layer canalizing intracellular signals between the two. The target layer consists of functionally related differentially expressed genes (FunDEGs). These genes may not all be highly differentially expressed, but form a functional core whose expression pattern determines the phenotype of the system. The next layer consists of transcription factors (TFs) that transcribe the genes in the target layer to capture how small changes in regulatory elements alter the phenotype. The last layer consists of genes, proteins, complexes, or other molecules considered to be Master Regulators (MRs) of the phenotype.
+
+This folder contains data and scripts used to identify each layer of the network.
 
 ### Folder Architecture  
 
