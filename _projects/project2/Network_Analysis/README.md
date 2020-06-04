@@ -5,7 +5,7 @@ Network_Analysis
 
 This folder contains all scripts and files necessary to identify and prioritize putative reversion targets. Run the shell scripts in the following order to run the complete pipeline. User inputs are defined at the start of each shell script, editing their values is sufficient to run the script as desired.
 
-** Shell Script**|**Purpose**
+**Shell Script**|**Purpose**
 :-----:|:-----:
 s1\_estimate\_ref\_attrs.sh|Estimate attractors from normalized expression data of experimental replicates using SFA to be used as references of the cancerous and normal phenotype.
 s2\_mds\_ref\_attrs.sh|Run non-metric MDS with sammon mapping on reference attractors and plot the results in 2 dimensions.
@@ -20,7 +20,7 @@ s8\_get\_fvs\_direction.sh| Find the frequency of the perturbation orientation o
 
 There are also shell scripts for some exploratory analyses, which are not necessary for the main pipeline:
 
-** Shell Script**|**Purpose**
+**Shell Script**|**Purpose**
 :-----:|:-----:
 mds\_perturbations.sh|Run MDS on the attractors from virtual screenings.
 kmeans\_perturbations.sh|Run k-means clustering on the attractors from virtual screenings.
