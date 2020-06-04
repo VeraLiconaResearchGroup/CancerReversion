@@ -13,7 +13,7 @@ This folder contains inputs and outputs of virtual screening and classification 
 
 ## Folder Architecture
 
-**successful_perturbations.txt** Is a list of perturbations that triggered a shift to the goal cluster when applied to all four initial conditions of MDA-MB-231.
+**successful_perturbations.txt** Is a list of perturbations that triggered a shift to the goal cluster when applied to all four initial conditions of MDA-MB-231. **Note:** this file was created manually after selecting the perturbations considered successful.
 
 **MDAMB231_\*** Contains datasets of attractors resulting from perturbations of the FVS nodes applied to each initial condition of MDA-MB-231.
 
