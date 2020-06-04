@@ -18,6 +18,8 @@ A6|TBET = ON, Ceramide = ON, MEK = ON, PI3K = ON
 
 ## Folder Architecture
 
+**DAC** contains the results of calculating the direction of activity change between the Apoptosis and Leukemia assocaited attractors simualted by SFA.
+
 **\*_initial.txt** contains the initial states in the basin of each attractor in the Boolean model.
 
 **allDACs.py** calculates pairwise DAC between attractors simulated by SFA between each of the initial conditions in the basin of the Apoptosis and Leukemia attractors.
