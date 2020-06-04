@@ -3,7 +3,7 @@ reference_attrs
 
 ## Description
 
-This folder contains datasets of reference attractors and results of unsupervised kmeans clustering on them.
+This folder contains datasets of reference attractors and results of mutli-dimensional scaling with sammon mapping and unsupervised kmeans clustering on them.
 
 ## Folder Architecture
 
