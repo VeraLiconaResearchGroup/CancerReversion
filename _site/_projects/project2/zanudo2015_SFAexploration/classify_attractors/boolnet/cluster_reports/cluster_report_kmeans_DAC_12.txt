@@ -20,3 +20,7 @@ Cluster Number_of_attrs Percent_of_attrs Percent_of_cluster
 1 2 6.45 1.9
 
 
+Unique Apop Clusters:
+[0, 5, 7, 8, 9, 10, 11]
+Unique Leuk Clusters:
+[1, 3, 4]

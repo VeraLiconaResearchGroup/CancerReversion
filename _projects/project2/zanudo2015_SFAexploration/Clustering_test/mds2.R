@@ -1,4 +1,4 @@
-setwd("/Volumes/GoogleDrive/My Drive/ALS_IPS/zanudo2015/Clustering_test")
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path)) #set wd to wherever script is located
 library(MASS)
 library(tidyverse)
 library(e1071)
@@ -14,8 +14,8 @@ scree.plot = function(d, k) {
 
 
 # Read in boolean attractors that are classified as leukemia and apoptosis based off of readout nodes
-exprl <- read.table('../classify_attractors/boolnet/classify_attractors_newRONs/leukemia_boolnet.txt', stringsAsFactors = F)
-expra <- read.table('../classify_attractors/boolnet/classify_attractors_newRONs/apoptosis_boolnet.txt', stringsAsFactors = F)
+exprl <- read.table('../classify_attractors/boolnet/leukemia_boolnet.txt', stringsAsFactors = F)
+expra <- read.table('../classify_attractors/boolnet/apoptosis_boolnet.txt', stringsAsFactors = F)
 
 # Add attractor numbers for leukemia1, leukemia2, and apoptosis
 exprl[nrow(exprl)+1,"V1"] <- 'attr_507'

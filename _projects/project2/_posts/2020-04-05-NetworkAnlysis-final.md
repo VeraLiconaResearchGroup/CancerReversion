@@ -521,6 +521,9 @@ Knocked-out|58.599|68.153|7.006|64.968|1.274|6.369|42.675|31.847|7.006|68.79|57.
 No Change|29.299|31.847|10.828|35.032|9.554|11.465|20.382|38.217|24.204|31.21|41.401|45.223
 
 
+
+
+
 The results that do not agree with literature is the upregulation of [CTNNB1](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0117097), [GSK3B](https://breast-cancer-research.biomedcentral.com/articles/10.1186/s13058-019-1125-0), and [HDAC3](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5611517/).
 
 Literature evidence:
@@ -794,5 +797,5 @@ As the goal is to trigger tumor reversion and not cell death, we want to make su
 
 The only FVS node that MDA-MB-231 upon which exhibits dependncy (Esentiality score \< -1) is HDAC3. Thus, perturbations that require its inhibition will not be considered for expermiental validaion.
 
-## Conclusions
+# Conclusions
 More experimentation needs to be done with different FVS sets and including perturbations of the source nodes. Running virtual screenings using RNAseq data from the additionally study would be another control to identify successful perturbations. As of now, I would prioritize **Perturb\_036358** for experimental validation because only 7 nodes need to be perturbed, and it does not require activation of GSK3B or CTNNB1.

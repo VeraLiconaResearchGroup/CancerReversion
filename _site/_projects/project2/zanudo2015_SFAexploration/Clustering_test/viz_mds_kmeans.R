@@ -1,3 +1,4 @@
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path)) #set wd to wherever script is located
 
 dataset = 'both'
 
@@ -8,8 +9,8 @@ for(k in 2:15){
   # mds3 <- mds3[,1:2]
   # clusters <- read.table(paste("kmeans_", dataset, "/kmeans_", dataset, k, '.txt', sep= ""), header = T, row.names = 1)
   
-  exprl <- read.table('../classify_attractors/boolnet/classify_attractors_newRONs/leukemia_boolnet.txt', stringsAsFactors = F)
-  expra <- read.table('../classify_attractors/boolnet/classify_attractors_newRONs/apoptosis_boolnet.txt', stringsAsFactors = F)
+  exprl <- read.table('../classify_attractors/boolnet/leukemia_boolnet.txt', stringsAsFactors = F)
+  expra <- read.table('../classify_attractors/boolnet/apoptosis_boolnet.txt', stringsAsFactors = F)
   # Add attractor numbers for leukemia1, leukemia2, and apoptosis
   exprl[nrow(exprl)+1,"V1"] <- 'attr_507'
   exprl[nrow(exprl)+1,] <- 'attr_284'

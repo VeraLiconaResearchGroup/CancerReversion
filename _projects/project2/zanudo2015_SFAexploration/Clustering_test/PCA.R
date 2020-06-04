@@ -1,5 +1,5 @@
 # PCA
-setwd("/Volumes/GoogleDrive/My Drive/ALS_IPS/zanudo2015/Clustering_test")
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path)) #set wd to wherever script is located
 library(MASS)
 library(tidyverse)
 # library(e1071)
@@ -14,10 +14,10 @@ attrsDAC <- attrsDAC[-c(1,2),]
 attr <- cbind(attrsss,attrsDAC)
 map <- read.table('../is_attrs_bn.txt', header = T, row.names = 1)
 
-lbool <- read.table("../classify_attractors/boolnet/classify_attractors_newRONs/leukemia_boolnet.txt", header = F, stringsAsFactors = F)
+lbool <- read.table("../classify_attractors/boolnet/leukemia_boolnet.txt", header = F, stringsAsFactors = F)
 lbool[nrow(lbool)+1,] <- "attr_284"
 lbool[nrow(lbool)+1,] <- "attr_507"
-abool <- read.table("../classify_attractors/boolnet/classify_attractors_newRONs/apoptosis_boolnet.txt", header = F, stringsAsFactors = F)
+abool <- read.table("../classify_attractors/boolnet/apoptosis_boolnet.txt", header = F, stringsAsFactors = F)
 abool[nrow(abool)+1,] <- "attr_195"
 
 map$bn <- paste("attr_", map[,1], sep = "")
