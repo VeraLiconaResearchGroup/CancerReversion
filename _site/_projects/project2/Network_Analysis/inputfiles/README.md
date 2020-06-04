@@ -22,7 +22,7 @@ This folder contains files needed to run the network analysis.
 
 **network_nodes_normalized_expresesion_replicates.txt**  is the normalized RNAseq expression data of all experimental replicates for all network nodes with gene expression data
 
-**network.sif** is the final network in .sif format
+**network.sif** is the final network with edges formatted as <**source interaction target**>, where interaction is either **activates** or **inactivates**.
 
 
 **source_nodes.txt** are the source nodes of the network.

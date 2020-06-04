@@ -423,7 +423,7 @@ MDAMB231\_3|5580|1256|5597|1198
 MDAMB231\_4|1198|1194|1198|1198
 
 ## Conclusions
-Changing the number of clusters in training set from 4 to 2 does not increse the intersection of perturbations causing a shift to the normal cluster for the four replicates. Use the concatination of the raw datasets and 3 nearest neighbors with 4 custers in the training set because it gives more strigent results.
+Changing the number of clusters in training set from 4 to 2 does not increse the intersection of perturbations causing a shift to the normal cluster for the four replicates. **Use the concatination of the raw datasets and 3 nearest neighbors with 4 custers in the training set because it gives more strigent results.**
 
 # FVS node values in training set
 
@@ -549,9 +549,9 @@ Knocked-out|45.02|67.729|14.741|68.342|15.538|20.686|50.322|31.934|20.104|48.851
 No Change|31.873|32.271|24.211|31.658|18.173|26.387|30.248|32.179|31.443|37.052|31.229|47.472
 
 
-I think we are seeing that we need to upregulate GSK3B and CTNNB1 because in the initial condition for MCF10A, they are upreagulated compared to MDAMB231 (see logfc above). 
+**I think we are seeing that we need to upregulate GSK3B and CTNNB1 because in the initial condition for MCF10A, they are upreagulated compared to MDAMB231 (see logfc above).**
 
-It has been observed that activity levels of CTNNB1 are lower in MDAMB231 than in other TNBC cell lines. This makes sense because CTNNB1 regulates cell proliferation and CL tumors have low proliferation rates. However, there is still evidence that inhibition of CTNNB1 in MDAMB231 cell lines decreases rates of metastasis and tumorigenesis, so it still does not make sense to activate it as a therapeutic target.
+It has been observed that activity levels of CTNNB1 are lower in MDAMB231 than in other TNBC cell lines. This makes sense because CTNNB1 regulates cell proliferation and CL tumors have low proliferation rates. However, there is evidence that inhibition of CTNNB1 in MDAMB231 cell lines decreases rates of metastasis and tumorigenesis, so it does not make sense to activate it as a therapeutic target.
 
 I'm not sure why we haven't seen these results before - it's likely due to the way that we are now simulating knock-ins and knock-outs and classifying perturbations. Instead of using the basin of attraction as the training set, we are using the attractor itself. This may be too restrictive when classifying attractors from perturbations. However, we have seen the SFA cannot accurately predict attractors from random initial conditions.
 
@@ -589,17 +589,17 @@ I will simulate new perturbations fixing:
 - RELA and FOXM1 as knock-out
 - PIAS1 as knock-in
 
-And all possible combinations for the other 7 nodes (2187 total). This is a concern because the two above perturbations (Perturb_003761 and Perturb_036358) were included in this list of perturbations and triggered a shift to normal in all 4 replicates the first time I ran knn. This time, they only trigger it in one of the replicates. One perturbation triggerse the shift in 3/4 replicates:
+And all possible combinations for the other 7 nodes (2187 total). This is a concern because the two above perturbations (Perturb_003761 and Perturb_036358) were included in this list of perturbations and triggered a shift to normal in all 4 replicates the first time I ran knn. This time, they only trigger it in one of the replicates. One perturbation triggers the shift in 3/4 replicates:
 
 **perturbation**|**AKT1**|**AURKA**|**CTNNB1**|**FOXM1**|**GSK3B**|**HDAC3**|**JUN**|**MAPK1**|**PIAS1**|**RELA**|**STAT3**|**TCF3**
 :-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
 Perturb_1216|Knock-out|Knock-out|No Change|Knock-out|No Change|Knock-in|Knock-out|Knock-out|Knock-in|Knock-out|Knock-out|No Change
 
-This is the same perturbation as Perturb_003761, but with no change applied to TCF3 instead of kncking it out.
+This is the same perturbation as Perturb_003761, but with no change applied to TCF3 instead of knocking it out.
 
 ### Elucidating why GSK3B and CTNNB1 must be upregulated
 
-I wanted to determine if the reason we are seeing the need to upregulatee GSK3B and CTNNB1 is because of an issue with the network topology, or because of the afore mentioned issue of the dicrepencies in expression level at initial conditions. To do so, I simulated the attractors for MDAMB231 and MCF10A, but swapped initial conditions for the FVS nodes that didn't agree with literature: GSK3B and CTNNB1. Then, I re-calssified the same 100,000 perturbations of FVS nodes using knn. 9 perturbations triggered the shift from normal to cancer in all 4 cancerous replicates. The frequency of their perturbation orientation is below:
+I wanted to determine if the reason we are seeing the need to upregulatee GSK3B and CTNNB1 is because of an issue with the network topology, or because of the afore mentioned issue of the dicrepencies in expression level at initial conditions. To do so, I [simulated the attractors](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Analysis/scripts/reference_attractors_flipped.py) for MDAMB231 and MCF10A, but swapped initial conditions for the FVS nodes that didn't agree with literature: GSK3B and CTNNB1. (Resultant attractors [here](https://github.com/VeraLiconaResearchGroup/CancerReversion/tree/master/_projects/project2/Network_Analysis/test_flip)) Then, I [re-calssified](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Analysis/knn_test_flip.sh) the same 100,000 perturbations of FVS nodes using knn. 9 perturbations triggered the shift from normal to cancer in all 4 cancerous replicates. The frequency of their perturbation orientation is below:
 
 **perturbation**|**AKT1**|**AURKA**|**CTNNB1**|**FOXM1**|**GSK3B**|**HDAC3**|**JUN**|**MAPK1**|**PIAS1**|**RELA**|**STAT3**|**TCF3**
 :-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
@@ -635,14 +635,15 @@ This tells me that our results are very sensitive to the initial conditions of t
 
 # Looking For similar trends in literature for GSK3B and CTNNB1
 
-[Here](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE75168), we observe the same trend in GSK3B but not in CTNNB1 from normalized counts:
-
-
+Count tables taken from [here](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE75168), show the same trend in GSK3B but not in CTNNB1 from normalized counts:
 
 **name**|**logfc**|**p-value**|**MCF10A\_1**|**MCF10A\_2**|**MCF10A\_3**|**MDAMB231\_1**|**MDAMB231\_2**|**MDAMB231\_3**
 :-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
 GSK3B|-1.135526001|1.01E-05|1788.99|1944.36|1254.37|775.35|741.93|751.92
 CTNNB1|1.559422991|2.39E-14|8479.24|8861.55|7088.68|23417.67|26209.64|22368.38
+
+*[Count tables](https://github.com/VeraLiconaResearchGroup/CancerReversion/tree/master/_projects/project2/Network_Analysis/test_RNAseq2) were normalized and [differential expression analysis](https://github.com/VeraLiconaResearchGroup/CancerReversion/blob/master/_projects/project2/Network_Analysis/scripts/differential_expression.R) was done using DESeq2 to obtain the above logfc and p-value.*
+
 
 From [RPKM data](http://lincs.hms.harvard.edu/db/datasets/20348/main), we see the same trend in GSK3B but not CTNNB1 
 
