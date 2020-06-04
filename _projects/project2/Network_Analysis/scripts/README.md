@@ -3,7 +3,7 @@ scripts
 
 ## Description
 
-This folder contains all scripts necessary to identify and prioritize putative reversion targets.
+This folder contains all scripts necessary to identify and prioritize putative reversion targets. The scripts should be run in the following order:
 
 | Script  | INPUTS  | OUTPUTS |
 | ----------------| -------------------------  | ------------------------- |
